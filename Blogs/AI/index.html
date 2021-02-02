@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Is AI dangerous?</title>
+  <meta name="description" content="Is AI really all that dangerous? This post talkas about the different benefits of AI and how its applications can and have been beneficial to not just us as individuals but society as a whole."/>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet"
+        crossorigin="anonymous">
+    <link href="./../../style.css" rel="stylesheet">
+    <link rel="icon" href="../../img/icon.png" type="image/png" sizes="16x16">
+</head>
+<body>
+
+<!-- Navigation -->
+<nav class="navbar navbar-expand-md navbar-light bg-light static-top">
+	<div class="container-fluid">
+		<a class="navbar-brand" href="../../"><img class="logoB" src="../../img/logoB.png"></a>
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target= "#navbarResponsive">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse" id="navbarResponsive">
+			<ul class="navbar-nav ml-auto">
+				<li class="nav-item">
+					<a class="nav-link" href="../../">Home</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link active" href="../">Blog</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../Quiz/">Quiz</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../FlashCards/">Flashcards</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="mailto:omsiddiqi01@gmail.com"><i class="fas fa-envelope-square"></i></a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="https://www.linkedin.com/in/owaissidd/" target="breach"><i class="fab fa-linkedin"></i></a>
+				</li>
+			</ul>
+		</div>
+	</div>
+</nav>
+
+<!--- Welcome Section -->
+<header>
+    <div class="overlay"></div>
+    <video playsinline="playsinline" autoplay="autoplay" poster ="../../img/AIbrain.png" muted="muted" loop="loop">
+      <source src="../../img/AIbrain.mp4" type="video/mp4">
+    </video>
+    <div class="container h-100">
+      <div class="d-flex h-100 text-center align-items-center">
+        <div class="w-100 text-white">
+          <h1 class="display-3" style="text-shadow: 4px 4px 4px #333333;">Is AI dangerous?</h1>
+        </div>
+      </div>
+    </div>
+  </header>
+  
+  <section class="my-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8 mx-auto">
+          <h2 id="contents"><ins>Contents<ins></h2>
+            <ol id="content" type="1">
+              <li><a href="#header1">What is AI?</a></li>
+              <li><a href="#header2">AI is on the rise but should it be?</a></li>
+              <li><a href="#header3">AI In Everyday Life</a></li>
+              <li><a href="#header4">How does AI benefit our health?</a>
+                  <ul>
+                      <li><a href="#subheader1">AI used in detection of COVID - 19</a>
+                      </li>
+                  </ul>
+                  <ul>
+                      <li><a href="#subheader2">AI used in detection of Skin Cancers</a>
+                      </li>
+                  </ul>
+              <li><a href="#header5">Conclusion</a></li>
+              <li><a href="#header6">References</a></li>
+          </ol>
+          <h2 id="header1">What is AI?</h2>
+
+          <p><strong>AI</strong>: Stands for Artificial Intelligence</p>
+          <p>The term &quot;<em>artificial intelligence</em>&quot; is used to describe the ability of machines to
+              learn and problem solve, to essentially mimic humans by using specialised algorithms <sup>[1]</sup>.
+              AI is simply an umbrella term that covers all of its subsets. AI can describe many different systems
+              from Machine Learning to Deep Learning. However, all its subsets and definitions share one common
+              attribute. They all allow machines to mimic human intelligence.</p>
+
+          <h2 id="header2">AI is on the rise but should it be?</h2>
+
+          <h4
+              id="using-google-trends-api-to-retrieve-secondary-data-on-recent-publics-interest-about-ai-and-its-usage">
+              Using Google Trends API To Retrieve Secondary Data On Recent Public's Interest About AI and Its
+              Usage
+          </h4>
+          <h4 id="disclaimer" style="text-decoration: underline;">Disclaimer</h4>
+          <p>All data presented is received from the Google Trends™ API (<strong>A</strong>pplication
+              <strong>P</strong>rogramming <strong>I</strong>nterface) and retrieved from their database, I do
+              not own any data presented and I am simply using it for research purposes to demonstrate the
+              public's
+              interest in AI. As a disclaimer, I do not claim ownership of any data presented here and I am using
+              it under the &#39;Fair Dealing&#39; law governed by Sections 29 and 30 of the Copyright, Designs and
+              Patents Act 1988, which outlines three instances where fair dealing is a legitimate defence:</p>
+          <ul>
+              <li>If the use is for the purposes of research or private study;</li>
+              <li>If it is used for the purposes of criticism, review or quotation;</li>
+              <li>Where it is utilised for the purposes of reporting current events (this does not apply to
+                  photographs)</li>
+          </ul>
+          <p>In this case, I am using the data solely for research purposes to demonstrate, as stated earlier, the
+              public's interest in AI.</p>
+          <h4 id="using-python-s-3rd-party-modules-to-gather-and-interpret-data-secondary-data">Using Python&#39;s
+              3rd party modules to gather and display data</h4>
+          <p>Using Google&#39;s API to gather data from the Google trends data analysis, and python 3 with modules
+              <strong><em>&#39;pandas&#39;</em></strong> and <strong><em>&#39;pytrends&#39;</em></strong>, I
+              searched for specific key phrases and plotted them in the graphs below to show recent public
+              interest in the subjects and to show, in recent years, how the public has come to view AI and its
+              use in healthcare.</p>
+          <h4 id="representation-">Representation:</h4>
+          <p>Numbers represent search interest relative to the highest point on the chart for the given region and
+              time. A value of 100 is the peak popularity for the term. A value of 50 means that the term is half
+              as popular. A score of 0 means there was not enough data for this term. Again, all of this data was
+              retrieved from Google™ and therefore abides by Google&#39;s chosen numerical scale.</p>
+          <div>
+              <div
+                  style="background: #272822; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;">
+                  <table>
+                      <tr>
+                          <td>
+                              <pre style="margin: 0; line-height: 125%"> 1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23</pre>
+                          </td>
+                          <td>
+                              <pre style="margin: 0; line-height: 125%"><span style="color: #75715e">#Here we import the 3rd party modules required</span>
+<span style="color: #75715e">#pandas is used to manipulate data frames    </span>
+<span style="color: #f92672">import</span> <span style="color: #f8f8f2">pandas</span> <span style="color: #f92672">as</span> <span style="color: #f8f8f2">pd</span>  
+<span style="color: #75715e">#pytrends is used to connect to the Google API and retrieve data          </span>
+<span style="color: #f92672">from</span> <span style="color: #f8f8f2">pytrends.request</span> <span style="color: #f92672">import</span> <span style="color: #f8f8f2">TrendReq</span>
+<span style="color: #75715e">#Then we name the TrendReq() function as a pytrends variable to use throughout the script</span>
+<span style="color: #f8f8f2">pytrends</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">TrendReq()</span>
+<span style="color: #75715e">#Then create a function that, whenever called, will create a graph based on the question asked</span>
+<span style="color: #66d9ef">def</span> <span style="color: #a6e22e">PlotGraph</span><span style="color: #f8f8f2">(kw_list):</span>
+  <span style="color: #f8f8f2">keyword_list</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">[kw_list</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">title()]</span>
+<span style="color: #75715e">#This defines what variables I am looking for, e.g. &quot;geo&quot; asks where in the world you are looking and using an empty space &quot;&quot; gives the value &quot;all&quot;, telling it we are looking worldwide</span>
+  <span style="color: #f8f8f2">pytrends</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">build_payload(keyword_list,</span> <span style="color: #f8f8f2">cat</span><span style="color: #f92672">=</span><span style="color: #ae81ff">0</span><span style="color: #f8f8f2">,</span> <span style="color: #f8f8f2">timeframe</span><span style="color: #f92672">=</span><span style="color: #e6db74">&#39;2010-01-14 2020-07-20&#39;</span><span style="color: #f8f8f2">,</span> <span style="color: #f8f8f2">geo</span><span style="color: #f92672">=</span><span style="color: #e6db74">&#39;&#39;</span><span style="color: #f8f8f2">,</span> <span style="color: #f8f8f2">gprop</span><span style="color: #f92672">=</span><span style="color: #e6db74">&#39;&#39;</span><span style="color: #f8f8f2">)</span>
+<span style="color: #75715e">#This looks for the key words interest over time in the period I specified in the code before</span>
+  <span style="color: #f8f8f2">data</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">pytrends</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">interest_over_time()</span>
+<span style="color: #75715e">#.plot() plots the data</span>
+  <span style="color: #f8f8f2">graph</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">data</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">plot(title</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">kw_list</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">title()</span> <span style="color: #f92672">+</span> <span style="color: #e6db74">&#39;? on Google Trends&#39;</span><span style="color: #f8f8f2">,figsize</span><span style="color: #f92672">=</span><span style="color: #f8f8f2">(</span><span style="color: #ae81ff">20</span><span style="color: #f8f8f2">,</span> <span style="color: #ae81ff">5</span><span style="color: #f8f8f2">))</span>
+<span style="color: #75715e">#set.(x/y)label, labels the graph</span>
+  <span style="color: #f8f8f2">graph</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">set_xlabel(</span><span style="color: #e6db74">&quot;Time (yrs)&quot;</span><span style="color: #f8f8f2">)</span>
+  <span style="color: #f8f8f2">graph</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">set_ylabel(</span><span style="color: #e6db74">&quot;Popularity (n / 100)&quot;</span><span style="color: #f8f8f2">)</span>
+
+<span style="color: #75715e">#Here, I can now call the PlotGraph() function made earlier to plot a graph to show recent searches using the phrase &quot;what is artificial intelligence&quot;</span>
+
+<span style="color: #f8f8f2">PlotGraph(</span><span style="color: #e6db74">&quot;what is artificial intelligence&quot;</span><span style="color: #f8f8f2">)</span>
+</pre>
+                          </td>
+                      </tr>
+                  </table>
+              </div>
+          </div>
+          <figure class="figure text-center">
+            <img src="../../img/WhatsAI.png" class="figure-img img-fluid zoom" alt="Graph showing the recent interest in AI" title="Graph showing the recent interest in AI">
+            <figcaption class="figure-caption"><em><strong>Figure 1:</strong> Recent search history of &quot;What is artificial intelligence?&quot; from Google
+              Trends™</em></figcaption><p class="text-muted small">(Hover to zoom)</p>
+          </figure>
+          <p>This can also be done with a <a href="../../Files/What_Is_Artificial_Intelligence.csv" download="What_Is_Artificial_Intelligence?">CSV
+                  File</a> from Google Trends, using <strong><em>pandas</em></strong> on Jupyter Notebook:
+          <div
+              style="background: #272822; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;">
+              <table>
+                  <tr>
+                      <td>
+                          <pre style="margin: 0; line-height: 125%"> 1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12</pre>
+                      </td>
+                      <td>
+                          <pre style="margin: 0; line-height: 125%"><span style="color: #75715e">#Imports pandas</span>
+<span style="color: #f92672">import</span> <span style="color: #f8f8f2">pandas</span> <span style="color: #f92672">as</span> <span style="color: #f8f8f2">pd</span>
+<span style="color: #75715e">#Makes a dataframe for the file</span>
+<span style="color: #f8f8f2">df</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">pd</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">read_csv(</span><span style="color: #e6db74">&quot;What_Is_Artificial_Intelligence.csv&quot;</span><span style="color: #f8f8f2">)</span>
+<span style="color: #75715e">#prints only the first 5 data points</span>
+<span style="color: #f8f8f2">df</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">head()</span>
+<span style="color: #75715e">#Plots the data with a suitable figure size and a title</span>
+<span style="color: #f8f8f2">graph</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">df[[</span><span style="color: #e6db74">&#39;Week&#39;</span><span style="color: #f8f8f2">,</span><span style="color: #e6db74">&#39;What Is Artificial Intelligence?&#39;</span><span style="color: #f8f8f2">]]</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">plot(figsize</span><span style="color: #f92672">=</span><span style="color: #f8f8f2">(</span><span style="color: #ae81ff">15</span><span style="color: #f8f8f2">,</span><span style="color: #ae81ff">8</span><span style="color: #f8f8f2">),</span> <span style="color: #f8f8f2">title</span> <span style="color: #f92672">=</span> <span style="color: #e6db74">&quot;What is Artificial Intelligence? On Google Trends&quot;</span><span style="color: #f8f8f2">)</span>
+<span style="color: #75715e">#Sets the x axis Label</span>
+<span style="color: #f8f8f2">graph</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">set_xlabel(</span><span style="color: #e6db74">&quot;Time (yrs)&quot;</span><span style="color: #f8f8f2">)</span>
+<span style="color: #75715e">#Sets the y axis Label</span>
+<span style="color: #f8f8f2">graph</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">set_ylabel(</span><span style="color: #e6db74">&quot;Popularity (n / 100)&quot;</span><span style="color: #f8f8f2">)</span>
+</pre>
+                      </td>
+                  </tr>
+              </table>
+          </div>
+<br>
+
+
+
+          <p>To learn the basics of data analysis, go to the Open University&#39;s free course: <a
+                  href="https://www.open.edu/openlearn/science-maths-technology/learn-code-data-analysis/content-section-overview-0"
+                  target="breach">Learn
+                  to code for data analysis</a></p>
+
+          <p>As shown in <em>figure 1</em>, in the last 5 years especially, there has been an exponential increase
+              in the searches of what AI is and therefore how it functions. This data suggests that the public
+              is becoming increasingly interested in AI technology which can lead to an increase in the production of
+              AI designs as people of all ages find out and begin their own research into the subject as well as funding for the industry.</p>
+
+          <p>Now we plot the next graph:</p>
+          <div
+              style="background: #272822; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;">
+              <pre style="margin: 0; line-height: 125%"><span style="color: #f8f8f2">PlotGraph(</span><span style="color: #e6db74">&quot;artificial intelligence in healthcare&quot;</span><span style="color: #f8f8f2">)</span>
+</pre>
+          </div>
+
+
+          <figure class="figure text-center">
+            <img src="../../img/HealthAI.png" class="zoom figure-img img-fluid" title="Graph showing the recent interest in AI in healthcare"
+            alt="Graph showing the recent interest in AI">
+            <figcaption class="figure-caption"><em><strong>Figure 2:</strong> Recent search history of &quot;Artificial intelligence in healthcare&quot; from Google
+              Trends™</em></figcaption><p class="text-muted small">(Hover to zoom)</p>
+          </figure>
+          <p>Surprisingly, this data co-aligns with the data in <em>figure 1</em>, which shows public interest in
+              what AI is. From 2017 onwards (<em>figure 2</em> ), there is also an exponential increase in search
+              results which could suggest that people who are learning about AI are also becoming more aware of it
+              being used in healthcare. AI is used in all types of treatments, from
+              radiotherapy to radiology and due to this, more people are researching AI, which can be a double
+              edged sword, as this can be both
+              beneficial and harmful. On one hand, there is reason to believe more people are becoming health
+              literate in this age of technology and, with reason to assume, are providing themselves with better
+              autonomous care by looking into treatments. </p>
+
+          <p>However, this could also backfire, as “Google” and most
+              search engines are fundamentally biased due to implementing search algorithms that cater towards
+              whichever site is most popular. This means that repeated searches can lead to a patient reading
+              something that is completely wrong which may distort their judgement on a treatment by providing
+              either
+              false,
+              non-specific, or not applicable information.</p>
+          <div
+              style="background: #272822; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;">
+              <pre style="margin: 0; line-height: 125%"><span style="color: #f8f8f2">PlotGraph(</span><span style="color: #e6db74">&quot;is artificial intelligence dangerous&quot;</span><span style="color: #f8f8f2">)</span>
+</pre>
+          </div>
+
+          <figure class="figure text-center">
+            <img src="../../img/DangerAI.png" class="zoom figure-img img-fluid" title="Graph showing the recent interest in the dangers of AI"
+            alt="Graph showing the recent interest in AI">
+            <figcaption class="figure-caption"><em><strong>Figure 3:</strong> Recent search history of &quot;Is artificial intelligence dangerous?&quot; from Google
+              Trends™</em></figcaption><p class="text-muted small">(Hover to zoom)</p>
+          </figure>
+
+          <p>Moreover, in <em>figure 3</em>, there are searches in recent years that ask the question “is AI
+              dangerous?”. Suggesting that a number of people still do not necessarily trust AI as of yet and a
+              big reason for this may be due to them not knowing what AI is. With <em>figure 1</em> and
+              <em>3</em>, it tells us that there are a number of people that both don&#39;t know or
+              understand what AI is and are scared of it. So while AI is on the rise, the
+              untrustworthiness of it is also rising as bias search engines lead people to sites that
+              are against AI as well as those that are pro-AI.</p>
+          <p>If a patient went into a consultation and found that AI or a robot was the best solution and was
+              being used in their
+              surgery and due to this they rejected the treatment, then both their quality and quantity of life is
+              at
+              risk. This is hazardous to public health and should be addressed. Computing and technology are
+              becoming increasingly vital in this day and age and therefore should be taught in more detail to the
+              general public to reduce the risk of situations like this occurring. </p>
+
+          <div
+              style="background: #272822; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;">
+              <pre style="margin: 0; line-height: 125%"><span style="color: #f8f8f2">PlotGraph(</span><span style="color: #e6db74">&quot;artificial intelligence advantages&quot;</span><span style="color: #f8f8f2">)</span>
+</pre>
+          </div>
+
+          <figure class="figure text-center">
+            <img src="../../img/AdvEffAI.png" class="zoom figure-img img-fluid" title="Graph showing the recent interest in AI's advantages"
+            alt="Graph showing the recent interest in AI">
+            <figcaption class="figure-caption"><em><strong>Figure 4:</strong> Recent search history of &quot;Artificial intelligence advantages?&quot; from Google
+              Trends™</em></figcaption><p class="text-muted small">(Hover to zoom)</p>
+          </figure>
+
+          <p>Fortunately, <em>in figure 4</em>, there is a much larger increase in search results for the
+              advantages of AI than the dangers of it. Showing that, while AI is on the rise, it’s not all bad, as
+              there are people out there researching the benefits of AI and how it can potentially help them.</p>
+          <p>This data demonstrates that while AI and AI technology is on the rise, It&#39;s not as dangerous as
+              it seems, as there are people out there trying to understand it and with understanding comes
+              acceptance and growth. Which can lead to more advancements in AI technology and its subsets due
+              to the amount of interest and further funding it may likely get in the future due to this.</p>
+          <h2 id="header3">AI In Everyday Life</h2>
+
+          <p>AI, and its subset Machine Learning, has a large variety of applications in daily life. One famous
+              example is the
+              self driving car. With companies like Tesla™ at the forefront of it all, AI and machine learning are
+              being used and perfected everyday to provide safer cars and cause fewer accidents on the road. With
+              self-driving cars, all cars could communicate with each other and therefore know where each vehicle
+              was going, which could drastically reduce the risk of car accidents. They can calculate operations
+              millions of times faster than the human brain <sup>[2]</sup> can and as a result, reduce the risk of
+              pedestrian and bicycle accidents.</p>
+          <p>Another example is robots, you may not expect it but even machines in your house use AI. The iRobot
+              Roomba 980™ model vacuum uses AI technology <sup>[3]</sup> to scan a room&#39;s area size and look
+              for the most efficient path to clean as well as avoid obstacles on the way. It can also assess the
+              amount of cleaning it&#39;s required to do by the size of the room. Larger rooms require less
+              cleaning cycles while smaller ones, which get dirtier faster, get more. This is just one of the ways
+              AI is being used in everyday life and Its ability to problem solve is continuously evolving.</p>
+              <h2 id="header4">How does AI benefit our health?</h2>
+                        
+              <figure class="figure float-right text-center">
+                          <img src="../../img/HandXRay.jpg" id= "hand" class="figure-img img-fluid" alt="Shoulder disarticulation and forequarter amputation" title="Shoulder disarticulation and forequarter amputation">
+                          <figcaption class="figure-caption"><em><strong>Figure 5: </strong>X-ray of a hand, with automatic calculation of bone age by a computer algorithm -
+                            Mikael
+                            Häggström</em></figcaption>
+                        </figure>
+                        <p>This picture above is an example of how AI can be used to better modern medicine. The computer
+                          software automatically calculated the bone age and therefore the age of the patient. This provides a
+                          fast and easy way to gauge a person&#39;s age who may not know it themselves, e.g. a patient with
+                          amnesia.</p>
+                    
+          <p>AI is used everywhere, especially in radiology and surgery. AI’s ability to interpret imaging from
+              radiology can aid health care professionals in identifying even the most minuscule change in a scan
+              that may have been missed previously.</p>
+          <h3 id="subheader1">AI used in detection of COVID - 19</h3>
+          <p>AI can even be used to differentiate COVID - 19 from pneumonia. In a paper done by the Department of
+              Radiology in
+              Wuhan, China <sup>[4]</sup>, AI was used to create a fully automatic framework to detect COVID - 19
+              using chest CT scans to distinguish it from pneumonia, which has similar symptoms to COVID - 19. It
+              used deep learning, a subset of
+              AI, to create an artificial neural network that used data sets of CT scans of patients with COVID -
+              19 and ones with just community acquired pneumonia. It used logical decision making and thinking to
+              learn how COVID - 19 symptoms may differ from standard pneumonia and this experiment resulted in a
+              96% accuracy in deducing which CT scans showed COVID -19 and a 95% accuracy for which CT scan showed
+              community acquired pneumonia.</p>
+          <p>This demonstrated that a deep learning model can accurately detect COVID - 19. This technology could
+              potentially save millions as it can reduce the risk of infection as patients with COVID - 19 can be
+              detected faster and quarantined appropriately, minimising exposure to others.</p>
+          <h3 id="subheader2">AI used in detection of Skin Cancers</h3>
+          <p>AI can also be used in surgery. In 2018, a paper published by the Annals of Oncology<sup> [5]</sup>, deep
+              learning
+              was also used in creating a neural network trained specifically on dermoscopic images. 100 cases of
+              skin cancers and benign lesions were used to help teach the machine to learn the differences between
+              different types of skin cancers and how to detect them. </p>
+          <p>This resulted in a 95% accuracy rate for the neural network whereas the dermatologists diagnosed it
+              with an accuracy of 94%. While the specialists were outperformed in this experiment, the researchers
+              themselves suspect that it may have been due to the artificial conditions of the lab and that in a
+              less artificial environment, the dermatologists and neural networks may have performed on the same
+              level.</p>
+          <p>As you can suspect, some specialists see the advancements of AI as a threat <sup>[6]</sup> as its
+              evolution to create a more accurate algorithm may result in improvements of diagnosis compared to
+              ones done by the specialists.</p>
+          <p>Even Google™ has dabbled with medical AI, with their company DeepMind <sup>[7]</sup>. The NHS uses
+              DeepMind to identify health threats from data obtained over a smartphone device. </p>
+
+          <h2 id="header5">Conclusion</h2>
+          <p style="text-decoration: underline">Why am I talking about AI?</p>
+          <p>Well as you can see from the data above, Machine learning, Deep learning and AI have become of
+            interest in recent years, however, some of the connotations associated with them are negative.</p>
+          <p style="text-decoration: underline">Is AI really dangerous?</p>
+          <p>AI isn't as dangerous as it may sound, it can
+              improve and benefit our lives in so many ways. Technology is only going to become more advanced as time
+              progresses, so it is important to learn about technology now to gain a deeper understanding of the world
+              we live in.</p>
+
+              <p class="mb-0">
+                By <a href="https://www.linkedin.com/in/owaissidd/" target="breach">Owais M Siddiqi</a>
+              </p><br>
+          <h2 id="header6">References</h2>
+
+          <p>[1] Russell, Stuart J.; Norvig, Peter (2009). <a
+                  href="https://en.wikipedia.org/wiki/Artificial_Intelligence:_A_Modern_Approach"
+                  target="breach">Artificial
+                  Intelligence: A Modern Approach</a> (3rd ed.). Upper Saddle River, New Jersey: Prentice Hall.
+          </p>
+          <p>[2] Nautilus, Written by Liquin Luo,
+              <a href="http://nautil.us/issue/59/connections/why-is-the-human-brain-so-efficient" target="breach">Why
+                  Is the Human
+                  Brain So Efficient?
+                  How massive parallelism lifts the brain’s performance above that of AI</a>, published April 12,
+              2018 [Accessed July 21, 2020]</p>
+          <p>[3] Venture Beat, Written by John Brandon,
+              <a href="https://venturebeat.com/2016/11/03/why-the-irobot-roomba-980-is-a-great-lesson-on-the-state-of-ai/"
+                  target="breach">Why
+                  the iRobot Roomba 980 is a great lesson on the state of AI</a>, published November 3, 2016
+              [Accessed July 22, 2020]</p>
+          <p>[4] Li L, Qin L, Xu Z, Yin Y, Wang X, et al. (March 2020). <a
+                  href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7233473" target="breach">&quot;Artificial
+                  Intelligence
+                  Distinguishes COVID-19 from Community Acquired Pneumonia on Chest CT&quot;</a>. Radiology:
+              200905</p>
+          <p>[5] Haenssle, H.A., Fink, C., Toberer, F., Winkler, J., Stolz, W., Deinlein, T., Hofmann-Wellenhof,
+              R., Lallas, A., Emmert, S., Buhl, T. and Zutt, M., 2020. Man against machine reloaded: performance
+              of a market-approved convolutional neural network in classifying a broad spectrum of skin lesions in
+              comparison with 96 dermatologists working under less artificial conditions. Annals of Oncology,
+              31(1), pp.137-143.</p>
+          <p>[6]Chockley K, Emanuel E (December 2016). &quot;The End of Radiology? Three Threats to the Future
+              Practice of Radiology&quot;. Journal of the American College of Radiology. 13 (12 Pt A): 1415–1420.
+          </p>
+          <p>[7] BBC News, Written By Chris Baraniuk,<a href="https://www.bbc.co.uk/news/technology-37230806"
+                  target="breach">
+                  &quot;Google gets access to cancer scans&quot;</a>, published August 31, 2016 [Accessed July 26,
+              2020]</p>
+              
+                    <nav aria-label="Page navigation example">
+                        <ul class="pagination justify-content-center">
+                          <li class="page-item">
+                            <a class="page-link" href="../Prosthetics/" aria-label="Previous">
+                              <span aria-hidden="true">&laquo;</span>
+                              <span class="sr-only">Previous</span>
+                            </a>
+                          </li>
+                          <li class="page-item"><a class="page-link" href="../PBT/">PBT</a></li>
+                          <li class="page-item"><a class="page-link" href="../RGB/">RBG</a></li>
+                          <li class="page-item"><a class="page-link" href="../COVID/">COVID</a></li>
+                          <li class="page-item"><a class="page-link" href="../Prosthetics/">Prosthetics</a></li>
+                          <li class="page-item active"><a class="page-link" href="#">AI</a></li>
+                          <li class="page-item"><a class="page-link" href="../DNA/">DNA</a></li>
+                          <li class="page-item"><a class="page-link" href="../Dementia/">Dementia</a></li>
+                          <li class="page-item">
+                          <li class="page-item"><a class="page-link" href="../Vax/">Vax</a></li>
+                            <a class="page-link" href="../DNA/" aria-label="Next">
+                              <span aria-hidden="true">&raquo;</span>
+                              <span class="sr-only">Next</span>
+                            </a>
+                          </li>
+                        </ul>
+                      </nav>
+                    </body>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+<!--- Footer -->
+<footer>
+	<div class="container-fluid padding">
+	<div class="row text-center">
+		<div class="col-md-12">
+			<div id="digital-clock"></div>
+		</div>
+	</div>
+	</div>
+	<div class="socket text-light text-center py-4">
+			<p>&copy; <a href="https://owaissiddiqi.co.uk/" target = "_blank">Owais Siddiqi All rights reserved</a></p>
+		</div>
+	</div>
+</footer>
+<button onclick="topFunction()" id="myBtn" title="Go to top">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6"><path d="M12 6H0l6-6z"/></svg></button>
+</body>
+<script>
+
+    var mybutton = document.getElementById("myBtn");
+    
+    window.onscroll = function() {scrollFunction()};
+    
+    function scrollFunction() {
+      if (document.body.scrollTop > 40 || document.documentElement.scrollTop > 40) {
+        mybutton.style.display = "block";
+      } else {
+        mybutton.style.display = "none";
+      }
+    }
+    
+    function topFunction() {
+      document.body.scrollTop = 0;
+      document.documentElement.scrollTop = 0;
+    }
+    
+function getDateTime() {
+	var now = new Date();
+	var year = now.getFullYear();
+	var month = now.getMonth() + 1;
+	var day = now.getDate();
+	var hour = now.getHours();
+	var minute = now.getMinutes();
+	var second = now.getSeconds();
+	if (month.toString().length == 1) {
+		month = '0' + month;
+	}
+	if (day.toString().length == 1) {
+		day = '0' + day;
+	}
+	if (hour.toString().length == 1) {
+		hour = '0' + hour;
+	}
+	if (minute.toString().length == 1) {
+		minute = '0' + minute;
+	}
+	if (second.toString().length == 1) {
+		second = '0' + second;
+	}
+	var dateTime = hour + ':' + minute + ':' + second + "<br>" + day + '/' + month + '/' + year;
+	return dateTime;
+}
+
+setInterval(function () {
+	currentTime = getDateTime();
+	document.getElementById("digital-clock").innerHTML = currentTime;
+});
+</script>
+</html>

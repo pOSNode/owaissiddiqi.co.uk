@@ -1,0 +1,202 @@
+[
+    {
+      "question": "What is the first thing a first aider must do when dealing with an emergency?",
+      "choice1": "Take a picture of the person",
+      "choice2": "Assess the risks",
+      "choice3": "Get to the casualty quickly",
+      "choice4": "Call an ambulance and leave",
+      "answer": 2
+    },
+    {
+      "question": "When do you use the recovery position?",
+      "choice1": "If a person is unconscious but is breathing and has no other life-threatening conditions",
+      "choice2": "If a person is conscious and is breathing and has no other life-threatening conditions",
+      "choice3": "If a person in unconscious but isn't breathing and has no other life-threatening conditions",
+      "choice4": "Never",
+      "answer": 1
+    },
+    {
+      "question": "When providing first aid, what is the first step?",
+      "choice1": "Giving CPR",
+      "choice2": "Opening the airways",
+      "choice3": "Call a friend for a quick chat",
+      "choice4": "Run away",
+      "answer": 2
+    },
+    {
+      "question": "When giving chest compressions to an adult, how fast should you go and how deep?",
+      "choice1": "Twice a second, 5-6cm",
+      "choice2": "Once a second, 8-9cm",
+      "choice3": "4 times a second, 11-15cm",
+      "choice4": "How ever you feel like",
+      "answer": 1
+    },
+    {
+      "question": "Inside the pancreas, in the Islets of Langerhans, what cell produces the hormone insulin?",
+      "choice1": "Alpha Cells",
+      "choice2": "Beta Cells",
+      "choice3": "Gamma Cells",
+      "choice4": "Omega Cells",
+      "answer": 2
+    },
+    {
+      "question": "Inside the pancreas, in the Islets of Langerhans, what cell produces the hormone Glucagon?",
+      "choice1": "Gamma Cells",
+      "choice2": "Omega Cells",
+      "choice3": "Alpha Cells",
+      "choice4": "Beta Cells",
+      "answer": 3
+    },
+    {
+      "question": "Which of these is not part of the heart?",
+      "choice1": "Chordae Tendineae",
+      "choice2": "Purkinje Fibers",
+      "choice3": "Atrioventricular Node",
+      "choice4": "Loop Of Henle",
+      "answer": 4
+    },
+    {
+      "question": "Which of these is part of the liver?",
+      "choice1": "Gallbladder",
+      "choice2": "Bladder",
+      "choice3": "Urethra",
+      "choice4": "Ureter",
+      "answer": 1
+    },
+    {
+      "question": "Which of these acronyms stands for the highly electronegative atoms, when directly connected to Hydrogen, cause hydrogen bonding in a molecule?",
+      "choice1": "SER",
+      "choice2": "CHONPS",
+      "choice3": "RER",
+      "choice4": "NOF",
+      "answer": 4
+    },
+    {
+      "question": "Which of these is covered in ribosomes and plays a central role in the synthesis of proteins?",
+      "choice1": "Smooth endoplasmic reticulum (SER)",
+      "choice2": "Rough endoplasmic reticulum (RER)",
+      "choice3": "Golgi Apparatus",
+      "choice4": "Bundle of His",
+      "answer": 2
+    },
+    {
+      "question": "What does the endocrine system do?",
+      "choice1": "Releases hormones outside the body to external surfaces",
+      "choice2": "Sends electrical impulses across neurons",
+      "choice3": "Kills pathogens that enter the body",
+      "choice4": "Releases hormones directly into the bloodstream or tissues of the body",
+      "answer": 4
+    },
+    {
+      "question": "Oestrogen is a type of what?",
+      "choice1": "Organelle",
+      "choice2": "Bone",
+      "choice3": "Organ",
+      "choice4": "Hormone",
+      "answer": 4
+    },
+    {
+      "question": "What is the 'All or None' principle in neurons?",
+      "choice1": "The idea that every neuron in your brain is activated when responding to a stimulus, no matter the type of stimulus",
+      "choice2": "The strength by which a nerve or muscle fibre responds to a stimulus is dependant of the strength of the stimulus",
+      "choice3": "The strength by which a nerve or muscle fibre responds to a stimulus is independent of the strength of the stimulus",
+      "choice4": "With neurons, it's nerf or nothing",
+      "answer": 3
+    },
+    {
+      "question": "Which test would indicate a heart attack?",
+      "choice1": "A Saliva Test",
+      "choice2": "A Reflex Test",
+      "choice3": "Troponin Level Test",
+      "choice4": "Eye Test",
+      "answer": 3
+    },
+    {
+      "question": "What does 'metastasis' mean in terms of cancer?",
+      "choice1": "When a tumor is completely removed",
+      "choice2": "When parts of a tumour can ‘break off’ and travel to other parts of the body in the blood, causing problems there",
+      "choice3": "When a cell divides into 2",
+      "choice4": "When 2 cells fuse into one",
+      "answer": 2
+    },
+    {
+      "question": "What does 'remission' mean in terms of cancer?",
+      "choice1": "There is still traces of the cancer in the body",
+      "choice2": "There are no trace of cancer in the body",
+      "choice3": "Re-starting a mission",
+      "choice4": "The word doesn't exist",
+      "answer": 2
+    },
+    {
+      "question": "What is the definition of 'Autonomy' in medicine?",
+      "choice1": "Considering all the physical, psychological and social factors potentially impacting a person’s health.",
+      "choice2": "The simultaneous occurrence of two or more conditions which may or may not be related.",
+      "choice3": "The right of patients to make decisions about their healthcare.",
+      "choice4": "The ability to understand another person's feelings and experience.",
+      "answer": 3
+    },
+    {
+      "question": "What does an 'ENT' surgeon specialise in?",
+      "choice1": "Ear, Nose, Throat",
+      "choice2": "Ear, Neuron, Trachea",
+      "choice3": "Elephant, Naken Mole Rat, Trousers",
+      "choice4": "Eye, Naval, Thyroid",
+      "answer": 1
+    },
+    {
+      "question": "What do 'Hepatobiliary' surgeons specialise in?",
+      "choice1": "Problems with the Arm, circulatory system and muscles",
+      "choice2": "Problems with the liver, bile duct system and pancreas",
+      "choice3": "That's not a real speciality",
+      "choice4": "Problems with the brain",
+      "answer": 2
+    },
+    {
+      "question": "What is a common health issue that surgeons treat no matter the surgeon's speciality?",
+      "choice1": "No work",
+      "choice2": "Too much free time",
+      "choice3": "Cancer",
+      "choice4": "Tardiness",
+      "answer": 3
+    },
+    {
+      "question": "Who do 'Maxillofacial' surgeons primarily treat?",
+      "choice1": "Patients with facial / jaw disease",
+      "choice2": "Patients with skin diseases",
+      "choice3": "Patients with high blood pressure",
+      "choice4": "Fixing Celebrities",
+      "answer": 1
+    },
+    {
+      "question": "What do 'Cardiothoracic' surgeons specialise in?",
+      "choice1": "Surgery on the liver and kidneys",
+      "choice2": "Surgery on young people",
+      "choice3": "Surgery on the brain",
+      "choice4": "Surgery on the heart and lungs",
+      "answer": 4
+    },
+    {
+      "question": "What do 'Gastrointestinal' surgeons specialise in?",
+      "choice1": "Having really engaging stories to tell",
+      "choice2": "The oesophagus, stomach and small intestines",
+      "choice3": "Having really nice consultation rooms",
+      "choice4": "Making sure they wear gloves",
+      "answer": 2
+    },
+    {
+      "question": "What do 'Orthopaedic' surgeons specialise in?",
+      "choice1": "Mechanical Engineering",
+      "choice2": "The gym and protein shakes",
+      "choice3": "Body Building",
+      "choice4": "Operations on the Bones and Joints",
+      "answer": 4
+    },
+    {
+      "question": "What do 'Colorectal' surgeons specialise in?",
+      "choice1": "Operations on the heart and lungs",
+      "choice2": "Operations on the large bowel and rectum",
+      "choice3": "The Torso and upper body",
+      "choice4": "Hair and Nails",
+      "answer": 2
+    }
+  ]

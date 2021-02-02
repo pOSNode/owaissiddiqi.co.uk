@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>The RGB Colour Model</title>
+  <meta name="description" content="We perceive color based on the stimulation levels of our cone cells. For example, if green light entered your eye and stimulated your retina, these wavelengths of light would activate both the M - Cones and L - Cones of the retina, however, the L - Cone will respond more. This difference in response is detected and...">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet"
+        crossorigin="anonymous">
+    <link href="./../../style.css" rel="stylesheet">
+    <link rel="icon" href="../../img/icon.png" type="image/png" sizes="16x16">
+</head>
+<body>
+<!-- Navigation -->
+<nav class="navbar navbar-expand-md navbar-light bg-light static-top">
+	<div class="container-fluid">
+    <a class="navbar-brand" href="../../"><img class="logoB" src="../../img/logoB.png"></a>
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target= "#navbarResponsive">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse" id="navbarResponsive">
+			<ul class="navbar-nav ml-auto">
+				<li class="nav-item">
+					<a class="nav-link" href="../../">Home</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link active" href="../">Blog</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../Quiz/">Quiz</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../FlashCards/">Flashcards</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="mailto:omsiddiqi01@gmail.com"><i class="fas fa-envelope-square"></i></a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="https://www.linkedin.com/in/owaissidd/" target="breach"><i class="fab fa-linkedin"></i></a>
+				</li>
+			</ul>
+		</div>
+	</div>
+</nav>
+
+<!--- Welcome Section -->
+<header>
+    <div class="overlay"></div>
+    <video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop">
+      <source src="../../img/RGBcolours.mp4" type="video/mp4">
+    </video>
+    <div class="container h-100">
+      <div class="d-flex h-100 text-center align-items-center">
+        <div class="w-100 text-white">
+          <h1 class="display-3" style="text-shadow: 4px 4px 4px #333333;">The RGB Colour Model</h1>
+        </div>
+      </div>
+    </div>
+  </header>
+  
+  <section class="my-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8 mx-auto">
+          <h2 id="contents"><ins>Contents<ins></h2>
+            <ol id="content" type="1">
+            <li><a href="#header1">Basic Eye Biology</a>
+            <ul>
+            <li><a href="#subheader1">Cone Cells</a></li>
+            </ul></li>
+            <li><a href="#header2">RGB colour model function and history</a></li>
+            <li><a href="#header3">How They Fit Together</a></li>
+            <li><a href="#header4">Conclusion</a></li>
+            <li><a href="#header5">References</a></li>
+            </ol>
+            <h2 id="header1">
+              Introduction To Eye Biology
+            </h2>
+            <p>The human eye contains 2 different types of photoreceptor (<em>photo-</em> meaning light) cells in the retina of our eye. The rod cells, which are used for detecting low levels of light <sup>[1]</sup>, used in night vision as they capture darker colours like grey very well, and the cone cell, which can see better in brighter lighting and have more of a range of light they can interpret <sup>[2]</sup>. The cone cell will be discussed further as it is used in interpreting and giving us a perception of colour.</p>
+            <h3 id="subheader1">
+            Cone Cells
+            </h3>
+            <p>While Cone cells are less sensitive to light, they can perceive colour and allow us to interpret the world around us. They typically come in three different types and these cones each have their own set of photoreceptor proteins (<em>Otherwise known as <a href="https://en.wikipedia.org/wiki/Photopsin" target="breach">photopsins</a></em><sup> [3]</sup>).</p>
+            <ol type="1">
+            <li>S - Cones: Sensitive to small wavelengths of light (peaking at 420 nm (Blue))</li>
+            <li>M - Cones: Sensitive to medium wavelengths of light (peaking at 530 nm (Green))</li>
+            <li>L - Cones: Sensitive to long wavelengths of light (peaking at 560 nm (Red))</li>
+            </ol>
+            <p>These three types of cone cells give us, humans, <a href="https://en.wikipedia.org/wiki/Trichromatic_vision" target="breach">trichromatic vision</a> <sup>[4]</sup> i.e. the ability to perceive colour in the RGB (Red, Green, Blue) colour gradient.</p>
+
+            <h2 id="header2" style="text-align: left;">
+              RGB colour model function and history
+              </h2>
+              <p>The modern RGB colour model, used in both science and art all around the world, is an additive colour model ( <em>something that predicts the appearance of colours made by adding up the numbers that represent the colours</em> ) <sup>[5]</sup> in which the primary colours (Red, Green and Blue) are combined in various different ways. It was quite an ingenious design, as it used the biological knowledge of our eyes coupled with the physics of light and generated something that has been used for 100's of years.
+              <p>It was first derived in 1860 and is based on the <a href="https://en.wikipedia.org/wiki/Young%E2%80%93Helmholtz_theory" target="breach">Young–Helmholtz theory</a> of trichromatic color vision, developed by Thomas Young and Hermann von Helmholtz. The first experiment to use the RGB model was in 1861, where Maxwell himself combined three color-filtered photographs.</p>
+              <p>The modern RGB colours is most popularly represented in the hexadecimal number system (base 16) from 0 - F. For example, in hexadecimal, each color is expressed from 0 (least saturated) to FF (most saturated). So white would be <code>#FFFFFF</code> and pure black would be <code>#000000</code> with 16 million different colours in between. It can also be represented in the decimal numerical system (base 10), typically as <code>rgb(R, G, B)</code> where each color is expressed from 0 (least saturated) to 255 (most saturated).</p>
+              <p>While it's easier to use the decimal system, in terms of computer systems, it is actually more convenient to use hexadecimal as you can store more information about colours in a smaller, more compact memory space. This leaves more space for the computer to complete other tasks rather than use vital memory in order to store a simple colour scheme.</p>
+              <h2 id="header3">
+                How They Fit Together
+              </h2>
+              <figure class="figure text-center">
+                <img src="../../img/rgbcolourgraph.png" class="figure-img img-fluid" alt="RGB Colour graphs" title="RGB Colour graphs">
+                <figcaption class="figure-caption"><em><strong>Figure 1:</strong> The sRGB (standard RGB) color triangle, shown as a subset of x,y space, a chromaticity space based on CIE 1931 colorimetry - Hankwang at English Wikipedia</em></figcaption>
+              </figure>
+              <p>The set of primary colours generate a colour triangle <sup>[7]</sup>, in which only colors within this triangle can be reproduced by mixing the primary colors. Colours that are not in this triangle are shown as gray as it is not possible to view these with a basic set of three colours. This is demonstrated in photographs and films, as they are never completely accurate in their display. This is one of the flaws in the sRGB which shows us that there are still improvements to be made in colour technology.</p>
+        <p>We perceive color based on the stimulation levels of our cone cells. For example, if green light entered your eye and stimulated your retina, these wavelengths of light would activate both the M - Cones and L - Cones of the retina, however, the L - Cone will respond more. This difference in response is detected and interpreted by our brain and creates the perception of green. Therefore, the object we are seeing will appear green due to the different degrees of stimulation of the cones on our retinas.</p>
+        <h2 id="header4">
+          Conclusion
+        </h2>
+        <p>The RGB model is the most compatible model of colour to date as it corresponds with the cell biology of primates incredibly well and lets us perceive up to 16,777,216 different colours (256<sup> 3</sup>). However, it is not the ultimate solution. There are still colours it can not represent, see Figure 1, and therefore it is likely we will have a better system in the future. Until then, we will continue using this model. Personally, I believe the RGB colour model is quite a clever design but not a flawless design. I look forward to what the next brilliant idea in colour technology will be and will happily use the RGB model in the meantime.</p>
+        <p class="mb-0">
+          By <a href="https://www.linkedin.com/in/owaissidd/" target="breach">Owais M Siddiqi</a>
+        </p><br>
+        <h2 id="header5">
+          References
+        </h2>
+        <p>[1] Hecht, S.; Shlar, S.; Pirenne, M.H. (1942). <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2142545" target="breach"><em>“Energy, Quanta, and Vision”</em></a>. Journal of General</p>
+        <p>[2] Kandel, E.R.; Schwartz, J.H; Jessell, T. M. (2000). <a href="https://archive.org/details/isbn_9780838577011" target="breach">“<em>Principles of Neural Science</em>”</a> (4th ed.). New York: McGraw-Hill. pp. 507–513.</p>
+        <p>[3] Schacter, Gilbert, Wegner, “<em>Psychology</em>”, New York: Worth Publishers, 2009.</p>
+        <p>[4] Rowe, Michael H (2002). <a href="http://physiologyonline.physiology.org/cgi/content/full/17/3/93" target="breach"><em>“Trichromatic color vision in primates”</em></a>. News in Physiological Sciences. 17 (3): 93–98.</p>
+        <p>[5] Handprint.com, Written by Bruce MacEvoy, <a href="https://www.handprint.com/HP/WCL/color5.html#theoryadd" target="breach"><em>“handprint : colormaking attributes”</em></a>, published August 1, 2015 [Accessed 01 November 2019]</p>
+        <p>[6] Sarah Lowengard (2008), <a href="http://www.gutenberg-e.org/lowengard/A_Chap03.html" target="breach">"<em>The Creation of Color in Eighteenth-Century Europe"</em></a>, Columbia University Press [Accessed 12 November 2019]</p>
+        <p>[7] <a href="https://en.wikipedia.org/wiki/Arun_Netravali" target="breach">Arun N. Netravali</a>; G. Haskell (1995). <a href="https://books.google.com/books?id=-TXYfZrCBuQC&amp;pg=PA101&amp;dq=gamut+color-triangle" target="breach"><em>Digital Pictures: Representation, Compression, and Standards</em></a> (second ed.). Springer</p>
+              
+                    <nav aria-label="Page navigation example">
+                        <ul class="pagination justify-content-center">
+                          <li class="page-item">
+                            <a class="page-link" href="../PBT/" aria-label="Previous">
+                              <span aria-hidden="true">&laquo;</span>
+                              <span class="sr-only">Previous</span>
+                            </a>
+                          </li>
+                          <li class="page-item"><a class="page-link" href="../PBT/">PBT</a></li>
+                          <li class="page-item active"><a class="page-link" href="#">RBG</a></li>
+                          <li class="page-item"><a class="page-link" href="../COVID/">COVID</a></li>
+                          <li class="page-item"><a class="page-link" href="../Prosthetics/">Prosthetics</a></li>
+                          <li class="page-item"><a class="page-link" href="../AI/">AI</a></li>
+                          <li class="page-item"><a class="page-link" href="../DNA/">DNA</a></li>
+                          <li class="page-item"><a class="page-link" href="../Dementia/">Dementia</a></li>
+                          <li class="page-item">
+                            <li class="page-item"><a class="page-link" href="../Vax/">Vax</a></li>
+                            <a class="page-link" href="../COVID/" aria-label="Next">
+                              <span aria-hidden="true">&raquo;</span>
+                              <span class="sr-only">Next</span>
+                            </a>
+                          </li>
+                        </ul>
+                      </nav>
+                    </body>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+<!--- Footer -->
+<footer>
+	<div class="container-fluid padding">
+	<div class="row text-center">
+		<div class="col-md-12">
+			<div id="digital-clock"></div>
+		</div>
+	</div>
+	</div>
+	<div class="socket text-light text-center py-4">
+			<p>&copy; <a href="https://owaissiddiqi.co.uk/" target = "_blank">Owais Siddiqi All rights reserved</a></p>
+		</div>
+	</div>
+</footer>
+<button onclick="topFunction()" id="myBtn" title="Go to top">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6"><path d="M12 6H0l6-6z"/></svg></button>
+</body>
+<script>
+    var mybutton = document.getElementById("myBtn");
+    
+    window.onscroll = function() {scrollFunction()};
+    
+    function scrollFunction() {
+      if (document.body.scrollTop > 40 || document.documentElement.scrollTop > 40) {
+        mybutton.style.display = "block";
+      } else {
+        mybutton.style.display = "none";
+      }
+    }
+    
+    function topFunction() {
+      document.body.scrollTop = 0;
+      document.documentElement.scrollTop = 0;
+    }
+    
+function getDateTime() {
+	var now = new Date();
+	var year = now.getFullYear();
+	var month = now.getMonth() + 1;
+	var day = now.getDate();
+	var hour = now.getHours();
+	var minute = now.getMinutes();
+	var second = now.getSeconds();
+	if (month.toString().length == 1) {
+		month = '0' + month;
+	}
+	if (day.toString().length == 1) {
+		day = '0' + day;
+	}
+	if (hour.toString().length == 1) {
+		hour = '0' + hour;
+	}
+	if (minute.toString().length == 1) {
+		minute = '0' + minute;
+	}
+	if (second.toString().length == 1) {
+		second = '0' + second;
+	}
+	var dateTime = hour + ':' + minute + ':' + second + "<br>" + day + '/' + month + '/' + year;
+	return dateTime;
+}
+
+setInterval(function () {
+	currentTime = getDateTime();
+	document.getElementById("digital-clock").innerHTML = currentTime;
+});
+</script>
+</html>

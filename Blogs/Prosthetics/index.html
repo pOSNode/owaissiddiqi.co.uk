@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>The Prosthetic Arm: A Brief Look At The Physics</title>
+  <meta name="description" content="The human arm's movement can be quantified mathematically in terms of forces, this can be transferred into a prosthetic arm and thus resemble a working arm. This post touches briefly at the physics behind the movement of our arms and the physics that goes behind the production of a artificial, bionic one">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet"
+        crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" type="text/javascript"></script>
+    <link href="./../../style.css" rel="stylesheet">
+    <link rel="icon" href="../../img/icon.png" type="image/png" sizes="16x16">
+</head>
+<body>
+
+
+<!-- Navigation -->
+<nav class="navbar navbar-expand-md navbar-light bg-light static-top">
+	<div class="container-fluid">
+    <a class="navbar-brand" href="../../"><img class="logoB" src="../../img/logoB.png"></a>
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target= "#navbarResponsive">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse" id="navbarResponsive">
+			<ul class="navbar-nav ml-auto">
+				<li class="nav-item">
+					<a class="nav-link" href="../../">Home</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link active" href="../">Blog</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../Quiz/">Quiz</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../FlashCards/">Flashcards</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="mailto:omsiddiqi01@gmail.com"><i class="fas fa-envelope-square"></i></a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="https://www.linkedin.com/in/owaissidd/" target="breach"><i class="fab fa-linkedin"></i></a>
+				</li>
+			</ul>
+		</div>
+	</div>
+</nav>
+
+<!--- Welcome Section -->
+<header>
+    <div class="overlay"></div>
+    <video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop">
+      <source src="../../img/Pros.mp4" type="video/mp4">
+    </video>
+    <div class="container h-100">
+      <div class="d-flex h-100 text-center align-items-center">
+        <div class="w-100 text-white">
+          <h1 class="display-3" style="text-shadow: 4px 4px 4px #333333;">The Prosthetic Arm: A Brief Look At The Physics</h1>
+        </div>
+      </div>
+    </div>
+  </header>
+  
+  <section class="my-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8 mx-auto">
+            <h2 id="contents"><ins>Contents<ins></h2>
+              <ol id="content" type="1">
+                <li><a href="#header1">The Physics Behind The Human Arm</a>
+                  <ul>
+                    <li><a href="#subheader1">Example: Arm</a></li>
+                  </ul>
+                </li>
+                <li><a href="#header2">The Physics Behind The Prosthetic Arm</a>
+                  <ul>
+                    <li><a href="#subheader2">Bending Rigidity</a></li>
+                    <li><a href="#subheader3">Area moment of inertia</a></li>
+                    <ul>
+                    <li><a href="#subheader4">Hollow Bone</a></li>
+                  </ul>
+                    <li><a href="#subheader5">Young's Modulus</a></li>
+                    <li><a href="#subheader6">Centre of Mass</a></li>
+                  </ul>
+                </li>
+                <li><a href="#header3">Mimicking Life</a></li>
+                <li><a href="#header4">Conclusion</a></li>
+                <li><a href="#header5">References</a></li>
+              </ol>
+              <p>The <em>osseointegration</em> of a prosthetic limb has allowed the quality of life for patients with either a
+                mutation
+                at birth that has led to a loss of one or more limbs or have gone through traumatic experiences
+                that has led to this injury. It not only improves the capabilities of one of these patients to manage daily
+                activities but also lets them stay independent.</p>
+              <p>For many people, an artificial limb can improve mobility and the ability to manage daily activities, as well as
+                provide the means to stay independent.</p>
+        
+              </li>
+              </ol>
+              <h2 id="header1">
+                The Physics Behind The Human Arm
+              </h2>
+              <h2 id="subheader1">
+                Example: Arm
+              </h2>
+              
+              <figure class="figure float-right text-center">
+                <img src="../../img/Amputee.png" class="figure-img img-fluid" alt="Shoulder disarticulation and forequarter amputation" title="Shoulder disarticulation and forequarter amputation">
+                <figcaption class="figure-caption"><em><strong style="padding-left: 10px;">Figure 1: </strong><a
+                  href="https://www.ottobock.co.uk/prosthetics/info-for-amputees/information-for-upper-limb-amputees-and-their-families/"
+                  target="breach">Removal of the upper arm and forearm</a></em></figcaption>
+              </figure>
+              <p>To get an idea of how body parts work and what thinking needs to go into building prosthetics, I will be using very basic Free Body Diagram to demonstrate how an arm works. The model will be of the total removal of the upper arm and forearm.</p>
+      <p>In this example, I will use the free body diagram below to show what forces are being applied to an arm when it is holding something up.</p>
+      <p>In the following diagram, we know Newton’s 3rd law, where for every force being applied, there is an opposite
+        and equal force (A reaction force), to find the force required to lift the object. We want to find the force required to lift this object.</p>
+        <figure class="figure justify-center">
+          <img src="../../img/FBD.png" class="figure-img img-fluid" alt="Free Body Diagram of an Arm" title="Free Body Diagram of an Arm">
+          <figcaption class="figure-caption text-center"><em><strong>Figure 2: </strong>Free
+            Body Diagram of an Arm</em></figcaption>
+        </figure>
+        <p>There are 4 given variables affecting the arm in this example. They are as follows:</p>
+        <ol type="I">
+          <li>The force produced by the bicep: <span class="math inline">\(F\)</span><sub><span
+                class="math inline">\(Bisceps\)</span></sub></li>
+          <li>The mass of the arm: <span class="math inline">\(m\)</span><sub><span class="math inline">\(1\)</span></sub>
+          </li>
+          <li>The mass of the object held: <span class="math inline">\(m\)</span><sub><span
+                class="math inline">\(2\)</span></sub></li>
+          <li>Acceleration due to earth's gravity: <span class="math inline">\(g = 9.81 \frac{m}{s^2}\)</span></li>
+        </ol>
+        <p><span class="math inline">\(L\)</span><sub><span class="math inline">\(E\)</span></sub> is the distance from
+          the elbow to the point of insertion of the bicep muscle.</p>
+        <p><span class="math inline">\(L\)</span><sub><span class="math inline">\(1\)</span></sub> is the distance from
+          the elbow to the forearm centre of mass.</p>
+        <p><span class="math inline">\(L\)</span><sub><span class="math inline">\(2\)</span></sub> is the distance from
+          the elbow to the held object.</p>
+        <p><span class="math inline">\(\theta\)</span> is the angle at which the bicep muscle is positioned at.</p>
+        <p>We know that the arm is not moving as there is no change in the arm over time (it's stable), this tells us that the arm is in an equilibrium state and therefore all forces are equal to 0. so we can resolve forces using: <span class="math inline">\(\sum F = 0\)</span></p>
+      <p>As stated before, the arm is not moving and is in equilibrium. From this, we can gather that there is no rotation around an axis as well, so we can take moments (&#10227 +) (clockwise direction is positive): <span class="math inline">\(\sum M = 0\)</span></p>
+      <p>In an equilibrium state, forces are equal, so forces in the clockwise direction = forces in the anti-clockwise forces. Therefore if we resolve vertically (&#8593), we get: </p>
+    <span class="math inline">\(m_1 \cdot\)</span>
+        </sub><span class="math inline">\(g + m_2 \cdot\)</span><span class="math inline">\(g + R \cdot \sin(\alpha) = F\)</span><sub><span
+            class="math inline">\(Bisceps\)</span></sub> <span class="math inline">\(\cdot\sin(180 - \theta)\)</span></p>
+            Now do the same horizontally</em> (&#8594): <span class="math inline">\(R\cdot\cos(\alpha) = F\)</span><sub><span
+              class="math inline">\(Bisceps\)</span></sub> <span class="math inline">\(\cdot \cos(180 - \theta)\)</span>
+      <p><br>Same with moments, there's no rotation as the arm is in equilibrium so we can take moments </em>(&#10227 +) about the elbow (we use the elbow as it generates an equation that includes all the relevant variables in it):</em></p>
+      <p><span class="math inline">\(m_1 \cdot g \cdot L_1 + m_2\cdot g \cdot L_2 = F\)</span><sub><span
+            class="math inline">\(Bisceps\)</span></sub> <span class="math inline">\(\cdot\sin(180 - \theta) \cdot
+          L_E\)</span></p>
+      <p><em>Rearrange to get:</em> <span class="math inline">\(F\)</span><sub><span
+            class="math inline">\(Biceps\)</span></sub> <span class="math inline">\(= \frac{g(m_1 \cdot L_1 + m_2 \cdot
+          L_2)}{L_E \cdot \sin(180 - \theta)}\)</span></p>
+          <p>Now we have <span class="math inline">\(F\)</span><sub><span
+            class="math inline">\(Biceps\)</span></sub></p>
+          <p>Next, we put both equations for resolving together to make it easier to follow:</p>
+      <p><em>Vertical</em> (&#8593):
+      </p>
+      <p><span class="math inline">\(m_1 \cdot\)</span>
+      </sub><span class="math inline">\(g + m_2\cdot\)</span><span class="math inline">\(g + R \cdot \sin(\alpha) = F\)</span><sub><span
+          class="math inline">\(Bisceps\)</span></sub> <span class="math inline">\(\cdot\sin(180 - \theta)\)</span>
+      </p>
+      <p>Horizontal (&#8594): </p><p><span class="math inline">\(R\cdot\cos(\alpha) = F\)</span><sub><span
+            class="math inline">\(Bisceps\)</span></sub> <span class="math inline">\(\cdot \cos(180 - \theta)\)</span></p>
+      <p>As we are using a right angle triangle to calculate and display the forces, seen in figure 2, we can use the Pythagorean equation to find the hypotenuse, which in this case is the reaction force:</p><p></p> <span class="math inline">\(R =
+          \sqrt{(R\cdot\cos(\alpha)^2 + (R\cdot\sin(\alpha)^2 )}\)</span></p>
+      <p><em>And the angle it acted at: </em><span class="math inline">\(\tan(\alpha) =
+          \frac{R\cdot\sin(\alpha)}{R\cdot\cos(\alpha)}\)</span> <em>Then:</em> <span class="math inline">\(\alpha =
+          \arctan(\frac{R\cdot\sin(\alpha)}{R\cdot\cos(\alpha)})\)</span></p>
+      <p>This reaction force shows us the minimum requirement the prosthetic needs to withstand to hold the object up
+        with no issues. So building a prosthetics that are strong and sturdy are vital for the patient</p>
+      <h2 id="header2">
+        The Physics Behind The Prosthetic Arm
+      </h2>
+      <h3 id="subheader2">
+        Bending Rigidity
+      </h3>
+      <p><em>Bending rigidity = (Area moment of inertia x Young’s modulus)</em></p>
+      <p>Bending rigidity is how much force the object can take before it experiences enough compression and tension and
+        bends, which can eventually lead to failure of the material at certain loads <sup>[1]</sup>. This is important
+        to understand for prosthetics as they have to withstand enough force to be useful in everyday life while also
+        being light enough to easily be moved around for daily activities that the user may do.</p>
+      <h3 id="subheader3">
+        Area moment of inertia
+      </h3>
+      <p><em>Equation 1:</em> <span class="math inline">\(I = \frac{\pi(r^4)}{4}\)</span></p>
+      <p><em>Equation 2:</em> <span class="math inline">\(I = \frac{\pi(r_2^4 - r_1^4)}{4}\)</span></p>
+      <p>Where <span class="math inline">\(I\)</span> = Area moment of inertia (<span
+          class="math inline">\(mm^4\)</span>) and <span class="math inline">\(r\)</span> = Radius of the circle (<span
+          class="math inline">\(mm\)</span>)</p>
+      <p>In classical mechanics, the area moment of inertia is defined as:
+        <blockquote class="blockquote text-center">
+          <p class="mb-0"><em>“A measure of the ‘efficiency’ of a cross-sectional shape to resist bending caused by loading.” <sup>[2]</sup></em>   
+        </blockquote>
+      <p>As bone is hollow it requires an alternative equation (<em>equation 2</em>) to calculate the moment of inertia.
+        The formula used for solid cylindrical objects seen in <em>equation 1</em> is applied to prosthetics. These
+        differences are kept in mind when researching shapes to use as the prosthetic needs to be able to handle forces
+        applied and resist bending in daily life and activities.</p>
+        <h4 id="subheader4">
+          Hollow Bone
+        </h4>
+        <p>In our biological evolution, the development of hollow bone is actually quite an incredible design that uses the limited materials the human body has at its disposal to create a structure that is, at its hardest, the same strength as a steel beam.</p>
+        <p>Due to the limited resources inside the human body, a hollow bone is actually the most logical solution due to the fact that all the material in the bone is condensed to the edges making the solid part denser and lighter at the same time due to the air pockets created. The empty space is vital for helping transport nutrients and makes the bone a regenerative environment.</p>
+      <h3 id="subheader5">
+        Young's Modulus
+      </h3>
+      <p>The youngs modulus is calculated via the following:</p>
+      <p><span class="math inline">\begin{equation*} E = \frac{\frac{F}{A}}{\frac{\Delta L}{L}}\ \end{equation*}</span>
+      </p>
+      <p>Where:
+        <div class="table-responsive-sm">
+          <table class="table" style="border-style:hidden">
+            <tr>
+              <td><span class="math inline">\(E\)</span> = Young Modulus (<span
+                  class="math inline">\(\frac{N}{m^2}\)</span>)</th>
+              <td><span class="math inline">\(F\)</span> = Force (<span class="math inline">\(N\)</span>)</th>
+            </tr>
+            <tr>
+              <td><span class="math inline">\(A\)</span> = Area (<span class="math inline">\(m^2\)</span>)</td>
+              <td><span class="math inline">\(L\)</span> = Length of object (<span class="math inline">\(m\)</span>)</td>
+            </tr>
+            <tr>
+              <td><span class="math inline">\(\Delta\)</span> = “Change in”</td>
+            </tr>
+          </table>
+        </div>
+      <br>
+      <p>The Young’s modulus is a mechanical property that measures the stiffness of a solid material <sup>[3]</sup>.
+        This is calculated by plotting a <span class="math inline">\(\frac{stress}{strain}
+          (\frac{\sigma}{\epsilon})\)</span> graph and finding the gradient of the graph. The gradient is the young’s
+        modulus. High young’s modulus values show a material that can handle large loads but is not flexible and a low
+        modulus is the inverse. So a compromise must be found between these two values to find the best material for the
+        prosthetic.</p>
+      <h3 id="subheader6">
+        Centre of Mass
+      </h3>
+      <p><span class="math inline">\begin{equation*} CoM = \frac{g(m_1 \cdot L_1 + m_2 \cdot L_2)}{g(m_1 + m_2)}\
+          \end{equation*}</span></p>
+      <p>For amputees, one issue they have to be adjusted to and for engineers to consider, is the centre of mass. The
+        loss of a limb is a loss of a large mass on one side of a person, thus altering the centre of mass of the
+        patient when compared to the average person. The force of gravity is assumed to act at this point on the person
+        and rotational force also occurs in this place and therefore has to be taken into consideration when deciding
+        the mass
+        of the prosthetic and may also be used in planning the physiotherapy for the patient later.</p>
+      <h2 id="header3">
+        Mimicking Life
+      </h2>
+      <p>While these artificial limbs have progressed leaps and bounds, from their mobility to their functionality, they
+        are
+        still just that, artificial. Previously, the cold metal prosthetic does not have the same feel to that of a
+        human limb, to touch and feel. Products such as the <a
+          href="https://hub.jhu.edu/2018/06/20/e-dermis-prosthetic-sense-of-touch/" target="breach">“Electric Skin”</a>
+        help people who miss the sense of touch by providing the artificial limb the one thing it’s missing, artificial
+        skin. The <a href="https://hub.jhu.edu/2018/06/20/e-dermis-prosthetic-sense-of-touch/" target="breach">“Electric
+          Skin”</a> stimulates the nerve endings in the hand and creates a sense of touch by sensing stimuli and
+        relaying the impulses back to the peripheral nerves <sup>[4]</sup>.</p>
+      <h2 id="header4">
+        Conclusion
+      </h2>
+      <p>These are only a few of the components (not including the electronic engineering aspect), that I've learned of, which I find most interesting when studying prosthetics and I believe that these are quite important when creating a holistic design suitable for a patient's use.
+        <p class="mb-0">
+          By <a href="https://www.linkedin.com/in/owaissidd/" target="breach">Owais M Siddiqi</a>
+        </p><br>
+        <h1 id="header5">
+          References
+        </h1>
+        <p>[1] Winn, Will (2010). Introduction to Understandable Physics: Volume I - Mechanics</p>
+        <p>[2] Learn Easy, MDME: MANUFACTURING, DESIGN, MECHANICAL ENGINEERING, <a href="http://www.learneasy.info/MDME/MEMmods/MEM30006A/Area_Moment/Area_Moment.html"
+            target="breach"><em>Area Moment of Interia</em></a>, published August 21, 2014 [Accessed 18 June 2020]</p>
+        <p>[3] The Rational mechanics of Flexible or Elastic Bodies, 1638–1788: Introduction to Leonhardi Euleri Opera
+          Omnia, vol. X and XI, Seriei Secundae. Orell Fussli.</p>
+        <p>[4] John Hopkins University, Written by Amy Lunday, <a href="https://hub.jhu.edu/2018/06/20/e-dermis-prosthetic-sense-of-touch/" target="breach">
+          <em>Biomedical engineering
+          Bringing a human touch to modern prosthetics
+        </em></a>, published Jun 20, 2018 [Accessed 20 June 2020]</p>
+                    <nav aria-label="Page navigation example">
+                        <ul class="pagination justify-content-center">
+                          <li class="page-item">
+                            <a class="page-link" href="../COVID/" aria-label="Previous">
+                              <span aria-hidden="true">&laquo;</span>
+                              <span class="sr-only">Previous</span>
+                            </a>
+                          </li>
+                          <li class="page-item"><a class="page-link" href=".././PBT/">PBT</a></li>
+                          <li class="page-item"><a class="page-link" href="../RGB/">RBG</a></li>
+                          <li class="page-item"><a class="page-link" href="../COVID/">COVID</a></li>
+                          <li class="page-item active"><a class="page-link" href="#">Prosthetics</a></li>
+                          <li class="page-item"><a class="page-link" href="../AI/">AI</a></li>
+                          <li class="page-item"><a class="page-link" href="../DNA/">DNA</a></li>
+                          <li class="page-item"><a class="page-link" href="../Dementia/">Dementia</a></li>
+                          <li class="page-item">
+                            <li class="page-item"><a class="page-link" href="../Vax/">Vax</a></li>
+                            <a class="page-link" href="../AI/" aria-label="Next">
+                              <span aria-hidden="true">&raquo;</span>
+                              <span class="sr-only">Next</span>
+                            </a>
+                          </li>
+                        </ul>
+                      </nav>
+                    </body>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+<!--- Footer -->
+<footer>
+	<div class="container-fluid padding">
+	<div class="row text-center">
+		<div class="col-md-12">
+			<div id="digital-clock"></div>
+		</div>
+	</div>
+	</div>
+	<div class="socket text-light text-center py-4">
+			<p>&copy; <a href="https://owaissiddiqi.co.uk/" target = "_blank">Owais Siddiqi All rights reserved</a></p>
+		</div>
+	</div>
+</footer>
+<button onclick="topFunction()" id="myBtn" title="Go to top">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6">
+      <path d="M12 6H0l6-6z" /></svg></button>
+</body>
+<script>
+  var mybutton = document.getElementById("myBtn");
+
+  window.onscroll = function () { scrollFunction() };
+
+  function scrollFunction() {
+      if (document.body.scrollTop > 40 || document.documentElement.scrollTop > 40) {
+          mybutton.style.display = "block";
+      } else {
+          mybutton.style.display = "none";
+      }
+  }
+
+  function topFunction() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+  }
+    
+function getDateTime() {
+	var now = new Date();
+	var year = now.getFullYear();
+	var month = now.getMonth() + 1;
+	var day = now.getDate();
+	var hour = now.getHours();
+	var minute = now.getMinutes();
+	var second = now.getSeconds();
+	if (month.toString().length == 1) {
+		month = '0' + month;
+	}
+	if (day.toString().length == 1) {
+		day = '0' + day;
+	}
+	if (hour.toString().length == 1) {
+		hour = '0' + hour;
+	}
+	if (minute.toString().length == 1) {
+		minute = '0' + minute;
+	}
+	if (second.toString().length == 1) {
+		second = '0' + second;
+	}
+	var dateTime = hour + ':' + minute + ':' + second + "<br>" + day + '/' + month + '/' + year;
+	return dateTime;
+}
+
+setInterval(function () {
+	currentTime = getDateTime();
+	document.getElementById("digital-clock").innerHTML = currentTime;
+});
+</script>
+</html>

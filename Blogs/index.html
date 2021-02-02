@@ -1,0 +1,880 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>My Blog</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet"
+        crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <link href="../style.css" rel="stylesheet">
+    <link rel="icon" href="../img/icon.png" type="image/png" sizes="16x16">
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-md navbar-light bg-light sticky-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="../"><img class="logoB" src="../img/logoB.png"></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="/Blogs/">Blog</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/Quiz/">Quiz</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/FlashCards/">Flashcards</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="mailto:omsiddiqi01@gmail.com"><i
+                                class="fas fa-envelope-square"></i></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://www.linkedin.com/in/owaissidd/"><i
+                                class="fab fa-linkedin"></i></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!--- Welcome Section -->
+    <div class="container-fluid">
+        <div class="row welcome text-center">
+            <div class="col-12">
+                <h1 class="display-4" data-aos="fade-down" data-aos-delay="250">Welcome To The Blogs.</h1>
+            </div>
+            <hr>
+            <div class="col-12" data-aos="fade-up" data-aos-delay="350">
+                <p class="lead">Here, I write about topics in Biomedical engineering and Medicine and their benefits to
+                    modern life and their potential future in society.</p>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid padding">
+        <div class="row welcome text-center" style="padding-top: 0">
+
+            <div class="col-12">
+
+
+                <ul class="filters text-center" style="padding-top: 0">
+                    <li class="active" data-filter="*"><a href="#!">All</a></li>
+                    <li data-filter=".med"><a href="#!">Medicine</a></li>
+                    <li data-filter=".bioeng"><a href="#!">Bioengineering</a></li>
+                    <li data-filter=".sci"><a href="#!">Science</a></li>
+                </ul>
+
+                <div class="projects">
+
+                    <div class="row">
+
+                        <div class="col-lg-4 item bioeng" >
+
+                            <div class="card">
+                                <img class="card-img-top" src="../img/Proton-beam-via-Varian.png">
+                                <div class="card-body d-flex flex-column">
+                                    <h4 class="card-title">Proton beam therapy</h4>
+                                    <p class="card-text"><strong>Proton Beam Therapy:</strong><br>An advanced form of
+                                        radiotherapy, with radiation treatment delivered by accelerated proton beams ...
+                                    </p>
+                                    <p class="mt-auto text-muted">Published: 19/08/2019</p>
+                                    <a href="/Blogs/PBT/" class="mt-auto btn btn-outline-secondary ">See More</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-4 item sci">
+
+                            <div class="card">
+                                <img class="card-img-top" src="../img/HumanEye.png">
+                                <div class="card-body d-flex flex-column">
+                                    <h4 class="card-title">The RGB Colour Model</h4>
+                                    <p class="card-text">We perceive color based on the stimulation levels of our cone
+                                        cells. For example, if green light entered your eye ...</p>
+                                    <p class="mt-auto text-muted">Published: 16/11/2019</p>
+                                    <a href="/Blogs/RGB/" class="mt-auto btn btn-outline-secondary">See More</a>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="col-lg-4 item med">
+
+                            <div class="card">
+                                <img class="card-img-top" src="../img/Covid19.png">
+                                <div class="card-body d-flex flex-column">
+                                    <h4 class="card-title">Coronavirus (COVID-19) Summary</h4>
+                                    <p class="card-text">Coronavirus disease 2019 (COVID-19) is a severe acute
+                                        respiratory infection. The virus was first identified ...</p>
+                                    <p class="mt-auto text-muted">Published: 31/05/2020</p>
+                                    <a href="/Blogs/COVID/" class="mt-auto btn btn-outline-secondary">See More</a>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="col-lg-4 item bioeng">
+
+                            <div class="card">
+                                <img class="card-img-top" src="../img/pros.png">
+                                <div class="card-body d-flex flex-column">
+                                    <h4 class="card-title">The Prosthetic Arm: A Brief Look At The Physics</h4>
+                                    <p class="card-text">The osseointegration of a prosthetic limb has allowed the
+                                        quality of life for patients with either a mutation at birth that has led to a
+                                        loss of one ...</p>
+                                    <p class="mt-auto text-muted">Published: 25/06/2020</p>
+                                    <a href="/Blogs/Prosthetics/" class="mt-auto btn btn-outline-secondary">See More</a>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="col-lg-4 item med">
+
+                        <div class="card">
+                            <img class="card-img-top" src="../img/AI.png">
+                            <div class="card-body d-flex flex-column">
+                                <h4 class="card-title">Is AI dangerous?</h4>
+                                <p class="card-text">The term "artificial intelligence" is used to describe the ability
+                                    of machines to learn and problem solve, to essentially mimic humans by using
+                                    specialised algorithms...</p>
+                                <p class="mt-auto text-muted">Published: 27/07/2020</p>
+                                <a href="/Blogs/AI/" class="mt-auto btn btn-outline-secondary">See More</a>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="col-lg-4 item bioeng">
+
+                        <div class="card">
+                            <img class="card-img-top" src="../img/DNA.png">
+                            <div class="card-body d-flex flex-column">
+                                <h4 class="card-title">Will DNA Data Storage Be The Future?</h4>
+                                <p class="card-text">All data is stored in a base 2 system called binary. There are only
+                                    2 values in binary, 1 and 0. In computers, these are represented as transistors, or
+                                    switches ...</p>
+                                <p class="mt-auto text-muted">Published: 01/09/2020</p>
+                                <a href="/Blogs/DNA/" class="mt-auto btn btn-outline-secondary">See More</a>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="col-lg-4 item med">
+
+                        <div class="card">
+                            <img class="card-img-top" src="../img/Dementia_Anatomy.jpg">
+                            <div class="card-body d-flex flex-column">
+                                <h4 class="card-title">What is Dementia?</h4>
+                                <p class="card-text" p><strong>Dementia</strong> is an umbrella term used to describe a
+                                    person’s decline in memory, thinking, or reasoning. There are many different types,
+                                    from Alzheimer’s...</p>
+                                </p>
+                                <p class="mt-auto text-muted">Published: 03/11/2020</p>
+                                <a href="/Blogs/Dementia/" class="mt-auto btn btn-outline-secondary">See More</a>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="col-lg-4 item med">
+
+                        <div class="card">
+                            <img class="card-img-top" src="../img/Vaccine_Frontpage.jpg">
+                            <div class="card-body d-flex flex-column">
+                                <h4 class="card-title">The COVID - 19 Vaccines</h4>
+                                <p class="card-text" p>Right now on the UK market, there are 3 released, and approved by the Medicines and Healthcare products Regulatory Agency (<em>MHRA</em>)...</p>
+                                </p>
+                                <p class="mt-auto text-muted">Published: 26/01/2021</p>
+                                <a href="/Blogs/Vax/" class="mt-auto btn btn-outline-secondary">See More</a>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    </div>
+
+    <div class="card col-12">
+        <div class="card-body text-center">
+            <div class="container">
+                <blockquote class="blockquote mb-0 text-center">
+                    <div id="quote-box"></div>
+                </blockquote>
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <!--- Connect -->
+    <div class="container-fluid padding">
+        <div class="row text-center padding">
+            <div class="col-12">
+                <h2>Contact</h2>
+            </div>
+            <div class="col-12 social padding">
+                <a href="mailto:omsiddiqi01@gmail.com"><i class="fas fa-envelope-square"></i></a>
+                <a href="https://www.linkedin.com/in/owaissidd/" target="breach"><i class="fab fa-linkedin"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <!--- Footer -->
+    <footer>
+        <div class="container-fluid padding">
+            <div class="row text-center">
+                <div class="col-md-12">
+                    <div id="digital-clock"></div>
+                </div>
+            </div>
+        </div>
+        <div class="socket text-light text-center py-4">
+            <p>&copy; <a href="https://owaissiddiqi.co.uk/" target="_blank">Owais Siddiqi All rights reserved</a></p>
+        </div>
+        </div>
+    </footer>
+    <button onclick="topFunction()" id="myBtn" title="Go to top">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6">
+            <path d="M12 6H0l6-6z" /></svg></button>
+    <script>
+        AOS.init();
+    </script>
+</body>
+<script>
+    var mybutton = document.getElementById("myBtn");
+
+    window.onscroll = function () { scrollFunction() };
+
+    function scrollFunction() {
+        if (document.body.scrollTop > 40 || document.documentElement.scrollTop > 40) {
+            mybutton.style.display = "block";
+        } else {
+            mybutton.style.display = "none";
+        }
+    }
+
+    function topFunction() {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+    }
+    function getDateTime() {
+        var now = new Date();
+        var year = now.getFullYear();
+        var month = now.getMonth() + 1;
+        var day = now.getDate();
+        var hour = now.getHours();
+        var minute = now.getMinutes();
+        var second = now.getSeconds();
+        if (month.toString().length == 1) {
+            month = '0' + month;
+        }
+        if (day.toString().length == 1) {
+            day = '0' + day;
+        }
+        if (hour.toString().length == 1) {
+            hour = '0' + hour;
+        }
+        if (minute.toString().length == 1) {
+            minute = '0' + minute;
+        }
+        if (second.toString().length == 1) {
+            second = '0' + second;
+        }
+        var dateTime = hour + ':' + minute + ':' + second + "<br>" + day + '/' + month + '/' + year;
+        return dateTime;
+    }
+
+    setInterval(function () {
+        currentTime = getDateTime();
+        document.getElementById("digital-clock").innerHTML = currentTime;
+    });
+</script>
+<script>
+    var quotes = [
+        {
+            quote: "“Remember that guy that gave up? Neither does anybody else”"
+
+        },
+        {
+            quote: "“Don’t practice until you get it right, practice until you can’t get it wrong”."
+
+        },
+        {
+            quote: "“You will NEVER regret hard work. You WILL regret not working hard”"
+
+        },
+        {
+            quote: "“One day, your life will flash before your eyes... make sure it’s worth watching”"
+
+        },
+        {
+            quote: "“The fact that you aren’t where you want to be should be enough motivation”"
+
+        },
+        {
+            quote: "“To shine in front of thousands, you have to outwork thousands in front of nobody”"
+
+        },
+        {
+            quote: "“Never focus on what other people can do better than you, focus on what you can do to be better than them”"
+
+        },
+        {
+            quote: "“The day you give up on your dreams could’ve been the day those dreams come true”"
+
+        },
+        {
+            quote: "“The pain is now, the honour is forever”"
+
+        },
+        {
+            quote: "“Eighty percent of success is showing up”"
+
+        },
+        {
+            quote: "“When you feel like quitting, remember why you started”"
+
+        },
+        {
+            quote: "“Work while the lights are off, so you can shine when the lights are the brightest”"
+
+        },
+        {
+            quote: "“8 hours of training is nothing compared to 1 second of losing”"
+
+        },
+        {
+            quote: "“It's hard to beat someone who doesn't quit”"
+        },
+        {
+            quote: "“It is better to fail in originality that to succeed in imitation”"
+        },
+        {
+            quote: "“I find that the harder I work, the more luck I seem to have”"
+        },
+        {
+            quote: "“The way to get started is to quit talking and begin doing”"
+        },
+        {
+            quote: "“If you really want to do something, you'll find a way. If you don't, you'll find an excuse”"
+        },
+        {
+            quote: "“Tell me and I forget. Teach me and I remember. Involve me and I learn”"
+        },
+        {
+            quote: "“Being a student is easy. Learning requires actual work”"
+        },
+        {
+            quote: "“Anything worth doing well is worth doing poorly at first”"
+        },
+        {
+            quote: "“Today, do what others won’t, so tomorrow, you can do what others can’t”"
+        },
+        {
+            quote: "“Everything was impossible before someone did it”"
+        },
+        {
+            quote: "“Hard work beats talent when talent fails to work hard”"
+        },
+        {
+            quote: "“No matter how good you are, there’s always someone out there who’s better. Don’t stop working till there isn’t anyone out there better”"
+        },
+        {
+            quote: "“You’re doing this for you. Nobody else”"
+        },
+
+        {
+            quote: "“You might not be 100% but give 100% of what you’ve got”"
+        },
+        {
+            quote: "“If you don’t take this serious, the more you're going to miss it when it’s taken away from you”"
+        },
+        {
+            quote: "“If you tell yourself you can’t, you won’t”"
+        },
+        {
+            quote: "“Don't think about missing a shot you haven’t taken yet”"
+        },
+        {
+            quote: "“The more you sweat in training the less you bleed in the fight”"
+        },
+        {
+            quote: "“You got to be willing to do what others won’t in order to succeed”"
+        },
+        {
+            quote: "“You don't need to be here. You GET to be here”"
+        },
+        {
+            quote: "“If you outwork yourself everyday, then no one else can outwork you”"
+        },
+        {
+            quote: "“You don’t need a plan B, if plan A fails fall, hit the ground, than get back up, and keep going until plan A works”"
+        },
+        {
+            quote: "“The only two things you can control in life are your attitude and effort”"
+        },
+        {
+            quote: "“You get what you put in”"
+        },
+        {
+            quote: "“Pain is temporary, quitting lasts forever”"
+        },
+        {
+            quote: "“Some days it’s not about doing good work, it’s about just getting the work done”"
+        },
+        {
+            quote: "“Just when the caterpillar thought the world was ending, he turned into a butterfly”"
+        },
+        {
+            quote: "“If you don't do it even when it doesn't matter, you won't do it when it does”"
+        },
+        {
+            quote: "“The moment you give up is the moment you let someone else win”"
+        },
+        {
+            quote: "“Don’t be the next me, be the first you”"
+        },
+        {
+            quote: "“It’s not whether you get knocked down, it's whether you get up”"
+        },
+        {
+            quote: "“You learn more in failure than you do in success”"
+        },
+        {
+            quote: "“Have no regrets go out there and play hard and play without fear, don't come back thinking you could have done something better”"
+        },
+        {
+            quote: "“Don't go for the one in a million because if you're 1 in a million there are 7000 others like you, be better than that, be the that 1 in a trillion”"
+        },
+        {
+            quote: "“You throw a bucket of water at a rock it doesn’t do anything. You let a drop of water fall into a rock everyday it creates a hole in that rock”"
+        },
+        {
+            quote: "“Pain temporary, success is permanent”"
+        },
+        {
+            quote: "Tough times don’t last, tough people do”"
+        },
+        {
+            quote: "“Be comfortable with being uncomfortable”"
+        },
+        {
+            quote: "“You don’t drown from falling in the water, you drown from staying there”"
+        },
+        {
+            quote: "“Don't worry about where everybody else is at. Focus on you and your progression. You'll get better by comparing yourself to you not others”"
+        },
+        {
+            quote: "“Life has no remote. Get up and change it yourself”"
+        },
+        {
+            quote: "“It’s the work that you put in when nobody is watching that gets you the furthest”"
+        },
+        {
+            quote: "“The best way to makes yourself comfortable in life, is to force yourself to go through uncomfortable situations”"
+        },
+        {
+            quote: "“Every second you aren’t working, someone else is”"
+        },
+        {
+            quote: "“Who are you doing this for?”"
+        },
+        {
+            quote: "“When you think you have given it your all, you have only given 40%. You’re not even half done working”"
+        },
+        {
+            quote: "“Luck is when hard work meets opportunity”"
+        },
+        {
+            quote: "“You wouldn’t be where you are now if it weren’t for the work you’ve already put in. Remember that next time you think about giving up”"
+        },
+        {
+            quote: "“Whether you think you can, or you think you can’t you’re right”"
+        },
+        {
+            quote: "“There are some days you don’t feel like working out. But there is never a day where you feel like losing”"
+        },
+        {
+            quote: "“Don't stop when you are tired, stop when you are done”"
+        },
+        {
+            quote: "“Hard work is useless to those who don’t believe in themselves”"
+        },
+        {
+            quote: "“If it’s not challenging you, it’s not changing you”"
+        },
+        {
+            quote: "“Somebody has to be the best, why can't it be you”"
+        },
+        {
+            quote: "“It is okay to be happy but never satisfied. Because the moment you become satisfied is the moment you lose”"
+        },
+        {
+            quote: "“If you’re not messing up, you're not working hard enough”"
+        },
+        {
+            quote: "“Winning is good but it doesn’t matter, what matters is how proud you are when you achieve it”"
+        },
+        {
+            quote: "“Practice like you've never won, perform like you've never lost”"
+        },
+        {
+            quote: "“You don’t need anyone else than yourself to believe in you”"
+        },
+        {
+            quote: "“There are plenty of difficult objects in your path, don’t let yourself become one of them”"
+        },
+        {
+            quote: "“It’s not how good you are… it’s how good you want to be”"
+        },
+        {
+            quote: "“A setback is just a comeback in disguise”"
+        },
+        {
+            quote: "“Don’t seek validation from anyone but yourself. Nobody knows how much work you do to be where you are”"
+        },
+        {
+            quote: "“You miss 100% of the shots you don’t take”"
+        },
+        {
+            quote: "“Success isn’t owned, it’s leased, and rent is due EVERY day”"
+        },
+        {
+            quote: "“Strength doesn't come from what you can do. Strength comes from overcoming the things you once thought you never could”"
+        },
+        {
+            quote: "“There are two kinds of people in this world, those who are humble and those about to be”"
+        },
+        {
+            quote: "“Great moments are born from great opportunities”"
+        },
+        {
+            quote: "“Focus on effort not outcome”"
+        },
+        {
+            quote: "“Do you want to watch TV or be on TV?”"
+        },
+        {
+            quote: "“Never give up, simple as that”"
+        },
+        {
+            quote: "“Nothing that comes easy is worth working for”"
+        },
+        {
+            quote: "“If the world never stops for you, you should never stop for it, keep pushing”"
+        },
+        {
+            quote: "“It's better to have it and not need it than need it and not have it”"
+        },
+        {
+            quote: "“Unless someone like you cares a whole awful lot, nothing is going to get better. It's not”"
+        },
+        {
+            quote: "“No-one in life is constant except yourself”"
+        },
+        {
+            quote: "“You don't drink poison just because you are thirsty”"
+        },
+        {
+            quote: "“Those who cannot acknowledge themselves will eventually fail”"
+        },
+        {
+            quote: "“The minute you think of giving up, think of the reason why you held on for so long”"
+        },
+        {
+            quote: "“There's no shame in being weak, the shame is in staying weak”"
+        },
+        {
+            quote: "“Goodbyes are only one side of the coin. You can't say goodbye until you've said hello”"
+        },
+        {
+            quote: "“People are born weak, but we have the freedom to defy our weaknesses and struggle to change ourselves”"
+        },
+        {
+            quote: "“Sometimes crying isn't the result of your weakness, it's because you've been strong for so long”"
+        },
+        {
+            quote: "“Don't believe in the you that believes in me and don't believe in the me that believes in you. Believe in the you that believes in yourself”"
+        },
+        {
+            quote: "“As soon as you start questioning your beliefs you already lost”"
+        },
+        {
+            quote: "“Of course you are different. I mean, you're another person so why be ashamed of how you are?”"
+        },
+        {
+            quote: "“Stop counting only those things you have lost! What is gone, is gone! So, ask yourself this. What is there... that still remains to you?”"
+        },
+        {
+            quote: "“Humans are strong because we have the ability to change”"
+        },
+        {
+            quote: "“There is no such thing as a “perfect” person. It’s the flaws that make us all different and unique from each other”"
+        },
+        {
+            quote: "“You haven't lost yet! You lose when you've given up!”"
+        },
+        {
+            quote: "“Sometimes you must hurt in order to know, fall in order to grow, lose in order to gain because life's greatest lessons are learned through pain”"
+        },
+        {
+            quote: "“Hard work beats talent”"
+        },
+        {
+            quote: "“Every tear tells a story because people don’t cry without a reason”"
+        },
+        {
+            quote: "“The worst thing in the world isn't being alone, it’s being around people who make you feel alone”"
+        },
+        {
+            quote: "“Ultimately we are judged by what we cannot change”"
+        },
+        {
+            quote: "“If you don’t share the pain with someone, you will never understand the pain”"
+        },
+        {
+            quote: "“The strongest people aren’t always the ones that win but the ones that never give up losing”"
+        },
+        {
+            quote: "“If all you ever do is look down on people, you won’t be able to recognize your own weaknesses”"
+        },
+        {
+            quote: "“If you don't like your destiny, don't accept it. Instead have the courage to change it the way you want it to be”"
+        },
+        {
+            quote: "“Life is not a game of luck, if you want to win, work hard”"
+        },
+        {
+            quote: "“There’s nothing crueller than letting a dream end halfway”"
+        },
+        {
+            quote: "“The future belongs to those who believe in the beauty of their dreams”"
+        },
+        {
+            quote: "“People's lives don't end only when they die, they end when the lose hope”"
+        },
+        {
+            quote: "“Moving on doesn't mean you forget about things. It just means you have to accept what's happened and continue living”"
+        },
+        {
+            quote: "“You can't fool your heart”"
+        },
+        {
+            quote: "“No matter how deep the night is, it always turns to day, eventually”"
+        },
+        {
+            quote: "“Failure is only the opportunity to begin again”"
+        },
+        , {
+            quote: "“Sometimes, the best way to solve your own problems is to help someone else”"
+        },
+        {
+            quote: "“It's time for you to look inward and start asking yourself the big question: Who are you and what do you want?”"
+        },
+        {
+            quote: "“Hope is something you give yourself. That is the meaning of inner strength”"
+        },
+        {
+            quote: "“Destiny is a funny thing. You never know how things are going to work out”"
+        },
+        {
+            quote: "“While it is always best to believe in oneself, a little help from others can be a great blessing”"
+        },
+        {
+            quote: "“Life happens wherever you are, whether you make it or not”"
+        },
+        {
+            quote: "“We don't have to know what tomorrow holds! That's why we can live for everything we're worth today!”"
+        },
+        {
+            quote: "“You can't have everything! Which is why you should treasure what do you have”"
+        },
+        {
+            quote: "“If you don't like the hand that fate’s dealt you, fight for a new one”"
+        },
+        {
+            quote: "“Sometimes you must hurt in order to know, fall in order to grow, lose in order to gain, because some of life's greatest lessons are learned through pain”"
+        },
+        {
+            quote: "“If you want to know who you are, you have to look at your real self and acknowledge what you see”"
+        },
+        {
+            quote: "“Some people are too concerned about what was and what will be”"
+        },
+        {
+            quote: "“There is just news. There is no good or bad”"
+        },
+        {
+            quote: "“If you only do what you can do, you will never be more than you are now”"
+        },
+        {
+            quote: "“Yesterday is history, tomorrow is a mystery, and today is a gift. That’s why they call it the present”"
+        },
+        {
+            quote: "“It is you who must decide whether to stay or go”"
+        },
+        {
+            quote: "“When the path you walk always leads back to yourself, you never get anywhere”"
+        },
+        {
+            quote: "“There is always something more to learn. Even for a master”"
+        },
+        {
+            quote: "“You are the master of your destiny: No one and nothing can come in between you and your destiny except you. Take destiny by the horns and have fun”"
+        },
+        {
+            quote: "“One often meets his destiny on the road he takes to avoid it”"
+        },
+        {
+            quote: "“Your mind is like this water, my friend. When it is agitated, it becomes difficult to see. But if you allow it to settle, the answer becomes clear”"
+        },
+        {
+            quote: "“If you are willing to guide it, to nurture it, to believe in it, you can”"
+        },
+        {
+            quote: "“It matters not what someone is born, but what they grow to be”"
+        },
+        {
+            quote: "“When will you realize, the more you take, the less you have”"
+        },
+        {
+            quote: "“There are no coincidences in this world”"
+        },
+        {
+            quote: "“Nothing is impossible”"
+        },
+        {
+            quote: "“Nothing's perfect, the world's not perfect. But it's there for us, trying the best it can; that's what makes it so damn beautiful”"
+        },
+        {
+            quote: "“I don't know which option you should choose. I could never advise you on that... No matter what kind of wisdom dictates the option you pick, no one will be able to tell if it's right or wrong until you arrive at some sort of outcome from your choice”"
+        },
+        {
+            quote: "“If you begin to regret, you'll dull your future decisions and let others make your choices for you. All that's left for you then is to die. Nobody can foretell the outcome. Each decision you make holds meaning only by affecting your next decision”"
+        },
+        {
+            quote: "“Work at it. All I can do is work hard. Hard work is the sum of daily efforts. It can be one step at a time”"
+        },
+        {
+            quote: "“Being weak is nothing to be ashamed of... Staying weak is”"
+        },
+        {
+            quote: "“How can you move forward if you keep regretting the past”"
+        },
+        {
+            quote: "“You haven't come this far, only to come this far”"
+        },
+        {
+            quote: "“If it's not alright in the end, then it's not the end”"
+        },
+        {
+            quote: "“We have two lives, and the second begins when we realize we only have one”"
+        },
+        {
+            quote: "“If you fear death you die everyday, one who doesn't fear death only dies once”"
+        }
+    ];
+
+    function getRandomQuote() {
+        let randomQuote = Math.floor(Math.random() * quotes.length);
+
+        return quotes[randomQuote];
+    }
+
+    function printQuote() {
+
+        let currentQuote = getRandomQuote();
+        let html = "<p class='quote'> " + currentQuote.quote + "</p>";
+
+        document.getElementById("quote-box").innerHTML = html;
+
+    }
+
+    // runs the printQuote function upon initial page load
+    printQuote();
+
+    document.getElementById('loadQuote').addEventListener("click", printQuote, false);
+</script>
+<style>
+    ul.filters {
+        display: block;
+        width: 100%;
+        margin: 0;
+        padding: 30px 0;
+    }
+
+    ul.filters>li {
+        list-style: none;
+        display: inline-block;
+    }
+
+    ul.filters>li>a {
+        display: block;
+        color: #434e5e;
+        text-decoration: none;
+        padding: 5px 20px;
+    }
+
+    ul.filters>li>a:hover {
+        background-color: #e6e9ed;
+    }
+
+    ul.filters>li.active>a {
+        color: #fff;
+        background-color: #28bea8;
+    }
+</style>
+<script>
+    (function () {
+
+        'use strict';
+
+
+        var $projects = $('.projects');
+
+        $projects.isotope({
+            itemSelector: '.item',
+            layoutMode: 'fitRows'
+        });
+
+        $('ul.filters > li').on('click', function (e) {
+
+            e.preventDefault();
+
+            var filter = $(this).attr('data-filter');
+
+            $('ul.filters > li').removeClass('active');
+            $(this).addClass('active');
+
+            $projects.isotope({ filter: filter });
+
+        });
+
+    })(jQuery);
+</script>
+
+</html>

@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>What is Dementia?</title>
+  <meta name="description" content="Dementia is an umbrella term used to describe a person’s decline in memory, thinking, or reasoning. There are many different types, from Alzheimer’s to Vascular Dementia.">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.js" integrity="sha512-d9xgZrVZpmmQlfonhQUvTR7lMPtO7NkZMkA0ABN3PHCbKA5nqylQ/yWlFAyY6hYgdF1Qh6nYiuADWwKB4C2WSw==" crossorigin="anonymous"></script>
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet"
+        crossorigin="anonymous">
+    <link href="../../style.css" rel="stylesheet">
+    <link href="./layout.css" type="text/css">
+    <link rel="icon" href="../../img/icon.png" type="image/png" sizes="16x16">
+</head>
+<body>
+
+<!-- Navigation -->
+<nav class="navbar navbar-expand-md navbar-light bg-light static-top">
+	<div class="container-fluid">
+		<a class="navbar-brand" href="../../"><img class="logoB" src="../../img/logoB.png"></a>
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target= "#navbarResponsive">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse" id="navbarResponsive">
+			<ul class="navbar-nav ml-auto">
+				<li class="nav-item">
+					<a class="nav-link" href="../../">Home</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link active" href="../">Blog</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../Quiz/">Quiz</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../FlashCards/">Flashcards</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="mailto:omsiddiqi01@gmail.com"><i class="fas fa-envelope-square"></i></a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="https://www.linkedin.com/in/owaissidd/" target="breach"><i class="fab fa-linkedin"></i></a>
+				</li>
+			</ul>
+		</div>
+	</div>
+</nav>
+
+<!--- Welcome Section -->
+<header>
+  <div class="overlay"></div>
+  <video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop">
+    <source src="../../img/mindful.mp4" type="video/mp4">
+  </video>
+  <div class="container h-100">
+    <div class="d-flex h-100 text-center align-items-center">
+      <div class="w-100 text-white">
+        <h1 class="display-3" style="text-shadow: 4px 4px 4px #333333;">What is Dementia?</h1>
+      </div>
+    </div>
+  </div>
+</header>
+  
+  <section class="my-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8 mx-auto">
+                    
+
+<h2 id="contents"><ins>Contents<ins></h2>
+  <ol type="1">
+  <li><a href="#header1">Symptoms</a></li>
+  <li><a href="#header2">Types of dementia</a>
+  <ul>
+  <li><a href="#subheader1">Alzheimer’s</a>
+  <ul>
+  <li><a href="#subheader2">Timeshift</a></li>
+  </ul></li>
+  <li><a href="#subheader3">Vascular Dementia</a></li>
+  <li><a href="#subheader4">Frontotemporal Dementia</a></li>
+  <li><a href="#subheader5">Dementia With Lewy - body (DLB)</a></li>
+  </ul></li>
+  <li><a href="#header3">Mild Cognitive Impairment (MCI)</a></li>
+  <li><a href="#header4">Treatment</a></li>
+  <li><a href="#header5">Support</a></li>
+  <li><a href="#header6">Other people’s experiences of living with dementia</a></li>
+  <li><a href="#header7">How you can support people with dementia?</a></li>
+  <li><a href="#header10">Is Dementia the end?</a></li>
+  <li><a href="#header8">Conclusion</a></li>
+  <li><a href="#header9">References</a></li>
+  </ol>
+  <p><strong>Dementia</strong> is an umbrella term used to describe a person’s decline in memory, thinking, or reasoning. There are many different types, from Alzheimer’s to Vascular Dementia.</p>
+  <h3 class="text-center">Most common types of dementia</h1>
+  <!-- Chart.js -->
+<script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels"></script>
+<div id="chart-container">
+	<canvas id="pieChart" width="600" height="600" style="padding-bottom: 5%;"></canvas>
+</div>
+<figure class="text-center">
+  <figcaption class="figure-caption"><em><strong>Figure 1:</strong> Most common types of dementia <sup>[16]</sup></em></figcaption>
+</figure>
+<script>
+  let ctx = document.getElementById('pieChart').getContext('2d');
+let labels = ["Alzheimer's", "Vascular Dementia", "Frontotemporal Dementia","Dementia with Lewy Bodies", "Younger-onset Dementia","Others"];
+let colorHex = ["#1d7af3","#f3545d","#fdaf4b","#0d7377","#e123fd","#0fedde"];
+Chart.defaults.global.defaultFontFamily =  "Poppins";
+
+let myChart = new Chart(ctx, {
+  type: 'pie',
+  data: {
+    datasets: [{
+      data: [65,15,10,4,5,1],
+      borderColor:"#252525",
+      hoverBorderWidth: 3,
+      hoverBorderColor: "#454545",
+      backgroundColor: colorHex,
+      borderWidth: 0
+    }],
+    labels: labels
+  },
+  options: {
+    responsive: true,
+    maintainAspectRatio: false,
+    legend: {
+      position: 'bottom',
+      labels : {
+				fontColor: 'rgb(154, 154, 154)',
+				fontSize: 12,
+        usePointStyle : true,
+      }
+    },
+    plugins: {
+      datalabels: {
+        color: '#fff',
+        anchor: 'end',
+        align: 'start',
+        offset: 20,
+        borderWidth: 2,
+        borderColor: '#fff',
+        borderRadius: 25,
+        backgroundColor: (context) => {
+          return context.dataset.backgroundColor;
+        },
+        font: {
+          size: '15',
+        },
+        formatter: (value) => {
+          return value + ' %';
+        }
+      }
+    }
+  }
+})
+</script>
+<!-- Chart.js -->
+  <h2 id="header1">
+  Symptoms
+  </h2>
+  <p>Dementia symptoms may include problems with <sup>[1]</sup>:</p>
+  <ul>
+  <li>Memory loss</li>
+  <li>Thinking speed</li>
+  <li>Mental sharpness and quickness</li>
+  <li>Language, such as using words incorrectly, or trouble speaking understanding</li>
+  <li>Judgement</li>
+  <li>Mood</li>
+  <li>Movement</li>
+  <li>Difficulties doing daily activities</li>
+  </ul>
+  <h2 id="header2">
+  Types of dementia
+  </h2>
+  <p>While your likelihood to develop dementia increases drastically from 65 years onwards, some people can develop dementia under 65, as young as 30. This is classified as <strong>younger onset dementia</strong> <sup>[2]</sup>, however, it is quite rare, only representing 1-5% of all dementia cases.</p>
+  <p>Dementia can affect people mentally, while it directly affects their memory and makes them forgetful, it can also make them frustrated as they begin to lose their independence and start to rely more on others because they can’t do things themselves.</p>
+  <blockquote>
+  <p class="text-center"><em>“Dementia has a physical, psychological, social, and economic impact, not only on people with dementia but also on their carers, families and society at large”</em> <sup>[3]</sup></p>
+  </blockquote>
+  <p>There are over <strong>400 different types</strong> of dementia <sup>[4]</sup>, the most common types are as follows:</p>
+  <h3 id="subheader1">
+  <a href="https://www.nhs.uk/conditions/alzheimers-disease/" target="breach">Alzheimer’s</a>
+  </h3>
+
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <figure class="text-center">
+          <img src="../../img/Alzheimer's_disease_brain_comparison.jpg" class="figure-img img-fluid" alt="pressue plot">
+          <figcaption class="figure-caption"><em><strong>Figure 2:</strong> Alzheimer's diseased brain compared to a normal one <sup>[17]</sup></em></figcaption>
+        </figure>
+      </div>
+    </div>
+  </div>
+
+  <p><strong>Alzheimer’s</strong> is the most common and therefore the most researched and understood type of dementia. Although there is no one absolute way Alzheimer’s is developed, it is thought to be caused by the formation and build-up of amyloid and tau proteins in the brain <sup>[5]</sup>. This build-up of proteins causes lethal injury to the nerve cells, resulting in the death of the cells and thus cause the brain to shrink.</p>
+  <p>The hippocampus (The part of the brain involved in forming new memories, learning and emotions) is typically the first to be affected and due to this, new memories can’t be formed and short term memory is affected. Then long term memory, with more current memories being forgotten first progressing to the eventual loss of older memories.</p>
+  <p>As Alzheimer’s continues to develop, the person may remember emotions associated with certain memories but may not remember the exact details. As time goes by, more nerve cells begin to die and there becomes a gradual decline in cognitive function.</p>
+  <p>Performing cognitive tasks such as learning new things and connecting to others socially can help prevent Alzheimer’s later in life, as well as having a healthy diet and lifestyle <sup>[6]</sup>.</p>
+  <h3 id="subheader2">
+  Timeshift
+  </h3>
+  <p>As stated previously, in Alzheimer’s, more current memories are lost first, progressively losing memories in reverse chronological order. This can lead to a phenomenon experienced by the person called “Time Shift”.</p>
+  <p>This person feels as though key milestones in their past are the present and that may result in them thinking they are in a different age, place, or still think people they knew who have passed are still alive. Time shifts can manifest in many ways, ranging from thinking they have to drop their kids to school to thinking they still have to go to work even if they retired years ago.</p>
+  <p>Due to these memories having strong connections in the brain, negating their existence can trigger a strong emotional response, so it would be best to ease them into the truth as to not cause an emotional outburst.</p>
+  <h3 id="subheader3">
+  <a href="https://www.nhs.uk/conditions/vascular-dementia/" target="breach">Vascular Dementia</a>
+  </h3>
+  <p><strong>Vascular dementia</strong> is caused by difficulties with the brain’s blood supply to its nerve cells, causing a reduction or a complete halt in oxygen and nutrients to said nerve cells. This reduced blood flow can result in damage to the nerves and lead to nerve cell death. This can be caused by a blockage or leak in the network of blood vessels in the brain called a stroke. This stroke can cause considerable damage to the brain and can therefore affect many parts of the brain from memory to language (they have difficulty remembering or speaking). Vascular dementia can be caused by either a large enough stroke (<em>Post-stroke dementia</em> ) or a series of smaller strokes (<em>Multi-infarct dementia</em>).</p>
+  <p>Another way of developing vascular dementia is through <strong>small vessel disease</strong> (<em>subcortical vascular dementia</em>), where the blood vessels in the brain begin to constrict and narrow. This type of development can lead to a more gradual loss of abilities such as the slowing of cognitive functions and problem - solving <sup>[7]</sup>.</p>
+  <p>Staying active and eating healthy in conjunction with treating high blood pressure and cholesterol can help slow down the progression of vascular dementia <sup>[8]</sup>.</p>
+  <h3 id="subheader4">
+  <a href="https://www.nhs.uk/conditions/frontotemporal-dementia/" target="breach">Frontotemporal Dementia</a>
+  </h3>
+  <figure class="text-center">
+    <img src="../../img/Temporallobes.jpg" class="figure-img img-fluid" alt="Alzheimer's diseased brain compared to a normal one">
+    <figcaption class="figure-caption"><em><strong>Figure 3:</strong> The positions of the frontal and temporal lobes of the brain <sup>[18]</sup></em></figcaption>
+  </figure>
+  <p><strong>Frontotemporal dementia</strong> is the name for various conditions where cells in the frontal and temporal lobes of the brain are damaged <sup>[9]</sup>. It is a type of dementia that is more likely to affect younger individuals than older. It is thought to occur when abnormal forms of proteins build-up, similar to Alzheimer’s, however, unlike Alzheimer’s and most dementia, it is thought to be hereditary and have a strong genetic link.</p>
+  <p>The frontotemporal section of the brain controls language, behaviour and emotional responses. The most common type of damage is damage to the frontal lobe, leading to changes in behaviour and personality, which may lead to a loss of their inhibitions. Damage to the temporal lobe can result in struggling to grasp their language <sup>[10]</sup>.</p>
+  <p>Frontotemporal dementia is challenging as the person with it may think that their behaviour is not unusual or inappropriate.</p>
+  <p>
+    People with frontotemporal dementia may require a caregiver as their ability to de independent declines. Participating in hobbies, and looking after their health can help them reduce their stress and minimise emotion outbursts that may appear as a result of this type of dementia <sup>[19]</sup>.
+  </p>
+  <h3 id="subheader5">
+  <a href="https://www.nhs.uk/conditions/dementia-with-lewy-bodies/" target="breach">Dementia With Lewy - body (DLB)</a>
+  </h2>
+  <p>Firstly, <strong>Lewy - bodies</strong> are clusters of proteins that develop in nerve cells in the brain, preventing proper intercellular communication by interrupting chemical signalling between them, leading to nerve cell death. It is not understood fully why Lewy-body dementia can give rise to its associated dementia, however, it can affect any and all parts of the brain which can result in many different symptoms such as physical degradation. It can also lead to the same symptoms as Alzheimer’s, and as it continues to develop, it can cause visual hallucinations too <sup>[11]</sup>.</p>
+  <p>Supporting someone with DLB can consist of a variety of methods. Re-assuring them that the hallucinations are not real and that you are there to aid and support them through it, and using visual/auditory aids to assist in their memorisation as it begins to degrade.</p>
+  <h3 id="header3">
+  <a href="https://www.alz.org/alzheimers-dementia/what-is-dementia/related_conditions/mild-cognitive-impairment#:~:text=Mild%20cognitive%20impairment%20(MCI)%20causes,developing%20Alzheimer&#39;s%20or%20another%20dementia." target="breach">Mild Cognitive Impairment (MCI)</a>
+  </h3>
+  <p><strong>Mild cognitive impairment</strong> (MCI) is halfway between the standard decline in cognitive function due to age and diagnosed dementia, it is not significant enough to intervene with daily activities, however, it still affects the person’s mental capabilities <sup>[12]</sup>. There are 2 types of MCI:</p>
+  <p><strong>Amnestic MCI</strong>: Where the dominant symptom is memory loss</p>
+  <p><strong>Nonamnestic MCI</strong>: Where the dominant symptom is not memory loss but is still associated with cognitive decline (e.g. physical, visual)</p>
+  <h2 id="header4">
+  Treatment
+  </h2>
+  <p>There is no cure for most types of dementia, however, there is medical care to temporarily improve or slow down the progression of it:</p>
+  <p>Acetylcholinesterase inhibitors (AChEIs) are used to slow down the progression of Alzheimer’s by inhibiting the degradation of acetylcholine, a neurotransmitter, leading to better intercellular communication <sup>[13]</sup>.</p>
+  <p>Memantine is used in conjunction with AChEIs for treating dementia, as it regulates glutamate, another neurotransmitter, which is used in cognitive functions such as memory <sup>[14]</sup>.</p>
+  <h2 id="header5">
+  Support
+  </h2>
+  <p>If you or someone you know might think they have dementia then you can find out your next steps here:</p>
+  <p class="text-center"><a href="https://www.nhs.uk/conditions/dementia/help-and-support/" target="breach">Help and support for people with dementia</a></p>
+  <h2 id="header6">
+  Other people’s experiences of living with dementia
+  </h2>
+  <p><em>Starting with Adele’s story:</em></p>
+  <p>Adeles partner ‌was diagnosed with a behavioural variant of frontotemporal dementia (bvFTD) in May 2013, at the young age of 45, an example of young-onset dementia. Adele and her partner lived together for years but he sadly passed in 2018, however, Adele continues to tell her story in the form of her blog <a href="https://alootes.wordpress.com/author/alootes/" target="breach">Alootes.</a> All about their life together and her experiences so far.</p>
+  <h2 id="header7">
+  How you can support people with dementia?
+  </h2>
+  <p>Check out the <a href="https://www.alzheimers.org.uk/" target="breach">Alzheimer’s Society</a> - an incredible charity with an aim to help sufferers of dementia and their families cope</p>
+  <p class="text-center">You can also donate to the Alzheimer’s society <a href="https://secure.alzheimers.org.uk/knowledge-ask/" target="breach">here</a> </p>
+  <h2 id="header10">
+    Is Dementia the end?
+    </h2>
+    <p>‌In most cases, dementia is not the end of the world. Many people with dementia can still lead eventful lives, with both social and physical activities. While in extreme cases, adjustments must be made to accommodate this new development, in mild cases, no such changes are necessary.</p>
+    <p>Changes are likely to occur as the condition develops however, that should not stop anyone from enjoying their life, enjoying with family. Visiting old friends, trying new things, and having a fun time is still possible with dementia.</p>
+
+      <blockquote class="blockquote">
+        <p class="mb-0 text-center"><em>“We want to reassure people that life doesn’t end when dementia begins.”</em>
+        <div class="blockquote-footer text-right">Jeremy Hughes</div>    
+      </blockquote>
+    </p>
+  <h2 id="header8">
+  Conclusion
+  </h2>
+  <p>During my time at Springfield hospital, I started reading “Understanding Behaviour in Dementia that Challenges: A Guide to Assessment and Treatment” to get a better understanding of the patients I was visiting and I learnt a lot about dementia and common misconceptions people have of it.</p>
+  <p>This page is just a concise post on dementia, giving the key points on the types of dementia and giving a head start for people, who can then <a href="https://www.youtube.com/playlist?list=PLFBC97121E960A7E5" target="breach">research further</a> if they want.</p>
+  <p>Some common misconceptions:</p>
+<div style="background-color: #333333; color:white" class="container rounded">
+    <div id="carouselContent" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner" role="listbox">
+            <div class="carousel-item active text-center p-4">
+                <p>"It won't affect me."</p>
+                <p></p>
+            </div>
+            <div class="carousel-item text-center p-4">  
+                <p>"Dementia basically means Alzheimer’s"</p>
+                <p></p>
+            </div>
+            <div class="carousel-item text-center p-4">  
+              <p>"It only happens to old people (over 65)"</p>
+              <p></p>
+            </div>
+            <div class="carousel-item text-center p-4">  
+              <p>"I can't stop it so what's the point in trying?"</p>
+              <p></p>
+            </div>
+    <div class="carousel-item text-center p-4">  
+      <p>"It only happens to old people (over 65)"</p>
+     <p></p>
+</div>
+        </div>
+        <a class="carousel-control-prev" href="#carouselContent" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselContent" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
+    </div>
+</div>
+<br>
+  <p>I want to help educate those people and get them to see the reality of dementia and its realness. Dementia affects <strong>50 million people Worldwide</strong>, and there are nearly <strong>10 million new cases every year</strong> <sup>[15]</sup>.</p>
+  <p>During my student internship, I personally saw how psychiatrists and psychologists (yes they’re different) work together with a whole multidisciplinary team consisting of nurses and other health care practitioners to provide the best, most holistic care they can provide for their patients. It inspired me to write this post, to do my part in helping people become more health literate so they can work in collaberation with their healthcare to give themselves the best quality of life they can get.</p>
+  <p class="mb-0">
+    By <a href="https://www.linkedin.com/in/owaissidd/" target="breach">Owais M Siddiqi</a>
+  </p><br>
+  <h2 id="header9">
+  References
+  </h2>
+  <p>[1] NHS Choices (2020). About dementia - Dementia guide. [online] Available at: https://www.nhs.uk/conditions/dementia/about/ [Accessed 2 Nov. 2020].</p>
+  <p>[2] YoungDementia UK. (2013). Young onset dementia facts &amp; figures. [online] Available at: https://www.youngdementiauk.org/young-onset-dementia-facts-figures [Accessed 1 Nov. 2020].</p>
+  <p>[3] World Health Organization: WHO (2020). Dementia. [online] Who.int. Available at: https://www.who.int/news-room/fact-sheets/detail/dementia [Accessed 1 Nov. 2020].</p>
+  <p>[4] Types of dementia (2020). Types of dementia. [online] Dementia. <a href="https://www.understandtogether.ie/about-dementia/what-is-dementia/types-of-dementia/#:~:text=There%20are%20over%20400%20different%20types%20of%20dementia.,Alzheimer’s%20disease%20and%20vascular%20dementia." target="breach">Available here</a> [Accessed 1 Nov. 2020].</p>
+  <p>[5] Hardy, J.A. and Higgins, G.A., 1992. Alzheimer’s disease: the amyloid cascade hypothesis. Science, 256(5054), pp.184-186. [Accessed 2 Nov. 2020]</p>
+  <p>[6] Harvard Health Publishing (2019). What can you do to avoid Alzheimer’s disease? - Harvard Health. [online] Harvard Health. <a href="https://www.health.harvard.edu/alzheimers-and-dementia/what-can-you-do-to-avoid-alzheimers-disease#:~:text=%22The%20most%20convincing%20evidence%20is,Eat%20a%20Mediterranean%20diet" target="breach">Available here</a> [Accessed 1 Nov. 2020].</p>
+  <p>[7] T O’Brien, J. and Thomas, A., 2015. Vascular dementia. The Lancet, 386(10004), pp.1698-1706. [Accessed 2 Nov. 2020]</p>
+  <p>[8] Stroke Association. (2019). Vascular dementia treatments. [online] Available at: https://www.stroke.org.uk/effects-of-stroke/vascular-dementia/treatments [Accessed 1 Nov. 2020].</p>
+  <p>[9] Alzheimer’s Disease and Dementia. (2015). Frontotemporal Dementia. [online] <a href="https://www.alz.org/alzheimers-dementia/what-is-dementia/types-of-dementia/frontotemporal-dementia#:~:text=Frontotemporal%20dementia%20(FTD)%20or%20frontotemporal,the%20regions%20behind%20your%20ears" target="breach">Available here</a>. [Accessed 1 Nov. 2020].</p>
+  <p>[10] Snowden, J.S., Neary, D. and Mann, D.M., 2002. Frontotemporal dementia. The British journal of psychiatry, 180(2), pp.140-143. [Accessed 2 Nov. 2020]</p>
+  <p>[11] Spillantini, M.G., Crowther, R.A., Jakes, R., Hasegawa, M. and Goedert, M., 1998. α-Synuclein in filamentous inclusions of Lewy bodies from Parkinson’s disease and dementia with Lewy bodies. Proceedings of the National Academy of Sciences, 95(11), pp.6469-6473. [Accessed 2 Nov. 2020]</p>
+  <p>[12] Petersen RC, Smith GE, Waring SC, Ivnik RJ, Tangalos EG, Kokmen E (1999). <a href="https://jamanetwork.com/journals/jamaneurology/fullarticle/774828" target="breach">“Mild cognitive impairment: clinical characterization and outcome”</a>. Arch. Neurol. 56 (3): 303–8. [Accessed 2 Nov. 2020]</p>
+  <p>[13] English, Brett A.; Webster, Andrew A. (2012). “Acetylcholinesterase and its Inhibitors”. Primer on the Autonomic Nervous System. Elsevier. pp. 631–633. [Accessed 2 Nov. 2020]</p>
+  <p>[14] NICE review of technology appraisal guidance 111 January 18, 2011, <a href="https://www.nice.org.uk/guidance/ta217/resources/alzheimers-disease-donepezil-galantamine-rivastigmine-and-memantine-review-final-appraisal-determination2" target="breach">Alzheimer’s disease - donepezil, galantamine, rivastigmine and memantine (review): final appraisal determination</a> [Accessed 2 Nov. 2020]</p>
+  <p>[15] World Health Organization: WHO (2020). Dementia. [online] Who.int. <a href="https://www.who.int/news-room/fact-sheets/detail/dementia#:~:text=Worldwide%2C%20around%2050%20million%20people,dependency%20among%20older%20people%20worldwide" target="breach">Available here</a> [Accessed 2 Nov. 2020].</p>
+  <p>[16] Uq.edu.au. (2017). Types of dementia. [online] Available at: https://qbi.uq.edu.au/brain/dementia/types-dementia [Accessed 2 Nov. 2020].</p>
+
+  <p>[17] Wikimedia.org. (2011). File:Alzheimer’s disease brain comparison.jpg - Wikimedia Commons. [online] <a href="https://commons.wikimedia.org/wiki/File:Alzheimer%27s_disease_brain_comparison.jpg" target="breach">Available here</a>  [Accessed 2 Nov. 2020].</p>
+  <p>[18] https://www.facebook.com/NIHAging (2019). Frontotemporal lobar degeneration consortium combines and continues research efforts. [online] National Institute on Aging. Available at: https://www.nia.nih.gov/news/frontotemporal-lobar-degeneration-consortium-combines-and-continues-research-efforts [Accessed 2 Nov. 2020].</p>
+
+  <p>[19] Mayoclinic.org. (2019). Frontotemporal dementia - Diagnosis and treatment - Mayo Clinic. [online] <a href="https://www.mayoclinic.org/diseases-conditions/frontotemporal-dementia/diagnosis-treatment/drc-20354741#:~:text=Caregivers%20should%20remember%20to%20take,families%20turn%20to%20nursing%20homes" target="breach">Available here</a>. [Accessed 3 Nov. 2020].</p>
+
+                    <nav aria-label="Page navigation example">
+                        <ul class="pagination justify-content-center">
+                          <li class="page-item">
+                            <a class="page-link" href="../DNA/" aria-label="Previous">
+                              <span aria-hidden="true">&laquo;</span>
+                              <span class="sr-only">Previous</span>
+                            </a>
+                          </li>
+                          <li class="page-item"><a class="page-link" href="../PBT/">PBT</a></li>
+                          <li class="page-item"><a class="page-link" href="../RGB/">RBG</a></li>
+                          <li class="page-item"><a class="page-link" href="../COVID/">COVID</a></li>
+                          <li class="page-item"><a class="page-link" href="../Prosthetics/">Prosthetics</a></li>
+                          <li class="page-item"><a class="page-link" href="../AI/">AI</a></li>
+                          <li class="page-item"><a class="page-link" href="../DNA/">DNA</a></li>
+                          <li class="page-item active"><a class="page-link" href="../Dementia/">Dementia</a></li>
+                          <li class="page-item">
+                            <li class="page-item"><a class="page-link" href="../Vax/">Vax</a></li>
+                            <a class="page-link" href="../Vax/" aria-label="Next">
+                              <span aria-hidden="true">&raquo;</span>
+                              <span class="sr-only">Next</span>
+                            </a>
+                          </li>
+                        </ul>
+                      </nav>
+                    </body>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+<!--- Footer -->
+<footer>
+	<div class="container-fluid padding">
+	<div class="row text-center">
+		<div class="col-md-12">
+			<div id="digital-clock"></div>
+		</div>
+	</div>
+	</div>
+	<div class="socket text-light text-center py-4">
+			<p>&copy; <a href="https://owaissiddiqi.co.uk/" target = "_blank">Owais Siddiqi All rights reserved</a></p>
+		</div>
+	</div>
+</footer>
+<button onclick="topFunction()" id="myBtn" title="Go to top">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6"><path d="M12 6H0l6-6z"/></svg></button>
+</body>
+<script>
+    var mybutton = document.getElementById("myBtn");
+    
+    window.onscroll = function() {scrollFunction()};
+    
+    function scrollFunction() {
+      if (document.body.scrollTop > 40 || document.documentElement.scrollTop > 40) {
+        mybutton.style.display = "block";
+      } else {
+        mybutton.style.display = "none";
+      }
+    }
+    
+    function topFunction() {
+      document.body.scrollTop = 0;
+      document.documentElement.scrollTop = 0;
+    }
+    
+function getDateTime() {
+	var now = new Date();
+	var year = now.getFullYear();
+	var month = now.getMonth() + 1;
+	var day = now.getDate();
+	var hour = now.getHours();
+	var minute = now.getMinutes();
+	var second = now.getSeconds();
+	if (month.toString().length == 1) {
+		month = '0' + month;
+	}
+	if (day.toString().length == 1) {
+		day = '0' + day;
+	}
+	if (hour.toString().length == 1) {
+		hour = '0' + hour;
+	}
+	if (minute.toString().length == 1) {
+		minute = '0' + minute;
+	}
+	if (second.toString().length == 1) {
+		second = '0' + second;
+	}
+	var dateTime = hour + ':' + minute + ':' + second + "<br>" + day + '/' + month + '/' + year;
+	return dateTime;
+}
+
+setInterval(function () {
+	currentTime = getDateTime();
+	document.getElementById("digital-clock").innerHTML = currentTime;
+});
+</script>
+</html>
