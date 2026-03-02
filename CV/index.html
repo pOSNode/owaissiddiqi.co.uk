@@ -1,230 +1,422 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Owais Siddiqi CV</title>
+    <title>CV – Owais Siddiqi</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet"
-        crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet" crossorigin="anonymous">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <link href="./cv_stylesheet.css" rel="stylesheet">
+    <link href="../style.css" rel="stylesheet">
     <link rel="icon" href="../img/icon.png" type="image/png" sizes="16x16">
-</head>
 
+    <style>
+        /* ── Hero ───────────────────────────────────── */
+        .cv-hero {
+            background: linear-gradient(135deg, #1a1d27 0%, #22263a 100%);
+            color: #fff;
+            padding: 4rem 1.5rem 3rem;
+            text-align: center;
+            border-bottom: 3px solid #6c63ff;
+        }
+
+        .cv-hero h1 {
+            font-size: clamp(1.8rem, 5vw, 3rem);
+            font-weight: 700;
+            letter-spacing: -0.02em;
+            margin-bottom: 0.5rem;
+        }
+
+        .cv-hero p {
+            color: rgba(255,255,255,0.6);
+            font-size: 1rem;
+            margin-bottom: 1.8rem;
+            max-width: 500px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .cv-hero-btns {
+            display: flex;
+            gap: 0.75rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn-cv-primary {
+            padding: 0.6rem 1.6rem;
+            border-radius: 8px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            background: #6c63ff;
+            color: #fff;
+            border: none;
+            text-decoration: none;
+            transition: all 0.2s;
+        }
+
+        .btn-cv-primary:hover {
+            background: #5a52d5;
+            color: #fff;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(108,99,255,0.4);
+            text-decoration: none;
+        }
+
+        .btn-cv-secondary {
+            padding: 0.6rem 1.6rem;
+            border-radius: 8px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            background: transparent;
+            color: rgba(255,255,255,0.8);
+            border: 1.5px solid rgba(255,255,255,0.25);
+            text-decoration: none;
+            transition: all 0.2s;
+        }
+
+        .btn-cv-secondary:hover {
+            border-color: rgba(255,255,255,0.6);
+            color: #fff;
+            text-decoration: none;
+        }
+
+        /* ── Stats strip ─────────────────────────────── */
+        .cv-stats {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 0;
+            background: #f8f9fa;
+            border-bottom: 1px solid #e9ecef;
+        }
+
+        .cv-stat {
+            padding: 1.2rem 2.5rem;
+            text-align: center;
+            border-right: 1px solid #e9ecef;
+        }
+
+        .cv-stat:last-child { border-right: none; }
+
+        .cv-stat-value {
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: #22263a;
+            line-height: 1;
+        }
+
+        .cv-stat-label {
+            font-size: 0.72rem;
+            color: #6c757d;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-top: 0.25rem;
+        }
+
+        @media (max-width: 576px) {
+            .cv-stat {
+                padding: 1rem 1.5rem;
+                border-right: none;
+                border-bottom: 1px solid #e9ecef;
+                width: 50%;
+            }
+        }
+
+        /* ── PDF viewer wrapper ───────────────────────── */
+        .cv-viewer-section {
+            padding: 2.5rem 1.5rem 3rem;
+            background: #f0f2f5;
+        }
+
+        .cv-viewer-wrapper {
+            max-width: 960px;
+            margin: 0 auto;
+            background: #fff;
+            border-radius: 16px;
+            box-shadow:
+                0 2px 4px rgba(0,0,0,0.04),
+                0 8px 24px rgba(0,0,0,0.08),
+                0 24px 48px rgba(0,0,0,0.06);
+            overflow: hidden;
+        }
+
+        /* Chrome bar at top of viewer */
+        .cv-viewer-chrome {
+            background: #22263a;
+            padding: 0.75rem 1.2rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .chrome-dot {
+            width: 12px; height: 12px;
+            border-radius: 50%;
+            flex-shrink: 0;
+        }
+
+        .chrome-dot-red   { background: #ff5f57; }
+        .chrome-dot-amber { background: #febc2e; }
+        .chrome-dot-green { background: #28c840; }
+
+        .chrome-title {
+            flex: 1;
+            text-align: center;
+            font-size: 0.78rem;
+            color: rgba(255,255,255,0.45);
+            font-family: monospace;
+            letter-spacing: 0.03em;
+        }
+
+        /* The iframe itself */
+        .cv-iframe {
+            width: 100%;
+            height: 85vh;
+            min-height: 600px;
+            border: none;
+            display: block;
+        }
+
+        /* Mobile fallback */
+        .cv-mobile-fallback {
+            display: none;
+            padding: 3rem 1.5rem;
+            text-align: center;
+        }
+
+        .cv-mobile-fallback p {
+            color: #6c757d;
+            margin-bottom: 1.5rem;
+        }
+
+        @media (max-width: 767px) {
+            .cv-iframe           { display: none; }
+            .cv-mobile-fallback  { display: block; }
+            .cv-viewer-chrome    { display: none; }
+        }
+
+        /* ── Skills chips ────────────────────────────── */
+        .cv-skills-section {
+            padding: 2.5rem 1.5rem;
+            max-width: 960px;
+            margin: 0 auto;
+        }
+
+        .cv-skills-section h2 {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: #22263a;
+            margin-bottom: 1.2rem;
+            text-align: center;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            font-size: 0.8rem;
+            color: #6c757d;
+        }
+
+        .skills-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            justify-content: center;
+        }
+
+        .skill-chip {
+            padding: 0.35rem 0.9rem;
+            border-radius: 999px;
+            font-size: 0.8rem;
+            font-weight: 500;
+            border: 1.5px solid transparent;
+        }
+
+        .chip-purple { background: rgba(108,99,255,.1);  color: #6c63ff; border-color: rgba(108,99,255,.2); }
+        .chip-teal   { background: rgba(0,201,167,.1);   color: #00a88c; border-color: rgba(0,201,167,.2); }
+        .chip-blue   { background: rgba(77,159,255,.1);  color: #2b85e0; border-color: rgba(77,159,255,.2); }
+        .chip-rose   { background: rgba(255,101,132,.1); color: #e04a6a; border-color: rgba(255,101,132,.2); }
+
+        /* Divider between skills and contact */
+        .section-divider {
+            border: none;
+            border-top: 1px solid #e9ecef;
+            max-width: 960px;
+            margin: 0 auto;
+        }
+    </style>
+</head>
 <body>
 
-    <!-- Navigation -->
-    <nav class="navbar navbar-expand-md navbar-light bg-light">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="../"><img class="logoB" src="../img/logoB.png"></a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarResponsive">
-                <ul class="navbar-nav ml-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="/">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/Blogs/">Blog</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/Quiz/">Quiz</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/FlashCards/">Flashcards</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link active" href="/CV/">CV</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="mailto:omsiddiqi01@gmail.com"><i
-                                class="fas fa-envelope-square"></i></a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="https://www.linkedin.com/in/owaissidd/"><i
-                                class="fab fa-linkedin"></i></a>
-                    </li>
-                </ul>
-            </div>
+<!-- Navigation -->
+<nav class="navbar navbar-expand-md navbar-light bg-light sticky-top">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="../"><img class="logoB" src="../img/logoB.png"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="/Blogs/">Blog</a></li>
+                <li class="nav-item"><a class="nav-link" href="/Quiz/">Quiz</a></li>
+                <li class="nav-item"><a class="nav-link" href="/FlashCards/">Flashcards</a></li>
+                <li class="nav-item"><a class="nav-link active" href="/CV/">CV</a></li>
+                <li class="nav-item"><a class="nav-link" href="mailto:omsiddiqi01@gmail.com"><i class="fas fa-envelope-square"></i></a></li>
+                <li class="nav-item"><a class="nav-link" href="https://www.linkedin.com/in/owaissidd/" target="_blank"><i class="fab fa-linkedin"></i></a></li>
+            </ul>
         </div>
-    </nav>
-<!--- Welcome Section -->
-<div class="container-fluid">
-    <div class="row welcome text-center">
-        <div class="col-12">
-            <h1 class="display-4" data-aos="fade-down" data-aos-delay="250">Welcome To My CV.</h1>
+    </div>
+</nav>
+
+<!-- Hero -->
+<div class="cv-hero" data-aos="fade-down">
+    <h1>Owais Siddiqi</h1>
+    <p>Data Scientist &nbsp;·&nbsp; Bioinformatics &nbsp;·&nbsp; MSc Biomedical Engineering</p>
+    <div class="cv-hero-btns">
+        <a href="./Owais_Siddiqi_CV.pdf" download class="btn-cv-primary">
+            <i class="fas fa-download" style="margin-right:0.4rem"></i> Download CV
+        </a>
+        <a href="https://www.linkedin.com/in/owaissidd/" target="_blank" class="btn-cv-secondary">
+            <i class="fab fa-linkedin" style="margin-right:0.4rem"></i> LinkedIn
+        </a>
+        <a href="mailto:omsiddiqi01@gmail.com" class="btn-cv-secondary">
+            <i class="fas fa-envelope" style="margin-right:0.4rem"></i> Email
+        </a>
+    </div>
+</div>
+
+<!-- Stats strip -->
+<div class="cv-stats" data-aos="fade-up" data-aos-delay="100">
+    <div class="cv-stat">
+        <div class="cv-stat-value">2+</div>
+        <div class="cv-stat-label">Years Experience</div>
+    </div>
+    <div class="cv-stat">
+        <div class="cv-stat-value">MSc</div>
+        <div class="cv-stat-label">Imperial College London</div>
+    </div>
+    <div class="cv-stat">
+        <div class="cv-stat-value">1st</div>
+        <div class="cv-stat-label">BEng, Queen Mary</div>
+    </div>
+    <div class="cv-stat">
+        <div class="cv-stat-value">3</div>
+        <div class="cv-stat-label">Industry Roles</div>
+    </div>
+</div>
+
+<!-- Skills chips -->
+<div class="cv-skills-section" data-aos="fade-up" data-aos-delay="150">
+    <h2>Technical Stack</h2>
+    <div class="skills-grid">
+        <span class="skill-chip chip-purple">Python</span>
+        <span class="skill-chip chip-purple">R</span>
+        <span class="skill-chip chip-purple">SQL</span>
+        <span class="skill-chip chip-purple">Bash</span>
+        <span class="skill-chip chip-purple">PyTorch</span>
+        <span class="skill-chip chip-purple">TensorFlow</span>
+        <span class="skill-chip chip-purple">Scikit-learn</span>
+        <span class="skill-chip chip-purple">LightGBM</span>
+        <span class="skill-chip chip-teal">RNA-seq</span>
+        <span class="skill-chip chip-teal">DESeq2</span>
+        <span class="skill-chip chip-teal">STAR-Fusion</span>
+        <span class="skill-chip chip-teal">Nextflow</span>
+        <span class="skill-chip chip-teal">Salmon</span>
+        <span class="skill-chip chip-teal">HDBSCAN</span>
+        <span class="skill-chip chip-blue">GCP</span>
+        <span class="skill-chip chip-blue">Docker</span>
+        <span class="skill-chip chip-blue">HPC</span>
+        <span class="skill-chip chip-blue">CI/CD</span>
+        <span class="skill-chip chip-blue">Git</span>
+        <span class="skill-chip chip-rose">Streamlit</span>
+        <span class="skill-chip chip-rose">Plotly</span>
+        <span class="skill-chip chip-rose">Pandas</span>
+        <span class="skill-chip chip-rose">NumPy</span>
+    </div>
+</div>
+
+<hr class="section-divider">
+
+<!-- PDF Viewer -->
+<div class="cv-viewer-section" data-aos="fade-up" data-aos-delay="200">
+    <div class="cv-viewer-wrapper">
+        <!-- Decorative chrome bar -->
+        <div class="cv-viewer-chrome">
+            <span class="chrome-dot chrome-dot-red"></span>
+            <span class="chrome-dot chrome-dot-amber"></span>
+            <span class="chrome-dot chrome-dot-green"></span>
+            <span class="chrome-title">Owais_Siddiqi_CV.pdf</span>
         </div>
-        <hr>
-        <div class="col-12" data-aos="fade-up" data-aos-delay="350">
-            <!-- Embedded PDF for larger screens -->
-            <div class="card d-none d-md-block">
-                <div class="card-body">
-                    <div class="embed-responsive embed-responsive-16by9">
-                        <iframe class="embed-responsive-item" src="./Owais_Siddiqi_CV.pdf#zoom=90" ></iframe>
-                    </div>
-                </div>
-            </div>
-            <!-- Link to open PDF in new tab for smaller screens -->
-            <div class="d-md-none">
-                <h1><a href="./Owais_Siddiqi_CV.pdf" target="_blank">View CV</a></h1>
-            </div>
+
+        <!-- Desktop: embedded PDF -->
+        <iframe
+            class="cv-iframe"
+            src="./Owais_Siddiqi_CV.pdf#zoom=90&toolbar=0&navpanes=0"
+            title="Owais Siddiqi CV">
+        </iframe>
+
+        <!-- Mobile: friendly fallback -->
+        <div class="cv-mobile-fallback">
+            <i class="fas fa-file-pdf" style="font-size:3rem; color:#6c63ff; margin-bottom:1rem; display:block"></i>
+            <p>PDF preview isn't available on smaller screens.</p>
+            <a href="./Owais_Siddiqi_CV.pdf" target="_blank" class="btn-cv-primary">Open CV in new tab</a>
+            <br><br>
+            <a href="./Owais_Siddiqi_CV.pdf" download class="btn-cv-secondary" style="color:#6c757d; border-color:#dee2e6;">
+                <i class="fas fa-download" style="margin-right:0.4rem"></i> Download instead
+            </a>
         </div>
     </div>
 </div>
 
-
-
-  
-
-    <!--- Connect -->
-    <div class="container-fluid padding">
-        <div class="row text-center padding">
-            <div class="col-12">
-                <h2>Contact</h2>
-            </div>
-            <div class="col-12 social padding">
-                <a href="mailto:omsiddiqi01@gmail.com"><i class="fas fa-envelope-square"></i></a>
-                <a href="https://www.linkedin.com/in/owaissidd/" target="breach"><i class="fab fa-linkedin"></i></a>
-            </div>
+<!-- Contact -->
+<div class="container-fluid padding">
+    <div class="row text-center padding">
+        <div class="col-12"><h2>Contact</h2></div>
+        <div class="col-12 social padding">
+            <a href="mailto:omsiddiqi01@gmail.com"><i class="fas fa-envelope-square"></i></a>
+            <a href="https://www.linkedin.com/in/owaissidd/" target="_blank"><i class="fab fa-linkedin"></i></a>
         </div>
     </div>
+</div>
 
-    <!--- Footer -->
-    <footer>
-        <div class="container-fluid padding">
-            <div class="row text-center">
-                <div class="col-md-12">
-                    <div id="digital-clock"></div>
-                </div>
-            </div>
+<!-- Footer -->
+<footer>
+    <div class="container-fluid padding">
+        <div class="row text-center">
+            <div class="col-md-12"><div id="digital-clock"></div></div>
         </div>
-        <div class="socket text-light text-center py-4">
-            <p>&copy; <a href="https://owaissiddiqi.co.uk/" target="_blank">Owais Siddiqi All rights reserved</a></p>
-        </div>
-        </div>
-    </footer>
-    <button onclick="topFunction()" id="myBtn" title="Go to top">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6">
-            <path d="M12 6H0l6-6z" /></svg></button>
-    <script>
-        AOS.init();
-    </script>
-</body>
+    </div>
+    <div class="socket text-light text-center py-4">
+        <p>&copy; <a href="https://owaissiddiqi.co.uk/" target="_blank">Owais Siddiqi All rights reserved</a></p>
+    </div>
+</footer>
+
+<button onclick="topFunction()" id="myBtn" title="Go to top">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6"><path d="M12 6H0l6-6z"/></svg>
+</button>
+
 <script>
-    var mybutton = document.getElementById("myBtn");
+    AOS.init();
 
-    window.onscroll = function () { scrollFunction() };
-
-    function scrollFunction() {
-        if (document.body.scrollTop > 40 || document.documentElement.scrollTop > 40) {
-            mybutton.style.display = "block";
-        } else {
-            mybutton.style.display = "none";
-        }
-    }
-
-    function topFunction() {
-        document.body.scrollTop = 0;
-        document.documentElement.scrollTop = 0;
-    }
-    function getDateTime() {
-        var now = new Date();
-        var year = now.getFullYear();
-        var month = now.getMonth() + 1;
-        var day = now.getDate();
-        var hour = now.getHours();
-        var minute = now.getMinutes();
-        var second = now.getSeconds();
-        if (month.toString().length == 1) {
-            month = '0' + month;
-        }
-        if (day.toString().length == 1) {
-            day = '0' + day;
-        }
-        if (hour.toString().length == 1) {
-            hour = '0' + hour;
-        }
-        if (minute.toString().length == 1) {
-            minute = '0' + minute;
-        }
-        if (second.toString().length == 1) {
-            second = '0' + second;
-        }
-        var dateTime = hour + ':' + minute + ':' + second + "<br>" + day + '/' + month + '/' + year;
-        return dateTime;
-    }
-
-    setInterval(function () {
-        currentTime = getDateTime();
-        document.getElementById("digital-clock").innerHTML = currentTime;
+    var mybutton = document.getElementById('myBtn');
+    window.addEventListener('scroll', function() {
+        mybutton.style.display = (document.documentElement.scrollTop > 40) ? 'block' : 'none';
     });
+    function topFunction() { window.scrollTo({ top: 0, behavior: 'smooth' }); }
+
+    function getDateTime() {
+        var now = new Date(), p = function(n){ return (n<10?'0':'')+n; };
+        return p(now.getHours())+':'+p(now.getMinutes())+':'+p(now.getSeconds())
+            +'<br>'+p(now.getDate())+'/'+p(now.getMonth()+1)+'/'+now.getFullYear();
+    }
+    setInterval(function(){
+        var el = document.getElementById('digital-clock');
+        if(el) el.innerHTML = getDateTime();
+    }, 1000);
 </script>
-
-<style>
-    ul.filters {
-        display: block;
-        width: 100%;
-        margin: 0;
-        padding: 30px 0;
-    }
-
-    ul.filters>li {
-        list-style: none;
-        display: inline-block;
-    }
-
-    ul.filters>li>a {
-        display: block;
-        color: #434e5e;
-        text-decoration: none;
-        padding: 5px 20px;
-    }
-
-    ul.filters>li>a:hover {
-        background-color: #e6e9ed;
-    }
-
-    ul.filters>li.active>a {
-        color: #fff;
-        background-color: #28bea8;
-    }
-</style>
-<script>
-    (function () {
-
-        'use strict';
-
-
-        var $projects = $('.projects');
-
-        $projects.isotope({
-            itemSelector: '.item',
-            layoutMode: 'fitRows'
-        });
-
-        $('ul.filters > li').on('click', function (e) {
-
-            e.preventDefault();
-
-            var filter = $(this).attr('data-filter');
-
-            $('ul.filters > li').removeClass('active');
-            $(this).addClass('active');
-
-            $projects.isotope({ filter: filter });
-
-        });
-
-    })(jQuery);
-</script>
-
+</body>
 </html>

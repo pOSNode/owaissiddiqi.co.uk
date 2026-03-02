@@ -1,281 +1,731 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Owais Siddiqi - Biomedical Engineer</title>
-	<meta name="author" content= "Owais Siddiqi"/>
-	<meta name="description" content="This is Owais Siddiqi's official website. It is where I talk about a variety of topics I am interested in, ranging from Biomedical Engineering to Medicine, in my blogs posts"/>
-	<meta name="google-site-verification" content="cPBmEeMxy8bhGVYaH28enfW3Rb-UgrrEfORHfCQRsjo" />
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-	<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-	<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet"
-		crossorigin="anonymous">
-		<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-	<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-	<link href="./style.css" rel="stylesheet">
-	<link rel="icon" href="img/icon.png" type="image/png" sizes="32x32">
-	<link rel="canonical" href="https://owaissiddiqi.co.uk/">
-	<link rel="apple-touch-icon" sizes="120x120" href="img/apple-touch-icon.png" /> <link rel="apple-touch-icon" sizes="152x152" href="img/apple-touch-icon.png" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Owais Siddiqi – Data Scientist</title>
+    <meta name="author" content="Owais Siddiqi"/>
+    <meta name="description" content="Owais Siddiqi — Data Scientist specialising in bioinformatics, machine learning, and clinical data engineering."/>
+    <meta name="google-site-verification" content="cPBmEeMxy8bhGVYaH28enfW3Rb-UgrrEfORHfCQRsjo"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet" crossorigin="anonymous">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- Inter font — same as CV page -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="./style.css" rel="stylesheet">
+    <link rel="icon" href="img/icon.png" type="image/png" sizes="32x32">
+    <link rel="canonical" href="https://owaissiddiqi.co.uk/">
+    <link rel="apple-touch-icon" sizes="120x120" href="img/apple-touch-icon.png"/>
+    <link rel="apple-touch-icon" sizes="152x152" href="img/apple-touch-icon.png"/>
+
+    <style>
+        /* ── Base ────────────────────────────────────── */
+        body, html {
+            font-family: 'Inter', sans-serif !important;
+        }
+
+        /* ── Navbar tweaks ───────────────────────────── */
+        .navbar { border-bottom: 1px solid rgba(0,0,0,0.06); }
+
+        /* ── HERO ────────────────────────────────────── */
+        .hero {
+            background: linear-gradient(135deg, #0f1117 0%, #1a1d27 50%, #22263a 100%);
+            color: #fff;
+            padding: 6rem 1.5rem 5rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Subtle grid texture */
+        .hero::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background-image:
+                linear-gradient(rgba(108,99,255,0.04) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(108,99,255,0.04) 1px, transparent 1px);
+            background-size: 40px 40px;
+            pointer-events: none;
+        }
+
+        /* Glowing orb */
+        .hero::after {
+            content: '';
+            position: absolute;
+            top: -80px; left: 50%;
+            transform: translateX(-50%);
+            width: 500px; height: 500px;
+            background: radial-gradient(circle, rgba(108,99,255,0.15) 0%, transparent 70%);
+            pointer-events: none;
+        }
+
+        .hero-inner { position: relative; z-index: 1; max-width: 700px; margin: 0 auto; }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            background: rgba(108,99,255,0.15);
+            border: 1px solid rgba(108,99,255,0.3);
+            color: #a89fff;
+            font-size: 0.78rem;
+            font-weight: 600;
+            letter-spacing: 0.06em;
+            text-transform: uppercase;
+            padding: 0.35rem 0.9rem;
+            border-radius: 999px;
+            margin-bottom: 1.5rem;
+        }
+
+        .hero-badge .dot {
+            width: 6px; height: 6px;
+            background: #6c63ff;
+            border-radius: 50%;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 1; transform: scale(1); }
+            50%       { opacity: 0.5; transform: scale(0.8); }
+        }
+
+        .hero h1 {
+            font-size: clamp(2.4rem, 7vw, 4rem);
+            font-weight: 800;
+            letter-spacing: -0.03em;
+            line-height: 1.1;
+            margin-bottom: 1rem;
+            color: #fff;
+        }
+
+        .hero h1 .accent { color: #6c63ff; }
+
+        .hero-sub {
+            font-size: clamp(1rem, 2.5vw, 1.15rem);
+            color: rgba(255,255,255,0.55);
+            line-height: 1.7;
+            margin-bottom: 2rem;
+            max-width: 540px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .hero-btns {
+            display: flex;
+            gap: 0.75rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-bottom: 3rem;
+        }
+
+        .btn-hero-primary {
+            padding: 0.7rem 1.8rem;
+            border-radius: 10px;
+            font-size: 0.92rem;
+            font-weight: 600;
+            background: #6c63ff;
+            color: #fff;
+            border: none;
+            text-decoration: none;
+            transition: all 0.2s;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+        }
+        .btn-hero-primary:hover {
+            background: #5a52d5;
+            color: #fff;
+            text-decoration: none;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px rgba(108,99,255,0.4);
+        }
+
+        .btn-hero-secondary {
+            padding: 0.7rem 1.8rem;
+            border-radius: 10px;
+            font-size: 0.92rem;
+            font-weight: 600;
+            background: transparent;
+            color: rgba(255,255,255,0.75);
+            border: 1.5px solid rgba(255,255,255,0.2);
+            text-decoration: none;
+            transition: all 0.2s;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+        }
+        .btn-hero-secondary:hover {
+            border-color: rgba(255,255,255,0.5);
+            color: #fff;
+            text-decoration: none;
+        }
+
+        /* Stats row in hero */
+        .hero-stats {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 2rem;
+            padding-top: 2.5rem;
+            border-top: 1px solid rgba(255,255,255,0.08);
+        }
+
+        .hero-stat-value {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: #fff;
+            line-height: 1;
+        }
+
+        .hero-stat-label {
+            font-size: 0.72rem;
+            color: rgba(255,255,255,0.4);
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-top: 0.2rem;
+        }
+
+        /* ── Carousel ────────────────────────────────── */
+        #slides .carousel-item img {
+            width: 100%;
+            object-fit: cover;
+            max-height: 75vh;
+            min-height: 300px;
+        }
+
+        @media (max-width: 576px) {
+            #slides .carousel-caption h1.display-2 { font-size: 1.8rem; }
+            #slides .carousel-caption h3 { font-size: 0.95rem; }
+        }
+
+        /* ── Section: About ──────────────────────────── */
+        .about-section {
+            padding: 5rem 1.5rem;
+            background: #fff;
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        @media (max-width: 768px) {
+            .about-grid { grid-template-columns: 1fr; gap: 2rem; }
+        }
+
+        .about-label {
+            font-size: 0.72rem;
+            font-weight: 700;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: #6c63ff;
+            margin-bottom: 0.75rem;
+        }
+
+        .about-section h2 {
+            font-size: clamp(1.6rem, 4vw, 2.2rem);
+            font-weight: 800;
+            letter-spacing: -0.02em;
+            color: #0f1117;
+            margin-bottom: 1.2rem;
+            line-height: 1.2;
+        }
+
+        .about-section p {
+            color: #4a5568;
+            line-height: 1.75;
+            font-size: 0.97rem;
+            margin-bottom: 1rem;
+        }
+
+        .about-img {
+            border-radius: 20px;
+            width: 100%;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.12);
+        }
+
+        /* Discipline cards: Physics + Biology */
+        .discipline-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+
+        @media (max-width: 500px) {
+            .discipline-grid { grid-template-columns: 1fr; }
+        }
+
+        .discipline-card {
+            background: #f8f9ff;
+            border: 1px solid #e8e8ff;
+            border-radius: 14px;
+            padding: 1.25rem;
+        }
+
+        .discipline-card i {
+            font-size: 1.5rem;
+            margin-bottom: 0.6rem;
+            display: block;
+        }
+
+        .discipline-card h4 {
+            font-size: 0.9rem;
+            font-weight: 700;
+            color: #0f1117;
+            margin-bottom: 0.4rem;
+        }
+
+        .discipline-card p {
+            font-size: 0.8rem;
+            color: #6c757d;
+            margin: 0;
+            line-height: 1.55;
+        }
+
+        /* ── Section: Blog intro ─────────────────────── */
+        .blog-intro-section {
+            background: #f8f9fc;
+            padding: 5rem 1.5rem;
+            border-top: 1px solid #eef0f5;
+            border-bottom: 1px solid #eef0f5;
+        }
+
+        .blog-intro-inner {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        @media (max-width: 768px) {
+            .blog-intro-inner { grid-template-columns: 1fr; gap: 2rem; }
+            .blog-intro-img-wrap { order: -1; }
+        }
+
+        .blog-intro-section h2 {
+            font-size: clamp(1.6rem, 4vw, 2.2rem);
+            font-weight: 800;
+            letter-spacing: -0.02em;
+            color: #0f1117;
+            margin-bottom: 1rem;
+            line-height: 1.2;
+        }
+
+        .blog-intro-section p {
+            color: #4a5568;
+            line-height: 1.75;
+            font-size: 0.97rem;
+            margin-bottom: 1rem;
+        }
+
+        .blog-intro-img {
+            border-radius: 20px;
+            width: 100%;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.1);
+        }
+
+        /* ── Parallax divider ────────────────────────── */
+        .fixed-background {
+            border-top: 2px solid black;
+        }
+
+        /* iOS Safari fix */
+        .ios-parallax-fallback .fixed-wrap {
+            position: absolute !important;
+            clip: unset !important;
+            top: 0 !important;
+            height: 100% !important;
+        }
+        .ios-parallax-fallback .fixed {
+            position: absolute !important;
+            background-attachment: scroll !important;
+            top: -20% !important;
+            height: 140% !important;
+            will-change: transform;
+        }
+
+        /* ── Hobbies ─────────────────────────────────── */
+        section.hobbies {
+            background: linear-gradient(135deg, #0062E6 0%, #33AEFF 100%);
+        }
+
+        .hobbies h3.section-heading {
+            font-size: clamp(1.5rem, 4vw, 2rem);
+            font-weight: 800;
+            color: #fff;
+            text-shadow: 0 2px 8px rgba(0,0,0,0.25);
+            letter-spacing: -0.01em;
+        }
+
+        .hobbies .card {
+            border: none;
+            border-radius: 16px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .hobbies .card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 32px rgba(0,0,0,0.15);
+        }
+
+        .hobbies .card-title {
+            font-size: 0.78rem;
+            letter-spacing: 0.08em;
+            font-weight: 700;
+        }
+
+        .hobbies .card-body { padding: 1.5rem; }
+
+        .hobbies ul.fa-ul { margin-left: 1.5em; }
+
+        .hobbies ul.fa-ul li {
+            font-size: 0.875rem;
+            color: #444;
+            line-height: 1.65;
+            margin-bottom: 0.75rem;
+        }
+
+        /* ── Contact ─────────────────────────────────── */
+        .contact-section { padding: 4rem 1.5rem; text-align: center; }
+        .contact-section h2 {
+            font-size: 1.8rem;
+            font-weight: 800;
+            color: #0f1117;
+            margin-bottom: 1.5rem;
+            letter-spacing: -0.02em;
+        }
+
+        /* ── Footer ──────────────────────────────────── */
+        footer {
+            background: #1a1d27;
+            color: rgba(255,255,255,0.5);
+            padding-top: 2rem;
+            font-size: 0.875rem;
+        }
+
+        .socket {
+            background: #0f1117;
+            border-top: 1px solid rgba(255,255,255,0.06);
+        }
+        .socket a { color: rgba(255,255,255,0.4); text-decoration: none; }
+        .socket a:hover { color: rgba(255,255,255,0.7); }
+
+        #digital-clock { font-size: 1.3rem; color: rgba(255,255,255,0.3); }
+
+        /* ── Scroll to top ───────────────────────────── */
+        #myBtn {
+            display: none;
+            position: fixed;
+            bottom: 1.5rem; right: 1.5rem;
+            z-index: 99;
+            background: #6c63ff;
+            border: none;
+            border-radius: 50%;
+            width: 44px; height: 44px;
+            cursor: pointer;
+            box-shadow: 0 4px 20px rgba(108,99,255,0.4);
+            transition: transform 0.2s;
+        }
+        #myBtn:hover { transform: translateY(-3px); }
+        #myBtn svg { width: 14px; height: 14px; fill: #fff; display: block; margin: auto; }
+    </style>
 </head>
 <body>
 
 <!-- Navigation -->
 <nav class="navbar navbar-expand-md navbar-light bg-light sticky-top">
-	<div class="container-fluid">
-		<a class="navbar-brand" href="/"><img class="logoB" src="img/logoB.png"></a>
-		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target= "#navbarResponsive">
-			<span class="navbar-toggler-icon"></span>
-		</button>
-		<div class="collapse navbar-collapse" id="navbarResponsive">
-			<ul class="navbar-nav ml-auto">
-				<li class="nav-item active">
-					<a class="nav-link" href="/">Home</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" href="./Blogs/">Blog</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" href="./Quiz/">Quiz</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" href="./FlashCards/">Flashcards</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" href="/CV/">CV</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" href="mailto:omsiddiqi01@gmail.com"><i class="fas fa-envelope-square"></i></a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" href="https://www.linkedin.com/in/owaissidd/" target="breach"><i class="fab fa-linkedin"></i></a>
-				</li>
-			</ul>
-		</div>
-	</div>
+    <div class="container-fluid">
+        <a class="navbar-brand" href="/"><img class="logoB" src="img/logoB.png"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item active"><a class="nav-link" href="/">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="./Blogs/">Blog</a></li>
+                <li class="nav-item"><a class="nav-link" href="./Quiz/">Quiz</a></li>
+                <li class="nav-item"><a class="nav-link" href="./FlashCards/">Flashcards</a></li>
+                <li class="nav-item"><a class="nav-link" href="/CV/">CV</a></li>
+                <li class="nav-item"><a class="nav-link" href="mailto:omsiddiqi01@gmail.com"><i class="fas fa-envelope-square"></i></a></li>
+                <li class="nav-item"><a class="nav-link" href="https://www.linkedin.com/in/owaissidd/" target="_blank"><i class="fab fa-linkedin"></i></a></li>
+            </ul>
+        </div>
+    </div>
 </nav>
 
-<!--- Image Slider -->
+<!-- Hero -->
+<div class="hero" data-aos="fade-in">
+    <div class="hero-inner">
+        <div class="hero-badge" data-aos="fade-down" data-aos-delay="100">
+            <span class="dot"></span> Available for opportunities
+        </div>
+        <h1 data-aos="fade-up" data-aos-delay="150">
+            Hi, I'm <span class="accent">Owais</span> Siddiqi
+        </h1>
+        <p class="hero-sub" data-aos="fade-up" data-aos-delay="200">
+            Data Scientist specialising in bioinformatics, machine learning, and clinical data analytics.
+            MSc Biomedical Engineering · Imperial College London.
+        </p>
+        <div class="hero-btns" data-aos="fade-up" data-aos-delay="250">
+            <a href="./Blogs/" class="btn-hero-primary">
+                <i class="fas fa-book-open"></i> Read My Blog
+            </a>
+            <a href="/CV/" class="btn-hero-secondary">
+                <i class="fas fa-file-alt"></i> View CV
+            </a>
+            <a href="./Quiz/" class="btn-hero-secondary">
+                <i class="fas fa-question-circle"></i> Take the Quiz
+            </a>
+        </div>
+        <div class="hero-stats" data-aos="fade-up" data-aos-delay="300">
+            <div>
+                <div class="hero-stat-value">2+</div>
+                <div class="hero-stat-label">Years in industry</div>
+            </div>
+            <div>
+                <div class="hero-stat-value">MSc</div>
+                <div class="hero-stat-label">Imperial College</div>
+            </div>
+            <div>
+                <div class="hero-stat-value">1st</div>
+                <div class="hero-stat-label">BEng, Queen Mary</div>
+            </div>
+            <div>
+                <div class="hero-stat-value">3</div>
+                <div class="hero-stat-label">Industry roles</div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Carousel -->
 <div id="slides" class="carousel slide" data-ride="carousel">
-	<ul class="carousel-indicators">
-		<li data-target="#slides" data-slide-to="0" class="active"></li>
-		<li data-target="#slides" data-slide-to="1"></li>
-		<li data-target="#slides" data-slide-to="2"></li>
-	</ul>
-	<div class="carousel-inner">
-		<div class="carousel-item active">
-			<img src="img/background.jpg">
-			<div class="carousel-caption">
-				<h1 class="display-2">Biomedical Engineering</h1>
-				<h3>Check out my Blog Posts</h3>
-				<a href="./Blogs/"><button type="button"  class="btn btn-outline-light btn-lg">View Blogs</button></a>
-			</div>
-		</div>
-		<div class="carousel-item">
-			<img src="img/background2.png">
-			<div class="carousel-caption">
-				<h1 class="display-2">Medicine <br>& Physiology</h1>
-				<h3>Try my Mini Med Quiz</h3>
-				<a href="./Quiz/"><button type="button" class="btn btn-outline-light btn-lg">View Quiz</button></a>
-			</div>
-		</div>
-		<div class="carousel-item">
-			<img src="img/background4.png">
-			<div class="carousel-caption">
-				<h1 class="display-2">Biology<br>& Physics</h1>
-				<h3>Learn some new words with my Flashcards</h3>
-				<a href="./FlashCards/"><button type="button" class="btn btn-outline-light btn-lg">View Flashcards</button></a>
-			</div>
-		</div>
-	</div>
-
-</div
-
-<!--- Welcome Section -->
-<div class="container-fluid padding">
-	<div class="row welcome text-center">
-		<div class="col-12">
-			<h1 class="display-4 aos-init" data-aos="fade-up" data-aos-offset="200" data-aos-delay="200">Welcome To My Website.</h1>
-		</div>
-		<hr>
-		<div class="col-12 aos-init" data-aos="fade-up" data-aos-delay="300">
-			<p class="lead">Hello, my name is Owais Siddiqi.<br> I am a Master's Student studying Neurotechnology at <a href="https://www.imperial.ac.uk/" target="breach">Imperial College London</a>. This website was primarily made so I could discuss about topics in the Biomedical Engineering and Medical fields that interest me, but do check out the other sections of this website, including <a href="./Quiz/">my Quiz.</a></p>
-		</div>
-	</div>
+    <ul class="carousel-indicators">
+        <li data-target="#slides" data-slide-to="0" class="active"></li>
+        <li data-target="#slides" data-slide-to="1"></li>
+        <li data-target="#slides" data-slide-to="2"></li>
+    </ul>
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+            <img src="img/background.jpg" alt="Data Science and Bioinformatics">
+            <div class="carousel-caption">
+                <h1 class="display-2">Data Science<br>&amp; Bioinformatics</h1>
+                <h3>Check out my Blog Posts</h3>
+                <a href="./Blogs/"><button type="button" class="btn btn-outline-light btn-lg">View Blogs</button></a>
+            </div>
+        </div>
+        <div class="carousel-item">
+            <img src="img/background2.png" alt="Medicine and Physiology">
+            <div class="carousel-caption">
+                <h1 class="display-2">Medicine<br>&amp; Physiology</h1>
+                <h3>Try my Mini Med Quiz</h3>
+                <a href="./Quiz/"><button type="button" class="btn btn-outline-light btn-lg">View Quiz</button></a>
+            </div>
+        </div>
+        <div class="carousel-item">
+            <img src="img/background4.png" alt="Biology and Physics">
+            <div class="carousel-caption">
+                <h1 class="display-2">Biology<br>&amp; Physics</h1>
+                <h3>Learn some new words with my Flashcards</h3>
+                <a href="./FlashCards/"><button type="button" class="btn btn-outline-light btn-lg">View Flashcards</button></a>
+            </div>
+        </div>
+    </div>
 </div>
+<!-- About -->
+<section class="about-section">
+    <div class="about-grid">
+        <div data-aos="fade-right" data-aos-delay="100">
+            <p class="about-label">About me</p>
+            <h2>Where biology meets<br>data science</h2>
+            <p>I'm a Bioinformatics-focused Data Scientist with a background in Biomedical Engineering. I build production-scale genomic analytics pipelines, deploy machine learning models for patient stratification, and translate complex molecular datasets into structured, decision-ready evidence.</p>
+            <p>I hold an MSc in Biomedical Engineering from <a href="https://www.imperial.ac.uk/" target="_blank" style="color:#6c63ff; font-weight:500;">Imperial College London</a> and a First Class BEng from <a href="https://www.qmul.ac.uk/" target="_blank" style="color:#6c63ff; font-weight:500;">Queen Mary University of London</a>. This site is where I write about the ideas and topics that shape how I think, from genomics to machine learning to medicine.</p>
+            <div class="discipline-grid">
+                <div class="discipline-card">
+                    <i class="fas fa-atom" style="color:#e53e3e"></i>
+                    <h4>Physics &amp; Maths</h4>
+                    <p>Multivariable calculus, linear algebra, and signal processing, the rigour behind every model I build.</p>
+                </div>
+                <div class="discipline-card">
+                    <i class="fas fa-dna" style="color:#2163af"></i>
+                    <h4>Biology &amp; Genomics</h4>
+                    <p>Living systems are noisy, dynamic, and deeply interconnected, precisely what makes data science on them so compelling.</p>
+                </div>
+            </div>
+        </div>
+        <div data-aos="fade-left" data-aos-delay="200">
+            <img src="img/writing.png" alt="Writing and research" class="about-img">
+        </div>
+    </div>
+</section>
 
-<!--- Three Column Section -->
-<div class="container-fluid padding">
-	<div class="row text-center padding">
-		<div class="col-xs-12 col-sm-12 col-md-6 aos-init" data-aos="fade-right" data-aos-delay="300">
-			<i class="fas fa-atom"></i>
-			<h3>Physics</h3>
-			<p>From learning Statics & Dynamics to Electrical Systems, the knowledge gained from the physics side of my degree has taught me the fundamentals and given me a deeper understanding of nature operate and the logical reasoning behind it</p>
-		</div>
-		<div class="col-xs-12 col-sm-12 col-md-6 aos-init" data-aos="fade-left" data-aos-delay="300">
-			<i class="fas fa-dna"></i>
-			<h3>Biology</h3>
-			<p>Biology, on the other hand, taught me the anatomical side of the body. From how cells and structures communicate with each other to keep our body in a controlled, harmonic state to the intricacies of surgical procedures and treatments as well as the machinery used in them</p>
-		</div>
-	</div>
-	<div class="border-top border-dark w-100 mx-auto my-3"></div>
-</div>
+<!-- Blog intro -->
+<section class="blog-intro-section">
+    <div class="blog-intro-inner">
+        <div class="blog-intro-img-wrap" data-aos="fade-right" data-aos-delay="100">
+            <img src="img/writing.png" alt="Blog posts" class="blog-intro-img">
+        </div>
+        <div data-aos="fade-left" data-aos-delay="200">
+            <p class="about-label">The Blog</p>
+            <h2>Exploring ideas at the boundary of disciplines</h2>
+            <p>Biology and engineering seem worlds apart — yet their intersection is where the most exciting science happens. Bioinformatics and data science give me the tools to make sense of complex biological systems: finding patterns in genomic data, modelling disease progression, and translating raw molecular information into something meaningful.</p>
+            <p>The human genome contains billions of base pairs. A single RNA-seq experiment generates millions of reads. A clinical dataset can span thousands of patients across years of follow-up. Making sense of that data, rigorously and reproducibly, is both a technical challenge and a creative one.</p>
+            <p>This blog is where I explore those ideas, from the logic of machine learning pipelines to the biology they're trying to decode. I hope you find something here that sparks your curiosity.</p>
+            <br>
+            <a href="./Blogs/" class="btn-hero-primary" style="display:inline-flex;">
+                <i class="fas fa-book-open"></i> Read Blog Posts
+            </a>
+        </div>
+    </div>
+</section>
 
-<!--- Two Column Section -->
-<div class="container-fluid padding aos-init mt-5" data-aos="fade-down" data-aos-delay="400" data-aos-easing="ease-in-out">
-	<div class="row padding">
-		<div class="col-lg-6" style="padding-left: 5%;">
-			<h2>My Blog Posts</h2>
-			<p>The content I am learning helps me understand the world in ways I didn't think of previously. Biomedical engineering has helped me delve deeper into the pure science behind medicine as well as the complexity of the technological world around us.</p>
-
-			<p>Biomedical engineering has taught me to think in abstract ways, I have always been keen on the dynamic and thought-provoking theories that arise when learning higher level math and physics. Engineering is about problem solving and morphing the ever changing world around you into an equation of numbers and letters to be solved.</p>
-				
-			<p>However, while engineering is all about science, medicine also incorporates art into it. Helping people, being side to side with them, and benefiting them in ways only I can has always been my ultimate goal.</p>
-				
-			<p>Over the years, I have developed an interest in the medical field and its various engineering components. To convey this passion of mine, I have written posts on topics of interest in both the medical and engineering fields to collate all the interesting topics I've found out about and deliver them in concise posts.</p>
-				
-			<p>Thank you for coming and I hope you learn something new while reading my blog.</p>
-			<br>
-			<a href="./Blogs/" class="btn btn-primary">Blog Posts</a>
-		</div>
-		<div class="col-lg-6 d-block m-auto">
-			<img style="border-radius: 10px;" src="img/writing.png" class="img-fluid">
-		</div>
-
-			
-		</div>
-	</div>
-	
-</div>
-
+<!-- Parallax divider — iOS-safe -->
 <div class="fixed-background" style="border-top:2px solid black">
-	<div class="fixed-wrap">
-		<div class="fixed">
-		</div>
-	</div>
+    <div class="fixed-wrap" id="parallaxWrap">
+        <div class="fixed" id="parallaxFixed"></div>
+    </div>
 </div>
 
+<!-- Hobbies -->
 <section class="hobbies py-5" style="border-bottom: 2px solid black;">
-	<div class=" text-center">
-		<h3 class=" aos-init" data-aos="fade-down" data-aos-delay="300">Hobbies</h3>
-		</div>
-	<div class="container-fluid" style="padding: 5%;">
-	  <div class="row">
-		<!-- Programming -->
-		<div class="col-lg-4 d-flex align-items-stretch" data-aos="fade-right" data-aos-delay="300"">
-		  <div class="card mb-5 mb-lg-0">
-			<div class="card-body">
-			  <h5 class="card-title text-muted text-uppercase text-center"> <i class="fas fa-code fa-3x"></i></h5>
-			  <h5 class="card-title text-muted text-uppercase text-center">Programming</h5>
-			  <hr>
-			  <ul class="fa-ul">
-				<li><span class="fa-li"><i class="fas fa-angle-double-right"></i></span>My favorite language to write in is Python. It's a user-friendly high-level language as it’s very easy to use as it's powerful and versatile, which is perfect for a novice programmer like myself.</li><br>
-				<li><span class="fa-li"><i class="fas fa-angle-double-right"></i></span>Python can be used for many different tasks due to its wide range of open-source libraries ready to install and use. From <strong>Pandas</strong> for Data Science to <strong>TensorFlow</strong> for Machine learning and AI development.</li>
-			</ul>
-			</div>
-		  </div>
-		</div>
-		<!-- Video Games -->
-		<div class="col-lg-4 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="300"">
-			<div class="card mb-5 mb-lg-0">
-			  <div class="card-body">
-				<h5 class="card-title text-muted text-uppercase text-center"> <i class="fas fa-gamepad fa-3x"></i></h5>
-				<h5 class="card-title text-muted text-uppercase text-center">Video Games</h5>
-				<hr>
-				<ul class="fa-ul">
-					<li><span class="fa-li"><i class="fas fa-angle-double-right"></i></span>Personally, I have a variety of different video game genres that I like to play. Solo games provide a beautiful, vast story combined by smooth game mechanics and a cleverly chosen score that only facilitates the immersiveness of a single player game (God Of War).</li><br>
-					<li><span class="fa-li"><i class="fas fa-angle-double-right"></i></span>Multiplayer games on the other hand, require a more strategic and alert mind as you are not playing against NPCs (Non - player characters) but real people, who are making their own unpredictable decisions that you have to counter.</li>
-				</ul>
-			  </div>
-			</div>
-		  </div>
-		<!-- Blogging -->
-		<div class="col-lg-4 d-flex align-items-stretch" data-aos="fade-left" data-aos-delay="300"">
-			<div class="card mb-5 mb-lg-0">
-			  <div class="card-body">
-				<h5 class="card-title text-muted text-uppercase text-center"> <i class="fas fa-comment-dots fa-3x"></i></h5>
-				<h5 class="card-title text-muted text-uppercase text-center">Blogging</h5>
-				<hr>
-				<ul class="fa-ul">
-					<li><span class="fa-li"><i class="fas fa-angle-double-right"></i></span>Blogging is one of the most effective ways to build awareness about your subject interests, while providing relevant and useful content for your audience at the same time. I enjoy blogging as it grants me a platform to convey the topics I find interesting.</li><br>
-					<li><span class="fa-li"><i class="fas fa-angle-double-right"></i></span>It also lets me share knowledge I have gained through research in various subjects and allows me to give my own opinion on them. Serendipitously, it indirectly diverts me to areas of science I never knew about and thus broadens my horizons on subjects I didn’t know existed in the first place.</li>
-				</ul>
-			  </div>
-			</div>
-		  </div>
-	  </div>
-	</div>
-  </section>
-
-
-
-<!--- Connect -->
-<div class="col-lg-6 d-block m-auto"></div>
-<div class="container-fluid padding aos-init" data-aos="fade-up">
-<div class="row text-center padding">
-	<div class="col-12">
-		<h2>Contact</h2>
-	</div>
-	<div class="col-12 social padding">
-		<a href="mailto:+omsiddiqi01@gmail.com"><i class="fas fa-envelope-square"></i></a>
-		<a href="https://www.linkedin.com/in/owaissidd/" target="breach"><i class="fab fa-linkedin"></i></a>
-	</div>
-</div>
+    <div class="text-center mb-4">
+        <h3 class="section-heading aos-init" data-aos="fade-down" data-aos-delay="100">Hobbies</h3>
+    </div>
+    <div class="container-fluid" style="padding: 0 5%;">
+        <div class="row">
+            <!-- Programming -->
+            <div class="col-lg-4 d-flex align-items-stretch mb-4" data-aos="fade-right" data-aos-delay="150">
+                <div class="card w-100">
+                    <div class="card-body">
+                        <h5 class="card-title text-muted text-uppercase text-center mb-0">
+                            <i class="fas fa-code fa-3x mb-2 d-block" style="color:#6c63ff"></i>
+                            Programming
+                        </h5>
+                        <hr>
+                        <ul class="fa-ul">
+                            <li><span class="fa-li"><i class="fas fa-angle-double-right" style="color:#6c63ff"></i></span>Python is my primary language — the backbone of modern data science and bioinformatics. Its readability and flexibility make it ideal for everything from rapid prototyping to production-scale pipelines.</li>
+                            <li><span class="fa-li"><i class="fas fa-angle-double-right" style="color:#6c63ff"></i></span>The ecosystem is what makes it so powerful: <strong>Pandas</strong> and <strong>NumPy</strong> for data engineering, <strong>Scikit-learn</strong> and <strong>PyTorch</strong> for ML, and <strong>Nextflow</strong> for genomic workflows.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- Video Games -->
+            <div class="col-lg-4 d-flex align-items-stretch mb-4" data-aos="fade-up" data-aos-delay="200">
+                <div class="card w-100">
+                    <div class="card-body">
+                        <h5 class="card-title text-muted text-uppercase text-center mb-0">
+                            <i class="fas fa-gamepad fa-3x mb-2 d-block" style="color:#00c9a7"></i>
+                            Video Games
+                        </h5>
+                        <hr>
+                        <ul class="fa-ul">
+                            <li><span class="fa-li"><i class="fas fa-angle-double-right" style="color:#00c9a7"></i></span>Personally, I have a variety of different video game genres that I like to play. Solo games provide a beautiful, vast story combined by smooth game mechanics and a cleverly chosen score that only facilitates the immersiveness of a single player game (God Of War).</li>
+                            <li><span class="fa-li"><i class="fas fa-angle-double-right" style="color:#00c9a7"></i></span>Multiplayer games on the other hand, require a more strategic and alert mind as you are not playing against NPCs (Non - player characters) but real people, who are making their own unpredictable decisions that you have to counter.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- Blogging -->
+            <div class="col-lg-4 d-flex align-items-stretch mb-4" data-aos="fade-left" data-aos-delay="250">
+                <div class="card w-100">
+                    <div class="card-body">
+                        <h5 class="card-title text-muted text-uppercase text-center mb-0">
+                            <i class="fas fa-comment-dots fa-3x mb-2 d-block" style="color:#f7b731"></i>
+                            Blogging
+                        </h5>
+                        <hr>
+                        <ul class="fa-ul">
+                            <li><span class="fa-li"><i class="fas fa-angle-double-right" style="color:#f7b731"></i></span>Blogging is one of the most effective ways to build awareness about your subject interests, while providing relevant and useful content for your audience at the same time. I enjoy blogging as it grants me a platform to convey the topics I find interesting.</li>
+                            <li><span class="fa-li"><i class="fas fa-angle-double-right" style="color:#f7b731"></i></span>It also lets me share knowledge I have gained through research in various subjects and allows me to give my own opinion on them. Serendipitously, it indirectly diverts me to areas of science I never knew about and thus broadens my horizons on subjects I didn’t know existed in the first place.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Contact -->
+<div class="contact-section" data-aos="fade-up">
+    <h2>Get In Touch</h2>
+    <div class="social padding">
+        <a href="mailto:omsiddiqi01@gmail.com"><i class="fas fa-envelope-square"></i></a>
+        <a href="https://www.linkedin.com/in/owaissidd/" target="_blank"><i class="fab fa-linkedin"></i></a>
+    </div>
 </div>
 
-<!--- Footer -->
+<!-- Footer -->
 <footer>
-	<div class="container-fluid padding">
-	<div class="row text-center">
-		<div class="col-md-12">
-			<div id="digital-clock"></div>
-		</div>
-	</div>
-	</div>
-	<div class="socket text-light text-center py-4">
-			<p>&copy; <a href="https://owaissiddiqi.co.uk/" target = "_blank">Owais Siddiqi All rights reserved</a></p>
-		</div>
-	</div>
+    <div class="container-fluid padding">
+        <div class="row text-center">
+            <div class="col-md-12">
+                <div id="digital-clock"></div>
+            </div>
+        </div>
+    </div>
+    <div class="socket text-light text-center py-4">
+        <p>&copy; <a href="https://owaissiddiqi.co.uk/" target="_blank">Owais Siddiqi · All rights reserved</a></p>
+    </div>
 </footer>
 
-<script>
-	AOS.init();
-  </script>
-</body>
-<script>
-function getDateTime() {
-	var now = new Date();
-	var year = now.getFullYear();
-	var month = now.getMonth() + 1;
-	var day = now.getDate();
-	var hour = now.getHours();
-	var minute = now.getMinutes();
-	var second = now.getSeconds();
-	if (month.toString().length == 1) {
-		month = '0' + month;
-	}
-	if (day.toString().length == 1) {
-		day = '0' + day;
-	}
-	if (hour.toString().length == 1) {
-		hour = '0' + hour;
-	}
-	if (minute.toString().length == 1) {
-		minute = '0' + minute;
-	}
-	if (second.toString().length == 1) {
-		second = '0' + second;
-	}
-	var dateTime = hour + ':' + minute + ':' + second + "<br>" + day + '/' + month + '/' + year;
-	return dateTime;
-}
+<button onclick="topFunction()" id="myBtn" title="Go to top">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6"><path d="M12 6H0l6-6z"/></svg>
+</button>
 
-setInterval(function () {
-	currentTime = getDateTime();
-	document.getElementById("digital-clock").innerHTML = currentTime;
-});
+<script>
+    AOS.init({ once: true, duration: 600 });
+
+    /* ── Scroll to top ───────────────────────── */
+    var mybutton = document.getElementById('myBtn');
+    window.addEventListener('scroll', function() {
+        mybutton.style.display = (document.documentElement.scrollTop > 40) ? 'block' : 'none';
+    });
+    function topFunction() { window.scrollTo({ top: 0, behavior: 'smooth' }); }
+
+    /* ── iOS parallax fix ────────────────────── */
+    (function () {
+        var isTouch = ('ontouchstart' in window) || (navigator.maxTouchPoints > 0);
+        if (isTouch) {
+            document.body.classList.add('ios-parallax-fallback');
+            var fixedEl   = document.getElementById('parallaxFixed');
+            var sectionEl = fixedEl ? fixedEl.closest('.fixed-background') : null;
+            if (fixedEl && sectionEl) {
+                function updateParallax() {
+                    var rect     = sectionEl.getBoundingClientRect();
+                    var progress = 1 - (rect.bottom / (window.innerHeight + rect.height));
+                    var shift    = (progress - 0.5) * 20;
+                    fixedEl.style.transform = 'translateY(' + shift + '%)';
+                }
+                window.addEventListener('scroll', updateParallax, { passive: true });
+                window.addEventListener('resize', updateParallax, { passive: true });
+                updateParallax();
+            }
+        }
+    })();
+
+    /* ── Digital clock ───────────────────────── */
+    function getDateTime() {
+        var now = new Date(), p = function(n){ return (n<10?'0':'')+n; };
+        return p(now.getHours())+':'+p(now.getMinutes())+':'+p(now.getSeconds())
+            +'<br>'+p(now.getDate())+'/'+p(now.getMonth()+1)+'/'+now.getFullYear();
+    }
+    setInterval(function(){
+        var el = document.getElementById('digital-clock');
+        if(el) el.innerHTML = getDateTime();
+    }, 1000);
 </script>
+</body>
 </html>
