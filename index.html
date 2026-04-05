@@ -14,7 +14,6 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet" crossorigin="anonymous">
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <!-- Inter font — same as CV page -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link href="./style.css" rel="stylesheet">
     <link rel="icon" href="img/icon.png" type="image/png" sizes="32x32">
@@ -23,15 +22,9 @@
     <link rel="apple-touch-icon" sizes="152x152" href="img/apple-touch-icon.png"/>
 
     <style>
-        /* ── Base ────────────────────────────────────── */
-        body, html {
-            font-family: 'Inter', sans-serif !important;
-        }
-
-        /* ── Navbar tweaks ───────────────────────────── */
+        body, html { font-family: 'Inter', sans-serif !important; }
         .navbar { border-bottom: 1px solid rgba(0,0,0,0.06); }
 
-        /* ── HERO ────────────────────────────────────── */
         .hero {
             background: linear-gradient(135deg, #0f1117 0%, #1a1d27 50%, #22263a 100%);
             color: #fff;
@@ -40,8 +33,6 @@
             position: relative;
             overflow: hidden;
         }
-
-        /* Subtle grid texture */
         .hero::before {
             content: '';
             position: absolute;
@@ -52,8 +43,6 @@
             background-size: 40px 40px;
             pointer-events: none;
         }
-
-        /* Glowing orb */
         .hero::after {
             content: '';
             position: absolute;
@@ -63,9 +52,7 @@
             background: radial-gradient(circle, rgba(108,99,255,0.15) 0%, transparent 70%);
             pointer-events: none;
         }
-
         .hero-inner { position: relative; z-index: 1; max-width: 700px; margin: 0 auto; }
-
         .hero-badge {
             display: inline-flex;
             align-items: center;
@@ -81,19 +68,16 @@
             border-radius: 999px;
             margin-bottom: 1.5rem;
         }
-
         .hero-badge .dot {
             width: 6px; height: 6px;
             background: #6c63ff;
             border-radius: 50%;
             animation: pulse 2s infinite;
         }
-
         @keyframes pulse {
             0%, 100% { opacity: 1; transform: scale(1); }
             50%       { opacity: 0.5; transform: scale(0.8); }
         }
-
         .hero h1 {
             font-size: clamp(2.4rem, 7vw, 4rem);
             font-weight: 800;
@@ -102,9 +86,7 @@
             margin-bottom: 1rem;
             color: #fff;
         }
-
         .hero h1 .accent { color: #6c63ff; }
-
         .hero-sub {
             font-size: clamp(1rem, 2.5vw, 1.15rem);
             color: rgba(255,255,255,0.55);
@@ -114,7 +96,6 @@
             margin-left: auto;
             margin-right: auto;
         }
-
         .hero-btns {
             display: flex;
             gap: 0.75rem;
@@ -122,7 +103,6 @@
             flex-wrap: wrap;
             margin-bottom: 3rem;
         }
-
         .btn-hero-primary {
             padding: 0.7rem 1.8rem;
             border-radius: 10px;
@@ -144,7 +124,6 @@
             transform: translateY(-2px);
             box-shadow: 0 8px 24px rgba(108,99,255,0.4);
         }
-
         .btn-hero-secondary {
             padding: 0.7rem 1.8rem;
             border-radius: 10px;
@@ -164,8 +143,6 @@
             color: #fff;
             text-decoration: none;
         }
-
-        /* Stats row in hero */
         .hero-stats {
             display: flex;
             justify-content: center;
@@ -174,14 +151,7 @@
             padding-top: 2.5rem;
             border-top: 1px solid rgba(255,255,255,0.08);
         }
-
-        .hero-stat-value {
-            font-size: 1.5rem;
-            font-weight: 800;
-            color: #fff;
-            line-height: 1;
-        }
-
+        .hero-stat-value { font-size: 1.5rem; font-weight: 800; color: #fff; line-height: 1; }
         .hero-stat-label {
             font-size: 0.72rem;
             color: rgba(255,255,255,0.4);
@@ -190,26 +160,12 @@
             letter-spacing: 0.05em;
             margin-top: 0.2rem;
         }
-
-        /* ── Carousel ────────────────────────────────── */
-        #slides .carousel-item img {
-            width: 100%;
-            object-fit: cover;
-            max-height: 75vh;
-            min-height: 300px;
-        }
-
+        #slides .carousel-item img { width: 100%; object-fit: cover; max-height: 75vh; min-height: 300px; }
         @media (max-width: 576px) {
             #slides .carousel-caption h1.display-2 { font-size: 1.8rem; }
             #slides .carousel-caption h3 { font-size: 0.95rem; }
         }
-
-        /* ── Section: About ──────────────────────────── */
-        .about-section {
-            padding: 5rem 1.5rem;
-            background: #fff;
-        }
-
+        .about-section { padding: 5rem 1.5rem; background: #fff; }
         .about-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -218,11 +174,7 @@
             max-width: 1100px;
             margin: 0 auto;
         }
-
-        @media (max-width: 768px) {
-            .about-grid { grid-template-columns: 1fr; gap: 2rem; }
-        }
-
+        @media (max-width: 768px) { .about-grid { grid-template-columns: 1fr; gap: 2rem; } }
         .about-label {
             font-size: 0.72rem;
             font-weight: 700;
@@ -231,7 +183,6 @@
             color: #6c63ff;
             margin-bottom: 0.75rem;
         }
-
         .about-section h2 {
             font-size: clamp(1.6rem, 4vw, 2.2rem);
             font-weight: 800;
@@ -240,67 +191,20 @@
             margin-bottom: 1.2rem;
             line-height: 1.2;
         }
-
-        .about-section p {
-            color: #4a5568;
-            line-height: 1.75;
-            font-size: 0.97rem;
-            margin-bottom: 1rem;
-        }
-
-        .about-img {
-            border-radius: 20px;
-            width: 100%;
-            box-shadow: 0 20px 60px rgba(0,0,0,0.12);
-        }
-
-        /* Discipline cards: Physics + Biology */
-        .discipline-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 1rem;
-            margin-top: 1.5rem;
-        }
-
-        @media (max-width: 500px) {
-            .discipline-grid { grid-template-columns: 1fr; }
-        }
-
-        .discipline-card {
-            background: #f8f9ff;
-            border: 1px solid #e8e8ff;
-            border-radius: 14px;
-            padding: 1.25rem;
-        }
-
-        .discipline-card i {
-            font-size: 1.5rem;
-            margin-bottom: 0.6rem;
-            display: block;
-        }
-
-        .discipline-card h4 {
-            font-size: 0.9rem;
-            font-weight: 700;
-            color: #0f1117;
-            margin-bottom: 0.4rem;
-        }
-
-        .discipline-card p {
-            font-size: 0.8rem;
-            color: #6c757d;
-            margin: 0;
-            line-height: 1.55;
-        }
-
-        /* ── Section: Blog intro ─────────────────────── */
+        .about-section p { color: #4a5568; line-height: 1.75; font-size: 0.97rem; margin-bottom: 1rem; }
+        .about-img { border-radius: 20px; width: 100%; box-shadow: 0 20px 60px rgba(0,0,0,0.12); }
+        .discipline-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-top: 1.5rem; }
+        @media (max-width: 500px) { .discipline-grid { grid-template-columns: 1fr; } }
+        .discipline-card { background: #f8f9ff; border: 1px solid #e8e8ff; border-radius: 14px; padding: 1.25rem; }
+        .discipline-card i { font-size: 1.5rem; margin-bottom: 0.6rem; display: block; }
+        .discipline-card h4 { font-size: 0.9rem; font-weight: 700; color: #0f1117; margin-bottom: 0.4rem; }
+        .discipline-card p { font-size: 0.8rem; color: #6c757d; margin: 0; line-height: 1.55; }
         .blog-intro-section {
             background: #f8f9fc;
             padding: 5rem 1.5rem;
             border-top: 1px solid #eef0f5;
             border-bottom: 1px solid #eef0f5;
         }
-
         .blog-intro-inner {
             max-width: 1100px;
             margin: 0 auto;
@@ -309,12 +213,10 @@
             gap: 4rem;
             align-items: center;
         }
-
         @media (max-width: 768px) {
             .blog-intro-inner { grid-template-columns: 1fr; gap: 2rem; }
             .blog-intro-img-wrap { order: -1; }
         }
-
         .blog-intro-section h2 {
             font-size: clamp(1.6rem, 4vw, 2.2rem);
             font-weight: 800;
@@ -323,45 +225,10 @@
             margin-bottom: 1rem;
             line-height: 1.2;
         }
-
-        .blog-intro-section p {
-            color: #4a5568;
-            line-height: 1.75;
-            font-size: 0.97rem;
-            margin-bottom: 1rem;
-        }
-
-        .blog-intro-img {
-            border-radius: 20px;
-            width: 100%;
-            box-shadow: 0 20px 60px rgba(0,0,0,0.1);
-        }
-
-        /* ── Parallax divider ────────────────────────── */
-        .fixed-background {
-            border-top: 2px solid black;
-        }
-
-        /* iOS Safari fix */
-        .ios-parallax-fallback .fixed-wrap {
-            position: absolute !important;
-            clip: unset !important;
-            top: 0 !important;
-            height: 100% !important;
-        }
-        .ios-parallax-fallback .fixed {
-            position: absolute !important;
-            background-attachment: scroll !important;
-            top: -20% !important;
-            height: 140% !important;
-            will-change: transform;
-        }
-
-        /* ── Hobbies ─────────────────────────────────── */
-        section.hobbies {
-            background: linear-gradient(135deg, #0062E6 0%, #33AEFF 100%);
-        }
-
+        .blog-intro-section p { color: #4a5568; line-height: 1.75; font-size: 0.97rem; margin-bottom: 1rem; }
+        .blog-intro-img { border-radius: 20px; width: 100%; box-shadow: 0 20px 60px rgba(0,0,0,0.1); }
+        .fixed-background { border-top: 2px solid black; }
+        section.hobbies { background: linear-gradient(135deg, #0062E6 0%, #33AEFF 100%); }
         .hobbies h3.section-heading {
             font-size: clamp(1.5rem, 4vw, 2rem);
             font-weight: 800;
@@ -369,76 +236,23 @@
             text-shadow: 0 2px 8px rgba(0,0,0,0.25);
             letter-spacing: -0.01em;
         }
-
-        .hobbies .card {
-            border: none;
-            border-radius: 16px;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
-            transition: transform 0.2s, box-shadow 0.2s;
-        }
-
-        .hobbies .card:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 12px 32px rgba(0,0,0,0.15);
-        }
-
-        .hobbies .card-title {
-            font-size: 0.78rem;
-            letter-spacing: 0.08em;
-            font-weight: 700;
-        }
-
+        .hobbies .card { border: none; border-radius: 16px; box-shadow: 0 4px 20px rgba(0,0,0,0.1); transition: transform 0.2s, box-shadow 0.2s; }
+        .hobbies .card:hover { transform: translateY(-4px); box-shadow: 0 12px 32px rgba(0,0,0,0.15); }
+        .hobbies .card-title { font-size: 0.78rem; letter-spacing: 0.08em; font-weight: 700; }
         .hobbies .card-body { padding: 1.5rem; }
-
         .hobbies ul.fa-ul { margin-left: 1.5em; }
-
-        .hobbies ul.fa-ul li {
-            font-size: 0.875rem;
-            color: #444;
-            line-height: 1.65;
-            margin-bottom: 0.75rem;
-        }
-
-        /* ── Contact ─────────────────────────────────── */
+        .hobbies ul.fa-ul li { font-size: 0.875rem; color: #444; line-height: 1.65; margin-bottom: 0.75rem; }
         .contact-section { padding: 4rem 1.5rem; text-align: center; }
-        .contact-section h2 {
-            font-size: 1.8rem;
-            font-weight: 800;
-            color: #0f1117;
-            margin-bottom: 1.5rem;
-            letter-spacing: -0.02em;
-        }
-
-        /* ── Footer ──────────────────────────────────── */
-        footer {
-            background: #1a1d27;
-            color: rgba(255,255,255,0.5);
-            padding-top: 2rem;
-            font-size: 0.875rem;
-        }
-
-        .socket {
-            background: #0f1117;
-            border-top: 1px solid rgba(255,255,255,0.06);
-        }
+        .contact-section h2 { font-size: 1.8rem; font-weight: 800; color: #0f1117; margin-bottom: 1.5rem; letter-spacing: -0.02em; }
+        footer { background: #1a1d27; color: rgba(255,255,255,0.5); padding-top: 2rem; font-size: 0.875rem; }
+        .socket { background: #0f1117; border-top: 1px solid rgba(255,255,255,0.06); }
         .socket a { color: rgba(255,255,255,0.4); text-decoration: none; }
         .socket a:hover { color: rgba(255,255,255,0.7); }
-
         #digital-clock { font-size: 1.3rem; color: rgba(255,255,255,0.3); }
-
-        /* ── Scroll to top ───────────────────────────── */
         #myBtn {
-            display: none;
-            position: fixed;
-            bottom: 1.5rem; right: 1.5rem;
-            z-index: 99;
-            background: #6c63ff;
-            border: none;
-            border-radius: 50%;
-            width: 44px; height: 44px;
-            cursor: pointer;
-            box-shadow: 0 4px 20px rgba(108,99,255,0.4);
-            transition: transform 0.2s;
+            display: none; position: fixed; bottom: 1.5rem; right: 1.5rem; z-index: 99;
+            background: #6c63ff; border: none; border-radius: 50%; width: 44px; height: 44px;
+            cursor: pointer; box-shadow: 0 4px 20px rgba(108,99,255,0.4); transition: transform 0.2s;
         }
         #myBtn:hover { transform: translateY(-3px); }
         #myBtn svg { width: 14px; height: 14px; fill: #fff; display: block; margin: auto; }
@@ -546,6 +360,7 @@
         </div>
     </div>
 </div>
+
 <!-- About -->
 <section class="about-section">
     <div class="about-grid">
@@ -593,7 +408,7 @@
     </div>
 </section>
 
-<!-- Parallax divider — iOS-safe -->
+<!-- Parallax divider -->
 <div class="fixed-background" style="border-top:2px solid black">
     <div class="fixed-wrap" id="parallaxWrap">
         <div class="fixed" id="parallaxFixed"></div>
@@ -607,7 +422,6 @@
     </div>
     <div class="container-fluid" style="padding: 0 5%;">
         <div class="row">
-            <!-- Programming -->
             <div class="col-lg-4 d-flex align-items-stretch mb-4" data-aos="fade-right" data-aos-delay="150">
                 <div class="card w-100">
                     <div class="card-body">
@@ -623,7 +437,6 @@
                     </div>
                 </div>
             </div>
-            <!-- Video Games -->
             <div class="col-lg-4 d-flex align-items-stretch mb-4" data-aos="fade-up" data-aos-delay="200">
                 <div class="card w-100">
                     <div class="card-body">
@@ -634,12 +447,11 @@
                         <hr>
                         <ul class="fa-ul">
                             <li><span class="fa-li"><i class="fas fa-angle-double-right" style="color:#00c9a7"></i></span>Personally, I have a variety of different video game genres that I like to play. Solo games provide a beautiful, vast story combined by smooth game mechanics and a cleverly chosen score that only facilitates the immersiveness of a single player game (God Of War).</li>
-                            <li><span class="fa-li"><i class="fas fa-angle-double-right" style="color:#00c9a7"></i></span>Multiplayer games on the other hand, require a more strategic and alert mind as you are not playing against NPCs (Non - player characters) but real people, who are making their own unpredictable decisions that you have to counter.</li>
+                            <li><span class="fa-li"><i class="fas fa-angle-double-right" style="color:#00c9a7"></i></span>Multiplayer games on the other hand, require a more strategic and alert mind as you are not playing against NPCs but real people, who are making their own unpredictable decisions that you have to counter.</li>
                         </ul>
                     </div>
                 </div>
             </div>
-            <!-- Blogging -->
             <div class="col-lg-4 d-flex align-items-stretch mb-4" data-aos="fade-left" data-aos-delay="250">
                 <div class="card w-100">
                     <div class="card-body">
@@ -650,7 +462,7 @@
                         <hr>
                         <ul class="fa-ul">
                             <li><span class="fa-li"><i class="fas fa-angle-double-right" style="color:#f7b731"></i></span>Blogging is one of the most effective ways to build awareness about your subject interests, while providing relevant and useful content for your audience at the same time. I enjoy blogging as it grants me a platform to convey the topics I find interesting.</li>
-                            <li><span class="fa-li"><i class="fas fa-angle-double-right" style="color:#f7b731"></i></span>It also lets me share knowledge I have gained through research in various subjects and allows me to give my own opinion on them. Serendipitously, it indirectly diverts me to areas of science I never knew about and thus broadens my horizons on subjects I didn’t know existed in the first place.</li>
+                            <li><span class="fa-li"><i class="fas fa-angle-double-right" style="color:#f7b731"></i></span>It also lets me share knowledge I have gained through research in various subjects and allows me to give my own opinion on them. Serendipitously, it indirectly diverts me to areas of science I never knew about and thus broadens my horizons.</li>
                         </ul>
                     </div>
                 </div>
@@ -658,6 +470,7 @@
         </div>
     </div>
 </section>
+
 <!-- Contact -->
 <div class="contact-section" data-aos="fade-up">
     <h2>Get In Touch</h2>
@@ -671,9 +484,7 @@
 <footer>
     <div class="container-fluid padding">
         <div class="row text-center">
-            <div class="col-md-12">
-                <div id="digital-clock"></div>
-            </div>
+            <div class="col-md-12"><div id="digital-clock"></div></div>
         </div>
     </div>
     <div class="socket text-light text-center py-4">
@@ -695,20 +506,41 @@
     });
     function topFunction() { window.scrollTo({ top: 0, behavior: 'smooth' }); }
 
-    /* ── iOS parallax fix ────────────────────── */
+    /* ── Parallax fix — Safari (desktop + iOS) ───────────────────────────────
+       Safari refuses position:fixed inside a clipped ancestor, causing the
+       parallax image to escape its container and sit on top of all content.
+       We detect Safari via the user-agent and apply a JS-driven translateY
+       approach instead, which works reliably on all Safari versions.
+    -------------------------------------------------------------------------- */
     (function () {
-        var isTouch = ('ontouchstart' in window) || (navigator.maxTouchPoints > 0);
-        if (isTouch) {
-            document.body.classList.add('ios-parallax-fallback');
+        var ua = navigator.userAgent;
+        // Matches Safari but NOT Chrome (which also includes "Safari" in UA)
+        var isSafari = /^((?!chrome|android).)*safari/i.test(ua);
+        // Also catch iOS devices (touch + webkit)
+        var isIOS = /iPad|iPhone|iPod/.test(ua) && !window.MSStream;
+
+        if (isSafari || isIOS) {
+            document.body.classList.add('safari-parallax-fallback');
+
             var fixedEl   = document.getElementById('parallaxFixed');
-            var sectionEl = fixedEl ? fixedEl.closest('.fixed-background') : null;
+            var sectionEl = document.querySelector('.fixed-background');
+
             if (fixedEl && sectionEl) {
                 function updateParallax() {
                     var rect     = sectionEl.getBoundingClientRect();
-                    var progress = 1 - (rect.bottom / (window.innerHeight + rect.height));
-                    var shift    = (progress - 0.5) * 20;
+                    var sectionH = sectionEl.offsetHeight;
+                    var viewH    = window.innerHeight;
+
+                    // progress: 0 when section enters bottom of viewport,
+                    //           1 when section exits top of viewport
+                    var progress = 1 - ((rect.bottom) / (viewH + sectionH));
+                    progress = Math.max(0, Math.min(1, progress));
+
+                    // Translate between -15% and +15% of the image height
+                    var shift = (progress - 0.5) * 30;
                     fixedEl.style.transform = 'translateY(' + shift + '%)';
                 }
+
                 window.addEventListener('scroll', updateParallax, { passive: true });
                 window.addEventListener('resize', updateParallax, { passive: true });
                 updateParallax();

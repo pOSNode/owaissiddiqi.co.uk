@@ -3,276 +3,208 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Owais Siddiqi – Data Scientist</title>
-    <meta name="author" content="Owais Siddiqi"/>
-    <meta name="description" content="Owais Siddiqi — Data Scientist specialising in bioinformatics, machine learning, and clinical data engineering."/>
-    <meta name="google-site-verification" content="cPBmEeMxy8bhGVYaH28enfW3Rb-UgrrEfORHfCQRsjo"/>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <title>Blog – Owais Siddiqi</title>
+    <meta name="description" content="Blog posts on Biomedical Engineering, Data Science and Medicine by Owais Siddiqi.">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet" crossorigin="anonymous">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    <link href="./style.css" rel="stylesheet">
-    <link rel="icon" href="img/icon.png" type="image/png" sizes="32x32">
-    <link rel="canonical" href="https://owaissiddiqi.co.uk/">
-    <link rel="apple-touch-icon" sizes="120x120" href="img/apple-touch-icon.png"/>
-    <link rel="apple-touch-icon" sizes="152x152" href="img/apple-touch-icon.png"/>
+    <link href="../style.css" rel="stylesheet">
+    <link rel="icon" href="../img/icon.png" type="image/png" sizes="16x16">
 
     <style>
-        body, html { font-family: 'Inter', sans-serif !important; }
-        .navbar { border-bottom: 1px solid rgba(0,0,0,0.06); }
+        /* ── Filter bar ───────────────────────────────── */
+        .filter-bar {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 0.5rem;
+            padding: 1.5rem 0 2rem;
+        }
 
-        .hero {
-            background: linear-gradient(135deg, #0f1117 0%, #1a1d27 50%, #22263a 100%);
-            color: #fff;
-            padding: 6rem 1.5rem 5rem;
-            text-align: center;
-            position: relative;
-            overflow: hidden;
-        }
-        .hero::before {
-            content: '';
-            position: absolute;
-            inset: 0;
-            background-image:
-                linear-gradient(rgba(108,99,255,0.04) 1px, transparent 1px),
-                linear-gradient(90deg, rgba(108,99,255,0.04) 1px, transparent 1px);
-            background-size: 40px 40px;
-            pointer-events: none;
-        }
-        .hero::after {
-            content: '';
-            position: absolute;
-            top: -80px; left: 50%;
-            transform: translateX(-50%);
-            width: 500px; height: 500px;
-            background: radial-gradient(circle, rgba(108,99,255,0.15) 0%, transparent 70%);
-            pointer-events: none;
-        }
-        .hero-inner { position: relative; z-index: 1; max-width: 700px; margin: 0 auto; }
-        .hero-badge {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.4rem;
-            background: rgba(108,99,255,0.15);
-            border: 1px solid rgba(108,99,255,0.3);
-            color: #a89fff;
-            font-size: 0.78rem;
-            font-weight: 600;
-            letter-spacing: 0.06em;
-            text-transform: uppercase;
-            padding: 0.35rem 0.9rem;
+        .filter-btn {
+            padding: 0.45rem 1.25rem;
             border-radius: 999px;
-            margin-bottom: 1.5rem;
-        }
-        .hero-badge .dot {
-            width: 6px; height: 6px;
-            background: #6c63ff;
-            border-radius: 50%;
-            animation: pulse 2s infinite;
-        }
-        @keyframes pulse {
-            0%, 100% { opacity: 1; transform: scale(1); }
-            50%       { opacity: 0.5; transform: scale(0.8); }
-        }
-        .hero h1 {
-            font-size: clamp(2.4rem, 7vw, 4rem);
-            font-weight: 800;
-            letter-spacing: -0.03em;
-            line-height: 1.1;
-            margin-bottom: 1rem;
-            color: #fff;
-        }
-        .hero h1 .accent { color: #6c63ff; }
-        .hero-sub {
-            font-size: clamp(1rem, 2.5vw, 1.15rem);
-            color: rgba(255,255,255,0.55);
-            line-height: 1.7;
-            margin-bottom: 2rem;
-            max-width: 540px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-        .hero-btns {
-            display: flex;
-            gap: 0.75rem;
-            justify-content: center;
-            flex-wrap: wrap;
-            margin-bottom: 3rem;
-        }
-        .btn-hero-primary {
-            padding: 0.7rem 1.8rem;
-            border-radius: 10px;
-            font-size: 0.92rem;
-            font-weight: 600;
-            background: #6c63ff;
-            color: #fff;
-            border: none;
-            text-decoration: none;
-            transition: all 0.2s;
-            display: inline-flex;
-            align-items: center;
-            gap: 0.4rem;
-        }
-        .btn-hero-primary:hover {
-            background: #5a52d5;
-            color: #fff;
-            text-decoration: none;
-            transform: translateY(-2px);
-            box-shadow: 0 8px 24px rgba(108,99,255,0.4);
-        }
-        .btn-hero-secondary {
-            padding: 0.7rem 1.8rem;
-            border-radius: 10px;
-            font-size: 0.92rem;
-            font-weight: 600;
-            background: transparent;
-            color: rgba(255,255,255,0.75);
-            border: 1.5px solid rgba(255,255,255,0.2);
-            text-decoration: none;
-            transition: all 0.2s;
-            display: inline-flex;
-            align-items: center;
-            gap: 0.4rem;
-        }
-        .btn-hero-secondary:hover {
-            border-color: rgba(255,255,255,0.5);
-            color: #fff;
-            text-decoration: none;
-        }
-        .hero-stats {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 2rem;
-            padding-top: 2.5rem;
-            border-top: 1px solid rgba(255,255,255,0.08);
-        }
-        .hero-stat-value { font-size: 1.5rem; font-weight: 800; color: #fff; line-height: 1; }
-        .hero-stat-label {
-            font-size: 0.72rem;
-            color: rgba(255,255,255,0.4);
+            border: 1.5px solid #dee2e6;
+            background: #fff;
+            color: #495057;
+            font-size: 0.875rem;
             font-weight: 500;
-            text-transform: uppercase;
-            letter-spacing: 0.05em;
-            margin-top: 0.2rem;
+            cursor: pointer;
+            transition: all 0.18s ease;
+            text-decoration: none;
         }
-        #slides .carousel-item img { width: 100%; object-fit: cover; max-height: 75vh; min-height: 300px; }
-        @media (max-width: 576px) {
-            #slides .carousel-caption h1.display-2 { font-size: 1.8rem; }
-            #slides .carousel-caption h3 { font-size: 0.95rem; }
+
+        .filter-btn:hover {
+            border-color: #28bea8;
+            color: #28bea8;
+            background: #f0fdfb;
         }
-        .about-section { padding: 5rem 1.5rem; background: #fff; }
-        .about-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 4rem;
-            align-items: center;
-            max-width: 1100px;
-            margin: 0 auto;
-        }
-        @media (max-width: 768px) { .about-grid { grid-template-columns: 1fr; gap: 2rem; } }
-        .about-label {
-            font-size: 0.72rem;
-            font-weight: 700;
-            letter-spacing: 0.1em;
-            text-transform: uppercase;
-            color: #6c63ff;
-            margin-bottom: 0.75rem;
-        }
-        .about-section h2 {
-            font-size: clamp(1.6rem, 4vw, 2.2rem);
-            font-weight: 800;
-            letter-spacing: -0.02em;
-            color: #0f1117;
-            margin-bottom: 1.2rem;
-            line-height: 1.2;
-        }
-        .about-section p { color: #4a5568; line-height: 1.75; font-size: 0.97rem; margin-bottom: 1rem; }
-        .about-img { border-radius: 20px; width: 100%; box-shadow: 0 20px 60px rgba(0,0,0,0.12); }
-        .discipline-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-top: 1.5rem; }
-        @media (max-width: 500px) { .discipline-grid { grid-template-columns: 1fr; } }
-        .discipline-card { background: #f8f9ff; border: 1px solid #e8e8ff; border-radius: 14px; padding: 1.25rem; }
-        .discipline-card i { font-size: 1.5rem; margin-bottom: 0.6rem; display: block; }
-        .discipline-card h4 { font-size: 0.9rem; font-weight: 700; color: #0f1117; margin-bottom: 0.4rem; }
-        .discipline-card p { font-size: 0.8rem; color: #6c757d; margin: 0; line-height: 1.55; }
-        .blog-intro-section {
-            background: #f8f9fc;
-            padding: 5rem 1.5rem;
-            border-top: 1px solid #eef0f5;
-            border-bottom: 1px solid #eef0f5;
-        }
-        .blog-intro-inner {
-            max-width: 1100px;
-            margin: 0 auto;
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 4rem;
-            align-items: center;
-        }
-        @media (max-width: 768px) {
-            .blog-intro-inner { grid-template-columns: 1fr; gap: 2rem; }
-            .blog-intro-img-wrap { order: -1; }
-        }
-        .blog-intro-section h2 {
-            font-size: clamp(1.6rem, 4vw, 2.2rem);
-            font-weight: 800;
-            letter-spacing: -0.02em;
-            color: #0f1117;
-            margin-bottom: 1rem;
-            line-height: 1.2;
-        }
-        .blog-intro-section p { color: #4a5568; line-height: 1.75; font-size: 0.97rem; margin-bottom: 1rem; }
-        .blog-intro-img { border-radius: 20px; width: 100%; box-shadow: 0 20px 60px rgba(0,0,0,0.1); }
-        .fixed-background { border-top: 2px solid black; }
-        section.hobbies { background: linear-gradient(135deg, #0062E6 0%, #33AEFF 100%); }
-        .hobbies h3.section-heading {
-            font-size: clamp(1.5rem, 4vw, 2rem);
-            font-weight: 800;
+
+        .filter-btn.active {
+            background: #28bea8;
+            border-color: #28bea8;
             color: #fff;
-            text-shadow: 0 2px 8px rgba(0,0,0,0.25);
-            letter-spacing: -0.01em;
         }
-        .hobbies .card { border: none; border-radius: 16px; box-shadow: 0 4px 20px rgba(0,0,0,0.1); transition: transform 0.2s, box-shadow 0.2s; }
-        .hobbies .card:hover { transform: translateY(-4px); box-shadow: 0 12px 32px rgba(0,0,0,0.15); }
-        .hobbies .card-title { font-size: 0.78rem; letter-spacing: 0.08em; font-weight: 700; }
-        .hobbies .card-body { padding: 1.5rem; }
-        .hobbies ul.fa-ul { margin-left: 1.5em; }
-        .hobbies ul.fa-ul li { font-size: 0.875rem; color: #444; line-height: 1.65; margin-bottom: 0.75rem; }
-        .contact-section { padding: 4rem 1.5rem; text-align: center; }
-        .contact-section h2 { font-size: 1.8rem; font-weight: 800; color: #0f1117; margin-bottom: 1.5rem; letter-spacing: -0.02em; }
-        footer { background: #1a1d27; color: rgba(255,255,255,0.5); padding-top: 2rem; font-size: 0.875rem; }
-        .socket { background: #0f1117; border-top: 1px solid rgba(255,255,255,0.06); }
-        .socket a { color: rgba(255,255,255,0.4); text-decoration: none; }
-        .socket a:hover { color: rgba(255,255,255,0.7); }
-        #digital-clock { font-size: 1.3rem; color: rgba(255,255,255,0.3); }
-        #myBtn {
-            display: none; position: fixed; bottom: 1.5rem; right: 1.5rem; z-index: 99;
-            background: #6c63ff; border: none; border-radius: 50%; width: 44px; height: 44px;
-            cursor: pointer; box-shadow: 0 4px 20px rgba(108,99,255,0.4); transition: transform 0.2s;
+
+        /* ── Blog card grid ──────────────────────────── */
+        .blog-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 1.5rem;
+            padding: 0 1rem 2rem;
+            max-width: 1300px;
+            margin: 0 auto;
         }
-        #myBtn:hover { transform: translateY(-3px); }
-        #myBtn svg { width: 14px; height: 14px; fill: #fff; display: block; margin: auto; }
+
+        .blog-item {
+            display: block;
+        }
+
+        .blog-item.hidden {
+            display: none;
+        }
+
+        @keyframes cardFadeIn {
+            from { opacity: 0; transform: translateY(14px); }
+            to   { opacity: 1; transform: translateY(0); }
+        }
+
+        .blog-item.visible {
+            animation: cardFadeIn 0.32s ease forwards;
+        }
+
+        .blog-item .card {
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .blog-item .card-img-top {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 10px 10px 0 0;
+        }
+
+        .blog-item .card-body {
+            display: flex;
+            flex-direction: column;
+            flex: 1;
+        }
+
+        .blog-item .card-title {
+            font-size: 1rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .blog-item .card-text {
+            font-size: 0.875rem;
+            color: #6c757d;
+            flex: 1;
+        }
+
+        .blog-item .text-muted {
+            font-size: 0.78rem;
+            margin-top: 0.75rem;
+        }
+
+        .blog-item .btn-outline-secondary {
+            margin-top: 0.75rem;
+            font-size: 0.875rem;
+            border-radius: 8px;
+            transition: all 0.18s;
+        }
+
+        /* ── Quote section ───────────────────────────── */
+        .quote-section {
+            background: #f8f9fa;
+            border-top: 2px solid #e9ecef;
+            border-bottom: 2px solid #e9ecef;
+            padding: 2rem 1.5rem;
+            text-align: center;
+            margin: 1rem 0;
+        }
+
+        .quote-section p.quote {
+            font-size: 1.05rem;
+            font-style: italic;
+            color: #495057;
+            max-width: 700px;
+            margin: 0 auto 1rem;
+            line-height: 1.7;
+        }
+
+        .quote-section .btn-quote {
+            padding: 0.45rem 1.4rem;
+            border-radius: 999px;
+            border: 1.5px solid #28bea8;
+            color: #28bea8;
+            background: transparent;
+            font-size: 0.875rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.18s;
+        }
+
+        .quote-section .btn-quote:hover {
+            background: #28bea8;
+            color: #fff;
+        }
+
+        /* ── Responsive tweaks ───────────────────────── */
+        @media (max-width: 576px) {
+            .blog-grid {
+                grid-template-columns: 1fr;
+                padding: 0 0.75rem 2rem;
+            }
+            .blog-item .card-img-top {
+                height: 180px;
+            }
+        }
+
+        .blog-stats {
+            text-align: center;
+            font-size: 0.82rem;
+            color: #6c757d;
+            padding-bottom: 0.5rem;
+        }
+        .blog-stats span {
+            font-weight: 600;
+            color: #343a40;
+        }
+
+        .blog-header .welcome {
+            width: 90%;
+            max-width: 800px;
+        }
+
+        .blog-header .display-4 {
+            font-size: clamp(1.6rem, 5vw, 2.8rem);
+            word-break: break-word;
+        }
     </style>
 </head>
+
 <body>
 
 <!-- Navigation -->
 <nav class="navbar navbar-expand-md navbar-light bg-light sticky-top">
     <div class="container-fluid">
-        <a class="navbar-brand" href="/"><img class="logoB" src="img/logoB.png"></a>
+        <a class="navbar-brand" href="../"><img class="logoB" src="../img/logoB.png"></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarResponsive">
             <ul class="navbar-nav ml-auto">
-                <li class="nav-item active"><a class="nav-link" href="/">Home</a></li>
-                <li class="nav-item"><a class="nav-link" href="./Blogs/">Blog</a></li>
-                <li class="nav-item"><a class="nav-link" href="./Quiz/">Quiz</a></li>
-                <li class="nav-item"><a class="nav-link" href="./FlashCards/">Flashcards</a></li>
+                <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
+                <li class="nav-item"><a class="nav-link active" href="/Blogs/">Blog</a></li>
+                <li class="nav-item"><a class="nav-link" href="/Quiz/">Quiz</a></li>
+                <li class="nav-item"><a class="nav-link" href="/FlashCards/">Flashcards</a></li>
                 <li class="nav-item"><a class="nav-link" href="/CV/">CV</a></li>
                 <li class="nav-item"><a class="nav-link" href="mailto:omsiddiqi01@gmail.com"><i class="fas fa-envelope-square"></i></a></li>
                 <li class="nav-item"><a class="nav-link" href="https://www.linkedin.com/in/owaissidd/" target="_blank"><i class="fab fa-linkedin"></i></a></li>
@@ -281,202 +213,244 @@
     </div>
 </nav>
 
-<!-- Hero -->
-<div class="hero" data-aos="fade-in">
-    <div class="hero-inner">
-        <div class="hero-badge" data-aos="fade-down" data-aos-delay="100">
-            <span class="dot"></span> Available for opportunities
+<!-- Header -->
+<div class="blog-header container-fluid">
+    <div class="row welcome text-center">
+        <div class="col-12">
+            <h1 class="display-4" data-aos="fade-down" data-aos-delay="200">Welcome To The Blogs.</h1>
         </div>
-        <h1 data-aos="fade-up" data-aos-delay="150">
-            Hi, I'm <span class="accent">Owais</span> Siddiqi
-        </h1>
-        <p class="hero-sub" data-aos="fade-up" data-aos-delay="200">
-            Data Scientist specialising in bioinformatics, machine learning, and clinical data analytics.
-            MSc Biomedical Engineering · Imperial College London.
-        </p>
-        <div class="hero-btns" data-aos="fade-up" data-aos-delay="250">
-            <a href="./Blogs/" class="btn-hero-primary">
-                <i class="fas fa-book-open"></i> Read My Blog
-            </a>
-            <a href="/CV/" class="btn-hero-secondary">
-                <i class="fas fa-file-alt"></i> View CV
-            </a>
-            <a href="./Quiz/" class="btn-hero-secondary">
-                <i class="fas fa-question-circle"></i> Take the Quiz
-            </a>
-        </div>
-        <div class="hero-stats" data-aos="fade-up" data-aos-delay="300">
-            <div>
-                <div class="hero-stat-value">2+</div>
-                <div class="hero-stat-label">Years in industry</div>
-            </div>
-            <div>
-                <div class="hero-stat-value">MSc</div>
-                <div class="hero-stat-label">Imperial College</div>
-            </div>
-            <div>
-                <div class="hero-stat-value">1st</div>
-                <div class="hero-stat-label">BEng, Queen Mary</div>
-            </div>
-            <div>
-                <div class="hero-stat-value">3</div>
-                <div class="hero-stat-label">Industry roles</div>
-            </div>
+        <hr>
+        <div class="col-12" data-aos="fade-up" data-aos-delay="300">
+            <p class="lead">Posts on Biomedical Engineering, Data Science, and Medicine — and their role in shaping modern life and future society.</p>
         </div>
     </div>
 </div>
 
-<!-- Carousel -->
-<div id="slides" class="carousel slide" data-ride="carousel">
-    <ul class="carousel-indicators">
-        <li data-target="#slides" data-slide-to="0" class="active"></li>
-        <li data-target="#slides" data-slide-to="1"></li>
-        <li data-target="#slides" data-slide-to="2"></li>
-    </ul>
-    <div class="carousel-inner">
-        <div class="carousel-item active">
-            <img src="img/background.jpg" alt="Data Science and Bioinformatics">
-            <div class="carousel-caption">
-                <h1 class="display-2">Data Science<br>&amp; Bioinformatics</h1>
-                <h3>Check out my Blog Posts</h3>
-                <a href="./Blogs/"><button type="button" class="btn btn-outline-light btn-lg">View Blogs</button></a>
-            </div>
-        </div>
-        <div class="carousel-item">
-            <img src="img/background2.png" alt="Medicine and Physiology">
-            <div class="carousel-caption">
-                <h1 class="display-2">Medicine<br>&amp; Physiology</h1>
-                <h3>Try my Mini Med Quiz</h3>
-                <a href="./Quiz/"><button type="button" class="btn btn-outline-light btn-lg">View Quiz</button></a>
-            </div>
-        </div>
-        <div class="carousel-item">
-            <img src="img/background4.png" alt="Biology and Physics">
-            <div class="carousel-caption">
-                <h1 class="display-2">Biology<br>&amp; Physics</h1>
-                <h3>Learn some new words with my Flashcards</h3>
-                <a href="./FlashCards/"><button type="button" class="btn btn-outline-light btn-lg">View Flashcards</button></a>
-            </div>
-        </div>
-    </div>
+<!-- Filter bar -->
+<div class="filter-bar" id="filterBar" data-aos="fade-up" data-aos-delay="350">
+    <button class="filter-btn active" data-filter="all">All</button>
+    <button class="filter-btn" data-filter="med">Medicine</button>
+    <button class="filter-btn" data-filter="bioeng">Bioengineering</button>
+    <button class="filter-btn" data-filter="sci">Science</button>
 </div>
 
-<!-- About -->
-<section class="about-section">
-    <div class="about-grid">
-        <div data-aos="fade-right" data-aos-delay="100">
-            <p class="about-label">About me</p>
-            <h2>Where biology meets<br>data science</h2>
-            <p>I'm a Bioinformatics-focused Data Scientist with a background in Biomedical Engineering. I build production-scale genomic analytics pipelines, deploy machine learning models for patient stratification, and translate complex molecular datasets into structured, decision-ready evidence.</p>
-            <p>I hold an MSc in Biomedical Engineering from <a href="https://www.imperial.ac.uk/" target="_blank" style="color:#6c63ff; font-weight:500;">Imperial College London</a> and a First Class BEng from <a href="https://www.qmul.ac.uk/" target="_blank" style="color:#6c63ff; font-weight:500;">Queen Mary University of London</a>. This site is where I write about the ideas and topics that shape how I think, from genomics to machine learning to medicine.</p>
-            <div class="discipline-grid">
-                <div class="discipline-card">
-                    <i class="fas fa-atom" style="color:#e53e3e"></i>
-                    <h4>Physics &amp; Maths</h4>
-                    <p>Multivariable calculus, linear algebra, and signal processing, the rigour behind every model I build.</p>
-                </div>
-                <div class="discipline-card">
-                    <i class="fas fa-dna" style="color:#2163af"></i>
-                    <h4>Biology &amp; Genomics</h4>
-                    <p>Living systems are noisy, dynamic, and deeply interconnected, precisely what makes data science on them so compelling.</p>
-                </div>
+<div class="blog-stats"><span id="post-count">–</span> posts</div>
+
+<!-- Blog grid -->
+<div class="blog-grid" id="blogGrid">
+
+    <!-- ★ NEW: Mouse Neoantigen Pipeline -->
+    <div class="blog-item bioeng visible">
+        <div class="card">
+            <img class="card-img-top" src="../img/neoantigen_pipeline.png" alt="Mouse Neoantigen Candidates Pipeline">
+            <div class="card-body">
+                <h4 class="card-title">Mouse Neoantigen Candidates Pipeline</h4>
+                <p class="card-text">
+                    End-to-end Nextflow DSL2 pipeline for somatic variant calling and MHC-I neoantigen prediction
+                    from murine RNA-Seq data (GRCm39). Implements STAR alignment, Strelka2 variant calling,
+                    GATK hard-filtering, VEP annotation, and NetMHCpan-4.1 candidate scoring.
+                </p>
+                <p class="text-muted">Published: 05/04/2026</p>
+                <a href="https://github.com/pOSNode/Mouse_Neoantigen_Candidates"
+                   class="btn btn-outline-secondary"
+                   target="_blank">
+                   View Repository
+                </a>
             </div>
         </div>
-        <div data-aos="fade-left" data-aos-delay="200">
-            <img src="img/maths_home_page.jpg" alt="Writing and research" class="about-img">
-        </div>
     </div>
-</section>
 
-<!-- Blog intro -->
-<section class="blog-intro-section">
-    <div class="blog-intro-inner">
-        <div class="blog-intro-img-wrap" data-aos="fade-right" data-aos-delay="100">
-            <img src="img/writing.png" alt="Blog posts" class="blog-intro-img">
-        </div>
-        <div data-aos="fade-left" data-aos-delay="200">
-            <p class="about-label">The Blog</p>
-            <h2>Exploring ideas at the boundary of disciplines</h2>
-            <p>Biology and engineering seem worlds apart, yet their intersection is where the most exciting science happens. Bioinformatics and data science give me the tools to make sense of complex biological systems: finding patterns in genomic data, modelling disease progression, and translating raw molecular information into something meaningful.</p>
-            <p>The human genome contains billions of base pairs. A single RNA-seq experiment generates millions of reads. A clinical dataset can span thousands of patients across years of follow-up. Making sense of that data, rigorously and reproducibly, is both a technical challenge and a creative one.</p>
-            <p>This blog is where I explore those ideas, from the logic of machine learning pipelines to the biology they're trying to decode. I hope you find something here that sparks your curiosity.</p>
-            <br>
-            <a href="./Blogs/" class="btn-hero-primary" style="display:inline-flex;">
-                <i class="fas fa-book-open"></i> Read Blog Posts
-            </a>
+    <div class="blog-item bioeng visible">
+        <div class="card">
+            <img class="card-img-top" src="../img/rna_image_pipeline.png" alt="Rare CTC RNA-seq Pipeline">
+            <div class="card-body">
+                <h4 class="card-title">Rare CTC RNA-seq DGE Pipeline</h4>
+                <p class="card-text">
+                    End-to-end Nextflow DSL2 differential gene expression pipeline optimised for low-input circulating tumour cell transcriptomics.
+                    Implements Salmon quantification, TMMwsp normalisation, cell-input aware QC, and additive batch modelling.
+                </p>
+                <p class="text-muted">Published: 02/03/2026</p>
+                <a href="https://github.com/pOSNode/Rare_CTC_RNA_DGE_Pipeline"
+                   class="btn btn-outline-secondary"
+                   target="_blank">
+                   View Repository
+                </a>
+            </div>
         </div>
     </div>
-</section>
 
-<!-- Parallax divider -->
-<div class="fixed-background" style="border-top:2px solid black">
-    <div class="fixed-wrap" id="parallaxWrap">
-        <div class="fixed" id="parallaxFixed"></div>
+    <div class="blog-item bioeng visible">
+        <div class="card">
+            <img class="card-img-top" src="../img/neural_network_masters.jpg" alt="Master's Project">
+            <div class="card-body">
+                <h4 class="card-title">Master's Project</h4>
+                <p class="card-text">R-Net: A Novel Approach Towards The Cell Quantification Of Microscopy Images Using A Regression-based Network.</p>
+                <p class="text-muted">Published: 04/12/2023</p>
+                <a href="https://github.com/pOSNode/MSc-Project/blob/main/Owais_Siddiqi_Final_Dissertation.pdf" class="btn btn-outline-secondary" target="_blank">See More</a>
+            </div>
+        </div>
     </div>
+
+    <div class="blog-item bioeng visible">
+        <div class="card">
+            <img class="card-img-top" src="../img/ML_frontpage.jpg" alt="Student Stress ML">
+            <div class="card-body">
+                <h4 class="card-title">Predicting Student's Stress Levels Using Machine Learning</h4>
+                <p class="card-text">Student stress levels can be attributed to an assortment of factors and can have debilitating effects...</p>
+                <p class="text-muted">Published: 21/12/2023</p>
+                <a href="https://nbviewer.org/github/pOSNode/ML-Healthcare-Project/blob/master/Student_Stress_Levels.ipynb" class="btn btn-outline-secondary" target="_blank">See More</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="blog-item bioeng visible">
+        <div class="card">
+            <img class="card-img-top" src="../img/ISMRM.png" alt="ISMRM Abstract">
+            <div class="card-body">
+                <h4 class="card-title">ISMRM 2022 Abstract</h4>
+                <p class="card-text">Investigating the Repeatability of Multifrequency Magnetic Resonance Elastography applied to a Soft Gelatin Phantom.</p>
+                <p class="text-muted">Published: 07/05/2022</p>
+                <a href="https://archive.ismrm.org/2022/2240.html" class="btn btn-outline-secondary" target="_blank">See More</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="blog-item bioeng visible">
+        <div class="card">
+            <img class="card-img-top" src="../img/BMI.jfif" alt="Third Year Project">
+            <div class="card-body">
+                <h4 class="card-title">Third Year Project</h4>
+                <p class="card-text">Multi-Class Classification of EEG Signals Using a Fuzzy Based Rule System for Brain Computer Interfaces.</p>
+                <p class="text-muted">Published: 03/01/2022</p>
+                <a href="https://github.com/pOSNode/Third-Year-Project" class="btn btn-outline-secondary" target="_blank">See More</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="blog-item bioeng visible">
+        <div class="card">
+            <img class="card-img-top" src="../img/ML_frontpage.jpg" alt="Diabetes ML">
+            <div class="card-body">
+                <h4 class="card-title">Predicting Diabetes Using Machine Learning</h4>
+                <p class="card-text">A classification task using machine learning algorithms to assign a class label based on patient health indicators...</p>
+                <p class="text-muted">Published: 19/02/2021</p>
+                <a href="https://nbviewer.org/github/pOSNode/ML-Healthcare-Project/blob/master/Diabetes-Classification-project.ipynb" class="btn btn-outline-secondary" target="_blank">See More</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="blog-item med visible">
+        <div class="card">
+            <img class="card-img-top" src="../img/Vaccine_Frontpage.jpg" alt="COVID Vaccines">
+            <div class="card-body">
+                <h4 class="card-title">The COVID-19 Vaccines</h4>
+                <p class="card-text">Right now on the UK market, there are 3 released and approved vaccines by the MHRA. A look at how they work...</p>
+                <p class="text-muted">Published: 26/01/2021</p>
+                <a href="/Blogs/Vax/" class="btn btn-outline-secondary">See More</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="blog-item med visible">
+        <div class="card">
+            <img class="card-img-top" src="../img/Dementia_Anatomy.jpg" alt="Dementia">
+            <div class="card-body">
+                <h4 class="card-title">What is Dementia?</h4>
+                <p class="card-text">Dementia is an umbrella term describing a person's decline in memory, thinking, or reasoning. There are many different types...</p>
+                <p class="text-muted">Published: 03/11/2020</p>
+                <a href="/Blogs/Dementia/" class="btn btn-outline-secondary">See More</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="blog-item bioeng visible">
+        <div class="card">
+            <img class="card-img-top" src="../img/DNA.png" alt="DNA Data Storage">
+            <div class="card-body">
+                <h4 class="card-title">Will DNA Data Storage Be The Future?</h4>
+                <p class="card-text">All data is stored in a base-2 binary system. DNA offers a radically different and ultra-dense alternative...</p>
+                <p class="text-muted">Published: 01/09/2020</p>
+                <a href="/Blogs/DNA/" class="btn btn-outline-secondary">See More</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="blog-item med visible">
+        <div class="card">
+            <img class="card-img-top" src="../img/AI.png" alt="Is AI Dangerous">
+            <div class="card-body">
+                <h4 class="card-title">Is AI Dangerous?</h4>
+                <p class="card-text">Artificial intelligence describes the ability of machines to learn and problem solve, mimicking human reasoning through specialised algorithms...</p>
+                <p class="text-muted">Published: 27/07/2020</p>
+                <a href="/Blogs/AI/" class="btn btn-outline-secondary">See More</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="blog-item bioeng visible">
+        <div class="card">
+            <img class="card-img-top" src="../img/pros.png" alt="Prosthetic Arm">
+            <div class="card-body">
+                <h4 class="card-title">The Prosthetic Arm: A Brief Look At The Physics</h4>
+                <p class="card-text">Osseointegration of prosthetic limbs has transformed quality of life for patients with limb loss, whether from birth or injury...</p>
+                <p class="text-muted">Published: 25/06/2020</p>
+                <a href="/Blogs/Prosthetics/" class="btn btn-outline-secondary">See More</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="blog-item med visible">
+        <div class="card">
+            <img class="card-img-top" src="../img/Covid19.png" alt="COVID Summary">
+            <div class="card-body">
+                <h4 class="card-title">Coronavirus (COVID-19) Summary</h4>
+                <p class="card-text">COVID-19 is a severe acute respiratory infection first identified in late 2019. A comprehensive overview of the virus and its impact...</p>
+                <p class="text-muted">Published: 31/05/2020</p>
+                <a href="/Blogs/COVID/" class="btn btn-outline-secondary">See More</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="blog-item sci visible">
+        <div class="card">
+            <img class="card-img-top" src="../img/HumanEye.png" alt="RGB Colour Model">
+            <div class="card-body">
+                <h4 class="card-title">The RGB Colour Model</h4>
+                <p class="card-text">We perceive colour based on the stimulation of cone cells. How light and biology combine to create the full spectrum of human vision...</p>
+                <p class="text-muted">Published: 16/11/2019</p>
+                <a href="/Blogs/RGB/" class="btn btn-outline-secondary">See More</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="blog-item bioeng visible">
+        <div class="card">
+            <img class="card-img-top" src="../img/Proton-beam-via-Varian.png" alt="Proton Beam Therapy">
+            <div class="card-body">
+                <h4 class="card-title">Proton Beam Therapy</h4>
+                <p class="card-text">An advanced form of radiotherapy delivering treatment via accelerated proton beams, offering precision targeting of tumours...</p>
+                <p class="text-muted">Published: 19/08/2019</p>
+                <a href="/Blogs/PBT/" class="btn btn-outline-secondary">See More</a>
+            </div>
+        </div>
+    </div>
+
+</div><!-- end blog-grid -->
+
+<!-- Quote section -->
+<div class="quote-section">
+    <p class="quote" id="quote-text">Loading quote...</p>
+    <button class="btn-quote" id="loadQuote">New Quote</button>
 </div>
-
-<!-- Hobbies -->
-<section class="hobbies py-5" style="border-bottom: 2px solid black;">
-    <div class="text-center mb-4">
-        <h3 class="section-heading aos-init" data-aos="fade-down" data-aos-delay="100">Hobbies</h3>
-    </div>
-    <div class="container-fluid" style="padding: 0 5%;">
-        <div class="row">
-            <div class="col-lg-4 d-flex align-items-stretch mb-4" data-aos="fade-right" data-aos-delay="150">
-                <div class="card w-100">
-                    <div class="card-body">
-                        <h5 class="card-title text-muted text-uppercase text-center mb-0">
-                            <i class="fas fa-code fa-3x mb-2 d-block" style="color:#6c63ff"></i>
-                            Programming
-                        </h5>
-                        <hr>
-                        <ul class="fa-ul">
-                            <li><span class="fa-li"><i class="fas fa-angle-double-right" style="color:#6c63ff"></i></span>Python is my primary language — the backbone of modern data science and bioinformatics. Its readability and flexibility make it ideal for everything from rapid prototyping to production-scale pipelines.</li>
-                            <li><span class="fa-li"><i class="fas fa-angle-double-right" style="color:#6c63ff"></i></span>The ecosystem is what makes it so powerful: <strong>Pandas</strong> and <strong>NumPy</strong> for data engineering, <strong>Scikit-learn</strong> and <strong>PyTorch</strong> for ML, and <strong>Nextflow</strong> for genomic workflows.</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 d-flex align-items-stretch mb-4" data-aos="fade-up" data-aos-delay="200">
-                <div class="card w-100">
-                    <div class="card-body">
-                        <h5 class="card-title text-muted text-uppercase text-center mb-0">
-                            <i class="fas fa-gamepad fa-3x mb-2 d-block" style="color:#00c9a7"></i>
-                            Video Games
-                        </h5>
-                        <hr>
-                        <ul class="fa-ul">
-                            <li><span class="fa-li"><i class="fas fa-angle-double-right" style="color:#00c9a7"></i></span>Personally, I have a variety of different video game genres that I like to play. Solo games provide a beautiful, vast story combined by smooth game mechanics and a cleverly chosen score that only facilitates the immersiveness of a single player game (God Of War).</li>
-                            <li><span class="fa-li"><i class="fas fa-angle-double-right" style="color:#00c9a7"></i></span>Multiplayer games on the other hand, require a more strategic and alert mind as you are not playing against NPCs but real people, who are making their own unpredictable decisions that you have to counter.</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 d-flex align-items-stretch mb-4" data-aos="fade-left" data-aos-delay="250">
-                <div class="card w-100">
-                    <div class="card-body">
-                        <h5 class="card-title text-muted text-uppercase text-center mb-0">
-                            <i class="fas fa-comment-dots fa-3x mb-2 d-block" style="color:#f7b731"></i>
-                            Blogging
-                        </h5>
-                        <hr>
-                        <ul class="fa-ul">
-                            <li><span class="fa-li"><i class="fas fa-angle-double-right" style="color:#f7b731"></i></span>Blogging is one of the most effective ways to build awareness about your subject interests, while providing relevant and useful content for your audience at the same time. I enjoy blogging as it grants me a platform to convey the topics I find interesting.</li>
-                            <li><span class="fa-li"><i class="fas fa-angle-double-right" style="color:#f7b731"></i></span>It also lets me share knowledge I have gained through research in various subjects and allows me to give my own opinion on them. Serendipitously, it indirectly diverts me to areas of science I never knew about and thus broadens my horizons.</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
 
 <!-- Contact -->
-<div class="contact-section" data-aos="fade-up">
-    <h2>Get In Touch</h2>
-    <div class="social padding">
-        <a href="mailto:omsiddiqi01@gmail.com"><i class="fas fa-envelope-square"></i></a>
-        <a href="https://www.linkedin.com/in/owaissidd/" target="_blank"><i class="fab fa-linkedin"></i></a>
+<div class="container-fluid padding">
+    <div class="row text-center padding">
+        <div class="col-12"><h2>Contact</h2></div>
+        <div class="col-12 social padding">
+            <a href="mailto:omsiddiqi01@gmail.com"><i class="fas fa-envelope-square"></i></a>
+            <a href="https://www.linkedin.com/in/owaissidd/" target="_blank"><i class="fab fa-linkedin"></i></a>
+        </div>
     </div>
 </div>
 
@@ -488,7 +462,7 @@
         </div>
     </div>
     <div class="socket text-light text-center py-4">
-        <p>&copy; <a href="https://owaissiddiqi.co.uk/" target="_blank">Owais Siddiqi · All rights reserved</a></p>
+        <p>&copy; <a href="https://owaissiddiqi.co.uk/" target="_blank">Owais Siddiqi All rights reserved</a></p>
     </div>
 </footer>
 
@@ -497,58 +471,44 @@
 </button>
 
 <script>
-    AOS.init({ once: true, duration: 600 });
+    AOS.init();
 
-    /* ── Scroll to top ───────────────────────── */
+    var allItems = document.querySelectorAll('.blog-item');
+
+    function filterPosts(filter) {
+        var count = 0;
+        allItems.forEach(function(item, i) {
+            var matches = filter === 'all' || item.classList.contains(filter);
+            if (matches) {
+                item.classList.remove('hidden');
+                item.classList.add('visible');
+                item.style.animationDelay = (count * 0.05) + 's';
+                count++;
+            } else {
+                item.classList.add('hidden');
+                item.classList.remove('visible');
+                item.style.animationDelay = '0s';
+            }
+        });
+        document.getElementById('post-count').textContent = count;
+    }
+
+    document.getElementById('filterBar').addEventListener('click', function(e) {
+        var btn = e.target.closest('.filter-btn');
+        if (!btn) return;
+        document.querySelectorAll('.filter-btn').forEach(function(b){ b.classList.remove('active'); });
+        btn.classList.add('active');
+        filterPosts(btn.dataset.filter);
+    });
+
+    filterPosts('all');
+
     var mybutton = document.getElementById('myBtn');
     window.addEventListener('scroll', function() {
         mybutton.style.display = (document.documentElement.scrollTop > 40) ? 'block' : 'none';
     });
     function topFunction() { window.scrollTo({ top: 0, behavior: 'smooth' }); }
 
-    /* ── Parallax fix — Safari (desktop + iOS) ───────────────────────────────
-       Safari refuses position:fixed inside a clipped ancestor, causing the
-       parallax image to escape its container and sit on top of all content.
-       We detect Safari via the user-agent and apply a JS-driven translateY
-       approach instead, which works reliably on all Safari versions.
-    -------------------------------------------------------------------------- */
-    (function () {
-        var ua = navigator.userAgent;
-        // Matches Safari but NOT Chrome (which also includes "Safari" in UA)
-        var isSafari = /^((?!chrome|android).)*safari/i.test(ua);
-        // Also catch iOS devices (touch + webkit)
-        var isIOS = /iPad|iPhone|iPod/.test(ua) && !window.MSStream;
-
-        if (isSafari || isIOS) {
-            document.body.classList.add('safari-parallax-fallback');
-
-            var fixedEl   = document.getElementById('parallaxFixed');
-            var sectionEl = document.querySelector('.fixed-background');
-
-            if (fixedEl && sectionEl) {
-                function updateParallax() {
-                    var rect     = sectionEl.getBoundingClientRect();
-                    var sectionH = sectionEl.offsetHeight;
-                    var viewH    = window.innerHeight;
-
-                    // progress: 0 when section enters bottom of viewport,
-                    //           1 when section exits top of viewport
-                    var progress = 1 - ((rect.bottom) / (viewH + sectionH));
-                    progress = Math.max(0, Math.min(1, progress));
-
-                    // Translate between -15% and +15% of the image height
-                    var shift = (progress - 0.5) * 30;
-                    fixedEl.style.transform = 'translateY(' + shift + '%)';
-                }
-
-                window.addEventListener('scroll', updateParallax, { passive: true });
-                window.addEventListener('resize', updateParallax, { passive: true });
-                updateParallax();
-            }
-        }
-    })();
-
-    /* ── Digital clock ───────────────────────── */
     function getDateTime() {
         var now = new Date(), p = function(n){ return (n<10?'0':'')+n; };
         return p(now.getHours())+':'+p(now.getMinutes())+':'+p(now.getSeconds())
@@ -558,6 +518,63 @@
         var el = document.getElementById('digital-clock');
         if(el) el.innerHTML = getDateTime();
     }, 1000);
+</script>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        var quotes = [
+            "Remember that guy that gave up? Neither does anybody else.",
+            "Don't practice until you get it right, practice until you can't get it wrong.",
+            "You will NEVER regret hard work. You WILL regret not working hard.",
+            "One day, your life will flash before your eyes... make sure it's worth watching.",
+            "The fact that you aren't where you want to be should be enough motivation.",
+            "To shine in front of thousands, you have to outwork thousands in front of nobody.",
+            "The more you sweat in training, the less you bleed in the fight.",
+            "Pain is temporary, quitting lasts forever.",
+            "It's hard to beat someone who doesn't quit.",
+            "It is better to fail in originality than to succeed in imitation.",
+            "I find that the harder I work, the more luck I seem to have.",
+            "The way to get started is to quit talking and begin doing.",
+            "Tell me and I forget. Teach me and I remember. Involve me and I learn.",
+            "Being a student is easy. Learning requires actual work.",
+            "Anything worth doing well is worth doing poorly at first.",
+            "Today, do what others won't — so tomorrow you can do what others can't.",
+            "Everything was impossible before someone did it.",
+            "Hard work beats talent when talent fails to work hard.",
+            "Success isn't owned, it's leased, and rent is due every day.",
+            "Don't stop when you are tired, stop when you are done.",
+            "If it's not challenging you, it's not changing you.",
+            "Somebody has to be the best — why can't it be you.",
+            "A setback is just a comeback in disguise.",
+            "You miss 100% of the shots you don't take.",
+            "Luck is when hard work meets opportunity.",
+            "Whether you think you can, or you think you can't — you're right.",
+            "Failure is only the opportunity to begin again.",
+            "There is always something more to learn. Even for a master.",
+            "Nothing is impossible.",
+            "We have two lives, and the second begins when we realise we only have one.",
+            "How can you move forward if you keep regretting the past.",
+            "You haven't come this far only to come this far.",
+            "If it's not alright in the end, then it's not the end.",
+            "Strength doesn't come from what you can do — it comes from overcoming what you once thought you couldn't.",
+            "Focus on effort, not outcome.",
+            "Don't seek validation from anyone but yourself.",
+            "Being weak is nothing to be ashamed of. Staying weak is.",
+            "Humans are strong because we have the ability to change.",
+            "Life has no remote. Get up and change it yourself.",
+            "Hard work beats talent.",
+            "If you only do what you can do, you will never be more than you are now.",
+            "Don't stop when you're tired — stop when you're done."
+        ];
+
+        function printQuote() {
+            var q = quotes[Math.floor(Math.random() * quotes.length)];
+            document.getElementById('quote-text').textContent = q;
+        }
+
+        printQuote();
+        document.getElementById('loadQuote').addEventListener('click', printQuote);
+    });
 </script>
 </body>
 </html>
