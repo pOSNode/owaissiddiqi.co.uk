@@ -198,5 +198,453 @@
       "choice3": "The Torso and upper body",
       "choice4": "Hair and Nails",
       "answer": 2
+    },
+    {
+      "question": "What does the acronym 'AI' stand for?",
+      "choice1": "Automated Interface",
+      "choice2": "Artificial Intelligence",
+      "choice3": "Advanced Internet",
+      "choice4": "Algorithmic Input",
+      "answer": 2
+    },
+    {
+      "question": "Which subset of AI uses artificial neural networks to mimic how the human brain processes information?",
+      "choice1": "Deep Learning",
+      "choice2": "Cloud Computing",
+      "choice3": "Blockchain",
+      "choice4": "Quantum Encryption",
+      "answer": 1
+    },
+    {
+      "question": "In a 2020 study by the Department of Radiology in Wuhan, what accuracy did an AI model achieve in detecting COVID-19 from chest CT scans?",
+      "choice1": "50%",
+      "choice2": "72%",
+      "choice3": "96%",
+      "choice4": "100%, it's basically psychic",
+      "answer": 3
+    },
+    {
+      "question": "Which Google-owned company's AI is used by the NHS to help identify health threats from smartphone data?",
+      "choice1": "DeepMind",
+      "choice2": "Waymo",
+      "choice3": "Nest",
+      "choice4": "YouTube",
+      "answer": 1
+    },
+    {
+      "question": "The iRobot Roomba 980 uses AI to do what, as mentioned in the blog?",
+      "choice1": "Order its own replacement parts",
+      "choice2": "Scan a room and find the most efficient cleaning path",
+      "choice3": "Predict the weather",
+      "choice4": "Chat with the homeowner",
+      "answer": 2
+    },
+    {
+      "question": "In the 2018 Annals of Oncology skin cancer study, how did the AI neural network's diagnostic accuracy compare to dermatologists?",
+      "choice1": "It performed worse, at 60% accuracy",
+      "choice2": "It tied exactly with the dermatologists",
+      "choice3": "It slightly outperformed them, 95% vs 94%",
+      "choice4": "The study was inconclusive",
+      "answer": 3
+    },
+    {
+      "question": "According to the blog, what is one key advantage self-driving cars could offer if all vehicles could communicate with each other?",
+      "choice1": "Free unlimited fuel",
+      "choice2": "A drastic reduction in road accidents",
+      "choice3": "Cars that can fly",
+      "choice4": "No more traffic lights needed anywhere",
+      "answer": 2
+    },
+    {
+      "question": "In which city was COVID-19 first identified, in December 2019?",
+      "choice1": "Beijing, China",
+      "choice2": "Wuhan, China",
+      "choice3": "Tokyo, Japan",
+      "choice4": "Seoul, South Korea",
+      "answer": 2
+    },
+    {
+      "question": "What is the term for the average number of people an infected person passes a disease onto?",
+      "choice1": "R0 (the reproduction number)",
+      "choice2": "The Vector Value",
+      "choice3": "The Spread Index",
+      "choice4": "The Contagion Constant",
+      "answer": 1
+    },
+    {
+      "question": "According to the blog, what was the recommended period of self-isolation in the UK?",
+      "choice1": "24 hours",
+      "choice2": "3 days",
+      "choice3": "7 days",
+      "choice4": "1 year",
+      "answer": 3
+    },
+    {
+      "question": "Which of these was NOT listed as one of the most common symptoms of COVID-19?",
+      "choice1": "Fever",
+      "choice2": "Loss of smell/taste",
+      "choice3": "Cough",
+      "choice4": "Broken bones",
+      "answer": 4
+    },
+    {
+      "question": "What does 'shielding' refer to in the context of the COVID-19 pandemic?",
+      "choice1": "Wearing full body armour outdoors",
+      "choice2": "Reducing interactions between vulnerable people and the rest of society",
+      "choice3": "A type of face mask",
+      "choice4": "A government tax break",
+      "answer": 2
+    },
+    {
+      "question": "Which organisation officially named the disease 'COVID-19'?",
+      "choice1": "NHS",
+      "choice2": "CDC",
+      "choice3": "World Health Organization (WHO)",
+      "choice4": "United Nations",
+      "answer": 3
+    },
+    {
+      "question": "What family of viruses does the virus that causes COVID-19 belong to?",
+      "choice1": "Enveloped RNA viruses (coronaviruses)",
+      "choice2": "Bacteriophages",
+      "choice3": "Retroviruses only",
+      "choice4": "DNA viruses",
+      "answer": 1
+    },
+    {
+      "question": "What does 'DNA' stand for?",
+      "choice1": "Deoxyribonucleic Acid",
+      "choice2": "Dinucleotide Amino Acid",
+      "choice3": "Digital Nucleic Array",
+      "choice4": "Double Nitrogen Atom",
+      "answer": 1
+    },
+    {
+      "question": "Which of these is NOT one of the four nitrogenous bases of DNA?",
+      "choice1": "Adenine",
+      "choice2": "Cytosine",
+      "choice3": "Uracil",
+      "choice4": "Guanine",
+      "answer": 3
+    },
+    {
+      "question": "In the 2017 'DNA Fountain' study, roughly how much data was stored in just 1 gram of synthetic DNA?",
+      "choice1": "215 petabytes",
+      "choice2": "215 gigabytes",
+      "choice3": "1 terabyte",
+      "choice4": "215 kilobytes",
+      "answer": 1
+    },
+    {
+      "question": "Which gene-editing technology can be used to insert an encoded data sequence into synthetic DNA?",
+      "choice1": "PCR",
+      "choice2": "CRISPR",
+      "choice3": "BLAST",
+      "choice4": "qPCR",
+      "answer": 2
+    },
+    {
+      "question": "What is one major reason DNA data storage isn't yet used commercially, according to the blog?",
+      "choice1": "It's too heavy to transport",
+      "choice2": "High cost and susceptibility to mutation errors",
+      "choice3": "It requires constant electricity",
+      "choice4": "There's no way to read it back",
+      "answer": 2
+    },
+    {
+      "question": "According to the blog, roughly what temperature does DNA need to be kept at to remain stable for over a million years?",
+      "choice1": "-18°C",
+      "choice2": "0°C",
+      "choice3": "37°C",
+      "choice4": "100°C",
+      "answer": 1
+    },
+    {
+      "question": "Which of these is NOT one of the alternative data storage types discussed in the blog alongside DNA?",
+      "choice1": "Optical",
+      "choice2": "Magnetic",
+      "choice3": "Flash",
+      "choice4": "Telepathic",
+      "answer": 4
+    },
+    {
+      "question": "Dementia is best described as an umbrella term for what?",
+      "choice1": "A decline in memory, thinking, or reasoning",
+      "choice2": "A single specific disease",
+      "choice3": "A type of infection",
+      "choice4": "A vitamin deficiency",
+      "answer": 1
+    },
+    {
+      "question": "Which is the most common and most researched type of dementia?",
+      "choice1": "Vascular Dementia",
+      "choice2": "Alzheimer's Disease",
+      "choice3": "Frontotemporal Dementia",
+      "choice4": "Dementia with Lewy-bodies",
+      "answer": 2
+    },
+    {
+      "question": "Alzheimer's disease is thought to be caused by the build-up of which two proteins in the brain?",
+      "choice1": "Collagen and Keratin",
+      "choice2": "Amyloid and tau",
+      "choice3": "Insulin and Glucagon",
+      "choice4": "Haemoglobin and Myoglobin",
+      "answer": 2
+    },
+    {
+      "question": "Which part of the brain is typically affected first in Alzheimer's, impairing the formation of new memories?",
+      "choice1": "Cerebellum",
+      "choice2": "Hippocampus",
+      "choice3": "Medulla Oblongata",
+      "choice4": "Occipital Lobe",
+      "answer": 2
+    },
+    {
+      "question": "What typically causes vascular dementia?",
+      "choice1": "A vitamin B12 deficiency",
+      "choice2": "Reduced blood supply to the brain's nerve cells, e.g. from a stroke",
+      "choice3": "A viral infection of the spinal cord",
+      "choice4": "Excessive sleep",
+      "answer": 2
+    },
+    {
+      "question": "What term describes a person with Alzheimer's feeling as though a past milestone is happening in the present?",
+      "choice1": "Deja Vu",
+      "choice2": "Time Shift",
+      "choice3": "Flashback Syndrome",
+      "choice4": "Memory Loop",
+      "answer": 2
+    },
+    {
+      "question": "Roughly what percentage of dementia cases are classified as 'younger-onset' (diagnosed under age 65)?",
+      "choice1": "1-5%",
+      "choice2": "25%",
+      "choice3": "50%",
+      "choice4": "90%",
+      "answer": 1
+    },
+    {
+      "question": "What does 'PBT' stand for in the context of cancer treatment?",
+      "choice1": "Proton Beam Therapy",
+      "choice2": "Post-Biopsy Treatment",
+      "choice3": "Peripheral Blood Test",
+      "choice4": "Personalised Body Therapy",
+      "answer": 1
+    },
+    {
+      "question": "What is the main advantage of Proton Beam Therapy over standard radiotherapy?",
+      "choice1": "It's completely free",
+      "choice2": "It causes less damage to surrounding healthy tissue",
+      "choice3": "It cures cancer instantly",
+      "choice4": "It doesn't require a hospital visit",
+      "answer": 2
+    },
+    {
+      "question": "Who first discovered X-rays in 1895, paving the way for radiotherapy?",
+      "choice1": "Marie Curie",
+      "choice2": "Wilhelm Röntgen",
+      "choice3": "Albert Einstein",
+      "choice4": "Isaac Newton",
+      "answer": 2
+    },
+    {
+      "question": "Which technique uses X-ray cameras to track a tumour's position and reposition the radiotherapy beam in real time?",
+      "choice1": "Brachytherapy",
+      "choice2": "CyberKnife",
+      "choice3": "MRI Scanning",
+      "choice4": "Ultrasound Therapy",
+      "answer": 2
+    },
+    {
+      "question": "What subatomic particle is fired at tumours in Proton Beam Therapy?",
+      "choice1": "Electrons",
+      "choice2": "Neutrons",
+      "choice3": "Protons",
+      "choice4": "Photons",
+      "answer": 3
+    },
+    {
+      "question": "Why is PBT considered especially important for treating cancer in children, according to the blog?",
+      "choice1": "Children respond faster to treatment",
+      "choice2": "It reduces the risk of a second cancer developing later, as their bodies are still growing",
+      "choice3": "It's cheaper for younger patients",
+      "choice4": "Children can't receive standard radiotherapy at all",
+      "answer": 2
+    },
+    {
+      "question": "Which form of radiotherapy involves placing radioactive material directly inside the body?",
+      "choice1": "Brachytherapy",
+      "choice2": "CyberKnife",
+      "choice3": "Proton Beam Therapy",
+      "choice4": "Intensity Modulated Radiotherapy",
+      "answer": 1
+    },
+    {
+      "question": "Which mechanical property, found from the gradient of a stress-strain graph, measures a material's stiffness?",
+      "choice1": "Bending Rigidity",
+      "choice2": "Young's Modulus",
+      "choice3": "Area Moment of Inertia",
+      "choice4": "Centre of Mass",
+      "answer": 2
+    },
+    {
+      "question": "Bending rigidity is calculated as the product of Young's modulus and which other property?",
+      "choice1": "Area moment of inertia",
+      "choice2": "Centre of mass",
+      "choice3": "Density",
+      "choice4": "Tensile strength",
+      "answer": 1
+    },
+    {
+      "question": "Why does the blog suggest human bone evolved to be hollow rather than solid?",
+      "choice1": "It looks better under an X-ray",
+      "choice2": "It's lighter while remaining strong, condensing material to the edges",
+      "choice3": "It's cheaper for the body to grow",
+      "choice4": "It helps regulate body temperature",
+      "answer": 2
+    },
+    {
+      "question": "What must engineers recalculate for an amputee due to the loss of limb mass?",
+      "choice1": "Their blood type",
+      "choice2": "Their centre of mass",
+      "choice3": "Their heart rate",
+      "choice4": "Their reflex speed",
+      "answer": 2
+    },
+    {
+      "question": "What technology mentioned in the blog gives a prosthetic limb an artificial sense of touch?",
+      "choice1": "Electric Skin",
+      "choice2": "Smart Glove",
+      "choice3": "Neural Lace",
+      "choice4": "Bio-Sonar",
+      "answer": 1
+    },
+    {
+      "question": "In the arm's free body diagram, which of Newton's laws explains that every force has an equal and opposite reaction force?",
+      "choice1": "Newton's First Law",
+      "choice2": "Newton's Second Law",
+      "choice3": "Newton's Third Law",
+      "choice4": "Newton's Zeroth Law",
+      "answer": 3
+    },
+    {
+      "question": "What term describes the fusing of a prosthetic limb with the body, improving a patient's quality of life?",
+      "choice1": "Osseointegration",
+      "choice2": "Osmosis",
+      "choice3": "Ossification",
+      "choice4": "Prosthetic Fusion Syndrome",
+      "answer": 1
+    },
+    {
+      "question": "Which cells in the retina are responsible for detecting colour?",
+      "choice1": "Rod cells",
+      "choice2": "Cone cells",
+      "choice3": "Ganglion cells",
+      "choice4": "Bipolar cells",
+      "answer": 2
+    },
+    {
+      "question": "Which retinal cells are used for detecting low levels of light, such as in night vision?",
+      "choice1": "Rod cells",
+      "choice2": "Cone cells",
+      "choice3": "Photopsins",
+      "choice4": "Amacrine cells",
+      "answer": 1
+    },
+    {
+      "question": "The RGB colour model is an example of what kind of colour model?",
+      "choice1": "Subtractive",
+      "choice2": "Additive",
+      "choice3": "Monochrome",
+      "choice4": "Circular",
+      "answer": 2
+    },
+    {
+      "question": "In hexadecimal, what code represents pure white in the RGB model?",
+      "choice1": "#000000",
+      "choice2": "#FF0000",
+      "choice3": "#FFFFFF",
+      "choice4": "#00FF00",
+      "answer": 3
+    },
+    {
+      "question": "How many distinct colours can the standard 8-bit RGB model represent (256³)?",
+      "choice1": "1,024",
+      "choice2": "65,536",
+      "choice3": "16,777,216",
+      "choice4": "Infinite",
+      "answer": 3
+    },
+    {
+      "question": "The RGB model is based on the trichromatic theory of colour vision developed by Thomas Young and which other scientist?",
+      "choice1": "Isaac Newton",
+      "choice2": "Hermann von Helmholtz",
+      "choice3": "James Clerk Maxwell",
+      "choice4": "Michael Faraday",
+      "answer": 2
+    },
+    {
+      "question": "Which type of cone cell is most sensitive to long wavelengths of light, peaking around 560nm (Red)?",
+      "choice1": "S-Cones",
+      "choice2": "M-Cones",
+      "choice3": "L-Cones",
+      "choice4": "X-Cones",
+      "answer": 3
+    },
+    {
+      "question": "As covered in the blog, which three COVID-19 vaccines were approved for use in the UK by January 2021?",
+      "choice1": "Pfizer-BioNTech, Oxford-AstraZeneca, Moderna",
+      "choice2": "Novavax, Sinovac, Sputnik V",
+      "choice3": "Johnson & Johnson, Sinopharm, Covaxin",
+      "choice4": "Pfizer, Novavax, Johnson & Johnson",
+      "answer": 1
+    },
+    {
+      "question": "What genetic material do the Pfizer and Moderna COVID-19 vaccines use to trigger an immune response?",
+      "choice1": "DNA",
+      "choice2": "mRNA",
+      "choice3": "A live weakened virus",
+      "choice4": "Bacterial plasmids",
+      "answer": 2
+    },
+    {
+      "question": "What does the Oxford-AstraZeneca vaccine use to deliver the spike protein's genetic code into cells?",
+      "choice1": "A lipid nanoparticle",
+      "choice2": "A weakened chimpanzee adenovirus",
+      "choice3": "A synthetic protein injection",
+      "choice4": "A bacterial vector",
+      "answer": 2
+    },
+    {
+      "question": "What is 'herd immunity'?",
+      "choice1": "Indirect protection for non-immune individuals when most of a population is immune",
+      "choice2": "A vaccine given only to farm animals",
+      "choice3": "Immunity passed down genetically",
+      "choice4": "A backup immune system in the liver",
+      "answer": 1
+    },
+    {
+      "question": "According to the blog, do the COVID-19 vaccines alter a person's DNA?",
+      "choice1": "Yes, permanently",
+      "choice2": "No",
+      "choice3": "Only the mRNA vaccines do",
+      "choice4": "Only in children",
+      "answer": 2
+    },
+    {
+      "question": "What term describes the body's ability to 'learn' to recognise a specific pathogen after exposure or vaccination?",
+      "choice1": "Innate immunity",
+      "choice2": "Acquired immunity",
+      "choice3": "Passive immunity",
+      "choice4": "Autoimmunity",
+      "answer": 2
+    },
+    {
+      "question": "Which of the three vaccines had the lowest cost per dose and could be stored at standard fridge temperatures (2-8°C)?",
+      "choice1": "Pfizer-BioNTech",
+      "choice2": "Moderna",
+      "choice3": "Oxford-AstraZeneca",
+      "choice4": "Johnson & Johnson",
+      "answer": 3
     }
   ]
