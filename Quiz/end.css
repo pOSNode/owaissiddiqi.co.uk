@@ -10,7 +10,6 @@
   display: none;
   color: var(--accent-red);
   font-size: 0.8rem;
-  margin-top: -0.35rem;
 }
 
 .field-error.show {
