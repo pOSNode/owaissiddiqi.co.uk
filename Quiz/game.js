@@ -27,12 +27,36 @@ fetch('questions.json')
 
 //CONSTANTS
 const CORRECT_BONUS = 10;
-const MAX_QUESTIONS = 10;
+// Set once per game to the number of domains represented, so every round covers each domain exactly once
+let MAX_QUESTIONS = 10;
+
+// Picks one random question from each domain so every round gets a guaranteed spread of topics
+function buildRound(allQuestions) {
+    const byDomain = {};
+    allQuestions.forEach((q) => {
+        const key = q.domain || 'General';
+        (byDomain[key] = byDomain[key] || []).push(q);
+    });
+
+    const round = Object.keys(byDomain).map((domain) => {
+        const pool = byDomain[domain];
+        return pool[Math.floor(Math.random() * pool.length)];
+    });
+
+    // Shuffle so the domains don't always appear in the same order
+    for (let i = round.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [round[i], round[j]] = [round[j], round[i]];
+    }
+
+    return round;
+}
 
 startGame = () => {
     questionCounter = 0;
     score = 0;
-    availableQuesions = [...questions];
+    availableQuesions = buildRound(questions);
+    MAX_QUESTIONS = availableQuesions.length;
     getNewQuestion();
     game.classList.remove('hidden');
     loader.classList.add('hidden');
@@ -42,7 +66,7 @@ getNewQuestion = () => {
     if (availableQuesions.length === 0 || questionCounter >= MAX_QUESTIONS) {
         localStorage.setItem('mostRecentScore', score);
         //go to the end page
-        return window.location.assign('/Quiz/end.html');
+        return window.location.assign('./end.html');
     }
     questionCounter++;
     progressText.innerText = `Question ${questionCounter}/${MAX_QUESTIONS}`;

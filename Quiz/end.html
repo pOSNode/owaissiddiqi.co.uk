@@ -21,10 +21,11 @@
     <div class="badge"><span class="dot"></span> Quiz Complete</div>
     <h2>Your Score</h2>
     <div class="score-value" id="finalScore">0</div>
-    <form>
-        <input type="text" name="username" id="username" placeholder="Enter your name" autocomplete="off">
-        <button type="submit" class="btn" id="saveScoreBtn" disabled>Save Score</button>
-    </form>
+    <div class="score-form">
+        <input type="text" name="username" id="username" placeholder="Enter your name" autocomplete="off" maxlength="20">
+        <p class="field-error" id="nameError">Please enter a name to save your score</p>
+        <button type="button" class="btn" id="saveScoreBtn">Save Score</button>
+    </div>
     <div class="header-btns" style="margin-top:1.75rem;">
         <a class="nav-btn" href="./game.html">Play Again</a>
         <a class="nav-btn" href="./highscores.html">High Scores</a>

@@ -5,3 +5,14 @@
   margin: 0.4rem 0 2rem;
   letter-spacing: -0.02em;
 }
+
+.field-error {
+  display: none;
+  color: var(--accent-red);
+  font-size: 0.8rem;
+  margin-top: -0.35rem;
+}
+
+.field-error.show {
+  display: block;
+}
