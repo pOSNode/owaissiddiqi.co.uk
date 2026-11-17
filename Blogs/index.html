@@ -1,633 +1,391 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-GB">
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Blog – Owais Siddiqi</title>
-    <meta name="description" content="Blog posts on Biomedical Engineering, Data Science and Medicine by Owais Siddiqi.">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.slim.min.js" integrity="sha384-5AkRS45j4ukf+JbWAfHL8P4onPA9p0KwwP7pUdjSQA3ss9edbJUJc/XcYAiheSSz" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" integrity="sha384-Bfad6CLCknfcloXFOyFnlgtENryhrpZCe29RTifKEixXQZ38WheV+i/6YWSzkz3V" crossorigin="anonymous" referrerpolicy="no-referrer">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" integrity="sha384-/rJKQnzOkEo+daG0jMjU1IwwY9unxt1NBw3Ef2fmOJ3PW/TfAg2KXVoWwMZQZtw9" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js" integrity="sha384-n1AULnKdMJlK1oQCLNDL9qZsDgXtH6jRYFCpBtWFc+a9Yve0KSoMn575rk755NJZ" crossorigin="anonymous"></script>
-    <link href="../style.css" rel="stylesheet">
-    <link rel="icon" href="../img/icon.png" type="image/png" sizes="16x16">
-
-    <style>
-        /* ── Filter bar ───────────────────────────────── */
-        .filter-bar {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 0.5rem;
-            padding: 1.5rem 0 2rem;
-        }
-
-        .filter-btn {
-            padding: 0.45rem 1.25rem;
-            border-radius: 999px;
-            border: 1.5px solid #dee2e6;
-            background: #fff;
-            color: #495057;
-            font-size: 0.875rem;
-            font-weight: 500;
-            cursor: pointer;
-            transition: all 0.18s ease;
-            text-decoration: none;
-        }
-
-        .filter-btn:hover {
-            border-color: #28bea8;
-            color: #28bea8;
-            background: #f0fdfb;
-        }
-
-        .filter-btn.active {
-            background: #28bea8;
-            border-color: #28bea8;
-            color: #fff;
-        }
-
-        /* ── Blog card grid ──────────────────────────── */
-        .blog-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-            gap: 1.5rem;
-            padding: 0 1rem 2rem;
-            max-width: 1300px;
-            margin: 0 auto;
-        }
-
-        .blog-item {
-            display: block;
-        }
-
-        .blog-item.hidden {
-            display: none;
-        }
-
-        @keyframes cardFadeIn {
-            from { opacity: 0; transform: translateY(14px); }
-            to   { opacity: 1; transform: translateY(0); }
-        }
-
-        .blog-item.visible {
-            animation: cardFadeIn 0.32s ease forwards;
-        }
-
-        .blog-item .card {
-            height: 100%;
-            display: flex;
-            flex-direction: column;
-        }
-
-        .blog-item .card-img-top {
-            width: 100%;
-            height: 200px;
-            object-fit: cover;
-            border-radius: 10px 10px 0 0;
-        }
-
-        .blog-item .card-body {
-            display: flex;
-            flex-direction: column;
-            flex: 1;
-        }
-
-        .blog-item .card-title {
-            font-size: 1rem;
-            font-weight: 600;
-            margin-bottom: 0.5rem;
-        }
-
-        .blog-item .card-text {
-            font-size: 0.875rem;
-            color: #6c757d;
-            flex: 1;
-        }
-
-        .blog-item .text-muted {
-            font-size: 0.78rem;
-            margin-top: 0.75rem;
-        }
-
-        .blog-item .btn-outline-secondary {
-            margin-top: 0.75rem;
-            font-size: 0.875rem;
-            border-radius: 8px;
-            transition: all 0.18s;
-        }
-
-        /* ── Quote section ───────────────────────────── */
-        .quote-section {
-            background: #f8f9fa;
-            border-top: 2px solid #e9ecef;
-            border-bottom: 2px solid #e9ecef;
-            padding: 2rem 1.5rem;
-            text-align: center;
-            margin: 1rem 0;
-        }
-
-        .quote-section p.quote {
-            font-size: 1.05rem;
-            font-style: italic;
-            color: #495057;
-            max-width: 700px;
-            margin: 0 auto 1rem;
-            line-height: 1.7;
-        }
-
-        .quote-section .btn-quote {
-            padding: 0.45rem 1.4rem;
-            border-radius: 999px;
-            border: 1.5px solid #28bea8;
-            color: #28bea8;
-            background: transparent;
-            font-size: 0.875rem;
-            font-weight: 500;
-            cursor: pointer;
-            transition: all 0.18s;
-        }
-
-        .quote-section .btn-quote:hover {
-            background: #28bea8;
-            color: #fff;
-        }
-
-        /* ── Responsive tweaks ───────────────────────── */
-        @media (max-width: 576px) {
-            .blog-grid {
-                grid-template-columns: 1fr;
-                padding: 0 0.75rem 2rem;
-            }
-            .blog-item .card-img-top {
-                height: 180px;
-            }
-        }
-
-        .blog-stats {
-            text-align: center;
-            font-size: 0.82rem;
-            color: #6c757d;
-            padding-bottom: 0.5rem;
-        }
-        .blog-stats span {
-            font-weight: 600;
-            color: #343a40;
-        }
-
-        .blog-header .welcome {
-            width: 90%;
-            max-width: 800px;
-        }
-
-        .blog-header .display-4 {
-            font-size: clamp(1.6rem, 5vw, 2.8rem);
-            word-break: break-word;
-        }
-    </style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script>document.documentElement.classList.add('js')</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;1,9..144,400&amp;family=Inter:wght@400;500;600&amp;display=swap">
+<link rel="stylesheet" href="/css/site.css">
+<link rel="icon" href="/img/icon.png" type="image/png">
+<title>Blog – Owais Siddiqi</title>
+<meta name="description" content="Blog posts on Biomedical Engineering, Data Science and Medicine by Owais Siddiqi.">
+<link rel="stylesheet" href="/css/blog.css">
+<noscript><style>.site-nav .navbar-collapse{display:block}.navbar-toggler{display:none}</style></noscript>
 </head>
-
 <body>
-
-<!-- Navigation -->
-<nav class="navbar navbar-expand-md navbar-light bg-light sticky-top">
-    <div class="container-fluid">
-        <a class="navbar-brand" href="../"><img alt="Owais Siddiqi home" class="logoB" src="../img/logoB.png"></a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarResponsive">
-            <ul class="navbar-nav ml-auto">
-                <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
-                <li class="nav-item"><a class="nav-link active" href="/Blogs/">Blog</a></li>
-                <li class="nav-item"><a class="nav-link" href="/Quiz/">Quiz</a></li>
-                <li class="nav-item"><a class="nav-link" href="/FlashCards/">Flashcards</a></li>
-                <li class="nav-item"><a class="nav-link" href="/CV/">CV</a></li>
-                <li class="nav-item"><a class="nav-link" href="mailto:omsiddiqi01@gmail.com"><i class="fas fa-envelope-square"></i></a></li>
-                <li class="nav-item"><a class="nav-link" href="https://www.linkedin.com/in/owaissidd/" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin"></i></a></li>
-            </ul>
-        </div>
+<a class="skip" href="#main">Skip to content</a>
+<header class="sticky-top">
+<nav class="navbar navbar-expand-md site-nav" aria-label="Main">
+  <div class="wrap">
+    <a class="navbar-brand p-0 m-0" href="/"><img src="/img/logoB.png" alt="Owais Siddiqi home" width="79" height="38"></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav" aria-controls="nav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse flex-grow-0" id="nav">
+      <ul class="navbar-nav">
+        <li class="nav-item"><a class="nav-link ul" href="/">Home</a></li>
+        <li class="nav-item"><a class="nav-link ul" href="/Blogs/" aria-current="page">Blog</a></li>
+        <li class="nav-item"><a class="nav-link ul" href="/Quiz/">Quiz</a></li>
+        <li class="nav-item"><a class="nav-link ul" href="/FlashCards/">Flashcards</a></li>
+        <li class="nav-item"><a class="nav-link ul" href="/CV/">CV</a></li>
+        <li class="nav-item"><a class="nav-link ic" href="mailto:omsiddiqi01@gmail.com" aria-label="Email Owais"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1zm13 2.383-4.708 2.825L15 11.105zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741M1 11.105l4.708-2.897L1 5.383z"/></svg><span>Email</span></a></li>
+        <li class="nav-item"><a class="nav-link ic" href="https://www.linkedin.com/in/owaissidd/" target="_blank" rel="noopener noreferrer" aria-label="Owais on LinkedIn"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854zm4.943 12.248V6.169H2.542v7.225zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248S2.4 3.226 2.4 3.934c0 .694.521 1.248 1.327 1.248zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016l.016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225z"/></svg><span>LinkedIn</span></a></li>
+      </ul>
     </div>
+  </div>
 </nav>
+</header>
 
-<!-- Header -->
-<div class="blog-header container-fluid">
-    <div class="row welcome text-center">
-        <div class="col-12">
-            <h1 class="display-4" data-aos="fade-down" data-aos-delay="200">Welcome To The Blogs.</h1>
-        </div>
-        <hr>
-        <div class="col-12" data-aos="fade-up" data-aos-delay="300">
-            <p class="lead">Posts on Biomedical Engineering, Data Science, and Medicine — and their role in shaping modern life and future society.</p>
-        </div>
+<main id="main">
+
+<section class="hero hero-page" aria-labelledby="blog-h">
+  <div class="glow g1" aria-hidden="true"></div><div class="glow g2" aria-hidden="true"></div>
+  <div class="wrap">
+    <p class="label rv" data-layout-label>The blog</p>
+    <h1 id="blog-h" class="rv" style="--d:.06s">Welcome To The <em class="ac">Blogs.</em></h1>
+    <p class="lead-ed rv" style="--d:.12s">Posts on Biomedical Engineering, Data Science, and Medicine — and their role in shaping modern life and future society.</p>
+  </div>
+</section>
+
+<section class="sec posts" aria-label="Blog posts">
+  <div class="wrap">
+    <div class="filter-row">
+      <div class="chips" id="filterBar" role="group" aria-label="Filter posts by category">
+        <button type="button" class="chip" data-filter="all" aria-pressed="true">All</button>
+        <button type="button" class="chip" data-filter="med" aria-pressed="false">Medicine</button>
+        <button type="button" class="chip" data-filter="bioeng" aria-pressed="false">Bioengineering</button>
+        <button type="button" class="chip" data-filter="sci" aria-pressed="false">Science</button>
+      </div>
+      <p class="count" aria-live="polite"><span id="post-count">18</span> posts</p>
     </div>
-</div>
-
-<!-- Filter bar -->
-<div class="filter-bar" id="filterBar" data-aos="fade-up" data-aos-delay="350">
-    <button class="filter-btn active" data-filter="all">All</button>
-    <button class="filter-btn" data-filter="med">Medicine</button>
-    <button class="filter-btn" data-filter="bioeng">Bioengineering</button>
-    <button class="filter-btn" data-filter="sci">Science</button>
-</div>
-
-<div class="blog-stats"><span id="post-count">–</span> posts</div>
-
-<!-- Blog grid -->
-<div class="blog-grid" id="blogGrid">
-    <!-- ★ NEW: Personalised Cancer Vaccines -->
-<div class="blog-item med visible">
-    <div class="card">
-        <img loading="lazy" decoding="async" class="card-img-top" src="../img/thumbs/cancer-vaccine-card.webp" alt="Illustration of a cancer cell">
-        <div class="card-body">
-            <h4 class="card-title">Personalised Cancer Vaccines: mRNA's Next Act</h4>
-            <p class="card-text">The mRNA technology behind the COVID-19 jabs is now being used to build a cancer vaccine for one patient at a time. How they are made, and what the 2026 trial results show...</p>
-            <p class="text-muted">Published: 17/11/2026</p>
-            <a href="/Blogs/CancerVax/" class="btn btn-outline-secondary">See More</a>
-        </div>
+    <div class="row g-4" id="blogGrid">
+      <div class="col-md-6 col-lg-4 post rv" data-cat="med" style="--d:0.00s">
+        <article class="hob post-card">
+          <div class="post-img"><img src="/img/thumbs/cancer-vaccine-card.webp" alt="Illustration of a cancer cell" width="800" height="600" loading="lazy" decoding="async"></div>
+          <div class="post-body">
+            <span class="k" data-layout-label>Medicine</span>
+            <h2 class="post-title">Personalised Cancer Vaccines: mRNA&#x27;s Next Act</h2>
+            <p>The mRNA technology behind the COVID-19 jabs is now being used to build a cancer vaccine for one patient at a time. How they are made, and what the 2026 trial results show...</p>
+            <p class="post-date"><time datetime="2026-11-17">Published: 17/11/2026</time></p>
+            <a class="post-link stretched-link" href="/Blogs/CancerVax/">See More <span class="arr" aria-hidden="true" data-layout-label>→</span></a>
+          </div>
+        </article>
+      </div>
+      <div class="col-md-6 col-lg-4 post rv" data-cat="bioeng" style="--d:0.06s">
+        <article class="hob post-card">
+          <div class="post-img"><img src="/img/thumbs/single-cell-rna-seq-analysis-pbmc3k.webp" alt="Single-cell PBMC Analysis" width="800" height="533" loading="lazy" decoding="async"></div>
+          <div class="post-body">
+            <span class="k" data-layout-label>Bioengineering</span>
+            <h2 class="post-title">Single-cell RNA-seq Analysis (PBMC3k)</h2>
+            <p>End-to-end single-cell RNA-seq workflow in scanpy on 10x PBMC3k data. Implements MAD-based quality control, normalisation, PCA and UMAP embedding, Leiden clustering, marker-gene detection, and signature-based cell-type annotation.</p>
+            <p class="post-date"><time datetime="2026-07-06">Published: 06/07/2026</time></p>
+            <a class="post-link stretched-link" href="https://github.com/pOSNode/Single_Cell_pbmc" target="_blank" rel="noopener noreferrer">View Repository <span class="arr" aria-hidden="true" data-layout-label>↗</span></a>
+          </div>
+        </article>
+      </div>
+      <div class="col-md-6 col-lg-4 post rv" data-cat="bioeng" style="--d:0.12s">
+        <article class="hob post-card">
+          <div class="post-img"><img src="/img/thumbs/cancer-survival-biomarker-analysis.webp" alt="TCGA Survival and Biomarker Analysis" width="800" height="800" loading="lazy" decoding="async"></div>
+          <div class="post-body">
+            <span class="k" data-layout-label>Bioengineering</span>
+            <h2 class="post-title">Cancer Survival &amp; Biomarker Analysis</h2>
+            <p>Gene-expression survival and biomarker analysis with lifelines, run on TCGA cohorts via cBioPortal. Implements Kaplan-Meier estimation, a univariate Cox screen across genes, log-rank testing, and multivariate Cox modelling adjusted for clinical covariates.</p>
+            <p class="post-date"><time datetime="2026-06-01">Published: 01/06/2026</time></p>
+            <a class="post-link stretched-link" href="https://github.com/pOSNode/TCGA_Survival_Biomarker" target="_blank" rel="noopener noreferrer">View Repository <span class="arr" aria-hidden="true" data-layout-label>↗</span></a>
+          </div>
+        </article>
+      </div>
+      <div class="col-md-6 col-lg-4 post rv" data-cat="bioeng" style="--d:0.00s">
+        <article class="hob post-card">
+          <div class="post-img"><img src="/img/thumbs/neoantigen_pipeline.webp" alt="Mouse Neoantigen Candidates Pipeline" width="800" height="533" loading="lazy" decoding="async"></div>
+          <div class="post-body">
+            <span class="k" data-layout-label>Bioengineering</span>
+            <h2 class="post-title">Mouse Neoantigen Candidates Pipeline</h2>
+            <p>End-to-end Nextflow DSL2 pipeline for somatic variant calling and MHC-I neoantigen prediction from murine RNA-Seq data (GRCm39). Implements STAR alignment, Strelka2 variant calling, GATK hard-filtering, VEP annotation, and NetMHCpan-4.1 candidate scoring.</p>
+            <p class="post-date"><time datetime="2026-04-05">Published: 05/04/2026</time></p>
+            <a class="post-link stretched-link" href="https://github.com/pOSNode/Mouse_Neoantigen_Candidates" target="_blank" rel="noopener noreferrer">View Repository <span class="arr" aria-hidden="true" data-layout-label>↗</span></a>
+          </div>
+        </article>
+      </div>
+      <div class="col-md-6 col-lg-4 post rv" data-cat="bioeng" style="--d:0.06s">
+        <article class="hob post-card">
+          <div class="post-img"><img src="/img/rna_image_pipeline.png" alt="Rare CTC RNA-seq Pipeline" width="1920" height="1920" loading="lazy" decoding="async"></div>
+          <div class="post-body">
+            <span class="k" data-layout-label>Bioengineering</span>
+            <h2 class="post-title">Rare CTC RNA-seq DGE Pipeline</h2>
+            <p>End-to-end Nextflow DSL2 differential gene expression pipeline optimised for low-input circulating tumour cell transcriptomics. Implements Salmon quantification, TMMwsp normalisation, cell-input aware QC, and additive batch modelling.</p>
+            <p class="post-date"><time datetime="2026-03-02">Published: 02/03/2026</time></p>
+            <a class="post-link stretched-link" href="https://github.com/pOSNode/Rare_CTC_RNA_DGE_Pipeline" target="_blank" rel="noopener noreferrer">View Repository <span class="arr" aria-hidden="true" data-layout-label>↗</span></a>
+          </div>
+        </article>
+      </div>
+      <div class="col-md-6 col-lg-4 post rv" data-cat="bioeng" style="--d:0.12s">
+        <article class="hob post-card">
+          <div class="post-img"><img src="/img/ML_frontpage.jpg" alt="Student Stress ML" width="2400" height="1256" loading="lazy" decoding="async"></div>
+          <div class="post-body">
+            <span class="k" data-layout-label>Bioengineering</span>
+            <h2 class="post-title">Predicting Student&#x27;s Stress Levels Using Machine Learning</h2>
+            <p>Student stress levels can be attributed to an assortment of factors and can have debilitating effects...</p>
+            <p class="post-date"><time datetime="2023-12-21">Published: 21/12/2023</time></p>
+            <a class="post-link stretched-link" href="https://nbviewer.org/github/pOSNode/ML-Healthcare-Project/blob/master/Student_Stress_Levels.ipynb" target="_blank" rel="noopener noreferrer">See More <span class="arr" aria-hidden="true" data-layout-label>↗</span></a>
+          </div>
+        </article>
+      </div>
+      <div class="col-md-6 col-lg-4 post rv" data-cat="bioeng" style="--d:0.00s">
+        <article class="hob post-card">
+          <div class="post-img"><img src="/img/neural_network_masters.jpg" alt="Master&#x27;s Project" width="1920" height="1080" loading="lazy" decoding="async"></div>
+          <div class="post-body">
+            <span class="k" data-layout-label>Bioengineering</span>
+            <h2 class="post-title">Master&#x27;s Project</h2>
+            <p>R-Net: A Novel Approach Towards The Cell Quantification Of Microscopy Images Using A Regression-based Network.</p>
+            <p class="post-date"><time datetime="2023-12-04">Published: 04/12/2023</time></p>
+            <a class="post-link stretched-link" href="https://github.com/pOSNode/MSc-Project/blob/main/Owais_Siddiqi_Final_Dissertation.pdf" target="_blank" rel="noopener noreferrer">See More <span class="arr" aria-hidden="true" data-layout-label>↗</span></a>
+          </div>
+        </article>
+      </div>
+      <div class="col-md-6 col-lg-4 post rv" data-cat="bioeng" style="--d:0.06s">
+        <article class="hob post-card">
+          <div class="post-img"><img src="/img/ISMRM.png" alt="ISMRM Abstract" width="279" height="200" loading="lazy" decoding="async"></div>
+          <div class="post-body">
+            <span class="k" data-layout-label>Bioengineering</span>
+            <h2 class="post-title">ISMRM 2022 Abstract</h2>
+            <p>Investigating the Repeatability of Multifrequency Magnetic Resonance Elastography applied to a Soft Gelatin Phantom.</p>
+            <p class="post-date"><time datetime="2022-05-07">Published: 07/05/2022</time></p>
+            <a class="post-link stretched-link" href="https://archive.ismrm.org/2022/2240.html" target="_blank" rel="noopener noreferrer">See More <span class="arr" aria-hidden="true" data-layout-label>↗</span></a>
+          </div>
+        </article>
+      </div>
+      <div class="col-md-6 col-lg-4 post rv" data-cat="bioeng" style="--d:0.12s">
+        <article class="hob post-card">
+          <div class="post-img"><img src="/img/BMI.jfif" alt="Third Year Project" width="674" height="506" loading="lazy" decoding="async"></div>
+          <div class="post-body">
+            <span class="k" data-layout-label>Bioengineering</span>
+            <h2 class="post-title">Third Year Project</h2>
+            <p>Multi-Class Classification of EEG Signals Using a Fuzzy Based Rule System for Brain Computer Interfaces.</p>
+            <p class="post-date"><time datetime="2022-01-03">Published: 03/01/2022</time></p>
+            <a class="post-link stretched-link" href="https://github.com/pOSNode/Third-Year-Project" target="_blank" rel="noopener noreferrer">See More <span class="arr" aria-hidden="true" data-layout-label>↗</span></a>
+          </div>
+        </article>
+      </div>
+      <div class="col-md-6 col-lg-4 post rv" data-cat="bioeng" style="--d:0.00s">
+        <article class="hob post-card">
+          <div class="post-img"><img src="/img/ML_frontpage.jpg" alt="Diabetes ML" width="2400" height="1256" loading="lazy" decoding="async"></div>
+          <div class="post-body">
+            <span class="k" data-layout-label>Bioengineering</span>
+            <h2 class="post-title">Predicting Diabetes Using Machine Learning</h2>
+            <p>A classification task using machine learning algorithms to assign a class label based on patient health indicators...</p>
+            <p class="post-date"><time datetime="2021-02-19">Published: 19/02/2021</time></p>
+            <a class="post-link stretched-link" href="https://nbviewer.org/github/pOSNode/ML-Healthcare-Project/blob/master/Diabetes-Classification-project.ipynb" target="_blank" rel="noopener noreferrer">See More <span class="arr" aria-hidden="true" data-layout-label>↗</span></a>
+          </div>
+        </article>
+      </div>
+      <div class="col-md-6 col-lg-4 post rv" data-cat="med" style="--d:0.06s">
+        <article class="hob post-card">
+          <div class="post-img"><img src="/img/Vaccine_Frontpage.jpg" alt="COVID Vaccines" width="1280" height="720" loading="lazy" decoding="async"></div>
+          <div class="post-body">
+            <span class="k" data-layout-label>Medicine</span>
+            <h2 class="post-title">The COVID-19 Vaccines</h2>
+            <p>Right now on the UK market, there are 3 released and approved vaccines by the MHRA. A look at how they work...</p>
+            <p class="post-date"><time datetime="2021-01-26">Published: 26/01/2021</time></p>
+            <a class="post-link stretched-link" href="/Blogs/Vax/">See More <span class="arr" aria-hidden="true" data-layout-label>→</span></a>
+          </div>
+        </article>
+      </div>
+      <div class="col-md-6 col-lg-4 post rv" data-cat="med" style="--d:0.12s">
+        <article class="hob post-card">
+          <div class="post-img"><img src="/img/thumbs/dementia_anatomy.webp" alt="Dementia" width="800" height="800" loading="lazy" decoding="async"></div>
+          <div class="post-body">
+            <span class="k" data-layout-label>Medicine</span>
+            <h2 class="post-title">What is Dementia?</h2>
+            <p>Dementia is an umbrella term describing a person&#x27;s decline in memory, thinking, or reasoning. There are many different types...</p>
+            <p class="post-date"><time datetime="2020-11-03">Published: 03/11/2020</time></p>
+            <a class="post-link stretched-link" href="/Blogs/Dementia/">See More <span class="arr" aria-hidden="true" data-layout-label>→</span></a>
+          </div>
+        </article>
+      </div>
+      <div class="col-md-6 col-lg-4 post rv" data-cat="bioeng" style="--d:0.00s">
+        <article class="hob post-card">
+          <div class="post-img"><img src="/img/DNA.png" alt="DNA Data Storage" width="1200" height="675" loading="lazy" decoding="async"></div>
+          <div class="post-body">
+            <span class="k" data-layout-label>Bioengineering</span>
+            <h2 class="post-title">Will DNA Data Storage Be The Future?</h2>
+            <p>All data is stored in a base-2 binary system. DNA offers a radically different and ultra-dense alternative...</p>
+            <p class="post-date"><time datetime="2020-09-01">Published: 01/09/2020</time></p>
+            <a class="post-link stretched-link" href="/Blogs/DNA/">See More <span class="arr" aria-hidden="true" data-layout-label>→</span></a>
+          </div>
+        </article>
+      </div>
+      <div class="col-md-6 col-lg-4 post rv" data-cat="med" style="--d:0.06s">
+        <article class="hob post-card">
+          <div class="post-img"><img src="/img/AI.png" alt="Is AI Dangerous" width="4097" height="2731" loading="lazy" decoding="async"></div>
+          <div class="post-body">
+            <span class="k" data-layout-label>Medicine</span>
+            <h2 class="post-title">Is AI Dangerous?</h2>
+            <p>Artificial intelligence describes the ability of machines to learn and problem solve, mimicking human reasoning through specialised algorithms...</p>
+            <p class="post-date"><time datetime="2020-07-27">Published: 27/07/2020</time></p>
+            <a class="post-link stretched-link" href="/Blogs/AI/">See More <span class="arr" aria-hidden="true" data-layout-label>→</span></a>
+          </div>
+        </article>
+      </div>
+      <div class="col-md-6 col-lg-4 post rv" data-cat="bioeng" style="--d:0.12s">
+        <article class="hob post-card">
+          <div class="post-img"><img src="/img/pros.png" alt="Prosthetic Arm" width="1000" height="666" loading="lazy" decoding="async"></div>
+          <div class="post-body">
+            <span class="k" data-layout-label>Bioengineering</span>
+            <h2 class="post-title">The Prosthetic Arm: A Brief Look At The Physics</h2>
+            <p>Osseointegration of prosthetic limbs has transformed quality of life for patients with limb loss, whether from birth or injury...</p>
+            <p class="post-date"><time datetime="2020-06-25">Published: 25/06/2020</time></p>
+            <a class="post-link stretched-link" href="/Blogs/Prosthetics/">See More <span class="arr" aria-hidden="true" data-layout-label>→</span></a>
+          </div>
+        </article>
+      </div>
+      <div class="col-md-6 col-lg-4 post rv" data-cat="med" style="--d:0.00s">
+        <article class="hob post-card">
+          <div class="post-img"><img src="/img/Covid19.png" alt="COVID Summary" width="664" height="538" loading="lazy" decoding="async"></div>
+          <div class="post-body">
+            <span class="k" data-layout-label>Medicine</span>
+            <h2 class="post-title">Coronavirus (COVID-19) Summary</h2>
+            <p>COVID-19 is a severe acute respiratory infection first identified in late 2019. A comprehensive overview of the virus and its impact...</p>
+            <p class="post-date"><time datetime="2020-05-31">Published: 31/05/2020</time></p>
+            <a class="post-link stretched-link" href="/Blogs/COVID/">See More <span class="arr" aria-hidden="true" data-layout-label>→</span></a>
+          </div>
+        </article>
+      </div>
+      <div class="col-md-6 col-lg-4 post rv" data-cat="sci" style="--d:0.06s">
+        <article class="hob post-card">
+          <div class="post-img"><img src="/img/thumbs/humaneye.webp" alt="RGB Colour Model" width="800" height="534" loading="lazy" decoding="async"></div>
+          <div class="post-body">
+            <span class="k" data-layout-label>Science</span>
+            <h2 class="post-title">The RGB Colour Model</h2>
+            <p>We perceive colour based on the stimulation of cone cells. How light and biology combine to create the full spectrum of human vision...</p>
+            <p class="post-date"><time datetime="2019-11-16">Published: 16/11/2019</time></p>
+            <a class="post-link stretched-link" href="/Blogs/RGB/">See More <span class="arr" aria-hidden="true" data-layout-label>→</span></a>
+          </div>
+        </article>
+      </div>
+      <div class="col-md-6 col-lg-4 post rv" data-cat="bioeng" style="--d:0.12s">
+        <article class="hob post-card">
+          <div class="post-img"><img src="/img/Proton-beam-via-Varian.png" alt="Proton Beam Therapy" width="620" height="348" loading="lazy" decoding="async"></div>
+          <div class="post-body">
+            <span class="k" data-layout-label>Bioengineering</span>
+            <h2 class="post-title">Proton Beam Therapy</h2>
+            <p>An advanced form of radiotherapy delivering treatment via accelerated proton beams, offering precision targeting of tumours...</p>
+            <p class="post-date"><time datetime="2019-08-19">Published: 19/08/2019</time></p>
+            <a class="post-link stretched-link" href="/Blogs/PBT/">See More <span class="arr" aria-hidden="true" data-layout-label>→</span></a>
+          </div>
+        </article>
+      </div>
     </div>
-</div>
+  </div>
+</section>
 
-    <!-- ★ NEW: Single-cell PBMC Analysis -->
-<div class="blog-item bioeng visible">
-    <div class="card">
-        <img loading="lazy" decoding="async" class="card-img-top" src="../img/thumbs/single-cell-rna-seq-analysis-pbmc3k.webp" alt="Single-cell PBMC Analysis">
-        <div class="card-body">
-            <h4 class="card-title">Single-cell RNA-seq Analysis (PBMC3k)</h4>
-            <p class="card-text">
-                End-to-end single-cell RNA-seq workflow in scanpy on 10x PBMC3k data.
-                Implements MAD-based quality control, normalisation, PCA and UMAP embedding,
-                Leiden clustering, marker-gene detection, and signature-based cell-type annotation.
-            </p>
-            <p class="text-muted">Published: 06/07/2026</p>
-            <a href="https://github.com/pOSNode/Single_Cell_pbmc"
-               class="btn btn-outline-secondary"
-               target="_blank" rel="noopener noreferrer">
-               View Repository
-            </a>
-        </div>
+<section class="sec tint quote-sec" aria-label="Quote generator">
+  <div class="wrap">
+    <p class="label mb-4 rv" data-layout-label><span class="n">01</span>Quote generator</p>
+    <blockquote class="quote rv" style="--d:.06s"><p id="quote-text">Remember that guy that gave up? Neither does anybody else.</p></blockquote>
+    <button type="button" class="btn-line quote-btn" id="loadQuote">New Quote</button>
+  </div>
+</section>
+
+<section class="sec contact" aria-labelledby="contact-h">
+  <div class="wrap rv">
+    <p class="label" data-layout-label><span class="n">02</span>Get in touch</p>
+    <h2 id="contact-h">Contact</h2>
+    <div class="links">
+      <a class="icon-link" href="mailto:omsiddiqi01@gmail.com" aria-label="Email Owais" title="Email"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1zm13 2.383-4.708 2.825L15 11.105zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741M1 11.105l4.708-2.897L1 5.383z"/></svg></a>
+      <a class="icon-link" href="https://www.linkedin.com/in/owaissidd/" target="_blank" rel="noopener noreferrer" aria-label="Owais on LinkedIn" title="LinkedIn"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854zm4.943 12.248V6.169H2.542v7.225zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248S2.4 3.226 2.4 3.934c0 .694.521 1.248 1.327 1.248zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016l.016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225z"/></svg></a>
     </div>
-</div>
+  </div>
+</section>
 
-<!-- ★ NEW: TCGA Survival & Biomarker Analysis -->
-<div class="blog-item bioeng visible">
-    <div class="card">
-        <img loading="lazy" decoding="async" class="card-img-top" src="../img/thumbs/cancer-survival-biomarker-analysis.webp" alt="TCGA Survival and Biomarker Analysis">
-        <div class="card-body">
-            <h4 class="card-title">Cancer Survival &amp; Biomarker Analysis</h4>
-            <p class="card-text">
-                Gene-expression survival and biomarker analysis with lifelines, run on TCGA cohorts via cBioPortal.
-                Implements Kaplan-Meier estimation, a univariate Cox screen across genes, log-rank testing,
-                and multivariate Cox modelling adjusted for clinical covariates.
-            </p>
-            <p class="text-muted">Published: 01/06/2026</p>
-            <a href="https://github.com/pOSNode/TCGA_Survival_Biomarker"
-               class="btn btn-outline-secondary"
-               target="_blank" rel="noopener noreferrer">
-               View Repository
-            </a>
-        </div>
-    </div>
-</div>
+</main>
 
-    <!-- ★ NEW: Mouse Neoantigen Pipeline -->
-    <div class="blog-item bioeng visible">
-        <div class="card">
-            <img loading="lazy" decoding="async" class="card-img-top" src="../img/thumbs/neoantigen_pipeline.webp" alt="Mouse Neoantigen Candidates Pipeline">
-            <div class="card-body">
-                <h4 class="card-title">Mouse Neoantigen Candidates Pipeline</h4>
-                <p class="card-text">
-                    End-to-end Nextflow DSL2 pipeline for somatic variant calling and MHC-I neoantigen prediction
-                    from murine RNA-Seq data (GRCm39). Implements STAR alignment, Strelka2 variant calling,
-                    GATK hard-filtering, VEP annotation, and NetMHCpan-4.1 candidate scoring.
-                </p>
-                <p class="text-muted">Published: 05/04/2026</p>
-                <a href="https://github.com/pOSNode/Mouse_Neoantigen_Candidates"
-                   class="btn btn-outline-secondary"
-                   target="_blank" rel="noopener noreferrer">
-                   View Repository
-                </a>
-            </div>
-        </div>
-    </div>
-
-    <div class="blog-item bioeng visible">
-        <div class="card">
-            <img loading="lazy" decoding="async" class="card-img-top" src="../img/rna_image_pipeline.png" alt="Rare CTC RNA-seq Pipeline">
-            <div class="card-body">
-                <h4 class="card-title">Rare CTC RNA-seq DGE Pipeline</h4>
-                <p class="card-text">
-                    End-to-end Nextflow DSL2 differential gene expression pipeline optimised for low-input circulating tumour cell transcriptomics.
-                    Implements Salmon quantification, TMMwsp normalisation, cell-input aware QC, and additive batch modelling.
-                </p>
-                <p class="text-muted">Published: 02/03/2026</p>
-                <a href="https://github.com/pOSNode/Rare_CTC_RNA_DGE_Pipeline"
-                   class="btn btn-outline-secondary"
-                   target="_blank" rel="noopener noreferrer">
-                   View Repository
-                </a>
-            </div>
-        </div>
-    </div>
-
-    <div class="blog-item bioeng visible">
-        <div class="card">
-            <img loading="lazy" decoding="async" class="card-img-top" src="../img/neural_network_masters.jpg" alt="Master's Project">
-            <div class="card-body">
-                <h4 class="card-title">Master's Project</h4>
-                <p class="card-text">R-Net: A Novel Approach Towards The Cell Quantification Of Microscopy Images Using A Regression-based Network.</p>
-                <p class="text-muted">Published: 04/12/2023</p>
-                <a href="https://github.com/pOSNode/MSc-Project/blob/main/Owais_Siddiqi_Final_Dissertation.pdf" class="btn btn-outline-secondary" target="_blank" rel="noopener noreferrer">See More</a>
-            </div>
-        </div>
-    </div>
-
-    <div class="blog-item bioeng visible">
-        <div class="card">
-            <img loading="lazy" decoding="async" class="card-img-top" src="../img/ML_frontpage.jpg" alt="Student Stress ML">
-            <div class="card-body">
-                <h4 class="card-title">Predicting Student's Stress Levels Using Machine Learning</h4>
-                <p class="card-text">Student stress levels can be attributed to an assortment of factors and can have debilitating effects...</p>
-                <p class="text-muted">Published: 21/12/2023</p>
-                <a href="https://nbviewer.org/github/pOSNode/ML-Healthcare-Project/blob/master/Student_Stress_Levels.ipynb" class="btn btn-outline-secondary" target="_blank" rel="noopener noreferrer">See More</a>
-            </div>
-        </div>
-    </div>
-
-    <div class="blog-item bioeng visible">
-        <div class="card">
-            <img loading="lazy" decoding="async" class="card-img-top" src="../img/ISMRM.png" alt="ISMRM Abstract">
-            <div class="card-body">
-                <h4 class="card-title">ISMRM 2022 Abstract</h4>
-                <p class="card-text">Investigating the Repeatability of Multifrequency Magnetic Resonance Elastography applied to a Soft Gelatin Phantom.</p>
-                <p class="text-muted">Published: 07/05/2022</p>
-                <a href="https://archive.ismrm.org/2022/2240.html" class="btn btn-outline-secondary" target="_blank" rel="noopener noreferrer">See More</a>
-            </div>
-        </div>
-    </div>
-
-    <div class="blog-item bioeng visible">
-        <div class="card">
-            <img loading="lazy" decoding="async" class="card-img-top" src="../img/BMI.jfif" alt="Third Year Project">
-            <div class="card-body">
-                <h4 class="card-title">Third Year Project</h4>
-                <p class="card-text">Multi-Class Classification of EEG Signals Using a Fuzzy Based Rule System for Brain Computer Interfaces.</p>
-                <p class="text-muted">Published: 03/01/2022</p>
-                <a href="https://github.com/pOSNode/Third-Year-Project" class="btn btn-outline-secondary" target="_blank" rel="noopener noreferrer">See More</a>
-            </div>
-        </div>
-    </div>
-
-    <div class="blog-item bioeng visible">
-        <div class="card">
-            <img loading="lazy" decoding="async" class="card-img-top" src="../img/ML_frontpage.jpg" alt="Diabetes ML">
-            <div class="card-body">
-                <h4 class="card-title">Predicting Diabetes Using Machine Learning</h4>
-                <p class="card-text">A classification task using machine learning algorithms to assign a class label based on patient health indicators...</p>
-                <p class="text-muted">Published: 19/02/2021</p>
-                <a href="https://nbviewer.org/github/pOSNode/ML-Healthcare-Project/blob/master/Diabetes-Classification-project.ipynb" class="btn btn-outline-secondary" target="_blank" rel="noopener noreferrer">See More</a>
-            </div>
-        </div>
-    </div>
-
-    <div class="blog-item med visible">
-        <div class="card">
-            <img loading="lazy" decoding="async" class="card-img-top" src="../img/Vaccine_Frontpage.jpg" alt="COVID Vaccines">
-            <div class="card-body">
-                <h4 class="card-title">The COVID-19 Vaccines</h4>
-                <p class="card-text">Right now on the UK market, there are 3 released and approved vaccines by the MHRA. A look at how they work...</p>
-                <p class="text-muted">Published: 26/01/2021</p>
-                <a href="/Blogs/Vax/" class="btn btn-outline-secondary">See More</a>
-            </div>
-        </div>
-    </div>
-
-    <div class="blog-item med visible">
-        <div class="card">
-            <img loading="lazy" decoding="async" class="card-img-top" src="../img/thumbs/dementia_anatomy.webp" alt="Dementia">
-            <div class="card-body">
-                <h4 class="card-title">What is Dementia?</h4>
-                <p class="card-text">Dementia is an umbrella term describing a person's decline in memory, thinking, or reasoning. There are many different types...</p>
-                <p class="text-muted">Published: 03/11/2020</p>
-                <a href="/Blogs/Dementia/" class="btn btn-outline-secondary">See More</a>
-            </div>
-        </div>
-    </div>
-
-    <div class="blog-item bioeng visible">
-        <div class="card">
-            <img loading="lazy" decoding="async" class="card-img-top" src="../img/DNA.png" alt="DNA Data Storage">
-            <div class="card-body">
-                <h4 class="card-title">Will DNA Data Storage Be The Future?</h4>
-                <p class="card-text">All data is stored in a base-2 binary system. DNA offers a radically different and ultra-dense alternative...</p>
-                <p class="text-muted">Published: 01/09/2020</p>
-                <a href="/Blogs/DNA/" class="btn btn-outline-secondary">See More</a>
-            </div>
-        </div>
-    </div>
-
-    <div class="blog-item med visible">
-        <div class="card">
-            <img loading="lazy" decoding="async" class="card-img-top" src="../img/AI.png" alt="Is AI Dangerous">
-            <div class="card-body">
-                <h4 class="card-title">Is AI Dangerous?</h4>
-                <p class="card-text">Artificial intelligence describes the ability of machines to learn and problem solve, mimicking human reasoning through specialised algorithms...</p>
-                <p class="text-muted">Published: 27/07/2020</p>
-                <a href="/Blogs/AI/" class="btn btn-outline-secondary">See More</a>
-            </div>
-        </div>
-    </div>
-
-    <div class="blog-item bioeng visible">
-        <div class="card">
-            <img loading="lazy" decoding="async" class="card-img-top" src="../img/pros.png" alt="Prosthetic Arm">
-            <div class="card-body">
-                <h4 class="card-title">The Prosthetic Arm: A Brief Look At The Physics</h4>
-                <p class="card-text">Osseointegration of prosthetic limbs has transformed quality of life for patients with limb loss, whether from birth or injury...</p>
-                <p class="text-muted">Published: 25/06/2020</p>
-                <a href="/Blogs/Prosthetics/" class="btn btn-outline-secondary">See More</a>
-            </div>
-        </div>
-    </div>
-
-    <div class="blog-item med visible">
-        <div class="card">
-            <img loading="lazy" decoding="async" class="card-img-top" src="../img/Covid19.png" alt="COVID Summary">
-            <div class="card-body">
-                <h4 class="card-title">Coronavirus (COVID-19) Summary</h4>
-                <p class="card-text">COVID-19 is a severe acute respiratory infection first identified in late 2019. A comprehensive overview of the virus and its impact...</p>
-                <p class="text-muted">Published: 31/05/2020</p>
-                <a href="/Blogs/COVID/" class="btn btn-outline-secondary">See More</a>
-            </div>
-        </div>
-    </div>
-
-    <div class="blog-item sci visible">
-        <div class="card">
-            <img loading="lazy" decoding="async" class="card-img-top" src="../img/thumbs/humaneye.webp" alt="RGB Colour Model">
-            <div class="card-body">
-                <h4 class="card-title">The RGB Colour Model</h4>
-                <p class="card-text">We perceive colour based on the stimulation of cone cells. How light and biology combine to create the full spectrum of human vision...</p>
-                <p class="text-muted">Published: 16/11/2019</p>
-                <a href="/Blogs/RGB/" class="btn btn-outline-secondary">See More</a>
-            </div>
-        </div>
-    </div>
-
-    <div class="blog-item bioeng visible">
-        <div class="card">
-            <img loading="lazy" decoding="async" class="card-img-top" src="../img/Proton-beam-via-Varian.png" alt="Proton Beam Therapy">
-            <div class="card-body">
-                <h4 class="card-title">Proton Beam Therapy</h4>
-                <p class="card-text">An advanced form of radiotherapy delivering treatment via accelerated proton beams, offering precision targeting of tumours...</p>
-                <p class="text-muted">Published: 19/08/2019</p>
-                <a href="/Blogs/PBT/" class="btn btn-outline-secondary">See More</a>
-            </div>
-        </div>
-    </div>
-
-</div><!-- end blog-grid -->
-
-<!-- Quote section -->
-<div class="quote-section">
-    <p class="quote" id="quote-text">Loading quote...</p>
-    <button class="btn-quote" id="loadQuote">New Quote</button>
-</div>
-
-<!-- Contact -->
-<div class="container-fluid padding">
-    <div class="row text-center padding">
-        <div class="col-12"><h2>Contact</h2></div>
-        <div class="col-12 social padding">
-            <a href="mailto:omsiddiqi01@gmail.com"><i class="fas fa-envelope-square"></i></a>
-            <a href="https://www.linkedin.com/in/owaissidd/" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin"></i></a>
-        </div>
-    </div>
-</div>
-
-<!-- Footer -->
-<footer>
-    <div class="container-fluid padding">
-        <div class="row text-center">
-            <div class="col-md-12"><div id="digital-clock"></div></div>
-        </div>
-    </div>
-    <div class="socket text-light text-center py-4">
-        <p>&copy; <a href="https://owaissiddiqi.co.uk/" target="_blank" rel="noopener noreferrer">Owais Siddiqi All rights reserved</a></p>
-    </div>
+<footer class="site-foot">
+  <div class="wrap">
+    <div class="clock-time" id="clockTime"></div>
+    <div class="clock-bar" aria-hidden="true"></div>
+    <div class="clock-date" id="clockDate"></div>
+    <p class="copy">&copy; <a href="/">Owais Siddiqi</a> · All rights reserved</p>
+  </div>
 </footer>
-
-<button onclick="topFunction()" id="myBtn" title="Go to top">
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6"><path d="M12 6H0l6-6z"/></svg>
-</button>
-
+<button class="to-top" id="toTop" type="button" aria-label="Back to top" title="Back to top"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 3.5 14 10l-1.4 1.4L8 6.3 3.4 11.4 2 10z"/></svg></button>
+<script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+<script defer src="/js/site.js"></script>
 <script>
-    AOS.init();
-
-    var allItems = document.querySelectorAll('.blog-item');
-
-    function filterPosts(filter) {
-        var count = 0;
-        allItems.forEach(function(item, i) {
-            var matches = filter === 'all' || item.classList.contains(filter);
-            if (matches) {
-                item.classList.remove('hidden');
-                item.classList.add('visible');
-                item.style.animationDelay = (count * 0.05) + 's';
-                count++;
-            } else {
-                item.classList.add('hidden');
-                item.classList.remove('visible');
-                item.style.animationDelay = '0s';
-            }
-        });
-        document.getElementById('post-count').textContent = count;
-    }
-
-    document.getElementById('filterBar').addEventListener('click', function(e) {
-        var btn = e.target.closest('.filter-btn');
-        if (!btn) return;
-        document.querySelectorAll('.filter-btn').forEach(function(b){ b.classList.remove('active'); });
-        btn.classList.add('active');
-        filterPosts(btn.dataset.filter);
+(function () {
+  var posts = document.querySelectorAll('#blogGrid .post');
+  var chips = document.querySelectorAll('#filterBar [data-filter]');
+  var count = document.getElementById('post-count');
+  document.getElementById('filterBar').addEventListener('click', function (e) {
+    var chip = e.target.closest('[data-filter]');
+    if (!chip) return;
+    var f = chip.dataset.filter, n = 0;
+    chips.forEach(function (c) { c.setAttribute('aria-pressed', String(c === chip)); });
+    posts.forEach(function (p) {
+      var on = f === 'all' || p.dataset.cat === f;
+      p.hidden = !on;
+      p.classList.remove('pop');
+      if (on) { p.style.setProperty('--i', (n * 0.04) + 's'); void p.offsetWidth; p.classList.add('in', 'pop'); n++; }
     });
+    count.textContent = n;
+  });
 
-    filterPosts('all');
-
-    var mybutton = document.getElementById('myBtn');
-    window.addEventListener('scroll', function() {
-        mybutton.style.display = (document.documentElement.scrollTop > 40) ? 'block' : 'none';
-    });
-    function topFunction() { window.scrollTo({ top: 0, behavior: 'smooth' }); }
-
-    function getDateTime() {
-        var now = new Date(), p = function(n){ return (n<10?'0':'')+n; };
-        return p(now.getHours())+':'+p(now.getMinutes())+':'+p(now.getSeconds())
-            +'<br>'+p(now.getDate())+'/'+p(now.getMonth()+1)+'/'+now.getFullYear();
-    }
-    setInterval(function(){
-        var el = document.getElementById('digital-clock');
-        if(el) el.innerHTML = getDateTime();
-    }, 1000);
-</script>
-
-<script>
-    document.addEventListener('DOMContentLoaded', function() {
-        var quotes = [
-            "Remember that guy that gave up? Neither does anybody else.",
-            "Don't practice until you get it right, practice until you can't get it wrong.",
-            "You will NEVER regret hard work. You WILL regret not working hard.",
-            "One day, your life will flash before your eyes... make sure it's worth watching.",
-            "The fact that you aren't where you want to be should be enough motivation.",
-            "To shine in front of thousands, you have to outwork thousands in front of nobody.",
-            "The more you sweat in training, the less you bleed in the fight.",
-            "Pain is temporary, quitting lasts forever.",
-            "It's hard to beat someone who doesn't quit.",
-            "It is better to fail in originality than to succeed in imitation.",
-            "I find that the harder I work, the more luck I seem to have.",
-            "The way to get started is to quit talking and begin doing.",
-            "Tell me and I forget. Teach me and I remember. Involve me and I learn.",
-            "Being a student is easy. Learning requires actual work.",
-            "Anything worth doing well is worth doing poorly at first.",
-            "Today, do what others won't — so tomorrow you can do what others can't.",
-            "Everything was impossible before someone did it.",
-            "Hard work beats talent when talent fails to work hard.",
-            "Success isn't owned, it's leased, and rent is due every day.",
-            "Don't stop when you are tired, stop when you are done.",
-            "If it's not challenging you, it's not changing you.",
-            "Somebody has to be the best — why can't it be you.",
-            "A setback is just a comeback in disguise.",
-            "You miss 100% of the shots you don't take.",
-            "Luck is when hard work meets opportunity.",
-            "Whether you think you can, or you think you can't — you're right.",
-            "Failure is only the opportunity to begin again.",
-            "There is always something more to learn. Even for a master.",
-            "Nothing is impossible.",
-            "We have two lives, and the second begins when we realise we only have one.",
-            "How can you move forward if you keep regretting the past.",
-            "You haven't come this far only to come this far.",
-            "If it's not alright in the end, then it's not the end.",
-            "Strength doesn't come from what you can do — it comes from overcoming what you once thought you couldn't.",
-            "Focus on effort, not outcome.",
-            "Don't seek validation from anyone but yourself.",
-            "Being weak is nothing to be ashamed of. Staying weak is.",
-            "Humans are strong because we have the ability to change.",
-            "Life has no remote. Get up and change it yourself.",
-            "Hard work beats talent.",
-            "If you only do what you can do, you will never be more than you are now.",
-            "Don't stop when you're tired — stop when you're done."
-        ];
-
-        function printQuote() {
-            var q = quotes[Math.floor(Math.random() * quotes.length)];
-            document.getElementById('quote-text').textContent = q;
-        }
-
-        printQuote();
-        document.getElementById('loadQuote').addEventListener('click', printQuote);
-    });
+  var quotes = [
+      "Remember that guy that gave up? Neither does anybody else.",
+      "Don't practice until you get it right, practice until you can't get it wrong.",
+      "You will NEVER regret hard work. You WILL regret not working hard.",
+      "One day, your life will flash before your eyes... make sure it's worth watching.",
+      "The fact that you aren't where you want to be should be enough motivation.",
+      "To shine in front of thousands, you have to outwork thousands in front of nobody.",
+      "The more you sweat in training, the less you bleed in the fight.",
+      "Pain is temporary, quitting lasts forever.",
+      "It's hard to beat someone who doesn't quit.",
+      "It is better to fail in originality than to succeed in imitation.",
+      "I find that the harder I work, the more luck I seem to have.",
+      "The way to get started is to quit talking and begin doing.",
+      "Tell me and I forget. Teach me and I remember. Involve me and I learn.",
+      "Being a student is easy. Learning requires actual work.",
+      "Anything worth doing well is worth doing poorly at first.",
+      "Today, do what others won't — so tomorrow you can do what others can't.",
+      "Everything was impossible before someone did it.",
+      "Hard work beats talent when talent fails to work hard.",
+      "Success isn't owned, it's leased, and rent is due every day.",
+      "Don't stop when you are tired, stop when you are done.",
+      "If it's not challenging you, it's not changing you.",
+      "Somebody has to be the best — why can't it be you.",
+      "A setback is just a comeback in disguise.",
+      "You miss 100% of the shots you don't take.",
+      "Luck is when hard work meets opportunity.",
+      "Whether you think you can, or you think you can't — you're right.",
+      "Failure is only the opportunity to begin again.",
+      "There is always something more to learn. Even for a master.",
+      "Nothing is impossible.",
+      "We have two lives, and the second begins when we realise we only have one.",
+      "How can you move forward if you keep regretting the past.",
+      "You haven't come this far only to come this far.",
+      "If it's not alright in the end, then it's not the end.",
+      "Strength doesn't come from what you can do — it comes from overcoming what you once thought you couldn't.",
+      "Focus on effort, not outcome.",
+      "Don't seek validation from anyone but yourself.",
+      "Being weak is nothing to be ashamed of. Staying weak is.",
+      "Humans are strong because we have the ability to change.",
+      "Life has no remote. Get up and change it yourself.",
+      "Hard work beats talent.",
+      "If you only do what you can do, you will never be more than you are now.",
+      "Don't stop when you're tired — stop when you're done."
+  ];
+  var quote = document.getElementById('quote-text');
+  function printQuote() {
+    var q;
+    do { q = quotes[Math.floor(Math.random() * quotes.length)]; } while (q === quote.textContent);
+    quote.textContent = q;
+  }
+  printQuote();
+  document.getElementById('loadQuote').addEventListener('click', printQuote);
+})();
 </script>
 </body>
 </html>
