@@ -11,6 +11,15 @@
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" integrity="sha384-Bfad6CLCknfcloXFOyFnlgtENryhrpZCe29RTifKEixXQZ38WheV+i/6YWSzkz3V" crossorigin="anonymous" referrerpolicy="no-referrer">
     <link href="./../../style.css" rel="stylesheet">
     <link rel="icon" href="../../img/icon.png" type="image/png" sizes="16x16">
+    <style>
+      /* On phones, wrap long code lines instead of scrolling sideways. The line numbers
+         sit in a separate column and would no longer line up with wrapped lines, so hide them. */
+      @media (max-width: 575.98px) {
+        .code-block table { width: 100%; }
+        .code-block td:first-child:not(:last-child) { display: none; }
+        .code-block pre { white-space: pre-wrap; overflow-wrap: anywhere; }
+      }
+    </style>
 </head>
 <body>
 
@@ -131,7 +140,7 @@
               retrieved from Google™ and therefore abides by Google&#39;s chosen numerical scale.</p>
           <div>
               <div
-                  style="background: #272822; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;">
+                  class="code-block" style="background: #272822; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;">
                   <table>
                       <tr>
                           <td>
@@ -197,7 +206,7 @@
           <p>This can also be done with a <a href="../../Files/What_Is_Artificial_Intelligence.csv" download="What_Is_Artificial_Intelligence?">CSV
                   File</a> from Google Trends, using <strong><em>pandas</em></strong> on Jupyter Notebook:
           <div
-              style="background: #272822; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;">
+              class="code-block" style="background: #272822; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;">
               <table>
                   <tr>
                       <td>
@@ -248,7 +257,7 @@
 
           <p>Now we plot the next graph:</p>
           <div
-              style="background: #272822; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;">
+              class="code-block" style="background: #272822; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;">
               <pre style="margin: 0; line-height: 125%"><span style="color: #f8f8f2">PlotGraph(</span><span style="color: #e6db74">&quot;artificial intelligence in healthcare&quot;</span><span style="color: #f8f8f2">)</span>
 </pre>
           </div>
@@ -278,7 +287,7 @@
               false,
               non-specific, or not applicable information.</p>
           <div
-              style="background: #272822; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;">
+              class="code-block" style="background: #272822; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;">
               <pre style="margin: 0; line-height: 125%"><span style="color: #f8f8f2">PlotGraph(</span><span style="color: #e6db74">&quot;is artificial intelligence dangerous&quot;</span><span style="color: #f8f8f2">)</span>
 </pre>
           </div>
@@ -306,7 +315,7 @@
               general public to reduce the risk of situations like this occurring. </p>
 
           <div
-              style="background: #272822; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;">
+              class="code-block" style="background: #272822; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;">
               <pre style="margin: 0; line-height: 125%"><span style="color: #f8f8f2">PlotGraph(</span><span style="color: #e6db74">&quot;artificial intelligence advantages&quot;</span><span style="color: #f8f8f2">)</span>
 </pre>
           </div>
