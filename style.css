@@ -588,6 +588,13 @@ html{
     margin-right: -25%;
   }
 }
+/* At 768-991px the widened row is 672px but the 11 links need 738px: tighten their padding */
+@media (min-width: 768px) and (max-width: 991.98px) {
+  nav[aria-label="Blog post navigation"] .page-link {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
+}
 
 /*--- Bootstrap Padding Fix --*/
 [class*="col-"] {

@@ -122,8 +122,8 @@
         <p>In August 2026 BioNTech stopped a Phase 2 trial of autogene cevumeran in bowel cancer. That trial gave the vaccine on its own, without another immunotherapy drug, to patients with traces of tumour DNA in their blood. The trial had already crossed its futility boundary in October 2025, meaning it was unlikely to show a benefit. The independent Data Safety Monitoring Board then found a numerical imbalance in overall survival between the two arms and judged that continuing was unlikely to change the result, so it recommended ending the trial. No new safety problems were found, and BioNTech says it will publish a full analysis later <sup>[6]</sup>. It is a reminder that a promising result in one cancer does not carry over to every other cancer.</p>
 
         <em><ins>Table 1:</ins></em> The two leading personalised mRNA cancer vaccines | Source: <em>[1], [3], [6]</em>
-        <div class="row justify-content-center">
-          <table class="table table-hover table-sm table-responsive">
+        <div class="table-responsive">
+          <table class="table table-hover table-sm">
             <thead class="thead-dark">
               <tr>
                 <th>Vaccine</th>
@@ -176,7 +176,7 @@
 
         <h2 id="header9">References</h2>
         <p>[1] Rojas, L.A. et al. (2023). Personalized RNA neoantigen vaccines stimulate T cells in pancreatic cancer. <em>Nature</em>, 618, pp.144–150. Available at: https://doi.org/10.1038/s41586-023-06063-y [Accessed 17 Nov. 2026]</p>
-        <p>[2] Merck (2023). Moderna and Merck announce mRNA-4157/V940, an investigational personalized mRNA cancer vaccine, in combination with KEYTRUDA (pembrolizumab), was granted Breakthrough Therapy Designation by the FDA. [online] <a href="https://www.merck.com/news/moderna-and-merck-announce-mrna-4157-v940-an-investigational-personalized-mrna-cancer-vaccine-in-combination-with-keytruda-pembrolizumab-was-granted-breakthrough-therapy-designation-by-the/" target="_blank" rel="noopener noreferrer">Available here</a> [Accessed 17 Nov. 2026]</p>
+        <p>[2] Ryan, C. (2023). FDA Grants Breakthrough Therapy Designation to mRNA-4157/V940 Plus Pembrolizumab in High-Risk Melanoma. [online] OncLive. <a href="https://www.onclive.com/view/fda-grants-breakthrough-therapy-designation-to-mrna-4157-v940-plus-pembrolizumab-in-high-risk-melanoma" target="_blank" rel="noopener noreferrer">Available here</a> [Accessed 17 Nov. 2026]</p>
         <p>[3] CancerNetwork (2026). Intismeran Plus Pembrolizumab Reduces Recurrence Risk in Resected Melanoma. [online] <a href="https://www.cancernetwork.com/view/intismeran-plus-pembrolizumab-reduces-recurrence-risk-in-resected-melanoma" target="_blank" rel="noopener noreferrer">Available here</a> [Accessed 17 Nov. 2026]</p>
         <p>[4] AACR (2026). From Promise to Proof: Personalized Melanoma mRNA Vaccine Delivers Phase III Success. [online] <a href="https://www.aacr.org/blog/2026/10/26/from-promise-to-proof-personalized-melanoma-mrna-vaccine-delivers-phase-iii-success/" target="_blank" rel="noopener noreferrer">Available here</a> [Accessed 17 Nov. 2026]</p>
         <p>[5] Sethna, Z. et al. (2025). RNA neoantigen vaccines prime long-lived CD8+ T cells in pancreatic cancer. <em>Nature</em>, 639. Available at: https://doi.org/10.1038/s41586-024-08508-4 [Accessed 17 Nov. 2026]</p>
@@ -240,14 +240,18 @@
   new Chart(document.getElementById("rfsChart"), {
     type: "bar",
     data: {
-      labels: ["Vaccine + pembrolizumab", "Placebo + pembrolizumab"],
+      // Two-line labels fit side by side at phone widths whichever font has loaded when Chart.js measures them
+      labels: [["Vaccine +", "pembrolizumab"], ["Placebo +", "pembrolizumab"]],
       datasets: [{ data: [82.2, 70.0], backgroundColor: ["#6c63ff", "#9aa3b5"], maxBarThickness: 90 }]
     },
     options: {
       responsive: true,
       maintainAspectRatio: false,
       legend: { display: false },
-      tooltips: { callbacks: { label: function (item) { return item.yLabel + "% recurrence-free"; } } },
+      tooltips: { callbacks: {
+        title: function (items, data) { return data.labels[items[0].index].join(" "); },
+        label: function (item) { return item.yLabel + "% recurrence-free"; }
+      } },
       scales: {
         yAxes: [{ ticks: { min: 0, max: 100, callback: function (v) { return v + "%"; } },
                   scaleLabel: { display: true, labelString: "Recurrence-free at 2 years" } }]
