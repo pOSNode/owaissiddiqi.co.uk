@@ -226,6 +226,8 @@
         }
         .blog-intro-section p { color: #4a5568; line-height: 1.75; font-size: 0.97rem; margin-bottom: 1rem; }
         .blog-intro-img { border-radius: 20px; width: 100%; box-shadow: 0 20px 60px rgba(0,0,0,0.1); }
+        /* Side-slide animations start 100px off to the side; clip them so the page never scrolls sideways */
+        .about-section, .blog-intro-section, section.hobbies { overflow-x: hidden; overflow-x: clip; }
         .fixed-background { border-top: 2px solid black; }
         section.hobbies { background: linear-gradient(135deg, #0062E6 0%, #33AEFF 100%); }
         .hobbies h3.section-heading {
