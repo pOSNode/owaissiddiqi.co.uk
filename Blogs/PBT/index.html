@@ -5,12 +5,10 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Proton beam therapy</title>
   <meta name="description" content="Proton beam therapy is an a form of radiotherapy which is used to fight cancer. Protons are subatomic particles with a positive electric charge, its use in fighting cancer has come a long way, research at places like UCLH are at the forefront of this technology and its use is helping us get closer to beating cancer once and for all.">
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-	<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet"
-        crossorigin="anonymous">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+	<script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.slim.min.js" integrity="sha384-5AkRS45j4ukf+JbWAfHL8P4onPA9p0KwwP7pUdjSQA3ss9edbJUJc/XcYAiheSSz" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" integrity="sha384-Bfad6CLCknfcloXFOyFnlgtENryhrpZCe29RTifKEixXQZ38WheV+i/6YWSzkz3V" crossorigin="anonymous" referrerpolicy="no-referrer">
     <link href="./../../style.css" rel="stylesheet">
     <link rel="icon" href="../../img/icon.png" type="image/png" sizes="16x16">
 </head>
@@ -35,7 +33,7 @@
 <!-- Navigation -->
 <nav class="navbar navbar-expand-md navbar-light bg-light static-top">
 	<div class="container-fluid">
-		<a class="navbar-brand" href="../../"><img class="logoB" src="../../img/logoB.png"></a>
+		<a class="navbar-brand" href="../../"><img alt="Owais Siddiqi home" class="logoB" src="../../img/logoB.png"></a>
 		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target= "#navbarResponsive">
 			<span class="navbar-toggler-icon"></span>
 		</button>
@@ -294,6 +292,6 @@ function getDateTime() {
 setInterval(function () {
 	currentTime = getDateTime();
 	document.getElementById("digital-clock").innerHTML = currentTime;
-});
+}, 1000);
 </script>
 </html>
