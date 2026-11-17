@@ -1,76 +1,59 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-GB">
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>The Prosthetic Arm: A Brief Look At The Physics</title>
-  <meta name="description" content="The human arm's movement can be quantified mathematically in terms of forces, this can be transferred into a prosthetic arm and thus resemble a working arm. This post touches briefly at the physics behind the movement of our arms and the physics that goes behind the production of a artificial, bionic one">
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
-	<script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.slim.min.js" integrity="sha384-5AkRS45j4ukf+JbWAfHL8P4onPA9p0KwwP7pUdjSQA3ss9edbJUJc/XcYAiheSSz" crossorigin="anonymous"></script>
-	<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" integrity="sha384-Bfad6CLCknfcloXFOyFnlgtENryhrpZCe29RTifKEixXQZ38WheV+i/6YWSzkz3V" crossorigin="anonymous" referrerpolicy="no-referrer">
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-mml-chtml.js" integrity="sha384-Wuix6BuhrWbjDBs24bXrjf4ZQ5aFeFWBuKkFekO2t8xFU0iNaLQfp2K6/1Nxveei" crossorigin="anonymous"></script>
-    <link href="./../../style.css" rel="stylesheet">
-    <link rel="icon" href="../../img/icon.png" type="image/png" sizes="16x16">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script>document.documentElement.classList.add('js')</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;1,9..144,400&amp;family=Inter:wght@400;500;600&amp;display=swap">
+<link rel="stylesheet" href="/css/site.css">
+<link rel="icon" href="/img/icon.png" type="image/png">
+<title>The Prosthetic Arm: A Brief Look At The Physics</title>
+<meta name="author" content="Owais Siddiqi">
+<meta name="description" content="The human arm's movement can be quantified mathematically in terms of forces, this can be transferred into a prosthetic arm and thus resemble a working arm. This post touches briefly at the physics behind the movement of our arms and the physics that goes behind the production of a artificial, bionic one">
+<link rel="stylesheet" href="/css/post.css">
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-mml-chtml.js" integrity="sha384-Wuix6BuhrWbjDBs24bXrjf4ZQ5aFeFWBuKkFekO2t8xFU0iNaLQfp2K6/1Nxveei" crossorigin="anonymous"></script>
+<noscript><style>.site-nav .navbar-collapse{display:block}.navbar-toggler{display:none}</style></noscript>
 </head>
 <body>
-
-
-<!-- Navigation -->
-<nav class="navbar navbar-expand-md navbar-light bg-light static-top">
-	<div class="container-fluid">
-    <a class="navbar-brand" href="../../"><img alt="Owais Siddiqi home" class="logoB" src="../../img/logoB.png"></a>
-		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target= "#navbarResponsive">
-			<span class="navbar-toggler-icon"></span>
-		</button>
-		<div class="collapse navbar-collapse" id="navbarResponsive">
-			<ul class="navbar-nav ml-auto">
-				<li class="nav-item">
-					<a class="nav-link" href="../../">Home</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link active" href="../">Blog</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" href="../../Quiz/">Quiz</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" href="../../FlashCards/">Flashcards</a>
-				</li>
-        <li class="nav-item">
-          <a class="nav-link" href="/CV/">CV</a>
-      </li>
-				<li class="nav-item">
-					<a class="nav-link" href="mailto:omsiddiqi01@gmail.com"><i class="fas fa-envelope-square"></i></a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" href="https://www.linkedin.com/in/owaissidd/" target="breach"><i class="fab fa-linkedin"></i></a>
-				</li>
-			</ul>
-		</div>
-	</div>
-</nav>
-
-<!--- Welcome Section -->
-<header>
-    <div class="overlay"></div>
-    <video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop">
-      <source src="../../img/Pros.mp4" type="video/mp4">
-    </video>
-    <div class="container h-100">
-      <div class="d-flex h-100 text-center align-items-center">
-        <div class="w-100 text-white">
-          <h1 class="display-3" style="text-shadow: 4px 4px 4px #333333;">The Prosthetic Arm: A Brief Look At The Physics</h1>
-        </div>
-      </div>
+<a class="skip" href="#main">Skip to content</a>
+<header class="sticky-top">
+<nav class="navbar navbar-expand-md site-nav" aria-label="Main">
+  <div class="wrap">
+    <a class="navbar-brand p-0 m-0" href="/"><img src="/img/logoB.png" alt="Owais Siddiqi home" width="79" height="38"></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav" aria-controls="nav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse flex-grow-0" id="nav">
+      <ul class="navbar-nav">
+        <li class="nav-item"><a class="nav-link ul" href="/">Home</a></li>
+        <li class="nav-item"><a class="nav-link ul" href="/Blogs/" aria-current="true">Blog</a></li>
+        <li class="nav-item"><a class="nav-link ul" href="/Quiz/">Quiz</a></li>
+        <li class="nav-item"><a class="nav-link ul" href="/FlashCards/">Flashcards</a></li>
+        <li class="nav-item"><a class="nav-link ul" href="/CV/">CV</a></li>
+        <li class="nav-item"><a class="nav-link ic" href="mailto:omsiddiqi01@gmail.com" aria-label="Email Owais"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1zm13 2.383-4.708 2.825L15 11.105zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741M1 11.105l4.708-2.897L1 5.383z"/></svg><span>Email</span></a></li>
+        <li class="nav-item"><a class="nav-link ic" href="https://www.linkedin.com/in/owaissidd/" target="_blank" rel="noopener noreferrer" aria-label="Owais on LinkedIn"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854zm4.943 12.248V6.169H2.542v7.225zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248S2.4 3.226 2.4 3.934c0 .694.521 1.248 1.327 1.248zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016l.016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225z"/></svg><span>LinkedIn</span></a></li>
+      </ul>
     </div>
-  </header>
-  
-  <section class="my-5">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-8 mx-auto">
-            <h2 id="contents"><ins>Contents<ins></h2>
+  </div>
+</nav>
+</header>
+
+<main id="main">
+<section class="hero hero-page has-vid" aria-labelledby="post-title">
+  <video class="hero-vid" autoplay muted loop playsinline preload="metadata" aria-hidden="true"><source src="/img/Pros.mp4" type="video/mp4"></video>
+  <div class="glow g1" aria-hidden="true"></div><div class="glow g2" aria-hidden="true"></div>
+  <div class="wrap">
+    <p class="label rv" data-layout-label><a href="/Blogs/">Blog</a></p>
+    <h1 id="post-title" class="rv" style="--d:.06s">The Prosthetic Arm: A Brief Look At The Physics</h1>
+  </div>
+</section>
+
+<article class="post" aria-labelledby="post-title">
+<div class="wrap"><div class="post-body">
+<h2 id="contents">Contents</h2>
               <ol id="content" type="1">
                 <li><a href="#header1">The Physics Behind The Human Arm</a>
                   <ul>
@@ -109,11 +92,10 @@
                 Example: Arm
               </h2>
               
-              <figure class="figure float-right text-center">
+              <figure class="figure float-end text-center">
                 <img loading="lazy" decoding="async" src="../../img/Amputee.png" class="figure-img img-fluid" alt="Shoulder disarticulation and forequarter amputation" title="Shoulder disarticulation and forequarter amputation">
                 <figcaption class="figure-caption"><em><strong style="padding-left: 10px;">Figure 1: </strong><a
-                  href="https://www.ottobock.co.uk/prosthetics/info-for-amputees/information-for-upper-limb-amputees-and-their-families/"
-                  target="breach">Removal of the upper arm and forearm</a></em></figcaption>
+                  href="https://www.ottobock.co.uk/prosthetics/info-for-amputees/information-for-upper-limb-amputees-and-their-families/" target="_blank" rel="noopener noreferrer">Removal of the upper arm and forearm</a></em></figcaption>
               </figure>
               <p>To get an idea of how body parts work and what thinking needs to go into building prosthetics, I will be using very basic Free Body Diagram to demonstrate how an arm works. The model will be of the total removal of the upper arm and forearm.</p>
       <p>In this example, I will use the free body diagram below to show what forces are being applied to an arm when it is holding something up.</p>
@@ -214,7 +196,7 @@
       </p>
       <p>Where:
         <div class="table-responsive-sm">
-          <table class="table" style="border-style:hidden">
+          <div class="table-responsive"><table class="table" style="border-style:hidden">
             <tr>
               <td><span class="math inline">\(E\)</span> = Young Modulus (<span
                   class="math inline">\(\frac{N}{m^2}\)</span>)</th>
@@ -227,7 +209,7 @@
             <tr>
               <td><span class="math inline">\(\Delta\)</span> = “Change in”</td>
             </tr>
-          </table>
+          </table></div>
         </div>
       <br>
       <p>The Young’s modulus is a mechanical property that measures the stiffness of a solid material <sup>[3]</sup>.
@@ -254,118 +236,59 @@
         are
         still just that, artificial. Previously, the cold metal prosthetic does not have the same feel to that of a
         human limb, to touch and feel. Products such as the <a
-          href="https://hub.jhu.edu/2018/06/20/e-dermis-prosthetic-sense-of-touch/" target="breach">“Electric Skin”</a>
+          href="https://hub.jhu.edu/2018/06/20/e-dermis-prosthetic-sense-of-touch/" target="_blank" rel="noopener noreferrer">“Electric Skin”</a>
         help people who miss the sense of touch by providing the artificial limb the one thing it’s missing, artificial
-        skin. The <a href="https://hub.jhu.edu/2018/06/20/e-dermis-prosthetic-sense-of-touch/" target="breach">“Electric
+        skin. The <a href="https://hub.jhu.edu/2018/06/20/e-dermis-prosthetic-sense-of-touch/" target="_blank" rel="noopener noreferrer">“Electric
           Skin”</a> stimulates the nerve endings in the hand and creates a sense of touch by sensing stimuli and
         relaying the impulses back to the peripheral nerves <sup>[4]</sup>.</p>
       <h2 id="header4">
         Conclusion
       </h2>
       <p>These are only a few of the components (not including the electronic engineering aspect), that I've learned of, which I find most interesting when studying prosthetics and I believe that these are quite important when creating a holistic design suitable for a patient's use.
-        <p class="mb-0">
-          By <a href="https://www.linkedin.com/in/owaissidd/" target="breach">Owais M Siddiqi</a>
+        <p class="mb-0 byline">
+          By <a href="https://www.linkedin.com/in/owaissidd/" target="_blank" rel="noopener noreferrer">Owais M Siddiqi</a>
         </p><br>
-        <h1 id="header5">
+        <h2 id="header5">
           References
-        </h1>
+        </h2>
         <p>[1] Winn, Will (2010). Introduction to Understandable Physics: Volume I - Mechanics</p>
-        <p>[2] Learn Easy, MDME: MANUFACTURING, DESIGN, MECHANICAL ENGINEERING, <a href="https://learneasy.info/MDME/MEMmods/MEM30006A/Area_Moment/Area_Moment.html"
-            target="breach"><em>Area Moment of Interia</em></a>, published August 21, 2014 [Accessed 18 June 2020]</p>
+        <p>[2] Learn Easy, MDME: MANUFACTURING, DESIGN, MECHANICAL ENGINEERING, <a href="https://learneasy.info/MDME/MEMmods/MEM30006A/Area_Moment/Area_Moment.html" target="_blank" rel="noopener noreferrer"><em>Area Moment of Interia</em></a>, published August 21, 2014 [Accessed 18 June 2020]</p>
         <p>[3] The Rational mechanics of Flexible or Elastic Bodies, 1638–1788: Introduction to Leonhardi Euleri Opera
           Omnia, vol. X and XI, Seriei Secundae. Orell Fussli.</p>
-        <p>[4] John Hopkins University, Written by Amy Lunday, <a href="https://hub.jhu.edu/2018/06/20/e-dermis-prosthetic-sense-of-touch/" target="breach">
+        <p>[4] John Hopkins University, Written by Amy Lunday, <a href="https://hub.jhu.edu/2018/06/20/e-dermis-prosthetic-sense-of-touch/" target="_blank" rel="noopener noreferrer">
           <em>Biomedical engineering
           Bringing a human touch to modern prosthetics
         </em></a>, published Jun 20, 2018 [Accessed 20 June 2020]</p>
-                    <nav aria-label="Blog post navigation">
-        <ul class="pagination flex-wrap justify-content-center">
-          <li class="page-item"><a class="page-link" href="../COVID/" aria-label="Previous post">&laquo;</a></li>
-          <li class="page-item"><a class="page-link" href="../PBT/">PBT</a></li>
-          <li class="page-item"><a class="page-link" href="../RGB/">RGB</a></li>
-          <li class="page-item"><a class="page-link" href="../COVID/">COVID</a></li>
-          <li class="page-item active" aria-current="page"><span class="page-link">Prosthetics</span></li>
-          <li class="page-item"><a class="page-link" href="../AI/">AI</a></li>
-          <li class="page-item"><a class="page-link" href="../DNA/">DNA</a></li>
-          <li class="page-item"><a class="page-link" href="../Dementia/">Dementia</a></li>
-          <li class="page-item"><a class="page-link" href="../Vax/">Vax</a></li>
-          <li class="page-item"><a class="page-link" href="../CancerVax/">Cancer Vax</a></li>
-          <li class="page-item"><a class="page-link" href="../AI/" aria-label="Next post">&raquo;</a></li>
-        </ul>
-      </nav>
-                    </body>
-        </div>
-      </div>
-    </div>
-  </section>
+</div></div>
+</article>
 
+<nav class="post-nav wrap" aria-label="Blog post navigation">
+  <ul class="pagination">
+    <li class="page-item"><a class="page-link" href="/Blogs/COVID/" aria-label="Previous post">&laquo;</a></li>
+    <li class="page-item"><a class="page-link" href="/Blogs/PBT/">PBT</a></li>
+    <li class="page-item"><a class="page-link" href="/Blogs/RGB/">RGB</a></li>
+    <li class="page-item"><a class="page-link" href="/Blogs/COVID/">COVID</a></li>
+    <li class="page-item active" aria-current="page"><span class="page-link">Prosthetics</span></li>
+    <li class="page-item"><a class="page-link" href="/Blogs/AI/">AI</a></li>
+    <li class="page-item"><a class="page-link" href="/Blogs/DNA/">DNA</a></li>
+    <li class="page-item"><a class="page-link" href="/Blogs/Dementia/">Dementia</a></li>
+    <li class="page-item"><a class="page-link" href="/Blogs/Vax/">Vax</a></li>
+    <li class="page-item"><a class="page-link" href="/Blogs/CancerVax/">Cancer Vax</a></li>
+    <li class="page-item"><a class="page-link" href="/Blogs/AI/" aria-label="Next post">&raquo;</a></li>
+  </ul>
+</nav>
+</main>
 
-<!--- Footer -->
-<footer>
-	<div class="container-fluid padding">
-	<div class="row text-center">
-		<div class="col-md-12">
-			<div id="digital-clock"></div>
-		</div>
-	</div>
-	</div>
-	<div class="socket text-light text-center py-4">
-			<p>&copy; <a href="https://owaissiddiqi.co.uk/" target = "_blank">Owais Siddiqi All rights reserved</a></p>
-		</div>
-	</div>
+<footer class="site-foot">
+  <div class="wrap">
+    <div class="clock-time" id="clockTime"></div>
+    <div class="clock-bar" aria-hidden="true"></div>
+    <div class="clock-date" id="clockDate"></div>
+    <p class="copy">&copy; <a href="/">Owais Siddiqi</a> · All rights reserved</p>
+  </div>
 </footer>
-<button onclick="topFunction()" id="myBtn" title="Go to top">
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6">
-      <path d="M12 6H0l6-6z" /></svg></button>
+<button class="to-top" id="toTop" type="button" aria-label="Back to top" title="Back to top"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 3.5 14 10l-1.4 1.4L8 6.3 3.4 11.4 2 10z"/></svg></button>
+<script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+<script defer src="/js/site.js"></script>
 </body>
-<script>
-  var mybutton = document.getElementById("myBtn");
-
-  window.onscroll = function () { scrollFunction() };
-
-  function scrollFunction() {
-      if (document.body.scrollTop > 40 || document.documentElement.scrollTop > 40) {
-          mybutton.style.display = "block";
-      } else {
-          mybutton.style.display = "none";
-      }
-  }
-
-  function topFunction() {
-    document.body.scrollTop = 0;
-    document.documentElement.scrollTop = 0;
-  }
-    
-function getDateTime() {
-	var now = new Date();
-	var year = now.getFullYear();
-	var month = now.getMonth() + 1;
-	var day = now.getDate();
-	var hour = now.getHours();
-	var minute = now.getMinutes();
-	var second = now.getSeconds();
-	if (month.toString().length == 1) {
-		month = '0' + month;
-	}
-	if (day.toString().length == 1) {
-		day = '0' + day;
-	}
-	if (hour.toString().length == 1) {
-		hour = '0' + hour;
-	}
-	if (minute.toString().length == 1) {
-		minute = '0' + minute;
-	}
-	if (second.toString().length == 1) {
-		second = '0' + second;
-	}
-	var dateTime = hour + ':' + minute + ':' + second + "<br>" + day + '/' + month + '/' + year;
-	return dateTime;
-}
-
-setInterval(function () {
-	currentTime = getDateTime();
-	document.getElementById("digital-clock").innerHTML = currentTime;
-}, 1000);
-</script>
 </html>

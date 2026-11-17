@@ -1,0 +1,77 @@
+/* Blog post template */
+.post{padding:clamp(2.5rem,6vw,4.5rem) 0 clamp(2rem,5vw,3.5rem);overflow-x:clip}
+.post-body{max-width:46rem;margin:0 auto}
+.post-body h2{font-size:clamp(1.6rem,3.6vw,2.3rem);margin:3rem 0 1rem}
+.post-body h3{margin:2.25rem 0 .75rem}
+.post-body h4{font-size:1.15rem;margin:1.75rem 0 .6rem}
+.post-body li{margin-bottom:.3rem}
+.post-body sup{font-size:.68em}
+
+/* Contents list */
+.post-body h2#contents{font-family:var(--sans);font-size:.75rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin:0 0 .75rem}
+.post-body #contents + ol{border-top:1px solid var(--ink);border-bottom:1px solid var(--rule);padding:1.1rem 0 1rem 1.6rem;margin:0 0 2.75rem;font-size:.97rem}
+.post-body #contents + ol a{text-decoration:none}
+.post-body #contents + ol a:hover{text-decoration:underline}
+
+/* Figures, captions, media */
+.post-body figure,.post-body .figure{display:block;margin:2rem auto;text-align:center}
+.post-body img,.post-body canvas{max-width:100%;height:auto;border-radius:3px}
+.post-body figcaption,.post-body .figure-caption{font-size:.85rem;line-height:1.55;color:var(--muted);margin-top:.6rem}
+.post-body .float-end,.post-body .float-start{max-width:100%}
+@media(min-width:576px){
+  .post-body .float-end{max-width:45%;margin:.25rem 0 1rem 1.5rem}
+  .post-body .float-start{max-width:45%;margin:.25rem 1.5rem 1rem 0}
+}
+@media(max-width:575.98px){.post-body .float-end,.post-body .float-start{float:none!important}}
+.post-body .text-muted{color:var(--muted)!important}
+
+/* Tables: scroll inside their own box, never the page */
+.post-body .table-responsive{margin:1rem 0 2rem}
+.post-body table{width:100%;border-collapse:collapse;font-size:.92rem;margin:0;--bs-table-bg:transparent}
+.post-body th,.post-body td{border:0;border-bottom:1px solid var(--rule);padding:.55rem .75rem;vertical-align:top;text-align:left}
+.post-body thead th,.post-body tr:first-child th{border-bottom:1px solid var(--ink);color:var(--ink);font-weight:600}
+.post-body .table-dark th,.post-body .table-dark td{--bs-table-bg:var(--navy);--bs-table-color:var(--on-navy);background:var(--navy);color:var(--on-navy)}
+.post-body .table-hover tbody tr:hover>*{--bs-table-bg-state:var(--paper-2)}
+
+/* Quotes */
+.post-body blockquote,.post-body .blockquote{border-left:3px solid var(--accent);padding:.25rem 0 .25rem 1.25rem;margin:2rem 0;font-family:var(--serif);font-size:1.2rem;line-height:1.5;color:var(--ink)}
+.post-body .blockquote-footer{font-family:var(--sans);font-size:.85rem;color:var(--muted)}
+
+/* Code */
+.post-body code{color:var(--accent-dark)}
+.post-body .code-block code,.post-body .code-block pre{color:inherit}
+@media(max-width:575.98px){
+  .post-body .code-block table{width:100%}
+  .post-body .code-block td:first-child:not(:last-child){display:none}
+  .post-body .code-block pre{white-space:pre-wrap;overflow-wrap:anywhere}
+}
+
+/* Hover-to-zoom figures (pointer devices only) */
+.post-body .zoom{padding:50px;margin:0 auto;transition:transform .2s var(--ease);position:relative;z-index:1}
+@media(max-width:575.98px){.post-body .zoom{padding:0}}
+@media(hover:hover) and (min-width:992px){.post-body .zoom:hover{transform:scale(1.75)}}
+
+/* Charts */
+.post-body .chart-wrap{position:relative;height:320px;max-width:560px;margin:0 auto}
+.post-body .pipeline-fig{max-width:520px;width:100%}
+
+/* Carousel inside a post */
+.post-body .misconceptions{background:linear-gradient(180deg,var(--navy),var(--navy-2));color:var(--on-navy);border-top:3px solid var(--accent);border-radius:10px;margin:2rem 0}
+.post-body .misconceptions .carousel-item{padding:2rem 3.5rem!important;font-family:var(--serif);font-size:1.2rem}
+.post-body .misconceptions .carousel-control-prev,.post-body .misconceptions .carousel-control-next{width:3rem}
+
+.post-body .byline{margin-top:2.5rem;padding-top:1rem;border-top:1px solid var(--rule)}
+
+/* Post-to-post navigation: one row from 768px up, wraps on phones */
+.post-nav{padding:0 0 clamp(3rem,7vw,5rem)}
+.post-nav .pagination{--bs-pagination-color:var(--ink);--bs-pagination-bg:transparent;--bs-pagination-border-color:var(--rule);
+  --bs-pagination-hover-color:#fff;--bs-pagination-hover-bg:var(--ink);--bs-pagination-hover-border-color:var(--ink);
+  --bs-pagination-focus-color:var(--ink);--bs-pagination-focus-bg:transparent;--bs-pagination-focus-box-shadow:none;
+  --bs-pagination-active-bg:var(--accent);--bs-pagination-active-border-color:var(--accent);
+  --bs-pagination-border-radius:2px;--bs-pagination-font-size:.9rem;flex-wrap:wrap;justify-content:center;row-gap:.4rem;margin:0}
+@media(min-width:768px){.post-nav .pagination{flex-wrap:nowrap}}
+@media(min-width:768px) and (max-width:991.98px){.post-nav .page-link{padding-left:.55rem;padding-right:.55rem}}
+
+/* MathJax: long equations scroll inside themselves on phones instead of widening the page */
+.post-body mjx-container[display="true"]{max-width:100%;overflow-x:auto;overflow-y:hidden}
+@media(max-width:575.98px){.post-body mjx-container:not([display="true"]){display:inline-block;max-width:100%;overflow-x:auto;overflow-y:hidden;vertical-align:middle}}
