@@ -1,565 +1,223 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-GB">
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Owais Siddiqi – Data Scientist</title>
-    <meta name="author" content="Owais Siddiqi"/>
-    <meta name="description" content="Owais Siddiqi — Data Scientist specialising in bioinformatics, machine learning, and clinical data engineering."/>
-    <meta name="google-site-verification" content="cPBmEeMxy8bhGVYaH28enfW3Rb-UgrrEfORHfCQRsjo"/>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.slim.min.js" integrity="sha384-5AkRS45j4ukf+JbWAfHL8P4onPA9p0KwwP7pUdjSQA3ss9edbJUJc/XcYAiheSSz" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" integrity="sha384-/rJKQnzOkEo+daG0jMjU1IwwY9unxt1NBw3Ef2fmOJ3PW/TfAg2KXVoWwMZQZtw9" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" integrity="sha384-Bfad6CLCknfcloXFOyFnlgtENryhrpZCe29RTifKEixXQZ38WheV+i/6YWSzkz3V" crossorigin="anonymous" referrerpolicy="no-referrer">
-    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js" integrity="sha384-n1AULnKdMJlK1oQCLNDL9qZsDgXtH6jRYFCpBtWFc+a9Yve0KSoMn575rk755NJZ" crossorigin="anonymous"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    <link href="./style.css" rel="stylesheet">
-    <link rel="icon" href="img/icon.png" type="image/png" sizes="32x32">
-    <link rel="canonical" href="https://owaissiddiqi.co.uk/">
-    <link rel="apple-touch-icon" sizes="120x120" href="img/apple-touch-icon.png"/>
-    <link rel="apple-touch-icon" sizes="152x152" href="img/apple-touch-icon.png"/>
-
-    <style>
-        body, html { font-family: 'Inter', sans-serif !important; }
-        .navbar { border-bottom: 1px solid rgba(0,0,0,0.06); }
-
-        .hero {
-            background: linear-gradient(135deg, #0f1117 0%, #1a1d27 50%, #22263a 100%);
-            color: #fff;
-            padding: 6rem 1.5rem 5rem;
-            text-align: center;
-            position: relative;
-            overflow: hidden;
-        }
-        .hero::before {
-            content: '';
-            position: absolute;
-            inset: 0;
-            background-image:
-                linear-gradient(rgba(108,99,255,0.04) 1px, transparent 1px),
-                linear-gradient(90deg, rgba(108,99,255,0.04) 1px, transparent 1px);
-            background-size: 40px 40px;
-            pointer-events: none;
-        }
-        .hero::after {
-            content: '';
-            position: absolute;
-            top: -80px; left: 50%;
-            transform: translateX(-50%);
-            width: 500px; height: 500px;
-            background: radial-gradient(circle, rgba(108,99,255,0.15) 0%, transparent 70%);
-            pointer-events: none;
-        }
-        .hero-inner { position: relative; z-index: 1; max-width: 700px; margin: 0 auto; }
-        .hero-badge {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.4rem;
-            background: rgba(108,99,255,0.15);
-            border: 1px solid rgba(108,99,255,0.3);
-            color: #a89fff;
-            font-size: 0.78rem;
-            font-weight: 600;
-            letter-spacing: 0.06em;
-            text-transform: uppercase;
-            padding: 0.35rem 0.9rem;
-            border-radius: 999px;
-            margin-bottom: 1.5rem;
-        }
-        .hero-badge .dot {
-            width: 6px; height: 6px;
-            background: #6c63ff;
-            border-radius: 50%;
-            animation: pulse 2s infinite;
-        }
-        @keyframes pulse {
-            0%, 100% { opacity: 1; transform: scale(1); }
-            50%       { opacity: 0.5; transform: scale(0.8); }
-        }
-        .hero h1 {
-            font-size: clamp(2.4rem, 7vw, 4rem);
-            font-weight: 800;
-            letter-spacing: -0.03em;
-            line-height: 1.1;
-            margin-bottom: 1rem;
-            color: #fff;
-        }
-        .hero h1 .accent { color: #6c63ff; }
-        .hero-sub {
-            font-size: clamp(1rem, 2.5vw, 1.15rem);
-            color: rgba(255,255,255,0.55);
-            line-height: 1.7;
-            margin-bottom: 2rem;
-            max-width: 540px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-        .hero-btns {
-            display: flex;
-            gap: 0.75rem;
-            justify-content: center;
-            flex-wrap: wrap;
-            margin-bottom: 3rem;
-        }
-        .btn-hero-primary {
-            padding: 0.7rem 1.8rem;
-            border-radius: 10px;
-            font-size: 0.92rem;
-            font-weight: 600;
-            background: #6c63ff;
-            color: #fff;
-            border: none;
-            text-decoration: none;
-            transition: all 0.2s;
-            display: inline-flex;
-            align-items: center;
-            gap: 0.4rem;
-        }
-        .btn-hero-primary:hover {
-            background: #5a52d5;
-            color: #fff;
-            text-decoration: none;
-            transform: translateY(-2px);
-            box-shadow: 0 8px 24px rgba(108,99,255,0.4);
-        }
-        .btn-hero-secondary {
-            padding: 0.7rem 1.8rem;
-            border-radius: 10px;
-            font-size: 0.92rem;
-            font-weight: 600;
-            background: transparent;
-            color: rgba(255,255,255,0.75);
-            border: 1.5px solid rgba(255,255,255,0.2);
-            text-decoration: none;
-            transition: all 0.2s;
-            display: inline-flex;
-            align-items: center;
-            gap: 0.4rem;
-        }
-        .btn-hero-secondary:hover {
-            border-color: rgba(255,255,255,0.5);
-            color: #fff;
-            text-decoration: none;
-        }
-        .hero-stats {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 2rem;
-            padding-top: 2.5rem;
-            border-top: 1px solid rgba(255,255,255,0.08);
-        }
-        .hero-stat-value { font-size: 1.5rem; font-weight: 800; color: #fff; line-height: 1; }
-        .hero-stat-label {
-            font-size: 0.72rem;
-            color: rgba(255,255,255,0.4);
-            font-weight: 500;
-            text-transform: uppercase;
-            letter-spacing: 0.05em;
-            margin-top: 0.2rem;
-        }
-        #slides .carousel-item img { width: 100%; object-fit: cover; max-height: 75vh; min-height: 300px; }
-        @media (max-width: 576px) {
-            #slides .carousel-caption h1.display-2 { font-size: 1.8rem; }
-            #slides .carousel-caption h3 { font-size: 0.95rem; }
-        }
-        .about-section { padding: 5rem 1.5rem; background: #fff; }
-        .about-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 4rem;
-            align-items: center;
-            max-width: 1100px;
-            margin: 0 auto;
-        }
-        @media (max-width: 768px) { .about-grid { grid-template-columns: 1fr; gap: 2rem; } }
-        .about-label {
-            font-size: 0.72rem;
-            font-weight: 700;
-            letter-spacing: 0.1em;
-            text-transform: uppercase;
-            color: #6c63ff;
-            margin-bottom: 0.75rem;
-        }
-        .about-section h2 {
-            font-size: clamp(1.6rem, 4vw, 2.2rem);
-            font-weight: 800;
-            letter-spacing: -0.02em;
-            color: #0f1117;
-            margin-bottom: 1.2rem;
-            line-height: 1.2;
-        }
-        .about-section p { color: #4a5568; line-height: 1.75; font-size: 0.97rem; margin-bottom: 1rem; }
-        .about-img { border-radius: 20px; width: 100%; box-shadow: 0 20px 60px rgba(0,0,0,0.12); }
-        .discipline-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-top: 1.5rem; }
-        @media (max-width: 500px) { .discipline-grid { grid-template-columns: 1fr; } }
-        .discipline-card { background: #f8f9ff; border: 1px solid #e8e8ff; border-radius: 14px; padding: 1.25rem; }
-        .discipline-card i { font-size: 1.5rem; margin-bottom: 0.6rem; display: block; }
-        .discipline-card h4 { font-size: 0.9rem; font-weight: 700; color: #0f1117; margin-bottom: 0.4rem; }
-        .discipline-card p { font-size: 0.8rem; color: #6c757d; margin: 0; line-height: 1.55; }
-        .blog-intro-section {
-            background: #f8f9fc;
-            padding: 5rem 1.5rem;
-            border-top: 1px solid #eef0f5;
-            border-bottom: 1px solid #eef0f5;
-        }
-        .blog-intro-inner {
-            max-width: 1100px;
-            margin: 0 auto;
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 4rem;
-            align-items: center;
-        }
-        @media (max-width: 768px) {
-            .blog-intro-inner { grid-template-columns: 1fr; gap: 2rem; }
-            .blog-intro-img-wrap { order: -1; }
-        }
-        .blog-intro-section h2 {
-            font-size: clamp(1.6rem, 4vw, 2.2rem);
-            font-weight: 800;
-            letter-spacing: -0.02em;
-            color: #0f1117;
-            margin-bottom: 1rem;
-            line-height: 1.2;
-        }
-        .blog-intro-section p { color: #4a5568; line-height: 1.75; font-size: 0.97rem; margin-bottom: 1rem; }
-        .blog-intro-img { border-radius: 20px; width: 100%; box-shadow: 0 20px 60px rgba(0,0,0,0.1); }
-        /* Side-slide animations start 100px off to the side; clip them so the page never scrolls sideways */
-        .about-section, .blog-intro-section, section.hobbies { overflow-x: hidden; overflow-x: clip; }
-        .fixed-background { border-top: 2px solid black; }
-        section.hobbies { background: linear-gradient(135deg, #0062E6 0%, #33AEFF 100%); }
-        .hobbies h3.section-heading {
-            font-size: clamp(1.5rem, 4vw, 2rem);
-            font-weight: 800;
-            color: #fff;
-            text-shadow: 0 2px 8px rgba(0,0,0,0.25);
-            letter-spacing: -0.01em;
-        }
-        .hobbies .card { border: none; border-radius: 16px; box-shadow: 0 4px 20px rgba(0,0,0,0.1); transition: transform 0.2s, box-shadow 0.2s; }
-        .hobbies .card:hover { transform: translateY(-4px); box-shadow: 0 12px 32px rgba(0,0,0,0.15); }
-        .hobbies .card-title { font-size: 0.78rem; letter-spacing: 0.08em; font-weight: 700; }
-        .hobbies .card-body { padding: 1.5rem; }
-        .hobbies ul.fa-ul { margin-left: 1.5em; }
-        .hobbies ul.fa-ul li { font-size: 0.875rem; color: #444; line-height: 1.65; margin-bottom: 0.75rem; }
-        .contact-section { padding: 4rem 1.5rem; text-align: center; }
-        .contact-section h2 { font-size: 1.8rem; font-weight: 800; color: #0f1117; margin-bottom: 1.5rem; letter-spacing: -0.02em; }
-        footer { background: #1a1d27; color: rgba(255,255,255,0.5); padding-top: 2rem; font-size: 0.875rem; }
-        .socket { background: #0f1117; border-top: 1px solid rgba(255,255,255,0.06); }
-        .socket a { color: rgba(255,255,255,0.4); text-decoration: none; }
-        .socket a:hover { color: rgba(255,255,255,0.7); }
-        #digital-clock { font-size: 1.3rem; color: rgba(255,255,255,0.3); }
-        #myBtn {
-            display: none; position: fixed; bottom: 1.5rem; right: 1.5rem; z-index: 99;
-            background: #6c63ff; border: none; border-radius: 50%; width: 44px; height: 44px;
-            cursor: pointer; box-shadow: 0 4px 20px rgba(108,99,255,0.4); transition: transform 0.2s;
-        }
-        #myBtn:hover { transform: translateY(-3px); }
-        #myBtn svg { width: 14px; height: 14px; fill: #fff; display: block; margin: auto; }
-    </style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script>document.documentElement.classList.add('js')</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;1,9..144,400&amp;family=Inter:wght@400;500;600&amp;display=swap">
+<link rel="stylesheet" href="/css/site.css">
+<link rel="icon" href="/img/icon.png" type="image/png">
+<title>Owais Siddiqi – Data Scientist</title>
+<meta name="author" content="Owais Siddiqi">
+<meta name="description" content="Owais Siddiqi, data scientist in computational biology, building machine learning and bioinformatics pipelines for genomic, proteomic and clinical data.">
+<meta name="google-site-verification" content="cPBmEeMxy8bhGVYaH28enfW3Rb-UgrrEfORHfCQRsjo">
+<link rel="canonical" href="https://owaissiddiqi.co.uk/">
+<link rel="apple-touch-icon" sizes="120x120" href="/img/apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="152x152" href="/img/apple-touch-icon.png">
+<link rel="stylesheet" href="/css/home.css">
+<noscript><style>.site-nav .navbar-collapse{display:block}.navbar-toggler{display:none}</style></noscript>
 </head>
 <body>
-
-<!-- Navigation -->
-<nav class="navbar navbar-expand-md navbar-light bg-light sticky-top">
-    <div class="container-fluid">
-        <a class="navbar-brand" href="/"><img alt="Owais Siddiqi home" class="logoB" src="img/logoB.png"></a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarResponsive">
-            <ul class="navbar-nav ml-auto">
-                <li class="nav-item active"><a class="nav-link" href="/">Home</a></li>
-                <li class="nav-item"><a class="nav-link" href="./Blogs/">Blog</a></li>
-                <li class="nav-item"><a class="nav-link" href="./Quiz/">Quiz</a></li>
-                <li class="nav-item"><a class="nav-link" href="./FlashCards/">Flashcards</a></li>
-                <li class="nav-item"><a class="nav-link" href="/CV/">CV</a></li>
-                <li class="nav-item"><a class="nav-link" href="mailto:omsiddiqi01@gmail.com"><i class="fas fa-envelope-square"></i></a></li>
-                <li class="nav-item"><a class="nav-link" href="https://www.linkedin.com/in/owaissidd/" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin"></i></a></li>
-            </ul>
-        </div>
+<a class="skip" href="#main">Skip to content</a>
+<header class="sticky-top">
+<nav class="navbar navbar-expand-md site-nav" aria-label="Main">
+  <div class="wrap">
+    <a class="navbar-brand p-0 m-0" href="/"><img src="/img/logoB.png" alt="Owais Siddiqi home" width="79" height="38"></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav" aria-controls="nav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse flex-grow-0" id="nav">
+      <ul class="navbar-nav">
+        <li class="nav-item"><a class="nav-link ul" href="/" aria-current="page">Home</a></li>
+        <li class="nav-item"><a class="nav-link ul" href="/Blogs/">Blog</a></li>
+        <li class="nav-item"><a class="nav-link ul" href="/Quiz/">Quiz</a></li>
+        <li class="nav-item"><a class="nav-link ul" href="/FlashCards/">Flashcards</a></li>
+        <li class="nav-item"><a class="nav-link ul" href="/CV/">CV</a></li>
+        <li class="nav-item"><a class="nav-link ic" href="mailto:omsiddiqi01@gmail.com" aria-label="Email Owais"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1zm13 2.383-4.708 2.825L15 11.105zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741M1 11.105l4.708-2.897L1 5.383z"/></svg><span>Email</span></a></li>
+        <li class="nav-item"><a class="nav-link ic" href="https://www.linkedin.com/in/owaissidd/" target="_blank" rel="noopener noreferrer" aria-label="Owais on LinkedIn"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854zm4.943 12.248V6.169H2.542v7.225zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248S2.4 3.226 2.4 3.934c0 .694.521 1.248 1.327 1.248zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016l.016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225z"/></svg><span>LinkedIn</span></a></li>
+      </ul>
     </div>
+  </div>
 </nav>
+</header>
 
-<!-- Hero -->
-<div class="hero" data-aos="fade-in">
-    <div class="hero-inner">
-        <div class="hero-badge" data-aos="fade-down" data-aos-delay="100">
-            <span class="dot"></span> Available for opportunities
+<main id="main">
+
+<section class="hero" aria-labelledby="hero-h">
+  <div class="glow g1" aria-hidden="true"></div><div class="glow g2" aria-hidden="true"></div>
+  <div class="wrap">
+    <div class="row g-5 align-items-end">
+      <div class="col-lg-8">
+        <p class="label status rv"><span class="dot" aria-hidden="true"></span>Available for opportunities</p>
+        <h1 id="hero-h" class="rv" style="--d:.06s">Hi, I'm <em class="ac">Owais</em> Siddiqi</h1>
+        <p class="lead-ed rv" style="--d:.12s">Data scientist in <em>computational biology</em>, building machine learning and bioinformatics pipelines for genomic, proteomic and clinical data.</p>
+        <p class="meta rv" style="--d:.16s">MSc Biomedical Engineering · Imperial College London</p>
+        <div class="cta rv" style="--d:.2s">
+          <a class="btn-ink" href="/Blogs/">Read my blog</a>
+          <a class="ul on" href="/CV/">View CV</a>
+          <a class="ul on" href="/Quiz/">Take the quiz</a>
         </div>
-        <h1 data-aos="fade-up" data-aos-delay="150">
-            Hi, I'm <span class="accent">Owais</span> Siddiqi
-        </h1>
-        <p class="hero-sub" data-aos="fade-up" data-aos-delay="200">
-            Data Scientist specialising in bioinformatics, machine learning, and clinical data analytics.
-            MSc Biomedical Engineering · Imperial College London.
-        </p>
-        <div class="hero-btns" data-aos="fade-up" data-aos-delay="250">
-            <a href="./Blogs/" class="btn-hero-primary">
-                <i class="fas fa-book-open"></i> Read My Blog
-            </a>
-            <a href="/CV/" class="btn-hero-secondary">
-                <i class="fas fa-file-alt"></i> View CV
-            </a>
-            <a href="./Quiz/" class="btn-hero-secondary">
-                <i class="fas fa-question-circle"></i> Take the Quiz
-            </a>
-        </div>
-        <div class="hero-stats" data-aos="fade-up" data-aos-delay="300">
-            <div>
-                <div class="hero-stat-value">3+</div>
-                <div class="hero-stat-label">Years in industry</div>
-            </div>
-            <div>
-                <div class="hero-stat-value">MSc</div>
-                <div class="hero-stat-label">Imperial College</div>
-            </div>
-            <div>
-                <div class="hero-stat-value">1st</div>
-                <div class="hero-stat-label">BEng, Queen Mary</div>
-            </div>
-            <div>
-                <div class="hero-stat-value">3</div>
-                <div class="hero-stat-label">Industry roles</div>
-            </div>
-        </div>
+      </div>
+      <div class="col-lg-4">
+        <a class="latest rv" style="--d:.28s" href="/Blogs/CancerVax/">
+          <p class="label">Latest post</p>
+          <div class="ph"><img src="/img/thumbs/cancer-vaccine-card.webp" alt="" width="640" height="400" decoding="async"></div>
+          <h2>Personalised cancer vaccines, mRNA's next act</h2>
+          <span class="more">Read the post <span class="arr" aria-hidden="true">→</span></span>
+        </a>
+      </div>
     </div>
-</div>
 
-<!-- Carousel -->
-<div id="slides" class="carousel slide" data-ride="carousel">
-    <ul class="carousel-indicators">
-        <li data-target="#slides" data-slide-to="0" class="active"></li>
-        <li data-target="#slides" data-slide-to="1"></li>
-        <li data-target="#slides" data-slide-to="2"></li>
-    </ul>
-    <div class="carousel-inner">
-        <div class="carousel-item active">
-            <img src="img/background.jpg" alt="Data Science and Bioinformatics">
-            <div class="carousel-caption">
-                <h1 class="display-2">Data Science<br>&amp; Bioinformatics</h1>
-                <h3>Check out my Blog Posts</h3>
-                <a href="./Blogs/"><button type="button" class="btn btn-outline-light btn-lg">View Blogs</button></a>
-            </div>
-        </div>
-        <div class="carousel-item">
-            <img src="img/background2.png" alt="Medicine and Physiology">
-            <div class="carousel-caption">
-                <h1 class="display-2">Medicine<br>&amp; Physiology</h1>
-                <h3>Try my Mini Med Quiz</h3>
-                <a href="./Quiz/"><button type="button" class="btn btn-outline-light btn-lg">View Quiz</button></a>
-            </div>
-        </div>
-        <div class="carousel-item">
-            <img src="img/background4.png" alt="Biology and Physics">
-            <div class="carousel-caption">
-                <h1 class="display-2">Biology<br>&amp; Physics</h1>
-                <h3>Learn some new words with my Flashcards</h3>
-                <a href="./FlashCards/"><button type="button" class="btn btn-outline-light btn-lg">View Flashcards</button></a>
-            </div>
-        </div>
-    </div>
-</div>
+    <dl class="stats rv" style="--d:.34s">
+      <div><dt>Years in industry</dt><dd>3+</dd></div>
+      <div><dt>Imperial College</dt><dd>MSc</dd></div>
+      <div><dt>BEng, Queen Mary</dt><dd>1st</dd></div>
+      <div><dt>Industry roles</dt><dd>3</dd></div>
+    </dl>
+  </div>
+</section>
 
-<!-- About -->
-<section class="about-section">
-    <div class="about-grid">
-        <div data-aos="fade-right" data-aos-delay="100">
-            <p class="about-label">About me</p>
-            <h2>Where biology meets<br>data science</h2>
+<section class="sec" aria-labelledby="about-h">
+  <div class="wrap">
+    <div class="row g-4 g-lg-5">
+      <div class="col-lg-4">
+        <div class="sec-head rv">
+          <p class="label mb-3"><span class="n">01</span>About me</p>
+          <h2 id="about-h">Where biology meets <em class="ac">data science</em></h2>
+        </div>
+      </div>
+      <div class="col-lg-8">
+        <div class="row g-4 g-md-5">
+          <div class="col-md-7 rv">
             <p>I'm a Bioinformatics-focused Data Scientist with a background in Biomedical Engineering. I build production-scale genomic analytics pipelines, deploy machine learning models for patient stratification, and translate complex molecular datasets into structured, decision-ready evidence.</p>
-            <p>I hold an MSc in Biomedical Engineering from <a href="https://www.imperial.ac.uk/" target="_blank" rel="noopener noreferrer" style="color:#6c63ff; font-weight:500;">Imperial College London</a> and a First Class BEng from <a href="https://www.qmul.ac.uk/" target="_blank" rel="noopener noreferrer" style="color:#6c63ff; font-weight:500;">Queen Mary University of London</a>. This site is where I write about the ideas and topics that shape how I think, from genomics to machine learning to medicine.</p>
-            <div class="discipline-grid">
-                <div class="discipline-card">
-                    <i class="fas fa-atom" style="color:#e53e3e"></i>
-                    <h4>Physics &amp; Maths</h4>
-                    <p>Multivariable calculus, linear algebra, and signal processing, the rigour behind every model I build.</p>
-                </div>
-                <div class="discipline-card">
-                    <i class="fas fa-dna" style="color:#2163af"></i>
-                    <h4>Biology &amp; Genomics</h4>
-                    <p>Living systems are noisy, dynamic, and deeply interconnected, precisely what makes data science on them so compelling.</p>
-                </div>
+            <p class="mb-0">I hold an MSc in Biomedical Engineering from <a href="https://www.imperial.ac.uk/" target="_blank" rel="noopener noreferrer">Imperial College London</a> and a First Class BEng from <a href="https://www.qmul.ac.uk/" target="_blank" rel="noopener noreferrer">Queen Mary University of London</a>. This site is where I write about the ideas and topics that shape how I think, from genomics to machine learning to medicine.</p>
+          </div>
+          <div class="col-md-5 rv" style="--d:.08s">
+            <figure class="fig"><img src="/img/thumbs/maths_home_page.webp" alt="Writing and research" width="600" height="450" loading="lazy" decoding="async"></figure>
+          </div>
+          <div class="col-sm-6 rv">
+            <div class="disc">
+              <h3><span aria-hidden="true">i.</span>Physics &amp; Maths</h3>
+              <p>Multivariable calculus, linear algebra, and signal processing, the rigour behind every model I build.</p>
             </div>
+          </div>
+          <div class="col-sm-6 rv" style="--d:.08s">
+            <div class="disc">
+              <h3><span aria-hidden="true">ii.</span>Biology &amp; Genomics</h3>
+              <p>Living systems are noisy, dynamic, and deeply interconnected, precisely what makes data science on them so compelling.</p>
+            </div>
+          </div>
         </div>
-        <div data-aos="fade-left" data-aos-delay="200">
-            <img loading="lazy" decoding="async" src="img/thumbs/maths_home_page.webp" alt="Writing and research" class="about-img">
-        </div>
+      </div>
     </div>
+  </div>
 </section>
 
-<!-- Blog intro -->
-<section class="blog-intro-section">
-    <div class="blog-intro-inner">
-        <div class="blog-intro-img-wrap" data-aos="fade-right" data-aos-delay="100">
-            <img loading="lazy" decoding="async" src="img/writing.png" alt="Blog posts" class="blog-intro-img">
-        </div>
-        <div data-aos="fade-left" data-aos-delay="200">
-            <p class="about-label">The Blog</p>
-            <h2>Exploring ideas at the boundary of disciplines</h2>
-            <p>Biology and engineering seem worlds apart, yet their intersection is where the most exciting science happens. Bioinformatics and data science give me the tools to make sense of complex biological systems: finding patterns in genomic data, modelling disease progression, and translating raw molecular information into something meaningful.</p>
-            <p>The human genome contains billions of base pairs. A single RNA-seq experiment generates millions of reads. A clinical dataset can span thousands of patients across years of follow-up. Making sense of that data, rigorously and reproducibly, is both a technical challenge and a creative one.</p>
-            <p>This blog is where I explore those ideas, from the logic of machine learning pipelines to the biology they're trying to decode. I hope you find something here that sparks your curiosity.</p>
-            <br>
-            <a href="./Blogs/" class="btn-hero-primary" style="display:inline-flex;">
-                <i class="fas fa-book-open"></i> Read Blog Posts
-            </a>
-            <p style="margin-top:1.25rem; font-size:0.92rem;"><strong>Latest post:</strong> <a href="./Blogs/CancerVax/" style="color:#6c63ff; font-weight:500;">Personalised cancer vaccines, mRNA's next act</a></p>
-        </div>
-    </div>
+<section class="sec pt-0" aria-labelledby="explore-h">
+  <div class="wrap">
+    <p class="label mb-3 rv"><span class="n">02</span>On this site</p>
+    <h2 id="explore-h" class="mb-4 mb-md-5 rv">Three places to start</h2>
+    <ul class="index">
+      <li class="rv"><a href="/Blogs/">
+        <span class="no" aria-hidden="true">a</span>
+        <span class="t">Data Science &amp; Bioinformatics</span>
+        <span class="d">Check out my blog posts</span>
+        <span class="go">View blogs <span class="arr" aria-hidden="true">→</span></span>
+      </a></li>
+      <li class="rv" style="--d:.06s"><a href="/Quiz/">
+        <span class="no" aria-hidden="true">b</span>
+        <span class="t">Medicine &amp; Physiology</span>
+        <span class="d">Try my Mini Med Quiz</span>
+        <span class="go">View quiz <span class="arr" aria-hidden="true">→</span></span>
+      </a></li>
+      <li class="rv" style="--d:.12s"><a href="/FlashCards/">
+        <span class="no" aria-hidden="true">c</span>
+        <span class="t">Biology &amp; Physics</span>
+        <span class="d">Learn some new words with my flashcards</span>
+        <span class="go">View flashcards <span class="arr" aria-hidden="true">→</span></span>
+      </a></li>
+    </ul>
+  </div>
 </section>
 
-<!-- Parallax divider -->
-<div class="fixed-background" style="border-top:2px solid black">
-    <div class="fixed-wrap" id="parallaxWrap">
-        <div class="fixed" id="parallaxFixed"></div>
-    </div>
-</div>
-
-<!-- Hobbies -->
-<section class="hobbies py-5" style="border-bottom: 2px solid black;">
-    <div class="text-center mb-4">
-        <h3 class="section-heading aos-init" data-aos="fade-down" data-aos-delay="100">Hobbies</h3>
-    </div>
-    <div class="container-fluid" style="padding: 0 5%;">
-        <div class="row">
-            <div class="col-lg-4 d-flex align-items-stretch mb-4" data-aos="fade-right" data-aos-delay="150">
-                <div class="card w-100">
-                    <div class="card-body">
-                        <h5 class="card-title text-muted text-uppercase text-center mb-0">
-                            <i class="fas fa-code fa-3x mb-2 d-block" style="color:#6c63ff"></i>
-                            Programming
-                        </h5>
-                        <hr>
-                        <ul class="fa-ul">
-                            <li><span class="fa-li"><i class="fas fa-angle-double-right" style="color:#6c63ff"></i></span>Python is my primary language — the backbone of modern data science and bioinformatics. Its readability and flexibility make it ideal for everything from rapid prototyping to production-scale pipelines.</li>
-                            <li><span class="fa-li"><i class="fas fa-angle-double-right" style="color:#6c63ff"></i></span>The ecosystem is what makes it so powerful: <strong>Pandas</strong> and <strong>NumPy</strong> for data engineering, <strong>Scikit-learn</strong> and <strong>PyTorch</strong> for ML, and <strong>Nextflow</strong> for genomic workflows.</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 d-flex align-items-stretch mb-4" data-aos="fade-up" data-aos-delay="200">
-                <div class="card w-100">
-                    <div class="card-body">
-                        <h5 class="card-title text-muted text-uppercase text-center mb-0">
-                            <i class="fas fa-gamepad fa-3x mb-2 d-block" style="color:#00c9a7"></i>
-                            Video Games
-                        </h5>
-                        <hr>
-                        <ul class="fa-ul">
-                            <li><span class="fa-li"><i class="fas fa-angle-double-right" style="color:#00c9a7"></i></span>Personally, I have a variety of different video game genres that I like to play. Solo games provide a beautiful, vast story combined by smooth game mechanics and a cleverly chosen score that only facilitates the immersiveness of a single player game (God Of War).</li>
-                            <li><span class="fa-li"><i class="fas fa-angle-double-right" style="color:#00c9a7"></i></span>Multiplayer games on the other hand, require a more strategic and alert mind as you are not playing against NPCs but real people, who are making their own unpredictable decisions that you have to counter.</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 d-flex align-items-stretch mb-4" data-aos="fade-left" data-aos-delay="250">
-                <div class="card w-100">
-                    <div class="card-body">
-                        <h5 class="card-title text-muted text-uppercase text-center mb-0">
-                            <i class="fas fa-comment-dots fa-3x mb-2 d-block" style="color:#f7b731"></i>
-                            Blogging
-                        </h5>
-                        <hr>
-                        <ul class="fa-ul">
-                            <li><span class="fa-li"><i class="fas fa-angle-double-right" style="color:#f7b731"></i></span>Blogging is one of the most effective ways to build awareness about your subject interests, while providing relevant and useful content for your audience at the same time. I enjoy blogging as it grants me a platform to convey the topics I find interesting.</li>
-                            <li><span class="fa-li"><i class="fas fa-angle-double-right" style="color:#f7b731"></i></span>It also lets me share knowledge I have gained through research in various subjects and allows me to give my own opinion on them. Serendipitously, it indirectly diverts me to areas of science I never knew about and thus broadens my horizons.</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
+<section class="sec tint" aria-labelledby="blog-h">
+  <div class="wrap">
+    <div class="row g-4 g-lg-5">
+      <div class="col-lg-5">
+        <div class="rv">
+          <p class="label mb-3"><span class="n">03</span>The blog</p>
+          <h2 id="blog-h" class="mb-4">Exploring ideas at the boundary of disciplines</h2>
+          <figure class="fig"><img src="/img/writing.png" alt="Blog posts" width="600" height="450" loading="lazy" decoding="async"></figure>
         </div>
+      </div>
+      <div class="col-lg-6 offset-lg-1 rv" style="--d:.08s">
+        <p class="lead-ed" style="max-width:none">Biology and engineering seem worlds apart, yet their intersection is where the most exciting science happens.</p>
+        <p>Bioinformatics and data science give me the tools to make sense of complex biological systems: finding patterns in genomic data, modelling disease progression, and translating raw molecular information into something meaningful.</p>
+        <p>The human genome contains billions of base pairs. A single RNA-seq experiment generates millions of reads. A clinical dataset can span thousands of patients across years of follow-up. Making sense of that data, rigorously and reproducibly, is both a technical challenge and a creative one.</p>
+        <p>This blog is where I explore those ideas, from the logic of machine learning pipelines to the biology they're trying to decode. I hope you find something here that sparks your curiosity.</p>
+        <p class="mt-4 mb-4"><a class="btn-ink" href="/Blogs/">Read blog posts</a></p>
+        <p class="mb-0" style="font-size:.95rem"><strong>Latest post:</strong> <a href="/Blogs/CancerVax/">Personalised cancer vaccines, mRNA's next act</a></p>
+      </div>
     </div>
+  </div>
 </section>
 
-<!-- Contact -->
-<div class="contact-section" data-aos="fade-up">
-    <h2>Get In Touch</h2>
-    <div class="social padding">
-        <a href="mailto:omsiddiqi01@gmail.com"><i class="fas fa-envelope-square"></i></a>
-        <a href="https://www.linkedin.com/in/owaissidd/" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin"></i></a>
+<section class="sec" aria-labelledby="hob-h">
+  <div class="wrap">
+    <p class="label mb-3 rv"><span class="n">04</span>Away from work</p>
+    <h2 id="hob-h" class="mb-4 mb-md-5 rv">Hobbies</h2>
+    <div class="row g-4 g-lg-5">
+      <div class="col-md-4 rv">
+        <article class="hob">
+          <h3><span class="k">Build</span>Programming</h3>
+          <p>Python is my primary language — the backbone of modern data science and bioinformatics. Its readability and flexibility make it ideal for everything from rapid prototyping to production-scale pipelines.</p>
+          <p>The ecosystem is what makes it so powerful: <strong>Pandas</strong> and <strong>NumPy</strong> for data engineering, <strong>Scikit-learn</strong> and <strong>PyTorch</strong> for ML, and <strong>Nextflow</strong> for genomic workflows.</p>
+        </article>
+      </div>
+      <div class="col-md-4 rv" style="--d:.07s">
+        <article class="hob">
+          <h3><span class="k">Play</span>Video Games</h3>
+          <p>Personally, I have a variety of different video game genres that I like to play. Solo games provide a beautiful, vast story combined by smooth game mechanics and a cleverly chosen score that only facilitates the immersiveness of a single player game (God Of War).</p>
+          <p>Multiplayer games on the other hand, require a more strategic and alert mind as you are not playing against NPCs but real people, who are making their own unpredictable decisions that you have to counter.</p>
+        </article>
+      </div>
+      <div class="col-md-4 rv" style="--d:.14s">
+        <article class="hob">
+          <h3><span class="k">Write</span>Blogging</h3>
+          <p>Blogging is one of the most effective ways to build awareness about your subject interests, while providing relevant and useful content for your audience at the same time. I enjoy blogging as it grants me a platform to convey the topics I find interesting.</p>
+          <p>It also lets me share knowledge I have gained through research in various subjects and allows me to give my own opinion on them. Serendipitously, it indirectly diverts me to areas of science I never knew about and thus broadens my horizons.</p>
+        </article>
+      </div>
     </div>
-</div>
+  </div>
+</section>
 
-<!-- Footer -->
-<footer>
-    <div class="container-fluid padding">
-        <div class="row text-center">
-            <div class="col-md-12"><div id="digital-clock"></div></div>
-        </div>
+<section class="sec tint contact" aria-labelledby="contact-h">
+  <div class="wrap rv">
+    <p class="label"><span class="n">05</span>Contact</p>
+    <h2 id="contact-h">Get in <em class="ac">touch</em></h2>
+    <div class="links">
+      <a class="icon-link" href="mailto:omsiddiqi01@gmail.com" aria-label="Email Owais" title="Email"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1zm13 2.383-4.708 2.825L15 11.105zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741M1 11.105l4.708-2.897L1 5.383z"/></svg></a>
+      <a class="icon-link" href="https://www.linkedin.com/in/owaissidd/" target="_blank" rel="noopener noreferrer" aria-label="Owais on LinkedIn" title="LinkedIn"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854zm4.943 12.248V6.169H2.542v7.225zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248S2.4 3.226 2.4 3.934c0 .694.521 1.248 1.327 1.248zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016l.016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225z"/></svg></a>
     </div>
-    <div class="socket text-light text-center py-4">
-        <p>&copy; <a href="https://owaissiddiqi.co.uk/" target="_blank" rel="noopener noreferrer">Owais Siddiqi · All rights reserved</a></p>
-    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="site-foot">
+  <div class="wrap">
+    <div class="clock-time" id="clockTime"></div>
+    <div class="clock-bar" aria-hidden="true"></div>
+    <div class="clock-date" id="clockDate"></div>
+    <p class="copy">&copy; <a href="/">Owais Siddiqi</a> · All rights reserved</p>
+  </div>
 </footer>
-
-<button onclick="topFunction()" id="myBtn" title="Go to top">
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6"><path d="M12 6H0l6-6z"/></svg>
-</button>
-
-<script>
-    AOS.init({ once: true, duration: 600 });
-
-    /* ── Scroll to top ───────────────────────── */
-    var mybutton = document.getElementById('myBtn');
-    window.addEventListener('scroll', function() {
-        mybutton.style.display = (document.documentElement.scrollTop > 40) ? 'block' : 'none';
-    });
-    function topFunction() { window.scrollTo({ top: 0, behavior: 'smooth' }); }
-
-    /* ── Parallax fix — Safari (desktop + iOS) ───────────────────────────────
-       Safari refuses position:fixed inside a clipped ancestor, causing the
-       parallax image to escape its container and sit on top of all content.
-       We detect Safari via the user-agent and apply a JS-driven translateY
-       approach instead, which works reliably on all Safari versions.
-    -------------------------------------------------------------------------- */
-    (function () {
-        var ua = navigator.userAgent;
-        // Matches Safari but NOT Chrome (which also includes "Safari" in UA)
-        var isSafari = /^((?!chrome|android).)*safari/i.test(ua);
-        // Also catch iOS devices (touch + webkit)
-        var isIOS = /iPad|iPhone|iPod/.test(ua) && !window.MSStream;
-
-        if (isSafari || isIOS) {
-            document.body.classList.add('safari-parallax-fallback');
-
-            var fixedEl   = document.getElementById('parallaxFixed');
-            var sectionEl = document.querySelector('.fixed-background');
-
-            if (fixedEl && sectionEl) {
-                function updateParallax() {
-                    var rect     = sectionEl.getBoundingClientRect();
-                    var sectionH = sectionEl.offsetHeight;
-                    var viewH    = window.innerHeight;
-
-                    // progress: 0 when section enters bottom of viewport,
-                    //           1 when section exits top of viewport
-                    var progress = 1 - ((rect.bottom) / (viewH + sectionH));
-                    progress = Math.max(0, Math.min(1, progress));
-
-                    // Translate between -15% and +15% of the image height
-                    var shift = (progress - 0.5) * 30;
-                    fixedEl.style.transform = 'translateY(' + shift + '%)';
-                }
-
-                window.addEventListener('scroll', updateParallax, { passive: true });
-                window.addEventListener('resize', updateParallax, { passive: true });
-                updateParallax();
-            }
-        }
-    })();
-
-    /* ── Digital clock ───────────────────────── */
-    function getDateTime() {
-        var now = new Date(), p = function(n){ return (n<10?'0':'')+n; };
-        return p(now.getHours())+':'+p(now.getMinutes())+':'+p(now.getSeconds())
-            +'<br>'+p(now.getDate())+'/'+p(now.getMonth()+1)+'/'+now.getFullYear();
-    }
-    setInterval(function(){
-        var el = document.getElementById('digital-clock');
-        if(el) el.innerHTML = getDateTime();
-    }, 1000);
-</script>
+<button class="to-top" id="toTop" type="button" aria-label="Back to top" title="Back to top"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 3.5 14 10l-1.4 1.4L8 6.3 3.4 11.4 2 10z"/></svg></button>
+<script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+<script defer src="/js/site.js"></script>
 </body>
 </html>
