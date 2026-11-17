@@ -571,11 +571,6 @@ html{
     background-color:#1971fd;
   }
   }
-  @media (max-width: 500px) {
-    .pagination{
-      display: none;
-    }
-  }
 
 /*---Firefox Bug Fix --*/
 .carousel-item {
@@ -584,6 +579,14 @@ html{
   transition: transform 0.5s ease, -webkit-transform 0.5s ease;
   -webkit-backface-visibility: visible;
   backface-visibility: visible;
+}
+
+/*--- Blog post links: span the full content width on tablet and up so they stay on one line --*/
+@media (min-width: 768px) {
+  nav[aria-label="Blog post navigation"] {
+    margin-left: -25%;
+    margin-right: -25%;
+  }
 }
 
 /*--- Bootstrap Padding Fix --*/

@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 760" font-family="Poppins, Inter, Arial, sans-serif" role="img" aria-labelledby="t d">
+  <title id="t">How a personalised cancer vaccine is made</title>
+  <desc id="d">Six steps: remove the tumour, sequence tumour and healthy DNA, find tumour-only mutations, rank neoantigens, encode them in mRNA, and train T cells.</desc>
+  <defs>
+    <marker id="a" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0 0L10 5L0 10z" fill="#9aa3b5"/>
+    </marker>
+    <style>
+      .box{fill:#fff;stroke:#d9dcea;stroke-width:1.5}
+      .num{fill:#6c63ff}
+      .n{fill:#fff;font-size:17px;font-weight:700;text-anchor:middle}
+      .h{fill:#0f1117;font-size:17px;font-weight:700}
+      .p{fill:#4a5568;font-size:13.5px}
+      .lab{fill:#6c63ff;font-size:12px;font-weight:700;letter-spacing:.08em}
+      .arr{stroke:#9aa3b5;stroke-width:2;marker-end:url(#a)}
+    </style>
+  </defs>
+  <rect width="560" height="760" rx="18" fill="#f6f7fb"/>
+  <text x="30" y="40" class="lab">IN THE HOSPITAL</text>
+  <g transform="translate(30,54)">
+    <rect class="box" width="500" height="86" rx="12"/>
+    <circle class="num" cx="38" cy="43" r="20"/><text x="38" y="49" class="n">1</text>
+    <text x="74" y="36" class="h">Remove the tumour</text>
+    <text x="74" y="60" class="p">Surgery removes the tumour. A blood sample gives</text>
+    <text x="74" y="77" class="p">the patient's healthy DNA for comparison.</text>
+  </g>
+  <line x1="280" y1="142" x2="280" y2="166" class="arr"/>
+  <text x="30" y="190" class="lab">IN THE LAB</text>
+  <g transform="translate(30,204)">
+    <rect class="box" width="500" height="86" rx="12"/>
+    <circle class="num" cx="38" cy="43" r="20"/><text x="38" y="49" class="n">2</text>
+    <text x="74" y="36" class="h">Sequence both samples</text>
+    <text x="74" y="60" class="p">Tumour DNA and RNA and healthy DNA are read</text>
+    <text x="74" y="77" class="p">base by base with next-generation sequencing.</text>
+  </g>
+  <line x1="280" y1="292" x2="280" y2="312" class="arr"/>
+  <g transform="translate(30,316)">
+    <rect class="box" width="500" height="86" rx="12"/>
+    <circle class="num" cx="38" cy="43" r="20"/><text x="38" y="49" class="n">3</text>
+    <text x="74" y="36" class="h">Find the tumour-only mutations</text>
+    <text x="74" y="60" class="p">Any change found in the tumour but not in the</text>
+    <text x="74" y="77" class="p">blood is a candidate. It belongs to the cancer alone.</text>
+  </g>
+  <line x1="280" y1="404" x2="280" y2="424" class="arr"/>
+  <g transform="translate(30,428)">
+    <rect class="box" width="500" height="86" rx="12"/>
+    <circle class="num" cx="38" cy="43" r="20"/><text x="38" y="49" class="n">4</text>
+    <text x="74" y="36" class="h">Rank the neoantigens</text>
+    <text x="74" y="60" class="p">Software predicts which mutant protein fragments</text>
+    <text x="74" y="77" class="p">the immune system will see. The best are chosen.</text>
+  </g>
+  <line x1="280" y1="516" x2="280" y2="536" class="arr"/>
+  <g transform="translate(30,540)">
+    <rect class="box" width="500" height="86" rx="12"/>
+    <circle class="num" cx="38" cy="43" r="20"/><text x="38" y="49" class="n">5</text>
+    <text x="74" y="36" class="h">Write them into mRNA</text>
+    <text x="74" y="60" class="p">The chosen fragments are coded into mRNA and</text>
+    <text x="74" y="77" class="p">wrapped in lipid nanoparticles, like a COVID jab.</text>
+  </g>
+  <line x1="280" y1="628" x2="280" y2="648" class="arr"/>
+  <g transform="translate(30,652)">
+    <rect class="box" width="500" height="86" rx="12" style="stroke:#6c63ff"/>
+    <circle class="num" cx="38" cy="43" r="20"/><text x="38" y="49" class="n">6</text>
+    <text x="74" y="36" class="h">Train the T cells</text>
+    <text x="74" y="60" class="p">After injection, T cells learn the fragments and</text>
+    <text x="74" y="77" class="p">attack any cancer cell that shows them.</text>
+  </g>
+</svg>
