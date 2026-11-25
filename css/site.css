@@ -51,6 +51,7 @@ a:hover .arr,a:focus-visible .arr{transform:translateX(5px)}
 .site-nav .ic:hover svg{transform:translateY(-2px)}
 .navbar-toggler{border:1px solid var(--rule);border-radius:0;padding:.4rem .6rem}
 .navbar-toggler:focus{box-shadow:none}
+@media(min-width:768px) and (max-width:991.98px){.site-nav .navbar-nav{gap:1.2rem!important}}
 @media(min-width:768px){.site-nav .navbar-nav{gap:1.9rem;align-items:center}.site-nav .ic span{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}}
 @media(max-width:767.98px){.site-nav .navbar-nav{padding:.75rem 0 .5rem;align-items:flex-start}}
 
