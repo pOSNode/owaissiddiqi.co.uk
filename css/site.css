@@ -1,8 +1,8 @@
 /* Shared design system for every page. Page-only rules live in css/<page>.css. */
 :root{
   --paper:#fbfaf7; --paper-2:#f4f1ea; --ink:#1c1917; --text:#44403c; --muted:#6b645c;
-  --rule:#ddd7cc; --accent:#a8371b; --accent-dark:#872a13;
-  --navy:#0d1329; --navy-2:#080c1b; --on-navy:#f6f2e9; --on-navy-2:#aeb3c9; --accent-lt:#f2a98b; --hero-red:#f2553f;
+  --rule:#ddd7cc; --accent:#b3200f; --accent-dark:#841608;
+  --navy:#0d1329; --navy-2:#080c1b; --on-navy:#f6f2e9; --on-navy-2:#aeb3c9; --accent-lt:#ff8a6b; --hero-red:#f03a17;
   --serif:'Fraunces',Georgia,'Times New Roman',serif;
   --sans:'Inter',system-ui,-apple-system,'Segoe UI',Roboto,Arial,sans-serif;
   --ease:cubic-bezier(.2,.7,.2,1);
@@ -110,7 +110,7 @@ a:hover .arr,a:focus-visible .arr{transform:translateX(5px)}
 .icon-link{display:inline-grid;place-items:center;width:64px;height:64px;border-radius:50%;background:var(--ink);color:var(--paper);
   transition:transform .25s var(--ease),background-color .25s var(--ease),box-shadow .25s var(--ease)}
 .icon-link svg{width:26px;height:26px;fill:currentColor}
-.icon-link:hover,.icon-link:focus-visible{color:var(--paper);transform:translateY(-4px);background:var(--accent);box-shadow:0 12px 26px rgba(168,55,27,.28)}
+.icon-link:hover,.icon-link:focus-visible{color:var(--paper);transform:translateY(-4px);background:var(--accent);box-shadow:0 12px 26px rgba(179,32,15,.28)}
 
 /* Footer clock */
 .site-foot{border-top:1px solid var(--rule);padding:2rem 0 1.75rem;font-size:.85rem;color:var(--muted);text-align:center}
@@ -122,7 +122,7 @@ a:hover .arr,a:focus-visible .arr{transform:translateX(5px)}
 
 /* Back to top */
 .to-top{position:fixed;right:20px;bottom:20px;z-index:1030;width:48px;height:48px;border:0;border-radius:50%;background:var(--accent);color:#fff;
-  display:grid;place-items:center;box-shadow:0 8px 22px rgba(168,55,27,.35);opacity:0;transform:translateY(12px);pointer-events:none;
+  display:grid;place-items:center;box-shadow:0 8px 22px rgba(179,32,15,.35);opacity:0;transform:translateY(12px);pointer-events:none;
   transition:opacity .25s var(--ease),transform .25s var(--ease),background-color .2s}
 .to-top.show{opacity:1;transform:none;pointer-events:auto}
 .to-top:hover{background:var(--accent-dark);transform:translateY(-3px)}

@@ -62,7 +62,7 @@
 .score-form input{width:100%;max-width:320px;padding:.8rem 1rem;font:inherit;font-size:1rem;color:var(--ink);background:var(--paper);border:1px solid var(--rule);border-radius:2px;
   transition:border-color .2s,box-shadow .2s}
 .score-form input::placeholder{color:var(--muted);opacity:1}
-.score-form input:focus{outline:none;border-color:var(--accent);box-shadow:0 0 0 3px rgba(168,55,27,.18)}
+.score-form input:focus{outline:none;border-color:var(--accent);box-shadow:0 0 0 3px rgba(179,32,15,.18)}
 .field-error{display:none;margin:0;color:var(--bad);font-size:.9rem}
 .field-error.show{display:block}
 
