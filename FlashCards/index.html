@@ -197,6 +197,127 @@
     <div class="fc-face fc-back"><p>A workflow orchestration framework for scalable and reproducible bioinformatics pipelines. Supports parallel execution, containerisation (Docker/Singularity), and deployment across HPC and cloud environments (GCP, AWS).</p></div>
 </div></div>
 
+<div class="fc" data-cat="bio" tabindex="0"><div class="fc-inner">
+    <div class="fc-face fc-front"><h2>SAM / BAM Format</h2><span class="fc-tag">Bioinformatics</span><span class="fc-hint">tap or hover to flip</span></div>
+    <div class="fc-face fc-back"><p><strong>SAM</strong> (Sequence Alignment/Map) is the tab-delimited text format for aligned reads; <strong>BAM</strong> is its compressed binary equivalent. Each record holds the read name, FLAG, reference and position, mapping quality (MAPQ), CIGAR string, sequence and base qualities. Sorted, indexed BAMs allow fast lookup of any region.</p></div>
+</div></div>
+
+<div class="fc" data-cat="bio" tabindex="0"><div class="fc-inner">
+    <div class="fc-face fc-front"><h2>VCF Format</h2><span class="fc-tag">Bioinformatics</span><span class="fc-hint">tap or hover to flip</span></div>
+    <div class="fc-face fc-back"><ul>
+        <li><strong>Variant Call Format:</strong> text file of variant sites</li>
+        <li>Header lines start with <strong>##</strong> and describe the fields</li>
+        <li>One line per site: CHROM, POS, ID, REF, ALT, QUAL, FILTER, INFO</li>
+        <li>Optional FORMAT column plus one genotype column per sample</li>
+        <li>Usually bgzip-compressed and indexed (.vcf.gz + .tbi)</li>
+    </ul></div>
+</div></div>
+
+<div class="fc" data-cat="bio" tabindex="0"><div class="fc-inner">
+    <div class="fc-face fc-front"><h2>Somatic vs Germline Variants</h2><span class="fc-tag">Bioinformatics</span><span class="fc-hint">tap or hover to flip</span></div>
+    <div class="fc-face fc-back"><ul>
+        <li><strong>Germline:</strong> inherited, present in every cell of the body</li>
+        <li><strong>Somatic:</strong> acquired during life, present only in a subset of cells such as a tumour</li>
+        <li>Somatic calling compares tumour reads with a matched normal sample (e.g. GATK Mutect2)</li>
+        <li>Somatic mutations in tumours are the source of neoantigens</li>
+    </ul></div>
+</div></div>
+
+<div class="fc" data-cat="bio" tabindex="0"><div class="fc-inner">
+    <div class="fc-face fc-front"><h2>Variant Effect Predictor (VEP)</h2><span class="fc-tag">Bioinformatics</span><span class="fc-hint">tap or hover to flip</span></div>
+    <div class="fc-face fc-back"><p>Ensembl's tool for annotating variants. For each variant it reports the affected genes and transcripts and the predicted consequence (e.g. missense, stop gained, frameshift, splice site), and can add population allele frequencies and pathogenicity scores such as SIFT and PolyPhen.</p></div>
+</div></div>
+
+<div class="fc" data-cat="bio" tabindex="0"><div class="fc-inner">
+    <div class="fc-face fc-front"><h2>MHC Binding Prediction</h2><span class="fc-tag">Bioinformatics</span><span class="fc-hint">tap or hover to flip</span></div>
+    <div class="fc-face fc-back"><ul>
+        <li>MHC class I molecules (HLA-A, -B, -C in humans) present short peptides, typically 8–11 amino acids, to CD8+ T cells</li>
+        <li>A mutant peptide must bind the patient's HLA alleles to be seen as a neoantigen</li>
+        <li>Tools such as <strong>NetMHCpan</strong> predict binding affinity (IC50, nM) and percentile rank</li>
+        <li>IC50 below 500 nM is a common cut-off for a predicted binder</li>
+    </ul></div>
+</div></div>
+
+<div class="fc" data-cat="bio" tabindex="0"><div class="fc-inner">
+    <div class="fc-face fc-front"><h2>RNA-seq Normalisation</h2><span class="fc-tag">Bioinformatics</span><span class="fc-hint">tap or hover to flip</span></div>
+    <div class="fc-face fc-back"><ul>
+        <li>Raw counts depend on sequencing depth, gene length and library composition</li>
+        <li><strong>CPM:</strong> counts per million mapped reads</li>
+        <li><strong>TPM:</strong> corrects for gene length, then for depth; comparable within a sample</li>
+        <li><strong>DESeq2</strong> median-of-ratios and <strong>edgeR</strong> TMM size factors are used for differential expression</li>
+    </ul></div>
+</div></div>
+
+<div class="fc" data-cat="bio" tabindex="0"><div class="fc-inner">
+    <div class="fc-face fc-front"><h2>Multiple Testing &amp; FDR</h2><span class="fc-tag">Bioinformatics</span><span class="fc-hint">tap or hover to flip</span></div>
+    <div class="fc-face fc-back"><ul>
+        <li>Testing 20,000 genes at p &lt; 0.05 gives about 1,000 false positives if nothing is truly changed</li>
+        <li><strong>Bonferroni:</strong> controls the chance of any false positive (FWER); very strict</li>
+        <li><strong>Benjamini-Hochberg:</strong> controls the false discovery rate, the expected share of false positives among the hits</li>
+        <li>Report adjusted p-values (padj / q-values)</li>
+    </ul></div>
+</div></div>
+
+<div class="fc" data-cat="bio" tabindex="0"><div class="fc-inner">
+    <div class="fc-face fc-front"><h2>Single-Cell RNA-seq</h2><span class="fc-tag">Bioinformatics</span><span class="fc-hint">tap or hover to flip</span></div>
+    <div class="fc-face fc-back"><ul>
+        <li>Measures gene expression in thousands of individual cells</li>
+        <li>Cell barcodes tag each cell; UMIs tag each original mRNA molecule</li>
+        <li>QC filters cells on genes detected, total counts and % mitochondrial reads</li>
+        <li>Workflow: normalise → highly variable genes → PCA → neighbour graph → clustering → UMAP → annotate with marker genes</li>
+    </ul></div>
+</div></div>
+
+<div class="fc" data-cat="bio" tabindex="0"><div class="fc-inner">
+    <div class="fc-face fc-front"><h2>PCA &amp; UMAP in Omics</h2><span class="fc-tag">Bioinformatics</span><span class="fc-hint">tap or hover to flip</span></div>
+    <div class="fc-face fc-back"><ul>
+        <li><strong>PCA:</strong> linear projection onto orthogonal axes of maximum variance; used for QC, outliers and batch effects</li>
+        <li><strong>UMAP:</strong> non-linear embedding that preserves local neighbourhoods; used to visualise single-cell data</li>
+        <li>UMAP is usually computed on the top principal components</li>
+        <li>Distances between UMAP clusters are not reliably meaningful</li>
+    </ul></div>
+</div></div>
+
+<div class="fc" data-cat="bio" tabindex="0"><div class="fc-inner">
+    <div class="fc-face fc-front"><h2>Leiden Clustering</h2><span class="fc-tag">Bioinformatics</span><span class="fc-hint">tap or hover to flip</span></div>
+    <div class="fc-face fc-back"><p>Graph-based community detection used in single-cell analysis (Scanpy, Seurat). Cells are connected in a k-nearest-neighbour graph built on principal components, and the algorithm finds densely connected groups. A <strong>resolution</strong> parameter controls how many clusters it finds. Leiden refines Louvain and guarantees well-connected communities.</p></div>
+</div></div>
+
+<div class="fc" data-cat="bio" tabindex="0"><div class="fc-inner">
+    <div class="fc-face fc-front"><h2>HDBSCAN</h2><span class="fc-tag">Bioinformatics</span><span class="fc-hint">tap or hover to flip</span></div>
+    <div class="fc-face fc-back"><ul>
+        <li><strong>Hierarchical Density-Based Spatial Clustering of Applications with Noise</strong></li>
+        <li>Finds clusters of varying density without being told how many there are</li>
+        <li>Labels points in sparse regions as noise (-1) instead of forcing them into a cluster</li>
+        <li>Main parameter: <strong>min_cluster_size</strong></li>
+    </ul></div>
+</div></div>
+
+<div class="fc" data-cat="bio" tabindex="0"><div class="fc-inner">
+    <div class="fc-face fc-front"><h2>Kaplan-Meier Estimator</h2><span class="fc-tag">Bioinformatics</span><span class="fc-hint">tap or hover to flip</span></div>
+    <div class="fc-face fc-back"><ul>
+        <li>Non-parametric estimate of the survival function S(t) from time-to-event data</li>
+        <li>A step curve: at each event time S(t) is multiplied by 1 − d/n, where d patients had the event out of n still at risk</li>
+        <li>Censored patients leave the risk set without causing a drop</li>
+        <li>Two or more curves are compared with the <strong>log-rank test</strong></li>
+    </ul></div>
+</div></div>
+
+<div class="fc" data-cat="bio" tabindex="0"><div class="fc-inner">
+    <div class="fc-face fc-front"><h2>Cox Proportional Hazards</h2><span class="fc-tag">Bioinformatics</span><span class="fc-hint">tap or hover to flip</span></div>
+    <div class="fc-face fc-back"><ul>
+        <li>Semi-parametric regression for survival data: h(t | x) = h<sub>0</sub>(t) · exp(βx)</li>
+        <li><strong>Hazard ratio</strong> = exp(β); HR &gt; 1 means higher risk, HR &lt; 1 lower risk</li>
+        <li>Adjusts for several covariates at once (e.g. a biomarker plus age and grade)</li>
+        <li>Assumes hazard ratios stay constant over time; check with Schoenfeld residuals</li>
+    </ul></div>
+</div></div>
+
+<div class="fc" data-cat="bio" tabindex="0"><div class="fc-inner">
+    <div class="fc-face fc-front"><h2>Nanopore Sequencing</h2><span class="fc-tag">Bioinformatics</span><span class="fc-hint">tap or hover to flip</span></div>
+    <div class="fc-face fc-back"><p>Oxford Nanopore technology passes single DNA or RNA molecules through a protein pore and reads the bases from changes in ionic current (basecalling). Reads can be tens of kilobases or longer, data stream in real time, and native molecules can be read directly, including RNA and base modifications such as methylation.</p></div>
+</div></div>
+
 <!-- MEDICINE -->
 <div class="fc" data-cat="med" tabindex="0"><div class="fc-inner">
     <div class="fc-face fc-front"><h2>Types Of Surgeons</h2><span class="fc-tag">Medicine</span><span class="fc-hint">tap or hover to flip</span></div>
