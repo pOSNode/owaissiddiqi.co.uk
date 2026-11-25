@@ -17,7 +17,8 @@ let questions = [];
 const ROUNDS = {
     compbio: { file: 'questions-compbio.json', title: 'Computational Biology Quiz' },
 };
-const round = ROUNDS[new URLSearchParams(location.search).get('round')];
+const roundKey = new URLSearchParams(location.search).get('round');
+const round = Object.hasOwn(ROUNDS, roundKey) ? ROUNDS[roundKey] : undefined;
 if (round) {
     document.getElementById('quiz-h').textContent = round.title;
     document.title = `${round.title} – Owais Siddiqi`;
