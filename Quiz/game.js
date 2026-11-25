@@ -13,7 +13,18 @@ let availableQuesions = [];
 
 let questions = [];
 
-fetch('questions.json')
+// Each extra round keeps its questions in its own file and is picked with ?round=<key>; no key plays the medical round
+const ROUNDS = {
+    compbio: { file: 'questions-compbio.json', title: 'Computational Biology Quiz' },
+};
+const roundKey = new URLSearchParams(location.search).get('round');
+const round = Object.hasOwn(ROUNDS, roundKey) ? ROUNDS[roundKey] : undefined;
+if (round) {
+    document.getElementById('quiz-h').textContent = round.title;
+    document.title = `${round.title} – Owais Siddiqi`;
+}
+
+fetch(round ? round.file : 'questions.json')
     .then((res) => {
         return res.json();
     })
@@ -66,7 +77,7 @@ getNewQuestion = () => {
     if (availableQuesions.length === 0 || questionCounter >= MAX_QUESTIONS) {
         localStorage.setItem('mostRecentScore', score);
         //go to the end page
-        return window.location.assign('./end.html');
+        return window.location.assign('./end.html' + location.search);
     }
     questionCounter++;
     progressText.innerText = `Question ${questionCounter}/${MAX_QUESTIONS}`;

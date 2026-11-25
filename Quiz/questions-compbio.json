@@ -1,0 +1,281 @@
+[
+  {
+    "domain": "Sequencing",
+    "question": "In Illumina sequencing by synthesis, how is each base in a read identified?",
+    "choice1": "By the change in electrical current as DNA passes through a pore",
+    "choice2": "By the fluorescent signal of a labelled nucleotide added in each cycle",
+    "choice3": "By weighing each nucleotide as it is removed",
+    "choice4": "By hybridising the read to a microarray",
+    "answer": 2
+  },
+  {
+    "domain": "Sequencing",
+    "question": "A base call with a Phred quality score of Q30 has what probability of being wrong?",
+    "choice1": "1 in 10",
+    "choice2": "1 in 100",
+    "choice3": "1 in 1,000",
+    "choice4": "1 in 10,000",
+    "answer": 3
+  },
+  {
+    "domain": "Sequencing",
+    "question": "Which technology reads single DNA or RNA molecules by measuring changes in ionic current as they pass through a protein pore?",
+    "choice1": "Sanger sequencing",
+    "choice2": "Oxford Nanopore sequencing",
+    "choice3": "Illumina sequencing",
+    "choice4": "Quantitative PCR",
+    "answer": 2
+  },
+  {
+    "domain": "File formats",
+    "question": "Which file format stores raw sequencing reads together with a quality score for every base?",
+    "choice1": "VCF",
+    "choice2": "BED",
+    "choice3": "GTF",
+    "choice4": "FASTQ",
+    "answer": 4
+  },
+  {
+    "domain": "File formats",
+    "question": "What is a BAM file?",
+    "choice1": "The compressed binary form of a SAM file of aligned reads",
+    "choice2": "A table of genes and their functions",
+    "choice3": "The raw images captured by the sequencer",
+    "choice4": "A list of protein structures",
+    "answer": 1
+  },
+  {
+    "domain": "File formats",
+    "question": "In a VCF file, what do the REF and ALT columns hold?",
+    "choice1": "The read name and the name of its mate",
+    "choice2": "The gene name and the transcript ID",
+    "choice3": "The quality score and the filter status",
+    "choice4": "The reference allele and the alternative allele at that position",
+    "answer": 4
+  },
+  {
+    "domain": "Alignment",
+    "question": "Why are splice-aware aligners such as STAR or HISAT2 used for RNA-seq reads?",
+    "choice1": "They remove PCR duplicates while aligning",
+    "choice2": "RNA-seq reads are always longer than DNA reads",
+    "choice3": "Reads from mature mRNA can span exon-exon junctions, so introns must be skipped",
+    "choice4": "They can align reads without a reference genome",
+    "answer": 3
+  },
+  {
+    "domain": "Alignment",
+    "question": "What does the MAPQ field of a SAM/BAM record describe?",
+    "choice1": "The number of reads covering that position",
+    "choice2": "The confidence that the read is aligned to the correct place",
+    "choice3": "The GC content of the read",
+    "choice4": "The length of the read",
+    "answer": 2
+  },
+  {
+    "domain": "Alignment",
+    "question": "Which index structure lets short-read aligners such as BWA and Bowtie2 search a whole genome quickly with little memory?",
+    "choice1": "A relational database table",
+    "choice2": "A linked list of chromosomes",
+    "choice3": "A spreadsheet of k-mer counts",
+    "choice4": "The Burrows-Wheeler transform (FM-index)",
+    "answer": 4
+  },
+  {
+    "domain": "Variant calling",
+    "question": "What is a germline variant?",
+    "choice1": "A variant inherited from a parent and present in every cell of the body",
+    "choice2": "A variant acquired only in tumour cells",
+    "choice3": "A base-calling error made by the sequencer",
+    "choice4": "A change found only in RNA, never in DNA",
+    "answer": 1
+  },
+  {
+    "domain": "Variant calling",
+    "question": "To call somatic mutations in a tumour, the tumour sample is usually compared with what?",
+    "choice1": "A tumour from a different patient",
+    "choice2": "The same tumour sequenced a second time",
+    "choice3": "A matched normal sample, such as blood, from the same patient",
+    "choice4": "A randomly generated genome",
+    "answer": 3
+  },
+  {
+    "domain": "Variant calling",
+    "question": "Which of these tools annotates variants with their predicted effect on genes, transcripts and proteins?",
+    "choice1": "FastQC",
+    "choice2": "Ensembl Variant Effect Predictor (VEP)",
+    "choice3": "STAR",
+    "choice4": "Seurat",
+    "answer": 2
+  },
+  {
+    "domain": "RNA-seq",
+    "question": "Why are raw RNA-seq read counts normalised before samples are compared?",
+    "choice1": "To convert the RNA into DNA",
+    "choice2": "To remove the introns from each read",
+    "choice3": "To make every gene's expression the same",
+    "choice4": "Because samples differ in sequencing depth and library composition",
+    "answer": 4
+  },
+  {
+    "domain": "RNA-seq",
+    "question": "DESeq2 and edgeR model RNA-seq read counts with which probability distribution?",
+    "choice1": "Normal (Gaussian)",
+    "choice2": "Negative binomial",
+    "choice3": "Uniform",
+    "choice4": "Exponential",
+    "answer": 2
+  },
+  {
+    "domain": "RNA-seq",
+    "question": "In a differential expression analysis, a log2 fold change of 1 means a gene is:",
+    "choice1": "Unchanged between the two conditions",
+    "choice2": "Ten times higher in one condition",
+    "choice3": "Twice as highly expressed in one condition as in the other",
+    "choice4": "Expressed in only one sample",
+    "answer": 3
+  },
+  {
+    "domain": "Single-cell",
+    "question": "In droplet-based single-cell RNA-seq, what is a unique molecular identifier (UMI) used for?",
+    "choice1": "Marking the start of each gene",
+    "choice2": "Counting original mRNA molecules by collapsing PCR duplicates",
+    "choice3": "Recording the patient's identity",
+    "choice4": "Measuring the size of each cell",
+    "answer": 2
+  },
+  {
+    "domain": "Single-cell",
+    "question": "During single-cell quality control, a high fraction of mitochondrial reads in a cell often indicates:",
+    "choice1": "A damaged or dying cell",
+    "choice2": "A cell from a different species",
+    "choice3": "A perfect library",
+    "choice4": "A cell with no RNA",
+    "answer": 1
+  },
+  {
+    "domain": "Single-cell",
+    "question": "Which method is commonly used to show thousands of single cells as points in a two-dimensional plot?",
+    "choice1": "Kaplan-Meier plot",
+    "choice2": "Manhattan plot",
+    "choice3": "Volcano plot",
+    "choice4": "UMAP",
+    "answer": 4
+  },
+  {
+    "domain": "Proteomics",
+    "question": "Which technique is most widely used to identify and quantify thousands of proteins in a sample?",
+    "choice1": "PCR",
+    "choice2": "Sanger sequencing",
+    "choice3": "Mass spectrometry",
+    "choice4": "Flow cytometry of DNA content",
+    "answer": 3
+  },
+  {
+    "domain": "Proteomics",
+    "question": "In bottom-up (shotgun) proteomics, which enzyme is usually used to digest proteins into peptides?",
+    "choice1": "Trypsin",
+    "choice2": "DNA polymerase",
+    "choice3": "Reverse transcriptase",
+    "choice4": "DNA ligase",
+    "answer": 1
+  },
+  {
+    "domain": "Proteomics",
+    "question": "What quantity does a mass spectrometer measure for each ion?",
+    "choice1": "Its colour",
+    "choice2": "Its mass-to-charge ratio (m/z)",
+    "choice3": "Its DNA sequence",
+    "choice4": "Its temperature",
+    "answer": 2
+  },
+  {
+    "domain": "Multiple testing",
+    "question": "You test 20,000 genes and none truly differs between groups. About how many would you expect to have p < 0.05 by chance alone?",
+    "choice1": "None",
+    "choice2": "20",
+    "choice3": "10,000",
+    "choice4": "1,000",
+    "answer": 4
+  },
+  {
+    "domain": "Multiple testing",
+    "question": "What does the Benjamini-Hochberg procedure control?",
+    "choice1": "The false discovery rate (FDR)",
+    "choice2": "The family-wise error rate",
+    "choice3": "The sequencing depth",
+    "choice4": "The sample size",
+    "answer": 1
+  },
+  {
+    "domain": "Multiple testing",
+    "question": "Which correction divides the significance threshold by the number of tests performed?",
+    "choice1": "Benjamini-Hochberg",
+    "choice2": "Bonferroni",
+    "choice3": "Log transformation",
+    "choice4": "Z-score scaling",
+    "answer": 2
+  },
+  {
+    "domain": "Survival analysis",
+    "question": "In survival analysis, what is a censored observation?",
+    "choice1": "A patient removed because of bad data",
+    "choice2": "A patient who had the event on the first day",
+    "choice3": "A patient whose event time is unknown because follow-up ended before the event",
+    "choice4": "A patient with missing gene expression values",
+    "answer": 3
+  },
+  {
+    "domain": "Survival analysis",
+    "question": "Which test is commonly used to compare two Kaplan-Meier survival curves?",
+    "choice1": "The log-rank test",
+    "choice2": "Student's t-test",
+    "choice3": "The Shapiro-Wilk test",
+    "choice4": "Pearson correlation",
+    "answer": 1
+  },
+  {
+    "domain": "Survival analysis",
+    "question": "In a Cox proportional hazards model, a hazard ratio of 2 for a binary biomarker means patients with the marker:",
+    "choice1": "Live twice as long",
+    "choice2": "Have twice the instantaneous risk of the event at any time",
+    "choice3": "Have half the risk of the event",
+    "choice4": "Are twice as common in the cohort",
+    "answer": 2
+  },
+  {
+    "domain": "Machine learning",
+    "question": "Why is cross-validation used when training a model on gene expression data?",
+    "choice1": "To increase the sequencing depth",
+    "choice2": "To normalise the read counts",
+    "choice3": "To align the reads to the genome",
+    "choice4": "To estimate how well the model will perform on unseen samples",
+    "answer": 4
+  },
+  {
+    "domain": "Machine learning",
+    "question": "Which of these is an unsupervised learning method?",
+    "choice1": "Random forest classification",
+    "choice2": "Logistic regression",
+    "choice3": "k-means clustering",
+    "choice4": "Support vector machine classification",
+    "answer": 3
+  },
+  {
+    "domain": "Machine learning",
+    "question": "With far more genes (features) than samples, what is the main risk when training a classifier?",
+    "choice1": "Overfitting to noise in the training data",
+    "choice2": "Running out of disk space",
+    "choice3": "Introducing sequencing errors",
+    "choice4": "Changing the reference genome",
+    "answer": 1
+  },
+  {
+    "domain": "Machine learning",
+    "question": "AlphaFold is best known for predicting what from a protein's amino acid sequence?",
+    "choice1": "Its expression level in each tissue",
+    "choice2": "Its three-dimensional structure",
+    "choice3": "Its DNA sequence",
+    "choice4": "Its mass spectrum",
+    "answer": 2
+  }
+]

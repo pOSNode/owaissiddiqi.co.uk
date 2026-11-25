@@ -3,12 +3,15 @@ const nameError = document.getElementById('nameError');
 const saveScoreBtn = document.getElementById('saveScoreBtn');
 const finalScore = document.getElementById('finalScore');
 const mostRecentScore = localStorage.getItem('mostRecentScore');
+const round = new URLSearchParams(location.search).get('round');
 
 const highScores = JSON.parse(localStorage.getItem('highScores')) || [];
 
 const MAX_HIGH_SCORES = 5;
 
 finalScore.innerText = mostRecentScore;
+// Play Again stays in the round that was just played
+document.querySelector('a[href="./game.html"]').search = location.search;
 
 username.addEventListener('input', () => {
     nameError.classList.remove('show');
@@ -34,6 +37,7 @@ function saveHighScore() {
     const score = {
         score: mostRecentScore,
         name: name,
+        round: round,
     };
     highScores.push(score);
     highScores.sort((a, b) => b.score - a.score);
