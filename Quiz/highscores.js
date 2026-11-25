@@ -17,7 +17,7 @@ if (highScores.length === 0) {
 
         const name = document.createElement('span');
         name.className = 'name';
-        name.textContent = score.name;
+        name.textContent = score.round === 'compbio' ? `${score.name} · Comp bio` : score.name;
 
         const points = document.createElement('span');
         points.className = 'score';
