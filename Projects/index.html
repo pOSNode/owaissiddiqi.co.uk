@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script>document.documentElement.classList.add('js')</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;1,9..144,400&amp;family=Inter:wght@400;500;600&amp;display=swap">
+<link rel="stylesheet" href="/css/site.css">
+<link rel="icon" href="/img/icon.png" type="image/png">
+<title>Projects – Owais Siddiqi</title>
+<meta name="author" content="Owais Siddiqi">
+<meta name="description" content="Computational biology case studies by Owais Siddiqi: neoantigen discovery, survival and biomarker analysis, single-cell RNA-seq and a CNN for cell quantification, with an interactive Kaplan-Meier explorer.">
+<link rel="canonical" href="https://owaissiddiqi.co.uk/Projects/">
+<link rel="stylesheet" href="/css/projects.css">
+<noscript><style>.site-nav .navbar-collapse{display:block}.navbar-toggler{display:none}</style></noscript>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="sticky-top">
+<nav class="navbar navbar-expand-md site-nav" aria-label="Main">
+  <div class="wrap">
+    <a class="navbar-brand p-0 m-0" href="/"><img src="/img/logoB.png" alt="Owais Siddiqi home" width="79" height="38"></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav" aria-controls="nav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse flex-grow-0" id="nav">
+      <ul class="navbar-nav">
+        <li class="nav-item"><a class="nav-link ul" href="/">Home</a></li>
+        <li class="nav-item"><a class="nav-link ul" href="/Blogs/">Blog</a></li>
+        <li class="nav-item"><a class="nav-link ul" href="/Quiz/">Quiz</a></li>
+        <li class="nav-item"><a class="nav-link ul" href="/FlashCards/">Flashcards</a></li>
+        <li class="nav-item"><a class="nav-link ul" href="/CV/">CV</a></li>
+        <li class="nav-item"><a class="nav-link ic" href="mailto:omsiddiqi01@gmail.com" aria-label="Email Owais"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1zm13 2.383-4.708 2.825L15 11.105zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741M1 11.105l4.708-2.897L1 5.383z"/></svg><span>Email</span></a></li>
+        <li class="nav-item"><a class="nav-link ic" href="https://www.linkedin.com/in/owaissidd/" target="_blank" rel="noopener noreferrer" aria-label="Owais on LinkedIn"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854zm4.943 12.248V6.169H2.542v7.225zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248S2.4 3.226 2.4 3.934c0 .694.521 1.248 1.327 1.248zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016l.016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225z"/></svg><span>LinkedIn</span></a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+</header>
+
+<main id="main">
+<section class="hero hero-page" aria-labelledby="pj-h">
+  <div class="glow g1" aria-hidden="true"></div><div class="glow g2" aria-hidden="true"></div>
+  <div class="wrap">
+    <p class="label rv" data-layout-label>Projects</p>
+    <h1 id="pj-h" class="rv" style="--d:.06s">Computational biology, <em class="ac">case by case</em></h1>
+    <p class="lead-ed rv" style="--d:.12s">Four projects from sequencing reads to survival curves: what each one set out to answer, how it was built, and what came out.</p>
+  </div>
+</section>
+
+<section class="sec" aria-labelledby="ov-h">
+  <div class="wrap">
+    <p class="label mb-3 rv" data-layout-label><span class="n">00</span>Overview</p>
+    <h2 id="ov-h" class="mb-4 mb-md-5 rv">The case studies</h2>
+    <div class="row g-4">
+      <div class="col-sm-6 col-lg-3 rv">
+        <article class="hob ov">
+          <span class="k" data-layout-label>01 · Genomics</span>
+          <h3>Neoantigen discovery</h3>
+          <p>RNA-seq reads to ranked MHC-I neoantigen candidates for mouse cancer vaccine research.</p>
+          <a class="ul stretched-link" href="#neo">Read the case study</a>
+        </article>
+      </div>
+      <div class="col-sm-6 col-lg-3 rv" style="--d:.06s">
+        <article class="hob ov">
+          <span class="k" data-layout-label>02 · Statistics</span>
+          <h3>Survival and biomarkers</h3>
+          <p>Kaplan-Meier, log-rank and Cox models linking tumour expression to outcome, with a live explorer.</p>
+          <a class="ul stretched-link" href="#surv">Read the case study</a>
+        </article>
+      </div>
+      <div class="col-sm-6 col-lg-3 rv" style="--d:.12s">
+        <article class="hob ov">
+          <span class="k" data-layout-label>03 · Single cell</span>
+          <h3>PBMC3k single-cell RNA-seq</h3>
+          <p>Quality control to annotated cell types in scanpy, packaged as a reproducible pipeline.</p>
+          <a class="ul stretched-link" href="#sc">Read the case study</a>
+        </article>
+      </div>
+      <div class="col-sm-6 col-lg-3 rv" style="--d:.18s">
+        <article class="hob ov">
+          <span class="k" data-layout-label>04 · Deep learning</span>
+          <h3>R-Net, MSc project</h3>
+          <p>A regression CNN that counts cell types in microscopy images without segmenting them.</p>
+          <a class="ul stretched-link" href="#rnet">Read the case study</a>
+        </article>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec tint cs" id="neo" aria-labelledby="neo-h">
+  <div class="wrap">
+    <div class="row g-4 g-lg-5">
+      <div class="col-lg-5 rv">
+        <p class="label mb-3" data-layout-label><span class="n">01</span>Genomics</p>
+        <h2 id="neo-h">RNA-seq neoantigen discovery pipeline</h2>
+        <h3>The problem</h3>
+        <p>Personalised cancer vaccines need a shortlist of tumour mutations whose peptides the immune system can see. Finding them means going from raw sequencing reads to mutations, then to peptides, then to a prediction of which peptides bind MHC class I.</p>
+        <h3>The approach</h3>
+        <p>An end-to-end Nextflow DSL2 pipeline for mouse RNA-seq (GRCm39). Reads are trimmed and aligned with STAR (or GPU alignment with NVIDIA Parabricks), variants are called with Strelka2, hard-filtered with GATK and annotated with Ensembl VEP. Mutant peptides of 8 to 11 amino acids are scored with NetMHCpan-4.1 against H-2-Kb and H-2-Db and ranked by a priority score. Every step runs in Docker or Singularity containers, locally, on SLURM or on Google Cloud Batch.</p>
+        <h3>The result</h3>
+        <p>In industry at Genevation, containerised FASTQ-to-VCF pipelines on the same toolchain (STAR, Strelka2, GATK and VEP) cut analysis turnaround from <strong>five days to two</strong> per sample batch. NetMHCpan predictions were combined with a cancer-specific XGBoost classifier to prioritise neoantigens for preclinical vaccine studies in mouse skin, colon and lung cancer.</p>
+        <ul class="tools" aria-label="Key tools">
+          <li>Nextflow DSL2</li><li>STAR</li><li>Strelka2</li><li>GATK</li><li>VEP</li><li>NetMHCpan-4.1</li><li>Docker</li>
+        </ul>
+        <p class="links"><a class="ul on" href="https://github.com/pOSNode/Mouse_Neoantigen_Candidates" target="_blank" rel="noopener noreferrer">View the repository <span class="arr" aria-hidden="true">↗</span></a></p>
+      </div>
+      <div class="col-lg-7 rv" style="--d:.08s">
+        <figure class="panel">
+          <ol class="flow">
+            <li><span class="st">Quality control</span><span class="tl">FastQC, Trimmomatic</span><span class="out">Trimmed FASTQ</span></li>
+            <li><span class="st">Alignment</span><span class="tl">STAR 2.7.11 or Parabricks</span><span class="out">Sorted, indexed BAM</span></li>
+            <li><span class="st">Variant calling</span><span class="tl">Strelka2 2.9.10</span><span class="out">Somatic and germline VCF</span></li>
+            <li><span class="st">Filtering</span><span class="tl">GATK 4.5 VariantFiltration</span><span class="out">PASS-only VCF</span></li>
+            <li><span class="st">Annotation</span><span class="tl">Ensembl VEP 111</span><span class="out">Annotated VCF</span></li>
+            <li><span class="st">Peptides</span><span class="tl">Ensembl REST API, Python</span><span class="out">Mutant peptide FASTA</span></li>
+            <li><span class="st">MHC-I scoring</span><span class="tl">NetMHCpan-4.1</span><span class="out">Ranked candidates (%EL rank &le; 2)</span></li>
+          </ol>
+          <figcaption>The seven stages of the pipeline, with the tool and output of each, as documented in the repository.</figcaption>
+        </figure>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec cs" id="surv" aria-labelledby="surv-h">
+  <div class="wrap">
+    <div class="row g-4 g-lg-5">
+      <div class="col-lg-5 rv">
+        <p class="label mb-3" data-layout-label><span class="n">02</span>Statistics</p>
+        <h2 id="surv-h">Survival and biomarker analysis</h2>
+      </div>
+      <div class="col-lg-7 rv" style="--d:.08s">
+        <h3>The problem</h3>
+        <p>Which tumour gene-expression features say something about a patient's outcome, and do they add anything beyond the clinical variables a doctor already has?</p>
+        <h3>The approach</h3>
+        <p>A modular Python pipeline using lifelines: Kaplan-Meier estimation, a univariate Cox screen with a hazard ratio per standard deviation of expression and Benjamini-Hochberg FDR, the log-rank test on a median split of the leading feature, and a multivariate Cox model adjusted for age, tumour size, grade and ER status. It is built to pull TCGA cohorts from the public cBioPortal API. When that is unreachable it falls back to a real breast cancer cohort bundled with the repository: Desmedt et al. (2007), GEO GSE7390, 198 patients with time to distant metastasis as the outcome.</p>
+        <h3>The result</h3>
+        <p>Re-running the pipeline on the bundled cohort: 51 of the 198 patients developed distant metastases. Across 76 expression probes, the strongest univariate signal was probe 203306_s_at (hazard ratio 0.64 per SD, p = 0.0009), but no probe passed an FDR of 0.05, so the screen is exploratory. ER status separates the curves (log-rank p = 0.010), and the multivariate model reaches a C-index of 0.677. Explore the curves below.</p>
+        <ul class="tools" aria-label="Key tools">
+          <li>Python</li><li>lifelines</li><li>pandas</li><li>cBioPortal API</li><li>Cox regression</li><li>Kaplan-Meier</li>
+        </ul>
+        <p class="links"><a class="ul on" href="https://github.com/pOSNode/TCGA_Survival_Biomarker" target="_blank" rel="noopener noreferrer">View the repository <span class="arr" aria-hidden="true">↗</span></a></p>
+      </div>
+    </div>
+
+    <figure class="panel km rv" aria-labelledby="km-h">
+      <div class="km-head">
+        <h3 id="km-h">Kaplan-Meier explorer</h3>
+        <div class="km-ctl">
+          <label for="kmGroup">Group patients by</label>
+          <select id="kmGroup" class="form-select" disabled>
+            <option>All patients</option>
+          </select>
+        </div>
+      </div>
+      <div class="km-live">
+        <p class="km-stat" id="kmStat" aria-live="polite">Loading the cohort&hellip;</p>
+        <div class="km-chart"><canvas id="kmChart" role="img" aria-label="Kaplan-Meier curves of distant-metastasis-free survival"></canvas></div>
+        <p class="km-note" id="kmNote"></p>
+        <div class="table-responsive">
+          <table class="km-tab" id="kmRisk">
+            <caption>Number at risk, by months of follow-up</caption>
+          </table>
+        </div>
+      </div>
+      <details class="km-all" open>
+        <summary>All groupings as a table</summary>
+        <div class="table-responsive">
+          <table class="km-tab">
+            <caption>Patients and distant metastases per group, with the log-rank p-value for each grouping</caption>
+            <thead><tr><th scope="col">Group</th><th scope="col">Patients</th><th scope="col">Metastases</th></tr></thead>
+<!-- km-table -->
+<tbody>
+<tr class="gh"><th colspan="3" scope="rowgroup">All patients</th></tr>
+<tr><td class="g">All patients</td><td>198</td><td>51</td></tr>
+</tbody>
+<tbody>
+<tr class="gh"><th colspan="3" scope="rowgroup">ER status <span class="p">log-rank p = 0.010</span></th></tr>
+<tr><td class="g">ER-positive</td><td>134</td><td>28</td></tr>
+<tr><td class="g">ER-negative</td><td>64</td><td>23</td></tr>
+</tbody>
+<tbody>
+<tr class="gh"><th colspan="3" scope="rowgroup">Tumour grade <span class="p">log-rank p = 0.276</span></th></tr>
+<tr><td class="g">Grade 1</td><td>30</td><td>4</td></tr>
+<tr><td class="g">Grade 2</td><td>83</td><td>23</td></tr>
+<tr><td class="g">Grade 3</td><td>83</td><td>24</td></tr>
+</tbody>
+<tbody>
+<tr class="gh"><th colspan="3" scope="rowgroup">Probe 203306_s_at, median split <span class="p">log-rank p = 0.006</span></th></tr>
+<tr><td class="g">203306_s_at high</td><td>99</td><td>17</td></tr>
+<tr><td class="g">203306_s_at low</td><td>99</td><td>34</td></tr>
+</tbody>
+<tbody>
+<tr class="gh"><th colspan="3" scope="rowgroup">Probe 202240_at, median split <span class="p">log-rank p &lt; 0.001</span></th></tr>
+<tr><td class="g">202240_at high</td><td>99</td><td>38</td></tr>
+<tr><td class="g">202240_at low</td><td>99</td><td>13</td></tr>
+</tbody>
+<tbody>
+<tr class="gh"><th colspan="3" scope="rowgroup">Probe 204014_at, median split <span class="p">log-rank p = 0.060</span></th></tr>
+<tr><td class="g">204014_at high</td><td>99</td><td>20</td></tr>
+<tr><td class="g">204014_at low</td><td>99</td><td>31</td></tr>
+</tbody>
+<tbody>
+<tr class="gh"><th colspan="3" scope="rowgroup">Probe 218883_s_at, median split <span class="p">log-rank p = 0.061</span></th></tr>
+<tr><td class="g">218883_s_at high</td><td>99</td><td>30</td></tr>
+<tr><td class="g">218883_s_at low</td><td>99</td><td>21</td></tr>
+</tbody>
+<tbody>
+<tr class="gh"><th colspan="3" scope="rowgroup">Probe 208180_s_at, median split <span class="p">log-rank p = 0.009</span></th></tr>
+<tr><td class="g">208180_s_at high</td><td>99</td><td>33</td></tr>
+<tr><td class="g">208180_s_at low</td><td>99</td><td>18</td></tr>
+</tbody>
+<!-- /km-table -->
+          </table>
+        </div>
+      </details>
+      <noscript><p class="km-note">The interactive chart needs JavaScript. The table above holds the same groupings.</p></noscript>
+      <figcaption>Time to distant metastasis in the Desmedt et al. (2007) breast cancer cohort (<a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE7390" target="_blank" rel="noopener noreferrer">GEO GSE7390</a>), 198 patients, as bundled with the repository. Curves are shown to 240 months. Median splits of expression are for visualisation only; the Cox models treat expression as continuous.</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section class="sec tint cs" id="sc" aria-labelledby="sc-h">
+  <div class="wrap">
+    <div class="row g-4 g-lg-5">
+      <div class="col-lg-5 rv">
+        <p class="label mb-3" data-layout-label><span class="n">03</span>Single cell</p>
+        <h2 id="sc-h">Single-cell RNA-seq of PBMC3k</h2>
+        <h3>The problem</h3>
+        <p>A blood sample holds many immune cell types mixed together. Single-cell RNA-seq can separate them, but only after careful quality control, normalisation and clustering of thousands of noisy cells.</p>
+        <h3>The approach</h3>
+        <p>An end-to-end scanpy workflow on the 10x Genomics PBMC3k dataset (about 2,700 peripheral blood mononuclear cells). Cells are filtered by median absolute deviation (5 MADs on counts, genes and mitochondrial fraction, plus a 15% mitochondrial cap), normalised and log-transformed, reduced to the top 2,000 highly variable genes and 50 principal components, then embedded with UMAP, clustered with Leiden and annotated by scoring canonical PBMC marker signatures. It ships as a notebook and as a command-line pipeline with fixed seeds.</p>
+        <h3>The result</h3>
+        <p>On the repository's synthetic validation dataset, which mimics PBMC3k with 2,700 cells, low-quality cells and doublets, the pipeline resolves 9 Leiden clusters and annotates them as 7 cell types: B cells, CD4 and CD8 T cells, NK cells, CD14 and FCGR3A monocytes, and platelets. With internet access the same code runs on the real PBMC3k data.</p>
+        <ul class="tools" aria-label="Key tools">
+          <li>Python</li><li>scanpy</li><li>AnnData</li><li>UMAP</li><li>Leiden</li><li>Wilcoxon tests</li>
+        </ul>
+        <p class="links"><a class="ul on" href="https://github.com/pOSNode/Single_Cell_PBMC" target="_blank" rel="noopener noreferrer">View the repository <span class="arr" aria-hidden="true">↗</span></a></p>
+      </div>
+      <div class="col-lg-7 rv" style="--d:.08s">
+        <figure class="panel">
+          <img src="/img/projects/pbmc-umap-cell-types.webp" alt="UMAP plot of about 2,700 cells in seven coloured groups: a large CD4 T cell cluster next to CD8 T and NK cells, a separate group of CD14 and FCGR3A monocytes with a few platelets, and an isolated B cell cluster." width="800" height="459" loading="lazy" decoding="async">
+          <figcaption>UMAP of the annotated cell types. This figure comes from the synthetic PBMC-structured validation dataset committed with the repository, not from the real PBMC3k data.</figcaption>
+        </figure>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec cs" id="rnet" aria-labelledby="rnet-h">
+  <div class="wrap">
+    <div class="row g-4 g-lg-5">
+      <div class="col-lg-5 rv">
+        <p class="label mb-3" data-layout-label><span class="n">04</span>Deep learning</p>
+        <h2 id="rnet-h">R-Net: counting cells without segmenting them</h2>
+        <h3>The problem</h3>
+        <p>Measuring the mix of cell types in a microscopy image usually means segmenting every cell first, which is slow and fragile. Could a network predict the composition directly?</p>
+        <h3>The approach</h3>
+        <p>R-Net, an MSc Biomedical Engineering project at Imperial College London (2023), is a custom convolutional network in TensorFlow and Keras that regresses the percentage of three cell types straight from simulated microscopy images. It stacks convolution blocks with batch normalisation and dropout, and trains on images expanded with an OpenCV augmentation pipeline. It was benchmarked against VGG16, ResNet, MobileNet and an MNIST-derived baseline.</p>
+        <h3>The result</h3>
+        <p>R-Net reached <strong>R&sup2; = 0.76</strong> (0.7576, MSE 0.0072), against 0.40 for ResNet and 0.32 for VGG16, and trained in about 1.5 hours where the larger networks took 3 to 4.</p>
+        <ul class="tools" aria-label="Key tools">
+          <li>Python</li><li>TensorFlow</li><li>Keras</li><li>OpenCV</li><li>scikit-learn</li>
+        </ul>
+        <p class="links">
+          <a class="ul on" href="https://github.com/pOSNode/MSc-Project/blob/main/Owais_Siddiqi_Final_Dissertation.pdf" target="_blank" rel="noopener noreferrer">Read the dissertation (PDF) <span class="arr" aria-hidden="true">↗</span></a>
+          <a class="ul on" href="https://github.com/pOSNode/MSc-Project" target="_blank" rel="noopener noreferrer">View the repository <span class="arr" aria-hidden="true">↗</span></a>
+        </p>
+      </div>
+      <div class="col-lg-7 rv" style="--d:.08s">
+        <figure class="panel">
+          <table class="bars">
+            <caption>R&sup2; by model (higher is better) and approximate training time</caption>
+            <thead><tr><th scope="col">Model</th><th scope="col">R&sup2;</th><th scope="col">Training</th></tr></thead>
+            <tbody>
+              <tr class="me"><th scope="row">R-Net</th><td><span class="bar" style="--v:.7576"></span><span class="v">0.758</span></td><td>~1.5 h</td></tr>
+              <tr><th scope="row">ResNet</th><td><span class="bar" style="--v:.4025"></span><span class="v">0.403</span></td><td>~4 h</td></tr>
+              <tr><th scope="row">MNIST baseline</th><td><span class="bar" style="--v:.3921"></span><span class="v">0.392</span></td><td>~1.5 h</td></tr>
+              <tr><th scope="row">VGG16</th><td><span class="bar" style="--v:.3215"></span><span class="v">0.322</span></td><td>~4 h</td></tr>
+              <tr><th scope="row">MobileNet</th><td><span class="bar" style="--v:.0959"></span><span class="v">0.096</span></td><td>~3 h</td></tr>
+            </tbody>
+          </table>
+          <figcaption>Results from the dissertation's performance summary, on simulated microscopy images.</figcaption>
+        </figure>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec tint contact" aria-labelledby="contact-h">
+  <div class="wrap rv">
+    <p class="label" data-layout-label><span class="n">05</span>Get in touch</p>
+    <h2 id="contact-h">Contact</h2>
+    <div class="links">
+      <a class="icon-link" href="mailto:omsiddiqi01@gmail.com" aria-label="Email Owais" title="Email"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1zm13 2.383-4.708 2.825L15 11.105zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741M1 11.105l4.708-2.897L1 5.383z"/></svg></a>
+      <a class="icon-link" href="https://github.com/pOSNode" target="_blank" rel="noopener noreferrer" aria-label="Owais on GitHub" title="GitHub"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8"/></svg></a>
+      <a class="icon-link" href="https://www.linkedin.com/in/owaissidd/" target="_blank" rel="noopener noreferrer" aria-label="Owais on LinkedIn" title="LinkedIn"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854zm4.943 12.248V6.169H2.542v7.225zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248S2.4 3.226 2.4 3.934c0 .694.521 1.248 1.327 1.248zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016l.016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225z"/></svg></a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="site-foot">
+  <div class="wrap">
+    <div class="clock-time" id="clockTime"></div>
+    <div class="clock-bar" aria-hidden="true"></div>
+    <div class="clock-date" id="clockDate"></div>
+    <p class="copy">&copy; <a href="/">Owais Siddiqi</a> · All rights reserved</p>
+  </div>
+</footer>
+<button class="to-top" id="toTop" type="button" aria-label="Back to top" title="Back to top"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 3.5 14 10l-1.4 1.4L8 6.3 3.4 11.4 2 10z"/></svg></button>
+<script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.js" integrity="sha512-d9xgZrVZpmmQlfonhQUvTR7lMPtO7NkZMkA0ABN3PHCbKA5nqylQ/yWlFAyY6hYgdF1Qh6nYiuADWwKB4C2WSw==" crossorigin="anonymous"></script>
+<script defer src="/js/site.js"></script>
+<script defer src="/js/projects.js"></script>
+</body>
+</html>
